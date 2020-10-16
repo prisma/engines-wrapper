@@ -9,6 +9,7 @@
     "enginesVersion": "e078aa75c40550d826bc35aeee4f45582fb4165e"
   },
   "devDependencies": {
+    "@types/node": "^14.11.8",
     "typescript": "^4.0.3"
   },
   "scripts": {
