@@ -10,11 +10,11 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-latest
 
-    strategy:
-      fail-fast: false
-      node: [12]
-
     steps:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+          check-latest: true
       - run: bash .github/workflows/setup.sh
         env:
           CI: true
