@@ -18,6 +18,7 @@ jobs:
           check-latest: true
       - run: npm i --silent -g pnpm@5.1.7 --unsafe-perm
       - run: pnpm i --no-prefer-frozen-lockfile --reporter=silent --ignore-scripts
+      - run: echo ${{ secrets.NPM_TOKEN }} > ~/.npmrc
       - run: pnpm run publish-all
         env:
           CI: true
