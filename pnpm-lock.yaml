@@ -2,14 +2,18 @@ importers:
   .:
     devDependencies:
       '@types/node': 14.11.8
+      '@types/node-fetch': 2.5.7
       chalk: 4.1.0
       execa: 4.0.3
+      node-fetch: 2.6.1
       ts-node: 9.0.0_typescript@4.0.3
       typescript: 4.0.3
     specifiers:
       '@types/node': ^14.11.8
+      '@types/node-fetch': ^2.5.7
       chalk: ^4.1.0
       execa: ^4.0.3
+      node-fetch: ^2.6.1
       ts-node: ^9.0.0
       typescript: ^4.0.3
   packages/engines:
@@ -103,6 +107,13 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==
+  /@types/node-fetch/2.5.7:
+    dependencies:
+      '@types/node': 14.11.8
+      form-data: 3.0.0
+    dev: true
+    resolution:
+      integrity: sha512-o2WVNf5UhWRkxlf6eq+jMZDu7kjgpgJfl4xVNlvryc95O/6F2ld8ztKX+qu+Rjyet93WAWm5LjeX9H5FGkODvw==
   /@types/node/14.11.8:
     dev: true
     resolution:
@@ -146,6 +157,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==
+  /asynckit/0.4.0:
+    dev: true
+    resolution:
+      integrity: sha1-x57Zf380y48robyXkLzDZkdLS3k=
   /balanced-match/1.0.0:
     dev: true
     resolution:
@@ -196,6 +211,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
+  /combined-stream/1.0.8:
+    dependencies:
+      delayed-stream: 1.0.0
+    dev: true
+    engines:
+      node: '>= 0.8'
+    resolution:
+      integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
   /commondir/1.0.1:
     dev: true
     resolution:
@@ -248,6 +271,12 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-1shh9DQ23L16oXSZKB2JxpL7iMy2E0S9d517ptA1P8iw0alkPtQcrKH7ru31rYtKwF499HkTu+DRzq3TCKDFRQ==
+  /delayed-stream/1.0.0:
+    dev: true
+    engines:
+      node: '>=0.4.0'
+    resolution:
+      integrity: sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
   /diff/4.0.2:
     dev: true
     engines:
@@ -340,6 +369,16 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==
+  /form-data/3.0.0:
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.27
+    dev: true
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-CKMFDglpbMi6PyN+brwB9Q/GOw0eAnsrEZDgcsH5Krhz5Od/haKHAX0NmQfha2zPPz0JpWzA7GJHGSnvCRLWsg==
   /fs.realpath/1.0.0:
     dev: true
     resolution:
@@ -532,6 +571,20 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-y7FpHSbMUMoyPbYUSzO6PaZ6FyRnQOpHuKwbo1G+Knck95XVU4QAiKdGEnj5wwoS7PlOgthX/09u5iFJ+aYf5Q==
+  /mime-db/1.44.0:
+    dev: true
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha512-/NOTfLrsPBVeH7YtFPgsVWveuL+4SjjYxaQ1xtM1KMFj7HdxlBlxeyNLzhyJVx7r4rZGJAZ/6lkKCitSc/Nmpg==
+  /mime-types/2.1.27:
+    dependencies:
+      mime-db: 1.44.0
+    dev: true
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha512-JIhqnCasI9yD+SsmkquHBxTSEuZdQX5BuQnS2Vc7puQQQ+8yiP5AY5uWhpdv4YL4VM5c6iliiYWPgJ/nJQLp7w==
   /mimic-fn/2.1.0:
     dev: true
     engines:

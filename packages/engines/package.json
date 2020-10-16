@@ -1,6 +1,6 @@
 {
   "name": "@prisma/engines",
-  "version": "0.0.1-e078aa75c40550d826bc35aeee4f45582fb4165e",
+  "version": "2.10.0-5bea54a481a20125d6fa88ee7d7ef1ed1c4fb8a8",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
