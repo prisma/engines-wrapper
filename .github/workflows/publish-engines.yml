@@ -16,14 +16,14 @@ jobs:
         with:
           node-version: '12'
           check-latest: true
-      - run: npm i --silent -g pnpm@5.1.7 --unsafe-perm
-      - run: pnpm i --no-prefer-frozen-lockfile --reporter=silent --ignore-scripts
-      - run: echo ${{ secrets.NPM_TOKEN }} > ~/.npmrc
+      - run: bash .github/workflows/setup.sh
+        env:
+          CI: true
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: pnpm run publish-all
         env:
           CI: true
           GITHUB_EVENT_CLIENT_PAYLOAD: ${{ toJson(github.event.client_payload) }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           # Optional but recommended, defaults to "Apply automatic changes"

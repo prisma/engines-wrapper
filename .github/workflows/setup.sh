@@ -1,7 +1,8 @@
 #!/bin/bash
 
-set -ex
+echo $NPM_TOKEN > ~/.npmrc
 
+set -ex
 npm i --silent -g pnpm@5.1.7 --unsafe-perm
 pnpm i
 
