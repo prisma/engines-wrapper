@@ -16,7 +16,7 @@ jobs:
           node-version: '12'
           check-latest: true
       - run: pwd
-      - run: bash setup.sh
+      - run: bash .github/workflows/setup.sh
       - run: pnpm run publish-all
         env:
           CI: true
