@@ -15,11 +15,8 @@ jobs:
         with:
           node-version: '12'
           check-latest: true
-      - run: bash .github/workflows/setup.sh
-        env:
-          CI: true
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-
+      - run: pwd
+      - run: bash setup.sh
       - run: pnpm run publish-all
         env:
           CI: true
