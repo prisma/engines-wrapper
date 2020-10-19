@@ -28,6 +28,7 @@ async function main(dryRun = false) {
 
   await run('packages/engines-version', `pnpm publish --no-git-checks --tag ${npmTag}`, dryRun)
   await run('packages/engines', `pnpm i @prisma/engines-version@${newVersion}`, dryRun)
+  await run('packages/engines', `pnpm run build`, dryRun)
   await run('packages/engines', `pnpm publish --no-git-checks --tag ${npmTag}`, dryRun)
 }
 
