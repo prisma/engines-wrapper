@@ -16,8 +16,7 @@
   "scripts": {
     "build": "node scripts/build.js",
     "prepublishOnly": "pnpm run build",
-    "postinstall": "node download/index.js",
-    "publish": "echo $GITHUB_CONTEXT"
+    "postinstall": "node download/index.js"
   },
   "files": [
     "!**/__tests__",
