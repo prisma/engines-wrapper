@@ -28,5 +28,5 @@ function run(command, preferLocal = true) {
 
 main().catch((e) => {
   console.error(e)
-  throw e
+  process.exit(1)
 })
