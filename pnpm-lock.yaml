@@ -22,7 +22,6 @@ importers:
       '@prisma/engines-version': 'link:../engines-version'
       '@prisma/fetch-engine': 2.9.0
       '@types/node': 14.11.8
-      esbuild: 0.7.15
       execa: 4.0.3
       typescript: 4.0.3
     specifiers:
@@ -30,7 +29,6 @@ importers:
       '@prisma/engines-version': 'workspace:*'
       '@prisma/fetch-engine': ^2.9.0
       '@types/node': ^14.11.8
-      esbuild: ^0.7.15
       execa: ^4.0.3
       typescript: 4.0.3
   packages/engines-version:
@@ -297,12 +295,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==
-  /esbuild/0.7.15:
-    dev: true
-    hasBin: true
-    requiresBuild: true
-    resolution:
-      integrity: sha512-tgvd7miwyQVAzlDIcrs9vwoVEL33NmDRggTwKSkcdTj25BOfSWoIUuFXG4vvHRQTkJDk2uHJSi7bhBdPmMzodA==
   /eventemitter3/4.0.7:
     dev: true
     resolution:
