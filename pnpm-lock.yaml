@@ -21,14 +21,14 @@ importers:
   packages/engines:
     devDependencies:
       '@prisma/debug': 2.9.0
-      '@prisma/engines-version': 'link:../engines-version'
+      '@prisma/engines-version': 2.10.0-ops-change-publish-839167265cb5911733a89a0f23cc8ff4b15741d3
       '@prisma/fetch-engine': 2.9.0
       '@types/node': 14.11.8
       execa: 4.0.3
       typescript: 4.0.3
     specifiers:
       '@prisma/debug': ^2.9.0
-      '@prisma/engines-version': 'workspace:2.10.0-0ae85d7f60031fc2db84f4b1ef19dd3b6c878f9e'
+      '@prisma/engines-version': 2.10.0ops-change-publish-839167265cb5911733a89a0f23cc8ff4b15741d3
       '@prisma/fetch-engine': ^2.9.0
       '@types/node': ^14.11.8
       execa: ^4.0.3
@@ -72,6 +72,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Z76oG/vKC8ohdcBSwLt0eu09h+AAEam0lj0JGD9Ijx6NfsdKj+gTZ8CH+IR7+f4aWB38QRzkJRs33jzQDT41Jw==
+  /@prisma/engines-version/2.10.0-ops-change-publish-839167265cb5911733a89a0f23cc8ff4b15741d3:
+    dev: true
+    resolution:
+      integrity: sha512-gfmybVZhTp1dSi3g2X2fLH1XEPiTFRcyppFMuVVuN7Kni56dcDe/MrxXCiqBM+Itw+ERWtAGezvdPFJL6WWv0A==
   /@prisma/fetch-engine/2.9.0:
     dependencies:
       '@prisma/debug': 2.9.0
