@@ -1,6 +1,7 @@
 importers:
   .:
     devDependencies:
+      '@sindresorhus/slugify': 1.1.0
       '@types/node': 14.11.8
       '@types/node-fetch': 2.5.7
       chalk: 4.1.0
@@ -9,6 +10,7 @@ importers:
       ts-node: 9.0.0_typescript@4.0.3
       typescript: 4.0.3
     specifiers:
+      '@sindresorhus/slugify': ^1.1.0
       '@types/node': ^14.11.8
       '@types/node-fetch': ^2.5.7
       chalk: ^4.1.0
@@ -99,6 +101,24 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Sp83D2txjMqyk+lqVUH/syiS6v6ZXFz8C15eqGDDq6aqstsqzKZ3+sx0bqfepbzJcvvddd6qbr/R034yKM7lzw==
+  /@sindresorhus/slugify/1.1.0:
+    dependencies:
+      '@sindresorhus/transliterate': 0.1.1
+      escape-string-regexp: 4.0.0
+    dev: true
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-ujZRbmmizX26yS/HnB3P9QNlNa4+UvHh+rIse3RbOXLp8yl6n1TxB4t7NHggtVgS8QmmOtzXo48kCxZGACpkPw==
+  /@sindresorhus/transliterate/0.1.1:
+    dependencies:
+      escape-string-regexp: 2.0.0
+      lodash.deburr: 4.1.0
+    dev: true
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-QSdIQ5keUFAZ3KLbfbsntW39ox0Ym8183RqTwBq/ZEFoN3NQAtGV+qWaNdzKpIDHgj9J2CQ2iNDRVU11Zyr7MQ==
   /@tootallnate/once/1.1.2:
     dev: true
     engines:
@@ -295,6 +315,18 @@ packages:
     dev: true
     resolution:
       integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==
+  /escape-string-regexp/2.0.0:
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-UpzcLCXolUWcNu5HtVMHYdXJjArjsF9C0aNnquZYY4uW/Vu0miy5YoWvbV345HauVvcAUnpRuhMMcqTcGOY2+w==
+  /escape-string-regexp/4.0.0:
+    dev: true
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
   /eventemitter3/4.0.7:
     dev: true
     resolution:
@@ -532,6 +564,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==
+  /lodash.deburr/4.1.0:
+    dev: true
+    resolution:
+      integrity: sha1-3bG7s+8HRYwBd7oH3hRCLLAz/5s=
   /make-dir/3.1.0:
     dependencies:
       semver: 6.3.0

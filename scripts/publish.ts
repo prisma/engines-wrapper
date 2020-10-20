@@ -3,6 +3,7 @@ import chalk from 'chalk'
 import fs from 'fs'
 import fetch from 'node-fetch'
 import execa from 'execa'
+import slugify from '@sindresorhus/slugify'
 
 async function main(dryRun = false) {
   const clientPayload = JSON.parse(process.env.GITHUB_EVENT_CLIENT_PAYLOAD)
@@ -10,7 +11,7 @@ async function main(dryRun = false) {
 
   const npmTag = clientPayload.branch === 'master' ? 'latest' : 'integration'
   const maybeName = clientPayload.branch === 'master' ? '' : `-${clientPayload.branch}`
-  const newVersion = `${await getNextStableVersion()}${maybeName}-${clientPayload.commit}`
+  const newVersion = `${await getNextStableVersion()}${slugify(maybeName)}-${clientPayload.commit}`
 
   console.log(chalk.bold.greenBright('Going to publish:\n'))
   console.log(`${chalk.bold('Version')}  ${newVersion}`)

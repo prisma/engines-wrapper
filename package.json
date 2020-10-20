@@ -4,6 +4,7 @@
   "description": "This repository contains the packages `@prisma/engines` and `@prisma/engines-version`. They are wrapping our [Rust Engines](https://github.com/prisma/prisma-engines) in npm packages.",
   "private": true,
   "devDependencies": {
+    "@sindresorhus/slugify": "^1.1.0",
     "@types/node": "^14.11.8",
     "@types/node-fetch": "^2.5.7",
     "chalk": "^4.1.0",
