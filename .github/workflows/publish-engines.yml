@@ -27,7 +27,7 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           # Optional but recommended, defaults to "Apply automatic changes"
-          commit_message: ${{ github.event.client_payload.commit }}
+          commit_message: engines commit ${{ github.event.client_payload.commit }}
 
           # Optional commit user and author settings
           commit_user_name: prisma-bot
