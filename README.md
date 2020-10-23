@@ -1,4 +1,4 @@
-<div align="center">
+<div>
   <h2>@prisma/engines
     <a href="https://www.npmjs.com/package/@prisma/engines">
       <img src="https://img.shields.io/npm/v/@prisma/engines.svg?style=flat" />
