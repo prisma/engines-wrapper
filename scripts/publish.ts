@@ -10,8 +10,10 @@ async function main(dryRun = false) {
   assertIsClientPayload(clientPayload)
 
   const npmTag = clientPayload.branch === 'master' ? 'latest' : 'integration'
-  const maybeName = clientPayload.branch === 'master' ? '' : `-${clientPayload.branch}`
-  const newVersion = `${await getNextStableVersion()}${slugify(maybeName)}-${clientPayload.commit}`
+  const maybeName = clientPayload.branch === 'master' ? '' : `-${slugify(clientPayload.branch)}`
+  const nextStable = await getNextStableVersion()
+  const increment = await getVersionIncrement(nextStable)
+  const newVersion = `${nextStable}-${increment}${maybeName}-${clientPayload.commit}`
 
   console.log(chalk.bold.greenBright('Going to publish:\n'))
   console.log(`${chalk.bold('Version')}  ${newVersion}`)
@@ -48,6 +50,25 @@ async function getNextStableVersion(): Promise<string | null> {
   const data = await fetch('https://registry.npmjs.org/@prisma/cli').then(res => res.json())
   const currentLatest: string = data['dist-tags']?.latest
   return increaseMinor(currentLatest)
+}
+
+async function getVersionIncrement(versionPrefix: string): Promise<number> {
+  const data = await fetch('https://registry.npmjs.org/@prisma/engines-version').then(res => res.json())
+  const versions: string[] = Object.keys(data.versions).filter(v => v.startsWith(versionPrefix))
+
+  let max = 0
+
+  // to match 2.10.0-123-asdasdasdja0s9dja0s9djas0d9j
+  const regex = /\d\.\d+\.\d+-(\d+)-\S+/
+  for (const version of versions) {
+    const match = regex.exec(version)
+    if (match) {
+      const n = Number(match[1])
+      max = Math.max(max, n)
+    }
+  }
+
+  return max + 1
 }
 
 function assertIsClientPayload(val: any): asserts val is ClientInput {
