@@ -28,7 +28,7 @@ importers:
       typescript: 4.0.3
     specifiers:
       '@prisma/debug': ^2.9.0
-      '@prisma/engines-version': 'workspace:2.10.0-8-5a232c8ec0942fa19e51e00892bc523f9d8fb514'
+      '@prisma/engines-version': 'workspace:2.10.0-9-0c84949eba9c811e0fad59320120ce159b41b0a1'
       '@prisma/fetch-engine': ^2.9.0
       '@types/node': ^14.11.8
       execa: ^4.0.3
