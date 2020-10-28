@@ -1,13 +1,13 @@
 {
   "name": "@prisma/engines",
-  "version": "2.10.1-4-9f0f427d33d54628b9df976d79afbff038c26b1b",
+  "version": "2.11.0-3-6fafbb461b7e0c140280a7794ed19a4f7035f577",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "devDependencies": {
     "@prisma/debug": "^2.9.0",
-    "@prisma/engines-version": "workspace:2.10.1-4-9f0f427d33d54628b9df976d79afbff038c26b1b",
+    "@prisma/engines-version": "workspace:2.11.0-3-6fafbb461b7e0c140280a7794ed19a4f7035f577",
     "@prisma/fetch-engine": "^2.9.0",
     "@types/node": "^14.11.8",
     "execa": "^4.0.3",
