@@ -5,13 +5,29 @@ import fetch from 'node-fetch'
 import execa from 'execa'
 import slugify from '@sindresorhus/slugify'
 
+function branchToTag(branch: string): string {
+  if (branch === 'master') {
+    return 'latest'
+  }
+
+  if (isPatchBranch(branch)) {
+    return 'patch'
+  }
+
+  return 'integration'
+}
+
+function isPatchBranch(version: string): boolean {
+  return /^2\.(\d+)\.x/.test(version)
+}
+
 async function main(dryRun = false) {
   const clientPayload = JSON.parse(process.env.GITHUB_EVENT_CLIENT_PAYLOAD)
   assertIsClientPayload(clientPayload)
 
-  const npmTag = clientPayload.branch === 'master' ? 'latest' : 'integration'
-  const maybeName = clientPayload.branch === 'master' ? '' : `-${slugify(clientPayload.branch)}`
-  const nextStable = await getNextStableVersion()
+  const npmTag = branchToTag(clientPayload.branch)
+  const maybeName = npmTag === 'integration' ? `-${slugify(clientPayload.branch)}` : ''
+  const nextStable = await getNextStableVersion(npmTag === 'patch')
   const increment = await getVersionIncrement(nextStable)
   const newVersion = `${nextStable}-${increment}${maybeName}-${clientPayload.commit}`
 
@@ -46,10 +62,13 @@ function adjustPkgJson(pathToIt: string, cb: (pkg: any) => void) {
   fs.writeFileSync(pathToIt, JSON.stringify(pkg, null, 2))
 }
 
-async function getNextStableVersion(): Promise<string | null> {
+async function getNextStableVersion(isPatch: boolean): Promise<string | null> {
   const data = await fetch('https://registry.npmjs.org/@prisma/cli').then(res => res.json())
   const currentLatest: string = data['dist-tags']?.latest
-  return increaseMinor(currentLatest)
+  if (isPatch) {
+    return incrementPatch(currentLatest)
+  }
+  return incrementMinor(currentLatest)
 }
 
 async function getVersionIncrement(versionPrefix: string): Promise<number> {
@@ -89,6 +108,10 @@ function assertIsClientPayload(val: any): asserts val is ClientInput {
   }
 }
 
+// useful for debugging
+// if you debug, run main(true) for dry run
+// process.env.GITHUB_EVENT_CLIENT_PAYLOAD = JSON.stringify({ branch: '2.10.x', commit: '5bea54a481a20125d6fa88ee7d7ef1ed1c4fb8a8' })
+
 main().catch(e => {
   console.error(e)
   process.exit(1)
@@ -96,11 +119,19 @@ main().catch(e => {
 
 const semverRegex = /^(?<major>0|[1-9]\d*)\.(?<minor>0|[1-9]\d*)\.(?<patch>0|[1-9]\d*)(?:-(?<prerelease>(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+(?<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/
 
-function increaseMinor(version: string): string | null {
+function incrementMinor(version: string): string | null {
   const match = semverRegex.exec(version)
   if (match) {
-    return `${match.groups.major}.${Number(match.groups.minor) + 1}.${match.groups.patch
-      }`
+    return `${match.groups.major}.${Number(match.groups.minor) + 1}.${match.groups.patch}`
+  }
+
+  return null
+}
+
+function incrementPatch(version: string): string | null {
+  const match = semverRegex.exec(version)
+  if (match) {
+    return `${match.groups.major}.${match.groups.minor}.${Number(match.groups.patch) + 1}`
   }
 
   return null
