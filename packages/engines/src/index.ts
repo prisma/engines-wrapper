@@ -1,7 +1,29 @@
 import path from 'path'
+import { enginesVersion } from '@prisma/engines-version'
+import { download } from '@prisma/fetch-engine'
 
 export function getEnginesPath() {
   return path.join(__dirname, '../')
+}
+
+export async function ensureBinariesExist() {
+  const binaryDir = path.join(__dirname, '../')
+  let binaryTargets = undefined
+  if (process.env.PRISMA_CLI_BINARY_TARGETS) {
+    binaryTargets = process.env.PRISMA_CLI_BINARY_TARGETS.split(',')
+  }
+  await download({
+    binaries: {
+      'query-engine': binaryDir,
+      'migration-engine': binaryDir,
+      'introspection-engine': binaryDir,
+      'prisma-fmt': binaryDir,
+    },
+    showProgress: true,
+    version: enginesVersion,
+    failSilent: false,
+    binaryTargets,
+  })
 }
 
 export { enginesVersion } from '@prisma/engines-version'
