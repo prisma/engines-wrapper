@@ -32,6 +32,7 @@ export { enginesVersion } from '@prisma/engines-version'
  * This annotation is used for `node-file-trace`
  * See https://github.com/zeit/node-file-trace/issues/104
  * It's necessary to run this package standalone or within the sdk in Vercel
+ * And needed for https://github.com/vercel/pkg#detecting-assets-in-source-code
  */
 
 path.join(__dirname, '../query-engine-darwin')

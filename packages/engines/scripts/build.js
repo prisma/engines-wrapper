@@ -12,7 +12,7 @@ async function main() {
       false,
     ),
     run(
-      'esbuild src/index.ts --outfile=dist/index.js --bundle --platform=node --target=node10 --minify --sourcemap',
+      'esbuild src/index.ts --outfile=dist/index.js --bundle --platform=node --target=node10',
       false,
     ),
   ])
