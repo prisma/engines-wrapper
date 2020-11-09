@@ -4,6 +4,7 @@ import fs from 'fs'
 import fetch from 'node-fetch'
 import execa from 'execa'
 import slugify from '@sindresorhus/slugify'
+import arg from 'arg'
 
 function branchToTag(branch: string): string {
   if (branch === 'master') {
@@ -22,6 +23,9 @@ function isPatchBranch(version: string): boolean {
 }
 
 async function main(dryRun = false) {
+  if (dryRun) {
+    console.log(`Dry run`)
+  }
   const clientPayload = JSON.parse(process.env.GITHUB_EVENT_CLIENT_PAYLOAD)
   assertIsClientPayload(clientPayload)
 
@@ -29,7 +33,7 @@ async function main(dryRun = false) {
   const maybeName = npmTag === 'integration' ? `-${slugify(clientPayload.branch)}` : ''
   const nextStable = await getNextStableVersion(npmTag === 'patch')
   const increment = await getVersionIncrement(nextStable)
-  const newVersion = `${nextStable}-${increment}${maybeName}-${clientPayload.commit}`
+  const newVersion = `${nextStable}-${increment}.${maybeName}${clientPayload.commit}`
 
   console.log(chalk.bold.greenBright('Going to publish:\n'))
   console.log(`${chalk.bold('Version')}  ${newVersion}`)
@@ -62,9 +66,17 @@ function adjustPkgJson(pathToIt: string, cb: (pkg: any) => void) {
   fs.writeFileSync(pathToIt, JSON.stringify(pkg, null, 2))
 }
 
+// Sets the last bit of the version, the patch to 0
+function setPatchZero(version: string): string {
+  const [major, minor, patch] = version.split('.')
+  return `${major}.${minor}.0`
+}
+
 async function getNextStableVersion(isPatch: boolean): Promise<string | null> {
   const data = await fetch('https://registry.npmjs.org/@prisma/cli').then(res => res.json())
-  const currentLatest: string = data['dist-tags']?.latest
+  // We want a version scheme of `2.12.0` if the latest version is `2.11.5`
+  // we're not interested in the patch - .5. That's why we remove it from the version
+  const currentLatest: string = setPatchZero(data['dist-tags']?.latest)
   if (isPatch) {
     return incrementPatch(currentLatest)
   }
@@ -107,15 +119,6 @@ function assertIsClientPayload(val: any): asserts val is ClientInput {
     throw new AssertionError({ message: 'commit is not a valid hash in client_payload', actual: val })
   }
 }
-
-// useful for debugging
-// if you debug, run main(true) for dry run
-// process.env.GITHUB_EVENT_CLIENT_PAYLOAD = JSON.stringify({ branch: '2.10.x', commit: '5bea54a481a20125d6fa88ee7d7ef1ed1c4fb8a8' })
-
-main().catch(e => {
-  console.error(e)
-  process.exit(1)
-})
 
 const semverRegex = /^(?<major>0|[1-9]\d*)\.(?<minor>0|[1-9]\d*)\.(?<patch>0|[1-9]\d*)(?:-(?<prerelease>(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+(?<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/
 
@@ -173,3 +176,16 @@ async function run(
     )
   }
 }
+
+
+// useful for debugging
+// process.env.GITHUB_EVENT_CLIENT_PAYLOAD = JSON.stringify({ branch: '2.10.x', commit: '5bea54a481a20125d6fa88ee7d7ef1ed1c4fb8a8' })
+
+const args = arg({
+  '--dry': Boolean
+})
+
+main(args["--dry"]).catch(e => {
+  console.error(e)
+  process.exit(1)
+})
