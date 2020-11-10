@@ -181,7 +181,7 @@ async function run(
 
 
 // useful for debugging
-process.env.GITHUB_EVENT_CLIENT_PAYLOAD = JSON.stringify({ branch: 'master', commit: '58369335532e47bdcec77a2f1e7c1fb83a463918' })
+// process.env.GITHUB_EVENT_CLIENT_PAYLOAD = JSON.stringify({ branch: 'master', commit: '58369335532e47bdcec77a2f1e7c1fb83a463918' })
 
 const args = arg({
   '--dry': Boolean
