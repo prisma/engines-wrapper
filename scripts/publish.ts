@@ -30,7 +30,7 @@ async function main(dryRun = false) {
   assertIsClientPayload(clientPayload)
 
   const npmTag = branchToTag(clientPayload.branch)
-  const maybeName = npmTag === 'integration' ? `-${slugify(clientPayload.branch)}` : ''
+  const maybeName = npmTag === 'integration' ? `${slugify(clientPayload.branch)}-` : ''
   const nextStable = await getNextStableVersion(npmTag === 'patch')
   const increment = await getVersionIncrement(nextStable)
   const newVersion = `${nextStable}-${increment}.${maybeName}${clientPayload.commit}`
