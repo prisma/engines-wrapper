@@ -84,13 +84,14 @@ async function getNextStableVersion(isPatch: boolean): Promise<string | null> {
 }
 
 async function getVersionIncrement(versionPrefix: string): Promise<number> {
+  console.log('getting increment for prefix', versionPrefix)
   const data = await fetch('https://registry.npmjs.org/@prisma/engines-version').then(res => res.json())
   const versions: string[] = Object.keys(data.versions).filter(v => v.startsWith(versionPrefix))
 
   let max = 0
 
-  // to match 2.10.0-123-asdasdasdja0s9dja0s9djas0d9j
-  const regex = /\d\.\d+\.\d+-(\d+)-\S+/
+  // to match 2.10.0-123.asdasdasdja0s9dja0s9djas0d9j
+  const regex = /\d\.\d+\.\d+-(\d+).\S+/
   for (const version of versions) {
     const match = regex.exec(version)
     if (match) {
@@ -98,6 +99,7 @@ async function getVersionIncrement(versionPrefix: string): Promise<number> {
       max = Math.max(max, n)
     }
   }
+  console.log({ max })
 
   return max + 1
 }
@@ -179,7 +181,7 @@ async function run(
 
 
 // useful for debugging
-// process.env.GITHUB_EVENT_CLIENT_PAYLOAD = JSON.stringify({ branch: '2.10.x', commit: '5bea54a481a20125d6fa88ee7d7ef1ed1c4fb8a8' })
+process.env.GITHUB_EVENT_CLIENT_PAYLOAD = JSON.stringify({ branch: 'master', commit: '58369335532e47bdcec77a2f1e7c1fb83a463918' })
 
 const args = arg({
   '--dry': Boolean
