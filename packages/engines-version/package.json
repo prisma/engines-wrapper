@@ -1,6 +1,6 @@
 {
   "name": "@prisma/engines-version",
-  "version": "2.11.0-11.-query-engine-second-coming-of-reserved-words5f311a3c26309b4d6cd89438cb1527011ba02057",
+  "version": "2.11.0-12.query-engine-second-coming-of-reserved-words-5f311a3c26309b4d6cd89438cb1527011ba02057",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
