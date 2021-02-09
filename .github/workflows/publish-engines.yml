@@ -12,18 +12,21 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2-beta
+      
+      - uses: actions/setup-node@v2
         with:
           node-version: '12'
-          check-latest: true
+      
       - run: bash .github/workflows/setup.sh
         env:
           CI: true
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      
       - run: pnpm run publish-all
         env:
           CI: true
           GITHUB_EVENT_CLIENT_PAYLOAD: ${{ toJson(github.event.client_payload) }}
+      
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           # Optional but recommended, defaults to "Apply automatic changes"
