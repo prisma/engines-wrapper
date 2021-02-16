@@ -2,3 +2,4 @@ introspection-engine*
 query-engine*
 migration-engine*
 prisma-fmt*
+libquery_engine*
