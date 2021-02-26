@@ -27,7 +27,6 @@ async function main() {
     await download({
       binaries: {
         'query-engine': binaryDir,
-        'libquery-engine-napi': binaryDir,
         'migration-engine': binaryDir,
         'introspection-engine': binaryDir,
         'prisma-fmt': binaryDir,
