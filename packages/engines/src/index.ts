@@ -1,6 +1,6 @@
-import path from 'path'
 import { enginesVersion } from '@prisma/engines-version'
 import { download } from '@prisma/fetch-engine'
+import path from 'path'
 
 export function getEnginesPath() {
   return path.join(__dirname, '../')
@@ -54,3 +54,14 @@ path.join(__dirname, '../prisma-fmt-rhel-openssl-1.0.x')
 path.join(__dirname, '../query-engine-rhel-openssl-1.1.x')
 path.join(__dirname, '../introspection-engine-rhel-openssl-1.1.x')
 path.join(__dirname, '../prisma-fmt-rhel-openssl-1.1.x')
+
+// NAPI
+path.join(__dirname, '../libquery_engine_napi-darwin.dylib.node')
+path.join(__dirname, '../libquery_engine_napi-debian-openssl-1.0.x.so.node')
+path.join(__dirname, '../libquery_engine_napi-debian-openssl-1.1.x.so.node')
+path.join(__dirname, '../libquery_engine_napi-linux-arm-openssl-1.0.x.so.node')
+path.join(__dirname, '../libquery_engine_napi-linux-arm-openssl-1.1.x.so.node')
+path.join(__dirname, '../libquery_engine_napi-linux-musl.so.node')
+path.join(__dirname, '../libquery_engine_napi-rhel-openssl-1.0.x.so.node')
+path.join(__dirname, '../libquery_engine_napi-rhel-openssl-1.1.x.so.node')
+path.join(__dirname, '../query_engine_napi-windows.dll.node')
