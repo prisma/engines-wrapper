@@ -29,8 +29,7 @@
     "url": "https://github.com/prisma/engines-wrapper/issues"
   },
   "homepage": "https://github.com/prisma/engines-wrapper#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "pnpm format"
