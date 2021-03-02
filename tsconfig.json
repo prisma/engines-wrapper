@@ -8,7 +8,7 @@
     "sourceMap": true,
     "noImplicitAny": false,
     "rootDir": "scripts",
-    "declaration": true,
+    "declaration": true
   },
   "include": ["scripts"]
 }

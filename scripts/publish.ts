@@ -30,7 +30,8 @@ async function main(dryRun = false) {
   assertIsClientPayload(clientPayload)
 
   const npmTag = branchToTag(clientPayload.branch)
-  const maybeName = npmTag === 'integration' ? `${slugify(clientPayload.branch)}-` : ''
+  const maybeName =
+    npmTag === 'integration' ? `${slugify(clientPayload.branch)}-` : ''
   const nextStable = await getNextStableVersion(npmTag === 'patch')
   const increment = await getVersionIncrement(nextStable)
   const newVersion = `${nextStable}-${increment}.${maybeName}${clientPayload.commit}`
@@ -39,20 +40,31 @@ async function main(dryRun = false) {
   console.log(`${chalk.bold('Version')}  ${newVersion}`)
   console.log(`${chalk.bold('Tag')}      ${npmTag}\n`)
 
-  adjustPkgJson('packages/engines-version/package.json', pkg => {
+  adjustPkgJson('packages/engines-version/package.json', (pkg) => {
     pkg.prisma.enginesVersion = clientPayload.commit
     pkg.version = newVersion
   })
 
-  adjustPkgJson('packages/engines/package.json', pkg => {
+  adjustPkgJson('packages/engines/package.json', (pkg) => {
     pkg.version = newVersion
   })
 
-
-  await run('packages/engines-version', `pnpm publish --no-git-checks --tag ${npmTag}`, dryRun)
-  await run('packages/engines', `pnpm i @prisma/engines-version@${newVersion}`, dryRun)
+  await run(
+    'packages/engines-version',
+    `pnpm publish --no-git-checks --tag ${npmTag}`,
+    dryRun,
+  )
+  await run(
+    'packages/engines',
+    `pnpm i @prisma/engines-version@${newVersion}`,
+    dryRun,
+  )
   await run('packages/engines', `pnpm run build`, dryRun)
-  await run('packages/engines', `pnpm publish --no-git-checks --tag ${npmTag}`, dryRun)
+  await run(
+    'packages/engines',
+    `pnpm publish --no-git-checks --tag ${npmTag}`,
+    dryRun,
+  )
 }
 
 type ClientInput = {
@@ -73,7 +85,9 @@ function setPatchZero(version: string): string {
 }
 
 async function getNextStableVersion(isPatch: boolean): Promise<string | null> {
-  const data = await fetch('https://registry.npmjs.org/@prisma/cli').then(res => res.json())
+  const data = await fetch(
+    'https://registry.npmjs.org/@prisma/cli',
+  ).then((res) => res.json())
   // We want a version scheme of `2.12.0` if the latest version is `2.11.5`
   // we're not interested in the patch - .5. That's why we remove it from the version
   const currentLatest: string = setPatchZero(data['dist-tags']?.latest)
@@ -85,8 +99,12 @@ async function getNextStableVersion(isPatch: boolean): Promise<string | null> {
 
 async function getVersionIncrement(versionPrefix: string): Promise<number> {
   console.log('getting increment for prefix', versionPrefix)
-  const data = await fetch('https://registry.npmjs.org/@prisma/engines-version').then(res => res.json())
-  const versions: string[] = Object.keys(data.versions).filter(v => v.startsWith(versionPrefix))
+  const data = await fetch(
+    'https://registry.npmjs.org/@prisma/engines-version',
+  ).then((res) => res.json())
+  const versions: string[] = Object.keys(data.versions).filter((v) =>
+    v.startsWith(versionPrefix),
+  )
 
   let max = 0
 
@@ -106,19 +124,34 @@ async function getVersionIncrement(versionPrefix: string): Promise<number> {
 
 function assertIsClientPayload(val: any): asserts val is ClientInput {
   if (!val || typeof val !== 'object') {
-    throw new AssertionError({ message: 'client_payload is not an object', actual: val })
+    throw new AssertionError({
+      message: 'client_payload is not an object',
+      actual: val,
+    })
   }
   if (!val.branch) {
-    throw new AssertionError({ message: 'branch missing in client_payload', actual: val })
+    throw new AssertionError({
+      message: 'branch missing in client_payload',
+      actual: val,
+    })
   }
   if (typeof val.branch !== 'string') {
-    throw new AssertionError({ message: 'branch must be a string in client_payload', actual: val })
+    throw new AssertionError({
+      message: 'branch must be a string in client_payload',
+      actual: val,
+    })
   }
   if (typeof val.commit !== 'string') {
-    throw new AssertionError({ message: 'commit must be a string in client_payload', actual: val })
+    throw new AssertionError({
+      message: 'commit must be a string in client_payload',
+      actual: val,
+    })
   }
   if (val.commit.length !== 'e078aa75c40550d826bc35aeee4f45582fb4165e'.length) {
-    throw new AssertionError({ message: 'commit is not a valid hash in client_payload', actual: val })
+    throw new AssertionError({
+      message: 'commit is not a valid hash in client_payload',
+      actual: val,
+    })
   }
 }
 
@@ -127,7 +160,9 @@ const semverRegex = /^(?<major>0|[1-9]\d*)\.(?<minor>0|[1-9]\d*)\.(?<patch>0|[1-
 function incrementMinor(version: string): string | null {
   const match = semverRegex.exec(version)
   if (match) {
-    return `${match.groups.major}.${Number(match.groups.minor) + 1}.${match.groups.patch}`
+    return `${match.groups.major}.${Number(match.groups.minor) + 1}.${
+      match.groups.patch
+    }`
   }
 
   return null
@@ -136,7 +171,9 @@ function incrementMinor(version: string): string | null {
 function incrementPatch(version: string): string | null {
   const match = semverRegex.exec(version)
   if (match) {
-    return `${match.groups.major}.${match.groups.minor}.${Number(match.groups.patch) + 1}`
+    return `${match.groups.major}.${match.groups.minor}.${
+      Number(match.groups.patch) + 1
+    }`
   }
 
   return null
@@ -179,15 +216,14 @@ async function run(
   }
 }
 
-
 // useful for debugging
 // process.env.GITHUB_EVENT_CLIENT_PAYLOAD = JSON.stringify({ branch: 'master', commit: '58369335532e47bdcec77a2f1e7c1fb83a463918' })
 
 const args = arg({
-  '--dry': Boolean
+  '--dry': Boolean,
 })
 
-main(args["--dry"]).catch(e => {
+main(args['--dry']).catch((e) => {
   console.error(e)
   process.exit(1)
 })

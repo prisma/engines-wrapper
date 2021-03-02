@@ -9,5 +9,5 @@
     "noImplicitAny": false,
     "declaration": true,
     "incremental": true
-  },
+  }
 }
