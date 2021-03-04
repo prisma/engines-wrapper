@@ -6,6 +6,5 @@ In the postinall hook of this package, all engines available for the current pla
 
 You should probably not use this package directly, but instead use one of these:
 
-- `@prisma/cli`
-- `@prisma/client`
-- And if you are adventurous: `@prisma/sdk`
+- [`prisma` CLI](https://www.npmjs.com/package/prisma)
+- [`@prisma/client`](https://www.npmjs.com/package/@prisma/client)
