@@ -1,5 +1,5 @@
 import { enginesVersion } from '@prisma/engines-version'
-import { download } from '@prisma/fetch-engine'
+import { download, EngineTypes } from '@prisma/fetch-engine'
 import path from 'path'
 
 export function getEnginesPath() {
@@ -12,13 +12,19 @@ export async function ensureBinariesExist() {
   if (process.env.PRISMA_CLI_BINARY_TARGETS) {
     binaryTargets = process.env.PRISMA_CLI_BINARY_TARGETS.split(',')
   }
+  const binaries = {
+    [
+      process.env.NAPI === 'true' 
+      ? EngineTypes.libqueryEngineNapi 
+      : EngineTypes.queryEngine
+    ]: binaryDir,
+    [EngineTypes.migrationEngine]: binaryDir,
+    [EngineTypes.introspectionEngine]: binaryDir,
+    [EngineTypes.prismaFmt]: binaryDir,
+  }
+  
   await download({
-    binaries: {
-      'query-engine': binaryDir,
-      'migration-engine': binaryDir,
-      'introspection-engine': binaryDir,
-      'prisma-fmt': binaryDir,
-    },
+    binaries: binaries,
     showProgress: true,
     version: enginesVersion,
     failSilent: false,
