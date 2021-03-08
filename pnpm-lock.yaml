@@ -26,9 +26,9 @@ importers:
       typescript: ^4.0.3
   packages/engines:
     devDependencies:
-      '@prisma/debug': 2.18.0-dev.32
-      '@prisma/engines-version': 'link:../engines-version'
-      '@prisma/fetch-engine': 2.18.0-dev.32
+      '@prisma/debug': 2.19.0-integration-napi-tests.4
+      '@prisma/engines-version': link:../engines-version
+      '@prisma/fetch-engine': 2.19.0-integration-napi-tests.4
       '@types/node': 14.11.8
       execa: 4.0.3
       typescript: 4.0.3
@@ -46,7 +46,7 @@ importers:
     specifiers:
       '@types/node': ^14.11.8
       typescript: ^4.0.3
-lockfileVersion: 5.1
+lockfileVersion: 5.2
 packages:
   /@babel/code-frame/7.12.13:
     dependencies:
@@ -90,17 +90,17 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-1V9XOY4rDW0rehzbrcqAmHnz8e7SKvX27gh8Gt2WgB0+pdzdiLV83p72kZPU+jvMbS1qU5mauP2iOvO8rhmurQ==
-  /@prisma/debug/2.18.0-dev.32:
+  /@prisma/debug/2.19.0-integration-napi-tests.4:
     dependencies:
       debug: 4.3.2
       ms: 2.1.3
     dev: true
     resolution:
-      integrity: sha512-XqH+Pc0zMXsiVI7LGASbgVL8ggKWOJOq4UzxkEPnolBI+pQ1hLYXl0dB0SpcC25efKFZt/EnsGV6Z8hacskpdw==
-  /@prisma/fetch-engine/2.18.0-dev.32:
+      integrity: sha512-Md23Car9vdxDu+A9gHpRivkECcqmVMW2lOjWXmNigSXaNP26h2K+cUhLvwN/Oq6jtEsHyeL+HsZL2QOy+q0+dg==
+  /@prisma/fetch-engine/2.19.0-integration-napi-tests.4:
     dependencies:
-      '@prisma/debug': 2.18.0-dev.32
-      '@prisma/get-platform': 2.18.0-dev.32
+      '@prisma/debug': 2.19.0-integration-napi-tests.4
+      '@prisma/get-platform': 2.19.0-integration-napi-tests.4
       chalk: 4.1.0
       execa: 5.0.0
       find-cache-dir: 3.3.1
@@ -118,13 +118,13 @@ packages:
       tempy: 1.0.0
     dev: true
     resolution:
-      integrity: sha512-vQAU5+SAVhT1725gNYRG6ccyNk769pjGU+7RWjxYsBSwhf6xMNTMAg0TO40ubkFSf4B/W1Y2jx2nvmiOLjQR+A==
-  /@prisma/get-platform/2.18.0-dev.32:
+      integrity: sha512-5Eyg6edjCisC0x1wvn3brdaQkEv1iW8sD0yCEMqdZ+Lp4Zp+39wt5wes7a8oO1Y0i4izN53TUKY/2Be3o5WM1g==
+  /@prisma/get-platform/2.19.0-integration-napi-tests.4:
     dependencies:
-      '@prisma/debug': 2.18.0-dev.32
+      '@prisma/debug': 2.19.0-integration-napi-tests.4
     dev: true
     resolution:
-      integrity: sha512-uVD+smIU7+qFTC6QOsyOORW1B8+sg86uq2ov9U3jYDHzPjrDuq5A2TPb9Eu/MqhE6CBTwb0rCkwCAAwSIm1Y1g==
+      integrity: sha512-q9May82EyNuZfHh38U0KukFnuK6LhrRjiDf4Luv3j/aagSUStj4Dca4JA0S/fjRngGl3aZpxeMEkGiOygi2RTg==
   /@sindresorhus/slugify/1.1.0:
     dependencies:
       '@sindresorhus/transliterate': 0.1.1
