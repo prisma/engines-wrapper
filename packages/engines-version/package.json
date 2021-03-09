@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "2.19.0-8.3639fe81ac9789da316acdfcbecb7e8465287184",
+  "version": "2.19.0-9.integration-napi-tests-e2a0535824021eab0bd0154e6f757793f28492b9",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "3639fe81ac9789da316acdfcbecb7e8465287184"
+    "enginesVersion": "e2a0535824021eab0bd0154e6f757793f28492b9"
   },
   "devDependencies": {
     "@types/node": "^14.11.8",
