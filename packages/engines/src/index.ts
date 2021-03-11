@@ -13,9 +13,9 @@ export async function ensureBinariesExist() {
   if (process.env.PRISMA_CLI_BINARY_TARGETS) {
     binaryTargets = process.env.PRISMA_CLI_BINARY_TARGETS.split(',')
   }
-  debug(`using NAPI: ${process.env.NAPI === 'true'}`)
+  debug(`using NAPI: ${process.env.PRISMA_FORCE_NAPI === 'true'}`)
   const binaries = {
-    [process.env.NAPI === 'true'
+    [process.env.PRISMA_FORCE_NAPI === 'true'
       ? EngineTypes.libqueryEngineNapi
       : EngineTypes.queryEngine]: binaryDir,
     [EngineTypes.migrationEngine]: binaryDir,
