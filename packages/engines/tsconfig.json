@@ -12,5 +12,5 @@
     "declaration": true,
     "incremental": true
   },
-  "exclude": ["dist", "build", "scripts"]
+  "exclude": ["src/__tests__", "dist", "build", "scripts"]
 }
