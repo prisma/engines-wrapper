@@ -19,7 +19,6 @@
     "postinstall": "node download/index.js"
   },
   "files": [
-    "!**/__tests__",
     "dist",
     "download"
   ]
