@@ -5,5 +5,5 @@
     ":disableRateLimiting"
   ],
   "masterIssue": true,
-  "reviewers": ["@jolg42", "@williamluke4"],
+  "reviewers": ["@jolg42", "@williamluke4"]
 }
