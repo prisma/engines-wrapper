@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "2.20.0-1.encryptor-fee2ef249dc000049f808fb5f7b0f35354f8aaf5",
+  "version": "2.20.0-2.040b795d68feaf99820baa05c447c8b29d7b3d77",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "fee2ef249dc000049f808fb5f7b0f35354f8aaf5"
+    "enginesVersion": "040b795d68feaf99820baa05c447c8b29d7b3d77"
   },
   "devDependencies": {
     "@types/node": "^14.11.8",
