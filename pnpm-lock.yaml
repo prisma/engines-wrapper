@@ -2,7 +2,7 @@ importers:
   .:
     devDependencies:
       '@sindresorhus/slugify': 1.1.0
-      '@types/node': 14.14.36
+      '@types/node': 14.14.37
       '@types/node-fetch': 2.5.8
       arg: 5.0.0
       chalk: 4.1.0
@@ -14,7 +14,7 @@ importers:
       typescript: 4.2.3
     specifiers:
       '@sindresorhus/slugify': 1.1.0
-      '@types/node': 14.14.36
+      '@types/node': 14.14.37
       '@types/node-fetch': 2.5.8
       arg: 5.0.0
       chalk: 4.1.0
@@ -27,26 +27,26 @@ importers:
   packages/engines:
     devDependencies:
       '@prisma/debug': 2.19.0
-      '@prisma/engines-version': 'link:../engines-version'
+      '@prisma/engines-version': link:../engines-version
       '@prisma/fetch-engine': 2.19.0
-      '@types/node': 14.14.36
+      '@types/node': 14.14.37
       execa: 5.0.0
       typescript: 4.2.3
     specifiers:
       '@prisma/debug': 2.19.0
-      '@prisma/engines-version': 'workspace:2.20.0-25.1083b6e4dda228c8ef7542ede1bde33dd50eb5db'
+      '@prisma/engines-version': workspace:2.20.0-25.1083b6e4dda228c8ef7542ede1bde33dd50eb5db
       '@prisma/fetch-engine': 2.19.0
-      '@types/node': 14.14.36
+      '@types/node': 14.14.37
       execa: 5.0.0
       typescript: 4.2.3
   packages/engines-version:
     devDependencies:
-      '@types/node': 14.14.36
+      '@types/node': 14.14.37
       typescript: 4.2.3
     specifiers:
-      '@types/node': 14.14.36
+      '@types/node': 14.14.37
       typescript: 4.2.3
-lockfileVersion: 5.1
+lockfileVersion: 5.2
 packages:
   /@babel/code-frame/7.12.13:
     dependencies:
@@ -160,10 +160,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Lt+wj8NVPx0zUmUwumiVXapmaLUcAk3yPuHCFVXras9k5VT9TdhJqKqGVUQCD60OTMCl0qxJ57OiTL0Mic3Iag==
-  /@types/node/14.14.36:
+  /@types/node/14.14.37:
     dev: true
     resolution:
-      integrity: sha512-kjivUwDJfIjngzbhooRnOLhGYz6oRFi+L+EpMjxroDYXwDw9lHrJJ43E+dJ6KAd3V3WxWAJ/qZE9XKYHhjPOFQ==
+      integrity: sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==
   /@types/parse-json/4.0.0:
     dev: true
     resolution:
