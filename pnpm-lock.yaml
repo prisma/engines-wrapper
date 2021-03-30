@@ -27,14 +27,14 @@ importers:
   packages/engines:
     devDependencies:
       '@prisma/debug': 2.19.0
-      '@prisma/engines-version': link:../engines-version
+      '@prisma/engines-version': 'link:../engines-version'
       '@prisma/fetch-engine': 2.19.0
       '@types/node': 14.14.37
       execa: 5.0.0
       typescript: 4.2.3
     specifiers:
       '@prisma/debug': 2.19.0
-      '@prisma/engines-version': workspace:2.20.0-25.1083b6e4dda228c8ef7542ede1bde33dd50eb5db
+      '@prisma/engines-version': 'workspace:2.21.0-1.89b1b736b1b049dad86bd2c65c2679cb469af72c'
       '@prisma/fetch-engine': 2.19.0
       '@types/node': 14.14.37
       execa: 5.0.0
@@ -46,7 +46,7 @@ importers:
     specifiers:
       '@types/node': 14.14.37
       typescript: 4.2.3
-lockfileVersion: 5.2
+lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.12.13:
     dependencies:
