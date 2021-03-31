@@ -1,9 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base",
-    ":disableRateLimiting"
-  ],
+  "extends": ["config:base", ":disableRateLimiting"],
   "masterIssue": true,
   "reviewers": ["@jolg42", "@williamluke4"]
 }

@@ -85,9 +85,9 @@ function setPatchZero(version: string): string {
 }
 
 async function getNextStableVersion(isPatch: boolean): Promise<string | null> {
-  const data = await fetch(
-    'https://registry.npmjs.org/prisma',
-  ).then((res) => res.json())
+  const data = await fetch('https://registry.npmjs.org/prisma').then((res) =>
+    res.json(),
+  )
   // We want a version scheme of `2.12.0` if the latest version is `2.11.5`
   // we're not interested in the patch - .5. That's why we remove it from the version
   const currentLatest: string = setPatchZero(data['dist-tags']?.latest)
