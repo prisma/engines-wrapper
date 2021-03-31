@@ -4,6 +4,7 @@ on:
   repository_dispatch:
     types:
       - publish-engines
+  workflow_dispatch:
 
 jobs:
   cli-commands:
