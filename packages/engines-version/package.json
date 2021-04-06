@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "2.21.0-8.d34b992f862102e74d2cc43982349940561db1f2",
+  "version": "2.21.0-9.98490f4bb05f4a47cd715617154a06c2c0d05756",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "d34b992f862102e74d2cc43982349940561db1f2"
+    "enginesVersion": "98490f4bb05f4a47cd715617154a06c2c0d05756"
   },
   "devDependencies": {
     "@types/node": "14.14.37",
