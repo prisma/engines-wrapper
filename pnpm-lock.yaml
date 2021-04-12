@@ -6,7 +6,7 @@ importers:
     specifiers:
       '@sindresorhus/slugify': 1.1.0
       '@types/node': 14.14.37
-      '@types/node-fetch': 2.5.8
+      '@types/node-fetch': 2.5.10
       arg: 5.0.0
       chalk: 4.1.0
       execa: 5.0.0
@@ -18,7 +18,7 @@ importers:
     devDependencies:
       '@sindresorhus/slugify': 1.1.0
       '@types/node': 14.14.37
-      '@types/node-fetch': 2.5.8
+      '@types/node-fetch': 2.5.10
       arg: 5.0.0
       chalk: 4.1.0
       execa: 5.0.0
@@ -155,15 +155,11 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /@types/node-fetch/2.5.8:
-    resolution: {integrity: sha512-fbjI6ja0N5ZA8TV53RUqzsKNkl9fv8Oj3T7zxW7FGv1GSH7gwJaNF8dzCjrqKaxKeUpTz4yT1DaJFq/omNpGfw==}
+  /@types/node-fetch/2.5.10:
+    resolution: {integrity: sha512-IpkX0AasN44hgEad0gEF/V6EgR5n69VEqPEgnmoM8GsIGro3PowbWs4tR6IhxUTyPLpOn+fiGG6nrQhcmoCuIQ==}
     dependencies:
-      '@types/node': 14.14.35
+      '@types/node': 14.14.37
       form-data: 3.0.0
-    dev: true
-
-  /@types/node/14.14.35:
-    resolution: {integrity: sha512-Lt+wj8NVPx0zUmUwumiVXapmaLUcAk3yPuHCFVXras9k5VT9TdhJqKqGVUQCD60OTMCl0qxJ57OiTL0Mic3Iag==}
     dev: true
 
   /@types/node/14.14.37:
