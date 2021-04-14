@@ -26,16 +26,16 @@ importers:
       typescript: 4.2.4
   packages/engines:
     devDependencies:
-      '@prisma/debug': 2.20.1
+      '@prisma/debug': 2.21.0
       '@prisma/engines-version': link:../engines-version
-      '@prisma/fetch-engine': 2.20.1
+      '@prisma/fetch-engine': 2.21.0
       '@types/node': 14.14.37
       execa: 5.0.0
       typescript: 4.2.4
     specifiers:
-      '@prisma/debug': 2.20.1
+      '@prisma/debug': 2.21.0
       '@prisma/engines-version': workspace:2.21.0-37.40a9cd77605c069799870e8237fdfb90dacc13af
-      '@prisma/fetch-engine': 2.20.1
+      '@prisma/fetch-engine': 2.21.0
       '@types/node': 14.14.37
       execa: 5.0.0
       typescript: 4.2.4
@@ -90,17 +90,17 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-8Broas6vTtW4GIXTAHDoE32hnN2M5ykgCpWGbuXHQ15vEMqr23pB76e/GZcYsZCHALv50ktd24qhEyKr6wBtow==
-  /@prisma/debug/2.20.1:
+  /@prisma/debug/2.21.0:
     dependencies:
       debug: 4.3.2
       ms: 2.1.3
     dev: true
     resolution:
-      integrity: sha512-/21PtPjusr+gFFTFe/HjQ7hxFfZEqZU8axFvP4xVX6CrXIjNEcUf6UKm1JbpbCKRwEEd6M040ovjS8jLAp253w==
-  /@prisma/fetch-engine/2.20.1:
+      integrity: sha512-fCAQKn62KDgPWnx+h2g9M8kXcnToEWG74wQ0xALO9HC0HM49ZJldB89/uiB5cU8tWG6ccgQacmXxj7c7a/WFCw==
+  /@prisma/fetch-engine/2.21.0:
     dependencies:
-      '@prisma/debug': 2.20.1
-      '@prisma/get-platform': 2.20.1
+      '@prisma/debug': 2.21.0
+      '@prisma/get-platform': 2.21.0
       chalk: 4.1.0
       execa: 5.0.0
       find-cache-dir: 3.3.1
@@ -118,13 +118,13 @@ packages:
       tempy: 1.0.0
     dev: true
     resolution:
-      integrity: sha512-DWwozghLIkqQJ+jE6AF9lx+qwc9+0+bg0t3LOTDVpZsr00C23hsZXJyaNjz8x62/SbmxAqvPeatS3U+xXPE5Gg==
-  /@prisma/get-platform/2.20.1:
+      integrity: sha512-smXXSx9zns3HKOA60hKI5qRgAjrjfWzX4RpQT6E7ieQW4x3YfEmzqCl6BTDftOB++esK8BpOLaes5J9NLbdAIw==
+  /@prisma/get-platform/2.21.0:
     dependencies:
-      '@prisma/debug': 2.20.1
+      '@prisma/debug': 2.21.0
     dev: true
     resolution:
-      integrity: sha512-kb/qTAPLnIdaeYiW385Qs35xuPHpgN/qzqxtkh//z1GuiQ8Izdq4UmoqqAdC63R1ipRYw6TJPcLSMpKTM1JF2A==
+      integrity: sha512-goHgU43l2kDF8n+wKNk6MfDAtM55ekC61Ud7qhjiF6DZM0z61oyf0ZsGqW0FqXMqFS1ckKJRw64/qeFgEhZc6g==
   /@sindresorhus/slugify/1.1.0:
     dependencies:
       '@sindresorhus/transliterate': 0.1.1
