@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "2.22.0-16.3c3be401308f160d11c27742e478ad094970c213",
+  "version": "2.22.0-17.query-engine-unify-aggregation-api-surface-0b891dd2a2592e1baa18b169b3622431a662d902",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "3c3be401308f160d11c27742e478ad094970c213"
+    "enginesVersion": "0b891dd2a2592e1baa18b169b3622431a662d902"
   },
   "devDependencies": {
     "@types/node": "14.14.43",
