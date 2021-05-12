@@ -34,7 +34,7 @@ importers:
       typescript: 4.2.4
     specifiers:
       '@prisma/debug': 2.22.1
-      '@prisma/engines-version': workspace:2.23.0-29.936e9b9eb66e6b265d1d25f687dd97f6ff479d7f
+      '@prisma/engines-version': workspace:2.23.0-30.query-engine-unify-aggregation-api-surface-ca54ad152b8a61a9b4b64ae7fd4eb7c7f3f5d885
       '@prisma/fetch-engine': 2.22.1
       '@types/node': 14.14.44
       execa: 5.0.0
