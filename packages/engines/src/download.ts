@@ -1,8 +1,12 @@
-import { download } from '@prisma/fetch-engine'
+import Debug from '@prisma/debug'
 import { enginesVersion } from '@prisma/engines-version'
+import {
+  BinaryDownloadConfiguration,
+  download,
+  EngineTypes,
+} from '@prisma/fetch-engine'
 import fs from 'fs'
 import path from 'path'
-import Debug from '@prisma/debug'
 const debug = Debug('prisma:download')
 
 const binaryDir = path.join(__dirname, '../')
@@ -24,13 +28,17 @@ async function main() {
     if (process.env.PRISMA_CLI_BINARY_TARGETS) {
       binaryTargets = process.env.PRISMA_CLI_BINARY_TARGETS.split(',')
     }
+    debug(`using NAPI: ${process.env.PRISMA_FORCE_NAPI === 'true'}`)
+    const binaries: BinaryDownloadConfiguration = {
+      [process.env.PRISMA_FORCE_NAPI === 'true'
+        ? EngineTypes.libqueryEngineNapi
+        : EngineTypes.queryEngine]: binaryDir,
+      [EngineTypes.migrationEngine]: binaryDir,
+      [EngineTypes.introspectionEngine]: binaryDir,
+      [EngineTypes.prismaFmt]: binaryDir,
+    }
     await download({
-      binaries: {
-        'query-engine': binaryDir,
-        'migration-engine': binaryDir,
-        'introspection-engine': binaryDir,
-        'prisma-fmt': binaryDir,
-      },
+      binaries,
       showProgress: true,
       version: enginesVersion,
       failSilent: true,
