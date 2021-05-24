@@ -1,6 +1,6 @@
 {
   "name": "@prisma/engines-version",
-  "version": "2.24.0-12.napi-version-function-4165db0d1bddd480461f721ad5447bb261727728",
+  "version": "2.24.0-13.napi-version-function-4165db0d1bddd480461f721ad5447bb261727728",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
