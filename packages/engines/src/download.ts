@@ -30,12 +30,14 @@ async function main() {
     }
     debug(`using NAPI: ${process.env.PRISMA_FORCE_NAPI === 'true'}`)
     const binaries: BinaryDownloadConfiguration = {
-      [process.env.PRISMA_FORCE_NAPI === 'true'
-        ? EngineTypes.libqueryEngineNapi
-        : EngineTypes.queryEngine]: binaryDir,
+      [EngineTypes.queryEngine]: binaryDir,
       [EngineTypes.migrationEngine]: binaryDir,
       [EngineTypes.introspectionEngine]: binaryDir,
       [EngineTypes.prismaFmt]: binaryDir,
+    }
+    // TODO tmp workaround until https://github.com/prisma/prisma/pull/7152 is merged
+    if(process.env.PRISMA_FORCE_NAPI === 'true'){
+      binaries[EngineTypes.libqueryEngineNapi] = binaryDir
     }
     await download({
       binaries,
