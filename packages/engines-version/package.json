@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "2.24.0-23.3e7fd9395fd522da21025ecfd731803bae72fd2f",
+  "version": "2.24.0-24.migration-engine-json-logging-a92947d63ede9b0b5b5aab253c2a7d9ad6cabe15",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "3e7fd9395fd522da21025ecfd731803bae72fd2f"
+    "enginesVersion": "a92947d63ede9b0b5b5aab253c2a7d9ad6cabe15"
   },
   "devDependencies": {
     "@types/node": "14.17.1",
