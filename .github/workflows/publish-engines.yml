@@ -5,6 +5,8 @@ on:
     types:
       - publish-engines
 
+concurrency: publish-engines
+
 jobs:
   cli-commands:
     timeout-minutes: 10
