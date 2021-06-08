@@ -34,7 +34,7 @@ importers:
       typescript: 4.3.2
     specifiers:
       '@prisma/debug': 2.24.1
-      '@prisma/engines-version': workspace:2.25.0-12.17ed782cf0be299db7bda715f38d8f6c7cae90a2
+      '@prisma/engines-version': workspace:2.25.0-13.sql-server-char-collation-fix-d1bbc3328748c24dcda5c39663fe8af9df62acff
       '@prisma/fetch-engine': 2.24.1
       '@types/node': 14.17.3
       execa: 5.1.1
