@@ -1,13 +1,13 @@
 {
   "name": "@prisma/engines",
-  "version": "2.25.0-13.sql-server-char-collation-fix-d1bbc3328748c24dcda5c39663fe8af9df62acff",
+  "version": "2.25.0-14.89926e7ecbebb89657ae2b56ab3454364ad7b5c5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "devDependencies": {
     "@prisma/debug": "2.24.1",
-    "@prisma/engines-version": "workspace:2.25.0-13.sql-server-char-collation-fix-d1bbc3328748c24dcda5c39663fe8af9df62acff",
+    "@prisma/engines-version": "workspace:2.25.0-14.89926e7ecbebb89657ae2b56ab3454364ad7b5c5",
     "@prisma/fetch-engine": "2.24.1",
     "@types/node": "14.17.3",
     "execa": "5.1.1",
