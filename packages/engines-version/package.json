@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "2.25.0-30.149261944d529dc4c506db7e017bb4dfd26ef398",
+  "version": "2.25.0-31.node-api-blocking-logging-95206c7fa37ce161cb2244a958535515d03af5cc",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "149261944d529dc4c506db7e017bb4dfd26ef398"
+    "enginesVersion": "95206c7fa37ce161cb2244a958535515d03af5cc"
   },
   "devDependencies": {
     "@types/node": "14.17.3",
