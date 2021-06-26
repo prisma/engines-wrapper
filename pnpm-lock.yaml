@@ -32,14 +32,14 @@ importers:
     specifiers:
       '@prisma/debug': 2.25.0
       '@prisma/engines-version': workspace:2.26.0-19.e6bd3dc12d849124a04c3a8e6bd9c194381afda3
-      '@prisma/fetch-engine': 2.26.0-dev.41
+      '@prisma/fetch-engine': 2.26.0-integration-warn-typescript.4
       '@types/node': 14.17.4
       execa: 5.1.1
       typescript: 4.3.4
     devDependencies:
       '@prisma/debug': 2.25.0
       '@prisma/engines-version': link:../engines-version
-      '@prisma/fetch-engine': 2.26.0-dev.41
+      '@prisma/fetch-engine': 2.26.0-integration-warn-typescript.4
       '@types/node': 14.17.4
       execa: 5.1.1
       typescript: 4.3.4
@@ -102,8 +102,8 @@ packages:
       - supports-color
     dev: true
 
-  /@prisma/debug/2.26.0-dev.41:
-    resolution: {integrity: sha512-fEACsBEym5ojqxck5R5Dfn9HENwRE/ACkYNvqaiJFvSa26a/87ja/tmMU0VRigzPyiRO4QFmij9hFixiRYIIqA==}
+  /@prisma/debug/2.26.0-integration-warn-typescript.4:
+    resolution: {integrity: sha512-JcK8OrbtsT2beywy+u2c1M1PDerrl8lWkwVHdevtN8CxTNA8ufn5uwKqLDUYV2uEXXlvZR+xPHB5Frtv7OI2Nw==}
     dependencies:
       debug: 4.3.2
       ms: 2.1.3
@@ -111,11 +111,11 @@ packages:
       - supports-color
     dev: true
 
-  /@prisma/fetch-engine/2.26.0-dev.41:
-    resolution: {integrity: sha512-nGH6WqTdYQ+t+O9A4KY53H2KDSgKZS98IuuKf9TiXSeGWzPfnkTwC4Z4Km2fUYQA8q5wYa2zmaP32YllT529fQ==}
+  /@prisma/fetch-engine/2.26.0-integration-warn-typescript.4:
+    resolution: {integrity: sha512-p7gtnShFj06mJNT40ap59ANxbjaE58IsgNVeRuVR8k675tgLSi18EYyKEruuzMrq4q0+b+YRmXymSSCqEotgIg==}
     dependencies:
-      '@prisma/debug': 2.26.0-dev.41
-      '@prisma/get-platform': 2.26.0-dev.41
+      '@prisma/debug': 2.26.0-integration-warn-typescript.4
+      '@prisma/get-platform': 2.26.0-integration-warn-typescript.4
       chalk: 4.1.1
       execa: 5.1.1
       find-cache-dir: 3.3.1
@@ -135,10 +135,10 @@ packages:
       - supports-color
     dev: true
 
-  /@prisma/get-platform/2.26.0-dev.41:
-    resolution: {integrity: sha512-PB5jXGUsQVwYN9y3+J2Qrr2j+Tv0qZelu0psfWHjXqSry/qFBcGyHsjqj60zEcJrP/7rkqUjxR8LpjqPtaYBNg==}
+  /@prisma/get-platform/2.26.0-integration-warn-typescript.4:
+    resolution: {integrity: sha512-OEIqzPbjF0TTyfV31xfuUYPVh9baXUipou0/S7vgXktaL5B8Ko4pDMyJeyPAyn6npUTleaE820CEgXM/8R9VVg==}
     dependencies:
-      '@prisma/debug': 2.26.0-dev.41
+      '@prisma/debug': 2.26.0-integration-warn-typescript.4
     transitivePeerDependencies:
       - supports-color
     dev: true
