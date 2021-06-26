@@ -1,9 +1,7 @@
 import Debug from '@prisma/debug'
 import { enginesVersion } from '@prisma/engines-version'
 import {
-  BinaryDownloadConfiguration,
-  download,
-  EngineTypes,
+  BinaryDownloadConfiguration, BinaryType, download
 } from '@prisma/fetch-engine'
 import fs from 'fs'
 import path from 'path'
@@ -31,11 +29,11 @@ async function main() {
     debug(`using NAPI: ${process.env.PRISMA_FORCE_NAPI === 'true'}`)
     const binaries: BinaryDownloadConfiguration = {
       [process.env.PRISMA_FORCE_NAPI === 'true'
-        ? EngineTypes.libqueryEngineNapi
-        : EngineTypes.queryEngine]: binaryDir,
-      [EngineTypes.migrationEngine]: binaryDir,
-      [EngineTypes.introspectionEngine]: binaryDir,
-      [EngineTypes.prismaFmt]: binaryDir,
+        ? BinaryType.libqueryEngineNapi
+        : BinaryType.queryEngine]: binaryDir,
+      [BinaryType.migrationEngine]: binaryDir,
+      [BinaryType.introspectionEngine]: binaryDir,
+      [BinaryType.prismaFmt]: binaryDir,
     }
 
     await download({
