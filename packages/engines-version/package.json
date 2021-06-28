@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "2.26.0-22.migration-engine-migrate-action-print-0df191a29ccc11e695f043ee298f0df5f9345e7a",
+  "version": "2.26.0-23.9b816b3aa13cc270074f172f30d6eda8a8ce867d",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "0df191a29ccc11e695f043ee298f0df5f9345e7a"
+    "enginesVersion": "9b816b3aa13cc270074f172f30d6eda8a8ce867d"
   },
   "devDependencies": {
     "@types/node": "14.17.4",
