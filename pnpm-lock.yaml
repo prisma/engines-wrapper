@@ -34,7 +34,7 @@ importers:
       typescript: 4.3.4
     specifiers:
       '@prisma/debug': 2.26.0
-      '@prisma/engines-version': workspace:2.27.0-5.46272af6f2d17339f04e0e439df8131beb22279f
+      '@prisma/engines-version': workspace:2.27.0-6.77e5c0039247bd407c28b0238c241b321b6d1bab
       '@prisma/fetch-engine': 2.26.0
       '@types/node': 14.17.4
       execa: 5.1.1
