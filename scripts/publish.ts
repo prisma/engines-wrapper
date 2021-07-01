@@ -69,6 +69,8 @@ async function main(dryRun = false) {
   // Print out version for workflow dispatch if npmTag is latest
   if (npmTag === 'latest') {
     console.log(`Printing version for workflow dispatch: ${npmTag}`)
+    // This special log makes new_prisma_version avaliable in github actions
+    // Read: https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#using-workflow-commands-to-access-toolkit-functions
     console.log(`::set-output name=new_prisma_version::${npmTag}`)
   }
 }
