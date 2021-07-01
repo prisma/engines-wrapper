@@ -65,6 +65,12 @@ async function main(dryRun = false) {
     `pnpm publish --no-git-checks --tag ${npmTag}`,
     dryRun,
   )
+
+  // Print out version for workflow dispatch if npmTag is latest
+  if (npmTag === 'latest') {
+    console.log(`Printing version for workflow dispatch: ${npmTag}`)
+    console.log(`::set-output name=new_prisma_version::${npmTag}`)
+  }
 }
 
 type ClientInput = {

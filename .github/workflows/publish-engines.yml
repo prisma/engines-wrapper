@@ -25,6 +25,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - run: pnpm run publish-all
+        id: publish_script
         env:
           CI: true
           GITHUB_EVENT_CLIENT_PAYLOAD: ${{ toJson(github.event.client_payload) }}
@@ -38,6 +39,15 @@ jobs:
           commit_user_name: prisma-bot
           commit_user_email: prismabots@gmail.com
           commit_author: prisma-bot <prismabots@gmail.com>
+
+      - name: Workflow dispatch to prisma/prisma for version update
+        if: ${{ steps.publish_script.outputs.new_prisma_version }}
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: Update Engines Version
+          repo: prisma/prisma
+          token: ${{ secrets.GH_TOKEN }}
+          inputs: '{ "version": "${{ steps.publish_script.outputs.new_prisma_version }}" }'
 
       - name: Slack Notification on Failure
         if: ${{ failure() }}
