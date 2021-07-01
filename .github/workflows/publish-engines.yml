@@ -46,7 +46,7 @@ jobs:
         with:
           workflow: Update Engines Version
           repo: prisma/prisma
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN }}
           inputs: '{ "version": "${{ steps.publish_script.outputs.new_prisma_version }}" }'
 
       - name: Slack Notification on Failure
