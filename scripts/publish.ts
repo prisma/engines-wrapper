@@ -6,8 +6,12 @@ import execa from 'execa'
 import slugify from '@sindresorhus/slugify'
 import arg from 'arg'
 
-function branchToTag(branch: string): string {
-  if (branch === 'master') {
+/**
+ * Turns a prisma-engines Git branch name (that got new engines published) into a 
+ * engines-wrapper Npm dist tag name (where the local packages will be published)
+ */
+function prismaEnginesBranchToNpmDistTag(branch: string): string {
+  if (branch === 'master' || branch === 'main') {
     return 'latest'
   }
 
@@ -18,40 +22,46 @@ function branchToTag(branch: string): string {
   return 'integration'
 }
 
-function isPatchBranch(version: string): boolean {
-  return /^2\.(\d+)\.x/.test(version)
+/** Is this a prisma-engines patch branch? (ends in .x) */
+function isPatchBranch(branchName: string): boolean {
+  return /^(\d+)\.(\d+)\.x/.test(branchName)
 }
 
 async function main(dryRun = false) {
   if (dryRun) {
     console.log(`Dry run`)
   }
-  const clientPayload = JSON.parse(process.env.GITHUB_EVENT_CLIENT_PAYLOAD)
-  assertIsClientPayload(clientPayload)
 
-  const npmTag = branchToTag(clientPayload.branch)
-  const maybeName =
-    npmTag === 'integration' ? `${slugify(clientPayload.branch)}-` : ''
-  const nextStable = await getNextStableVersion(npmTag === 'patch')
-  const increment = await getVersionIncrement(nextStable)
-  const newVersion = `${nextStable}-${increment}.${maybeName}${clientPayload.commit}`
+  // Client Payload via GitHub Event (branch + commit)
+  const githubEventClientPayload = JSON.parse(process.env.GITHUB_EVENT_CLIENT_PAYLOAD)
+  assertIsClientPayload(githubEventClientPayload)
 
+  // Gather information for version string
+  const npmDistTag = prismaEnginesBranchToNpmDistTag(githubEventClientPayload.branch)
+  const optionalNamePart =
+    npmDistTag === 'integration' ? `${slugify(githubEventClientPayload.branch)}-` : ''
+  const nextStable = await getNextPrismaStableVersion(npmDistTag === 'patch')
+  const versionIncrement = await getNextVersionIncrement(nextStable)
+  const newVersion = `${nextStable}-${versionIncrement}.${optionalNamePart}${githubEventClientPayload.commit}`
+
+  // Output
   console.log(chalk.bold.greenBright('Going to publish:\n'))
-  console.log(`${chalk.bold('Version')}  ${newVersion}`)
-  console.log(`${chalk.bold('Tag')}      ${npmTag}\n`)
+  console.log(`${chalk.bold('New version')}   ${newVersion}`)
+  console.log(`${chalk.bold('Npm Dist Tag')}  ${npmDistTag}\n`)
 
+  // Adjust pkg.json files
   adjustPkgJson('packages/engines-version/package.json', (pkg) => {
-    pkg.prisma.enginesVersion = clientPayload.commit
+    pkg.prisma.enginesVersion = githubEventClientPayload.commit
     pkg.version = newVersion
   })
-
   adjustPkgJson('packages/engines/package.json', (pkg) => {
     pkg.version = newVersion
   })
 
+  // Publish packages in specific order
   await run(
     'packages/engines-version',
-    `pnpm publish --no-git-checks --tag ${npmTag}`,
+    `pnpm publish --no-git-checks --tag ${npmDistTag}`,
     dryRun,
   )
   await run(
@@ -59,15 +69,19 @@ async function main(dryRun = false) {
     `pnpm i @prisma/engines-version@${newVersion}`,
     dryRun,
   )
-  await run('packages/engines', `pnpm run build`, dryRun)
+  await run(
+    'packages/engines', 
+    `pnpm run build`, 
+    dryRun
+  )
   await run(
     'packages/engines',
-    `pnpm publish --no-git-checks --tag ${npmTag}`,
+    `pnpm publish --no-git-checks --tag ${npmDistTag}`,
     dryRun,
   )
 
   // Print out version for workflow dispatch if npmTag is latest
-  if (npmTag === 'latest') {
+  if (npmDistTag === 'latest') {
     console.log(`Printing version for workflow dispatch: ${newVersion}`)
     // This special log makes new_prisma_version avaliable in github actions
     // Read: https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#using-workflow-commands-to-access-toolkit-functions
@@ -75,24 +89,22 @@ async function main(dryRun = false) {
   }
 }
 
-type ClientInput = {
-  branch: string
-  commit: string
-}
 
+/** Apply call back function to content of file and write it back */
 function adjustPkgJson(pathToIt: string, cb: (pkg: any) => void) {
   const pkg = JSON.parse(fs.readFileSync(pathToIt, 'utf-8'))
   cb(pkg)
   fs.writeFileSync(pathToIt, JSON.stringify(pkg, null, 2))
 }
 
-// Sets the last bit of the version, the patch to 0
+/** Sets the last bit of the version, the patch, to 0 */
 function setPatchZero(version: string): string {
   const [major, minor, patch] = version.split('.')
   return `${major}.${minor}.0`
 }
 
-async function getNextStableVersion(isPatch: boolean): Promise<string | null> {
+/** Get next stable version of prisma CLI (using Npm) */
+async function getNextPrismaStableVersion(isPatch: boolean): Promise<string | null> {
   const data = await fetch('https://registry.npmjs.org/prisma').then((res) =>
     res.json(),
   )
@@ -105,7 +117,8 @@ async function getNextStableVersion(isPatch: boolean): Promise<string | null> {
   return incrementMinor(currentLatest)
 }
 
-async function getVersionIncrement(versionPrefix: string): Promise<number> {
+/** Get next version increment of engines version (using Npm) */
+async function getNextVersionIncrement(versionPrefix: string): Promise<number> {
   console.log('getting increment for prefix', versionPrefix)
   const data = await fetch(
     'https://registry.npmjs.org/@prisma/engines-version',
@@ -114,10 +127,11 @@ async function getVersionIncrement(versionPrefix: string): Promise<number> {
     v.startsWith(versionPrefix),
   )
 
-  let max = 0
-
-  // to match 2.10.0-123.asdasdasdja0s9dja0s9djas0d9j
+  // regex to match 2.10.0-123.asdasdasdja0s9dja0s9djas0d9j
+  //                       ^^^ we are interested in this 
   const regex = /\d\.\d+\.\d+-(\d+).\S+/
+
+  let max = 0
   for (const version of versions) {
     const match = regex.exec(version)
     if (match) {
@@ -125,11 +139,18 @@ async function getVersionIncrement(versionPrefix: string): Promise<number> {
       max = Math.max(max, n)
     }
   }
-  console.log({ max })
+  console.log('found current max', max)
 
   return max + 1
 }
 
+
+type ClientInput = {
+  branch: string
+  commit: string
+}
+
+/** Assert receivec payload is valid */
 function assertIsClientPayload(val: any): asserts val is ClientInput {
   if (!val || typeof val !== 'object') {
     throw new AssertionError({
@@ -163,6 +184,7 @@ function assertIsClientPayload(val: any): asserts val is ClientInput {
   }
 }
 
+// TODO Figure out where this comes from
 const semverRegex =
   /^(?<major>0|[1-9]\d*)\.(?<minor>0|[1-9]\d*)\.(?<patch>0|[1-9]\d*)(?:-(?<prerelease>(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+(?<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/
 
@@ -187,6 +209,7 @@ function incrementPatch(version: string): string | null {
 
   return null
 }
+
 
 /**
  * Runs a command and pipes the stdout & stderr to the current process.
@@ -224,6 +247,7 @@ async function run(
     )
   }
 }
+
 
 // useful for debugging
 // process.env.GITHUB_EVENT_CLIENT_PAYLOAD = JSON.stringify({ branch: 'master', commit: '58369335532e47bdcec77a2f1e7c1fb83a463918' })
