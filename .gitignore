@@ -7,3 +7,4 @@ pnpm-debug.log
 dist
 download
 *.tsbuildinfo
+.eslintcache
