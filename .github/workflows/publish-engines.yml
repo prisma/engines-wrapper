@@ -24,22 +24,6 @@ jobs:
           CI: true
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - run: pnpm run test
-        name: 'fetch-engine'
-        working-directory: packages/fetch-engine
-        env:
-          CI: true
-          SKIP_GIT: true
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-
-      - run: pnpm run test
-        name: 'get-platform'
-        working-directory: src/packages/get-platform
-        env:
-          CI: true
-          SKIP_GIT: true
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-
       - run: pnpm run publish-all
         id: publish_script
         env:

@@ -31,14 +31,14 @@ importers:
   packages/engines:
     specifiers:
       '@prisma/debug': 2.26.0
-      '@prisma/engines-version': workspace:2.27.0-14.95b10778266ed1eb3013872ab5c09e460bd941fe
+      '@prisma/engines-version': workspace:2.27.0-16.a9c98af755a622d76a201f0f1917d44b073c6238
       '@prisma/fetch-engine': workspace:*
       '@types/node': 14.17.4
       execa: 5.1.1
       typescript: 4.3.5
     devDependencies:
       '@prisma/debug': 2.26.0
-      '@prisma/engines-version': workspace:2.27.0-16.a9c98af755a622d76a201f0f1917d44b073c6238
+      '@prisma/engines-version': link:../engines-version
       '@prisma/fetch-engine': link:../fetch-engine
       '@types/node': 14.17.4
       execa: 5.1.1
@@ -55,7 +55,7 @@ importers:
   packages/fetch-engine:
     specifiers:
       '@prisma/debug': 2.26.0
-      '@prisma/engines-version': workspace:2.27.0-14.95b10778266ed1eb3013872ab5c09e460bd941fe
+      '@prisma/engines-version': workspace:2.27.0-16.a9c98af755a622d76a201f0f1917d44b073c6238
       '@prisma/get-platform': workspace:*
       '@types/find-cache-dir': 3.2.0
       '@types/jest': 26.0.23
@@ -775,9 +775,22 @@ packages:
       '@nodelib/fs.stat': 2.0.4
       run-parallel: 1.2.0
 
+  /@nodelib/fs.scandir/2.1.5:
+    resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
+    engines: {node: '>= 8'}
+    dependencies:
+      '@nodelib/fs.stat': 2.0.5
+      run-parallel: 1.2.0
+    dev: true
+
   /@nodelib/fs.stat/2.0.4:
     resolution: {integrity: sha512-IYlHJA0clt2+Vg7bccq+TzRdJvv19c2INqBSsoOLp1je7xjtr7J26+WXR72MCdvU9q1qTzIWDfhMf+DRvQJK4Q==}
     engines: {node: '>= 8'}
+
+  /@nodelib/fs.stat/2.0.5:
+    resolution: {integrity: sha512-RkhPPp2zrqDAQA/2jNhnztcPAlv64XdhIp7a7454A5ovI7Bukxgt7MX7udwAu3zg1DcpPU0rz3VV1SeaqvY4+A==}
+    engines: {node: '>= 8'}
+    dev: true
 
   /@nodelib/fs.walk/1.2.6:
     resolution: {integrity: sha512-8Broas6vTtW4GIXTAHDoE32hnN2M5ykgCpWGbuXHQ15vEMqr23pB76e/GZcYsZCHALv50ktd24qhEyKr6wBtow==}
@@ -785,6 +798,14 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.4
       fastq: 1.11.0
+
+  /@nodelib/fs.walk/1.2.7:
+    resolution: {integrity: sha512-BTIhocbPBSrRmHxOAJFtR18oLhxTtAFDAvL8hY1S3iU8k+E60W/YFs4jrixGzQjMpF4qPXxIQHcjVD9dz1C2QA==}
+    engines: {node: '>= 8'}
+    dependencies:
+      '@nodelib/fs.scandir': 2.1.5
+      fastq: 1.11.0
+    dev: true
 
   /@prisma/debug/2.26.0:
     resolution: {integrity: sha512-dBZPmxGKXP0VhDpKgpsFM3NhjFZZmP09MKRgV3oWfZmU+X1uA+crVscrajfZsOP0T6lbP1FCDLkFEEGyNCyuFA==}
@@ -1914,6 +1935,17 @@ packages:
       micromatch: 4.0.4
       picomatch: 2.3.0
 
+  /fast-glob/3.2.6:
+    resolution: {integrity: sha512-GnLuqj/pvQ7pX8/L4J84nijv6sAnlwvSDpMkJi9i7nPmPxGtRPkBSStfvDW5l6nMdX9VWe+pkKWFTgD+vF2QSQ==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@nodelib/fs.stat': 2.0.5
+      '@nodelib/fs.walk': 1.2.7
+      glob-parent: 5.1.2
+      merge2: 1.4.1
+      micromatch: 4.0.4
+    dev: true
+
   /fast-json-stable-stringify/2.1.0:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
     dev: true
@@ -2084,7 +2116,7 @@ packages:
     dependencies:
       array-union: 2.1.0
       dir-glob: 3.0.1
-      fast-glob: 3.2.5
+      fast-glob: 3.2.6
       ignore: 5.1.8
       merge2: 1.4.1
       slash: 3.0.0
@@ -3379,8 +3411,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /queue-microtask/1.2.2:
-    resolution: {integrity: sha512-dB15eXv3p2jDlbOiNLyMabYg1/sXvppd8DP2J3EOCQ0AkuSXCW2tP7mnVouVLJKgUMY6yP0kcQDVpLCN13h4Xg==}
+  /queue-microtask/1.2.3:
+    resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
   /react-is/17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
@@ -3451,7 +3483,7 @@ packages:
   /run-parallel/1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
-      queue-microtask: 1.2.2
+      queue-microtask: 1.2.3
 
   /rxjs/6.6.7:
     resolution: {integrity: sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==}
