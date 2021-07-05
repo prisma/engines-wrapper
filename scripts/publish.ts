@@ -83,12 +83,7 @@ async function main(dryRun = false) {
 
   await run(
     'packages/fetch-engine',
-    `pnpm i @prisma/engines-version@${newVersion}`,
-    dryRun,
-  )
-  await run(
-    'packages/fetch-engine',
-    `pnpm i @prisma/get-platform@${newVersion}`,
+    `pnpm i @prisma/engines-version@${newVersion} @prisma/get-platform@${newVersion}`,
     dryRun,
   )
 
@@ -107,12 +102,7 @@ async function main(dryRun = false) {
 
   await run(
     'packages/engines',
-    `pnpm i @prisma/fetch-engine@${newVersion}`,
-    dryRun,
-  )
-  await run(
-    'packages/engines',
-    `pnpm i @prisma/engines-version@${newVersion}`,
+    `pnpm i @prisma/fetch-engine@${newVersion} @prisma/engines-version@${newVersion}`,
     dryRun,
   )
 
