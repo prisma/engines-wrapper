@@ -9,9 +9,9 @@ export async function isNodeAPISupported() {
   const customLibraryExists =
     customLibraryPath && fs.existsSync(customLibraryPath)
   const os = await getos()
-  if (!customLibraryExists && os.platform === 'darwin' && os.arch === 'arm64') {
+  if (!customLibraryExists && (os.arch === 'x32' || os.arch === 'ia32')) {
     throw new Error(
-      `Node-API is currently not supported for Apple M1. Please remove \`nApi\` from the "previewFeatures" attribute in the "generator" block of the "schema.prisma", or remove the "PRISMA_FORCE_NAPI" environment variable.`,
+      `Node-API is currently not supported for 32bit Node. Please remove \`nApi\` from the "previewFeatures" attribute in the "generator" block of the "schema.prisma", or remove the "PRISMA_FORCE_NAPI" environment variable.`,
     )
   }
 }
