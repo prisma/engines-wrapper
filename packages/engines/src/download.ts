@@ -1,7 +1,9 @@
 import Debug from '@prisma/debug'
 import { enginesVersion } from '@prisma/engines-version'
 import {
-  BinaryDownloadConfiguration, BinaryType, download
+  BinaryDownloadConfiguration,
+  BinaryType,
+  download,
 } from '@prisma/fetch-engine'
 import fs from 'fs'
 import path from 'path'
