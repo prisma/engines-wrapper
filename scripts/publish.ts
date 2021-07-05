@@ -1,10 +1,10 @@
-import { AssertionError } from 'assert'
-import chalk from 'chalk'
-import fs from 'fs'
-import fetch from 'node-fetch'
-import execa from 'execa'
 import slugify from '@sindresorhus/slugify'
 import arg from 'arg'
+import { AssertionError } from 'assert'
+import chalk from 'chalk'
+import execa from 'execa'
+import fs from 'fs'
+import fetch from 'node-fetch'
 
 /**
  * Turns a prisma-engines Git branch name (that got new engines published) into a 
@@ -49,19 +49,65 @@ async function main(dryRun = false) {
   console.log(`${chalk.bold('New version')}   ${newVersion}`)
   console.log(`${chalk.bold('Npm Dist Tag')}  ${npmDistTag}\n`)
 
-  // Adjust pkg.json files
+  // Publish Order
+  // [engines-version, get-platform], fetch-engine, engines
+
+  // @prisma/engines-version
   adjustPkgJson('packages/engines-version/package.json', (pkg) => {
     pkg.prisma.enginesVersion = githubEventClientPayload.commit
     pkg.version = newVersion
   })
+  await run(
+    'packages/engines-version',
+    `pnpm publish --no-git-checks --tag ${npmDistTag}`,
+    dryRun,
+  )
+
+  // @prisma/get-platform
+  adjustPkgJson('packages/get-platform/package.json', (pkg) => {
+    pkg.version = newVersion
+  })
+  
+  await run('packages/get-platform', `pnpm run build`, dryRun)
+
+  await run(
+    'packages/get-platform',
+    `pnpm publish --no-git-checks --tag ${npmDistTag}`,
+    dryRun,
+  )
+
+  // @prisma/fetch-engine
+  adjustPkgJson('packages/fetch-engine/package.json', (pkg) => {
+    pkg.version = newVersion
+  })
+
+  await run(
+    'packages/fetch-engine',
+    `pnpm i @prisma/engines-version@${newVersion}`,
+    dryRun,
+  )
+  await run(
+    'packages/fetch-engine',
+    `pnpm i @prisma/get-platform@${newVersion}`,
+    dryRun,
+  )
+
+  await run('packages/fetch-engine', `pnpm run build`, dryRun)
+
+  await run(
+    'packages/fetch-engine',
+    `pnpm publish --no-git-checks --tag ${npmDistTag}`,
+    dryRun,
+  )
+
+  // @prisma/engines
   adjustPkgJson('packages/engines/package.json', (pkg) => {
     pkg.version = newVersion
   })
 
-  // Publish packages in specific order
   await run(
-    'packages/engines-version',
-    `pnpm publish --no-git-checks --tag ${npmDistTag}`,
+    'packages/engines',
+    `pnpm i @prisma/fetch-engine@${newVersion}`,
     dryRun,
   )
   await run(
@@ -69,11 +115,9 @@ async function main(dryRun = false) {
     `pnpm i @prisma/engines-version@${newVersion}`,
     dryRun,
   )
-  await run(
-    'packages/engines', 
-    `pnpm run build`, 
-    dryRun
-  )
+
+  await run('packages/engines', `pnpm run build`, dryRun)
+
   await run(
     'packages/engines',
     `pnpm publish --no-git-checks --tag ${npmDistTag}`,
@@ -250,7 +294,10 @@ async function run(
 
 
 // useful for debugging
-// process.env.GITHUB_EVENT_CLIENT_PAYLOAD = JSON.stringify({ branch: 'master', commit: '58369335532e47bdcec77a2f1e7c1fb83a463918' })
+// process.env.GITHUB_EVENT_CLIENT_PAYLOAD = JSON.stringify({
+//   branch: 'master',
+//   commit: '95b10778266ed1eb3013872ab5c09e460bd941fe',
+// })
 
 const args = arg({
   '--dry': Boolean,
