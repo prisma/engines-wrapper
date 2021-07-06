@@ -1,6 +1,6 @@
 import Debug from '@prisma/debug'
 import {
-  getNapiName,
+  getNodeAPIName,
   getos,
   getPlatform,
   isNodeAPISupported,
@@ -119,7 +119,7 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
         const fileName = getBinaryName(binaryName, binaryTarget)
         const targetFilePath =
           binaryName === BinaryType.libqueryEngine
-            ? path.join(targetFolder, getNapiName(binaryTarget, 'fs'))
+            ? path.join(targetFolder, getNodeAPIName(binaryTarget, 'fs'))
             : path.join(targetFolder, fileName)
         return {
           binaryName,
@@ -356,7 +356,7 @@ export async function checkVersionCommand(
 
 export function getBinaryName(binaryName: string, platform: Platform): string {
   if (binaryName === BinaryType.libqueryEngine) {
-    return `${getNapiName(platform, 'url')}`
+    return `${getNodeAPIName(platform, 'url')}`
   }
   const extension = platform === 'windows' ? '.exe' : ''
   return `${binaryName}-${platform}${extension}`

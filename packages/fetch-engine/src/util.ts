@@ -1,5 +1,5 @@
 import Debug from '@prisma/debug'
-import { getNapiName, Platform } from '@prisma/get-platform'
+import { getNodeAPIName, Platform } from '@prisma/get-platform'
 import findCacheDir from 'find-cache-dir'
 import fs from 'fs'
 import makeDir from 'make-dir'
@@ -67,7 +67,7 @@ export function getDownloadUrl(
       ? `.exe${extension}`
       : extension
   if (binaryName === BinaryType.libqueryEngine) {
-    binaryName = getNapiName(platform, 'url')
+    binaryName = getNodeAPIName(platform, 'url')
   }
 
   return `${baseUrl}/${channel}/${version}/${platform}/${binaryName}${finalExtension}`
