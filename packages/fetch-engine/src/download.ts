@@ -1,6 +1,6 @@
 import Debug from '@prisma/debug'
 import {
-  getNapiName,
+  getNodeAPIName,
   getos,
   getPlatform,
   isNodeAPISupported,
@@ -34,7 +34,7 @@ const utimes = promisify(fs.utimes)
 const channel = 'master'
 export enum BinaryType {
   queryEngine = 'query-engine',
-  libqueryEngineNapi = 'libquery-engine',
+  libqueryEngine = 'libquery-engine',
   migrationEngine = 'migration-engine',
   introspectionEngine = 'introspection-engine',
   prismaFmt = 'prisma-fmt',
@@ -60,7 +60,7 @@ export interface DownloadOptions {
 const BINARY_TO_ENV_VAR = {
   [BinaryType.migrationEngine]: 'PRISMA_MIGRATION_ENGINE_BINARY',
   [BinaryType.queryEngine]: 'PRISMA_QUERY_ENGINE_BINARY',
-  [BinaryType.libqueryEngineNapi]: 'PRISMA_QUERY_ENGINE_LIBRARY',
+  [BinaryType.libqueryEngine]: 'PRISMA_QUERY_ENGINE_LIBRARY',
   [BinaryType.introspectionEngine]: 'PRISMA_INTROSPECTION_ENGINE_BINARY',
   [BinaryType.prismaFmt]: 'PRISMA_FMT_BINARY',
 }
@@ -93,7 +93,7 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
         'Warning',
       )} Precompiled binaries are not available for ${platform}. Read more about building your own binaries at https://pris.ly/d/build-binaries`,
     )
-  } else if (BinaryType.libqueryEngineNapi in options.binaries) {
+  } else if (BinaryType.libqueryEngine in options.binaries) {
     await isNodeAPISupported()
   }
 
@@ -118,8 +118,8 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
       opts.binaryTargets.map((binaryTarget) => {
         const fileName = getBinaryName(binaryName, binaryTarget)
         const targetFilePath =
-          binaryName === BinaryType.libqueryEngineNapi
-            ? path.join(targetFolder, getNapiName(binaryTarget, 'fs'))
+          binaryName === BinaryType.libqueryEngine
+            ? path.join(targetFolder, getNodeAPIName(binaryTarget, 'fs'))
             : path.join(targetFolder, fileName)
         return {
           binaryName,
@@ -327,7 +327,7 @@ async function binaryNeedsToBeDownloaded(
   // 3. If same platform, always check --version
   if (
     job.binaryTarget === nativePlatform &&
-    job.binaryName !== BinaryType.libqueryEngineNapi
+    job.binaryName !== BinaryType.libqueryEngine
   ) {
     const works = await checkVersionCommand(binaryPath)
     return !works
@@ -355,8 +355,8 @@ export async function checkVersionCommand(
 }
 
 export function getBinaryName(binaryName: string, platform: Platform): string {
-  if (binaryName === BinaryType.libqueryEngineNapi) {
-    return `${getNapiName(platform, 'url')}`
+  if (binaryName === BinaryType.libqueryEngine) {
+    return `${getNodeAPIName(platform, 'url')}`
   }
   const extension = platform === 'windows' ? '.exe' : ''
   return `${binaryName}-${platform}${extension}`
