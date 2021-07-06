@@ -28,7 +28,7 @@ async function main() {
     if (process.env.PRISMA_CLI_BINARY_TARGETS) {
       binaryTargets = process.env.PRISMA_CLI_BINARY_TARGETS.split(',')
     }
-    debug(`using NAPI: ${process.env.PRISMA_FORCE_NAPI === 'true'}`)
+    debug(`using Node API: ${process.env.PRISMA_FORCE_NAPI === 'true'}`)
     const binaries: BinaryDownloadConfiguration = {
       [process.env.PRISMA_FORCE_NAPI === 'true'
         ? BinaryType.libqueryEngine
