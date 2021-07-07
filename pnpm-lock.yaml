@@ -11,6 +11,7 @@ importers:
       chalk: 4.1.1
       execa: 5.1.1
       husky: 7.0.1
+      is-ci: 3.0.0
       node-fetch: 2.6.1
       prettier: 2.3.2
       ts-node: 10.0.0
@@ -23,6 +24,7 @@ importers:
       chalk: 4.1.1
       execa: 5.1.1
       husky: 7.0.1
+      is-ci: 3.0.0
       node-fetch: 2.6.1
       prettier: 2.3.2
       ts-node: 10.0.0_b1db7a0a552a0c53a59462444fd28591
