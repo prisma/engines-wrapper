@@ -1,0 +1,7 @@
+node_modules
+.pnpm-store/
+build
+dist
+download
+__snapshots__
+pnpm-lock.yaml

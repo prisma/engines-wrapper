@@ -18,7 +18,7 @@
     "typescript": "4.3.5"
   },
   "scripts": {
-    "format": "prettier --ignore-path .gitignore --write .",
+    "format": "prettier --write .",
     "publish-all": "ts-node scripts/publish.ts",
     "dry": "ts-node scripts/publish.ts --dry",
     "prepare": "is-ci || husky install"
