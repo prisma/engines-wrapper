@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/prisma/engines-wrapper/issues"
   },
-  "homepage": "https://github.com/prisma/engines-wrapper#readme"
+  "homepage": "https://github.com/prisma/engines-wrapper#readme",
+  "engines": {
+    "node": ">=12.2"
+  }
 }
