@@ -8,4 +8,3 @@ export function getFiles(dir: string): Array<{ name: string; size: number }> {
     return { name, size }
   })
 }
-

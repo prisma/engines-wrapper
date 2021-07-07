@@ -7,7 +7,7 @@ import fs from 'fs'
 import fetch from 'node-fetch'
 
 /**
- * Turns a prisma-engines Git branch name (that got new engines published) into a 
+ * Turns a prisma-engines Git branch name (that got new engines published) into a
  * engines-wrapper Npm dist tag name (where the local packages will be published)
  */
 function prismaEnginesBranchToNpmDistTag(branch: string): string {
@@ -33,13 +33,19 @@ async function main(dryRun = false) {
   }
 
   // Client Payload via GitHub Event (branch + commit)
-  const githubEventClientPayload = JSON.parse(process.env.GITHUB_EVENT_CLIENT_PAYLOAD)
+  const githubEventClientPayload = JSON.parse(
+    process.env.GITHUB_EVENT_CLIENT_PAYLOAD,
+  )
   assertIsClientPayload(githubEventClientPayload)
 
   // Gather information for version string
-  const npmDistTag = prismaEnginesBranchToNpmDistTag(githubEventClientPayload.branch)
+  const npmDistTag = prismaEnginesBranchToNpmDistTag(
+    githubEventClientPayload.branch,
+  )
   const optionalNamePart =
-    npmDistTag === 'integration' ? `${slugify(githubEventClientPayload.branch)}-` : ''
+    npmDistTag === 'integration'
+      ? `${slugify(githubEventClientPayload.branch)}-`
+      : ''
   const nextStable = await getNextPrismaStableVersion(npmDistTag === 'patch')
   const versionIncrement = await getNextVersionIncrement(nextStable)
   const newVersion = `${nextStable}-${versionIncrement}.${optionalNamePart}${githubEventClientPayload.commit}`
@@ -67,7 +73,7 @@ async function main(dryRun = false) {
   adjustPkgJson('packages/get-platform/package.json', (pkg) => {
     pkg.version = newVersion
   })
-  
+
   await run('packages/get-platform', `pnpm run build`, dryRun)
 
   await run(
@@ -123,7 +129,6 @@ async function main(dryRun = false) {
   }
 }
 
-
 /** Apply call back function to content of file and write it back */
 function adjustPkgJson(pathToIt: string, cb: (pkg: any) => void) {
   const pkg = JSON.parse(fs.readFileSync(pathToIt, 'utf-8'))
@@ -138,7 +143,9 @@ function setPatchZero(version: string): string {
 }
 
 /** Get next stable version of prisma CLI (using Npm) */
-async function getNextPrismaStableVersion(isPatch: boolean): Promise<string | null> {
+async function getNextPrismaStableVersion(
+  isPatch: boolean,
+): Promise<string | null> {
   const data = await fetch('https://registry.npmjs.org/prisma').then((res) =>
     res.json(),
   )
@@ -162,7 +169,7 @@ async function getNextVersionIncrement(versionPrefix: string): Promise<number> {
   )
 
   // regex to match 2.10.0-123.asdasdasdja0s9dja0s9djas0d9j
-  //                       ^^^ we are interested in this 
+  //                       ^^^ we are interested in this
   const regex = /\d\.\d+\.\d+-(\d+).\S+/
 
   let max = 0
@@ -177,7 +184,6 @@ async function getNextVersionIncrement(versionPrefix: string): Promise<number> {
 
   return max + 1
 }
-
 
 type ClientInput = {
   branch: string
@@ -244,7 +250,6 @@ function incrementPatch(version: string): string | null {
   return null
 }
 
-
 /**
  * Runs a command and pipes the stdout & stderr to the current process.
  * @param cwd cwd for running the command
@@ -281,7 +286,6 @@ async function run(
     )
   }
 }
-
 
 // useful for debugging
 // process.env.GITHUB_EVENT_CLIENT_PAYLOAD = JSON.stringify({
