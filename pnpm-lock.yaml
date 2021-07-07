@@ -6,7 +6,7 @@ importers:
     specifiers:
       '@sindresorhus/slugify': 1.1.2
       '@types/node': 14.17.4
-      '@types/node-fetch': 2.5.10
+      '@types/node-fetch': 2.5.11
       arg: 5.0.0
       chalk: 4.1.1
       execa: 5.1.1
@@ -18,7 +18,7 @@ importers:
     devDependencies:
       '@sindresorhus/slugify': 1.1.2
       '@types/node': 14.17.4
-      '@types/node-fetch': 2.5.10
+      '@types/node-fetch': 2.5.11
       arg: 5.0.0
       chalk: 4.1.1
       execa: 5.1.1
@@ -31,8 +31,8 @@ importers:
   packages/engines:
     specifiers:
       '@prisma/debug': 2.26.0
-      '@prisma/engines-version': workspace:2.27.0-27.6fb273e4720704f1b344da9b161663b60a0041f8
-      '@prisma/fetch-engine': workspace:2.27.0-27.6fb273e4720704f1b344da9b161663b60a0041f8
+      '@prisma/engines-version': workspace:2.27.0-28.3fd2cf1fea2a0364dd9c2cb1b25995c695cb8805
+      '@prisma/fetch-engine': workspace:2.27.0-28.3fd2cf1fea2a0364dd9c2cb1b25995c695cb8805
       '@types/node': 14.17.4
       execa: 5.1.1
       typescript: 4.3.5
@@ -55,12 +55,12 @@ importers:
   packages/fetch-engine:
     specifiers:
       '@prisma/debug': 2.26.0
-      '@prisma/engines-version': workspace:2.27.0-27.6fb273e4720704f1b344da9b161663b60a0041f8
-      '@prisma/get-platform': workspace:2.27.0-27.6fb273e4720704f1b344da9b161663b60a0041f8
-      '@types/find-cache-dir': 3.2.0
-      '@types/jest': 26.0.23
+      '@prisma/engines-version': workspace:2.27.0-28.3fd2cf1fea2a0364dd9c2cb1b25995c695cb8805
+      '@prisma/get-platform': workspace:2.27.0-28.3fd2cf1fea2a0364dd9c2cb1b25995c695cb8805
+      '@types/find-cache-dir': 3.2.1
+      '@types/jest': 26.0.24
       '@types/node': 14.17.4
-      '@types/node-fetch': 2.5.10
+      '@types/node-fetch': 2.5.11
       '@types/progress': 2.0.3
       '@typescript-eslint/eslint-plugin': 4.28.2
       '@typescript-eslint/parser': 4.28.2
@@ -111,10 +111,10 @@ importers:
       tempy: 1.0.0
     devDependencies:
       '@prisma/engines-version': link:../engines-version
-      '@types/find-cache-dir': 3.2.0
-      '@types/jest': 26.0.23
+      '@types/find-cache-dir': 3.2.1
+      '@types/jest': 26.0.24
       '@types/node': 14.17.4
-      '@types/node-fetch': 2.5.10
+      '@types/node-fetch': 2.5.11
       '@types/progress': 2.0.3
       '@typescript-eslint/eslint-plugin': 4.28.2_9db08eeb3d3e65543a4e203d4845651e
       '@typescript-eslint/parser': 4.28.2_eslint@7.30.0+typescript@4.3.4
@@ -134,7 +134,7 @@ importers:
   packages/get-platform:
     specifiers:
       '@prisma/debug': 2.26.0
-      '@types/jest': 26.0.23
+      '@types/jest': 26.0.24
       '@types/node': 14.17.4
       '@typescript-eslint/eslint-plugin': 4.28.2
       '@typescript-eslint/parser': 4.28.2
@@ -151,7 +151,7 @@ importers:
     dependencies:
       '@prisma/debug': 2.26.0
     devDependencies:
-      '@types/jest': 26.0.23
+      '@types/jest': 26.0.24
       '@types/node': 14.17.4
       '@typescript-eslint/eslint-plugin': 4.28.2_9db08eeb3d3e65543a4e203d4845651e
       '@typescript-eslint/parser': 4.28.2_eslint@7.30.0+typescript@4.3.4
@@ -907,8 +907,8 @@ packages:
       '@babel/types': 7.14.5
     dev: true
 
-  /@types/find-cache-dir/3.2.0:
-    resolution: {integrity: sha512-+JeT9qb2Jwzw72WdjU+TSvD5O1QRPWCeRpDJV+guiIq+2hwR0DFGw+nZNbTFjMIVe6Bf4GgAKeB/6Ytx6+MbeQ==}
+  /@types/find-cache-dir/3.2.1:
+    resolution: {integrity: sha512-frsJrz2t/CeGifcu/6uRo4b+SzAwT4NYCVPu1GN8IB9XTzrpPkGuV0tmh9mN+/L0PklAlsC3u5Fxt0ju00LXIw==}
     dev: true
 
   /@types/graceful-fs/4.1.5:
@@ -933,8 +933,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/26.0.23:
-    resolution: {integrity: sha512-ZHLmWMJ9jJ9PTiT58juykZpL7KjwJywFN3Rr2pTSkyQfydf/rk22yS7W8p5DaVUMQ2BQC7oYiU3FjbTM/mYrOA==}
+  /@types/jest/26.0.24:
+    resolution: {integrity: sha512-E/X5Vib8BWqZNRlDxj9vYXhsDwPYbPINqKF9BsnSoon4RQ0D9moEuLD8txgyypFLH7J4+Lho9Nr/c8H0Fi+17w==}
     dependencies:
       jest-diff: 26.6.2
       pretty-format: 26.6.2
@@ -944,8 +944,8 @@ packages:
     resolution: {integrity: sha512-cxWFQVseBm6O9Gbw1IWb8r6OS4OhSt3hPZLkFApLjM8TEXROBuQGLAH2i2gZpcXdLBIrpXuTDhH7Vbm1iXmNGA==}
     dev: true
 
-  /@types/node-fetch/2.5.10:
-    resolution: {integrity: sha512-IpkX0AasN44hgEad0gEF/V6EgR5n69VEqPEgnmoM8GsIGro3PowbWs4tR6IhxUTyPLpOn+fiGG6nrQhcmoCuIQ==}
+  /@types/node-fetch/2.5.11:
+    resolution: {integrity: sha512-2upCKaqVZETDRb8A2VTaRymqFBEgH8u6yr96b/u3+1uQEPDRo3mJLEiPk7vdXBHRtjwkjqzFYMJXrt0Z9QsYjQ==}
     dependencies:
       '@types/node': 14.17.4
       form-data: 3.0.0
