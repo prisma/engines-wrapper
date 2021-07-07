@@ -19,7 +19,8 @@
   "scripts": {
     "format": "prettier --ignore-path .gitignore --write .",
     "publish-all": "ts-node scripts/publish.ts",
-    "dry": "ts-node scripts/publish.ts --dry"
+    "dry": "ts-node scripts/publish.ts --dry",
+    "prepare": "is-ci || husky install"
   },
   "repository": {
     "type": "git",
@@ -28,11 +29,5 @@
   "bugs": {
     "url": "https://github.com/prisma/engines-wrapper/issues"
   },
-  "homepage": "https://github.com/prisma/engines-wrapper#readme",
-  "dependencies": {},
-  "husky": {
-    "hooks": {
-      "pre-commit": "pnpm format"
-    }
-  }
+  "homepage": "https://github.com/prisma/engines-wrapper#readme"
 }
