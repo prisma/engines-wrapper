@@ -1,6 +1,6 @@
 {
   "name": "@prisma/fetch-engine",
-  "version": "2.27.0-35.5be2f2a4d5093b2a6a1461c38f8c9617ed0a9af8",
+  "version": "2.27.0-36.6bd5154d692faa50d073fd6c9ed7c0b8c5a98b5e",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
@@ -14,7 +14,7 @@
   ],
   "bugs": "https://github.com/prisma/prisma/issues",
   "devDependencies": {
-    "@prisma/engines-version": "workspace:2.27.0-35.5be2f2a4d5093b2a6a1461c38f8c9617ed0a9af8",
+    "@prisma/engines-version": "workspace:2.27.0-36.6bd5154d692faa50d073fd6c9ed7c0b8c5a98b5e",
     "@types/find-cache-dir": "3.2.1",
     "@types/jest": "26.0.24",
     "@types/node": "14.17.4",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@prisma/debug": "2.26.0",
-    "@prisma/get-platform": "workspace:2.27.0-35.5be2f2a4d5093b2a6a1461c38f8c9617ed0a9af8",
+    "@prisma/get-platform": "workspace:2.27.0-36.6bd5154d692faa50d073fd6c9ed7c0b8c5a98b5e",
     "chalk": "^4.0.0",
     "execa": "^5.0.0",
     "find-cache-dir": "^3.3.1",
