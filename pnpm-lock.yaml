@@ -32,14 +32,14 @@ importers:
 
   packages/engines:
     specifiers:
-      '@prisma/debug': 2.26.0
+      '@prisma/debug': 2.27.0
       '@prisma/engines-version': workspace:2.27.0-44.query-engine-hyper-4ff0e142dfe56dc3e414eaf7c727e3ac89964b5b
       '@prisma/fetch-engine': workspace:2.27.0-44.query-engine-hyper-4ff0e142dfe56dc3e414eaf7c727e3ac89964b5b
       '@types/node': 14.17.5
       execa: 5.1.1
       typescript: 4.3.5
     devDependencies:
-      '@prisma/debug': 2.26.0
+      '@prisma/debug': 2.27.0
       '@prisma/engines-version': link:../engines-version
       '@prisma/fetch-engine': link:../fetch-engine
       '@types/node': 14.17.5
@@ -56,7 +56,7 @@ importers:
 
   packages/fetch-engine:
     specifiers:
-      '@prisma/debug': 2.26.0
+      '@prisma/debug': 2.27.0
       '@prisma/engines-version': workspace:2.27.0-44.query-engine-hyper-4ff0e142dfe56dc3e414eaf7c727e3ac89964b5b
       '@prisma/get-platform': workspace:2.27.0-44.query-engine-hyper-4ff0e142dfe56dc3e414eaf7c727e3ac89964b5b
       '@types/find-cache-dir': 3.2.1
@@ -94,7 +94,7 @@ importers:
       ts-jest: 27.0.3
       typescript: 4.3.5
     dependencies:
-      '@prisma/debug': 2.26.0
+      '@prisma/debug': 2.27.0
       '@prisma/get-platform': link:../get-platform
       chalk: 4.1.1
       execa: 5.1.1
@@ -135,7 +135,7 @@ importers:
 
   packages/get-platform:
     specifiers:
-      '@prisma/debug': 2.26.0
+      '@prisma/debug': 2.27.0
       '@types/jest': 26.0.24
       '@types/node': 14.17.5
       '@typescript-eslint/eslint-plugin': 4.28.3
@@ -151,7 +151,7 @@ importers:
       ts-jest: 27.0.3
       typescript: 4.3.5
     dependencies:
-      '@prisma/debug': 2.26.0
+      '@prisma/debug': 2.27.0
     devDependencies:
       '@types/jest': 26.0.24
       '@types/node': 14.17.5
@@ -824,8 +824,8 @@ packages:
       fastq: 1.11.0
     dev: true
 
-  /@prisma/debug/2.26.0:
-    resolution: {integrity: sha512-dBZPmxGKXP0VhDpKgpsFM3NhjFZZmP09MKRgV3oWfZmU+X1uA+crVscrajfZsOP0T6lbP1FCDLkFEEGyNCyuFA==}
+  /@prisma/debug/2.27.0:
+    resolution: {integrity: sha512-Et01S4RoLnQP9u547dCp74aSnLWTu0akfBCzF4zQZsbEdw7wXLttrcvbcYKr+KhpfF5Xu291UP/Kaxg0aj8o4w==}
     dependencies:
       debug: 4.3.2
       ms: 2.1.3
