@@ -79,7 +79,7 @@ importers:
       http-proxy-agent: ^4.0.1
       https-proxy-agent: ^5.0.0
       jest: 27.0.6
-      lint-staged: 11.0.0
+      lint-staged: 11.0.1
       make-dir: ^3.0.2
       node-fetch: ^2.6.0
       p-filter: ^2.1.0
@@ -127,7 +127,7 @@ importers:
       eslint-plugin-jest: 24.3.6_c7802047a424f5f4702bce272d08e602
       eslint-plugin-prettier: 3.4.0_0470f3bcd018a045da11d0bbb868d6c6
       jest: 27.0.6_ts-node@10.1.0
-      lint-staged: 11.0.0
+      lint-staged: 11.0.1
       prettier: 2.3.2
       strip-ansi: 6.0.0
       ts-jest: 27.0.3_jest@27.0.6+typescript@4.3.5
@@ -146,7 +146,7 @@ importers:
       eslint-plugin-jest: 24.3.6
       eslint-plugin-prettier: 3.4.0
       jest: 27.0.6
-      lint-staged: 11.0.0
+      lint-staged: 11.0.1
       prettier: 2.3.2
       ts-jest: 27.0.3
       typescript: 4.3.5
@@ -163,7 +163,7 @@ importers:
       eslint-plugin-jest: 24.3.6_c7802047a424f5f4702bce272d08e602
       eslint-plugin-prettier: 3.4.0_0470f3bcd018a045da11d0bbb868d6c6
       jest: 27.0.6_ts-node@10.1.0
-      lint-staged: 11.0.0
+      lint-staged: 11.0.1
       prettier: 2.3.2
       ts-jest: 27.0.3_jest@27.0.6+typescript@4.3.5
       typescript: 4.3.5
@@ -3011,15 +3011,15 @@ packages:
     resolution: {integrity: sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=}
     dev: true
 
-  /lint-staged/11.0.0:
-    resolution: {integrity: sha512-3rsRIoyaE8IphSUtO1RVTFl1e0SLBtxxUOPBtHxQgBHS5/i6nqvjcUfNioMa4BU9yGnPzbO+xkfLtXtxBpCzjw==}
+  /lint-staged/11.0.1:
+    resolution: {integrity: sha512-RkTA1ulE6jAGFskxpGAwxfVRXjHp7D9gFg/+KMARUWMPiVFP0t28Em2u0gL8sA0w3/ck3TC57F2v2RNeQ5XPnw==}
     hasBin: true
     dependencies:
       chalk: 4.1.1
       cli-truncate: 2.1.0
       commander: 7.2.0
       cosmiconfig: 7.0.0
-      debug: 4.3.1
+      debug: 4.3.2
       dedent: 0.7.0
       enquirer: 2.3.6
       execa: 5.1.1
@@ -3297,7 +3297,7 @@ packages:
     resolution: {integrity: sha512-ayCKvm/phCGxOkYRSCM82iDwct8/EonSEgCSxWxD7ve6jHggsFl4fZVQBPRNgQoKiuV/odhFrGzQXZwbifC8Rg==}
     engines: {node: '>=8'}
     dependencies:
-      '@babel/code-frame': 7.12.13
+      '@babel/code-frame': 7.14.5
       error-ex: 1.3.2
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.1.6
