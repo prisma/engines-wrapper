@@ -6,7 +6,7 @@ importers:
     specifiers:
       '@sindresorhus/slugify': 1.1.2
       '@types/node': 14.17.5
-      '@types/node-fetch': 2.5.11
+      '@types/node-fetch': 2.5.12
       arg: 5.0.0
       chalk: 4.1.1
       execa: 5.1.1
@@ -19,7 +19,7 @@ importers:
     devDependencies:
       '@sindresorhus/slugify': 1.1.2
       '@types/node': 14.17.5
-      '@types/node-fetch': 2.5.11
+      '@types/node-fetch': 2.5.12
       arg: 5.0.0
       chalk: 4.1.1
       execa: 5.1.1
@@ -62,7 +62,7 @@ importers:
       '@types/find-cache-dir': 3.2.1
       '@types/jest': 26.0.24
       '@types/node': 14.17.5
-      '@types/node-fetch': 2.5.11
+      '@types/node-fetch': 2.5.12
       '@types/progress': 2.0.4
       '@typescript-eslint/eslint-plugin': 4.28.3
       '@typescript-eslint/parser': 4.28.3
@@ -116,7 +116,7 @@ importers:
       '@types/find-cache-dir': 3.2.1
       '@types/jest': 26.0.24
       '@types/node': 14.17.5
-      '@types/node-fetch': 2.5.11
+      '@types/node-fetch': 2.5.12
       '@types/progress': 2.0.4
       '@typescript-eslint/eslint-plugin': 4.28.3_8da3816a7c3fb8ebc9f4c4b3e4b2e38f
       '@typescript-eslint/parser': 4.28.3_eslint@7.30.0+typescript@4.3.5
@@ -946,10 +946,10 @@ packages:
     resolution: {integrity: sha512-cxWFQVseBm6O9Gbw1IWb8r6OS4OhSt3hPZLkFApLjM8TEXROBuQGLAH2i2gZpcXdLBIrpXuTDhH7Vbm1iXmNGA==}
     dev: true
 
-  /@types/node-fetch/2.5.11:
-    resolution: {integrity: sha512-2upCKaqVZETDRb8A2VTaRymqFBEgH8u6yr96b/u3+1uQEPDRo3mJLEiPk7vdXBHRtjwkjqzFYMJXrt0Z9QsYjQ==}
+  /@types/node-fetch/2.5.12:
+    resolution: {integrity: sha512-MKgC4dlq4kKNa/mYrwpKfzQMB5X3ee5U6fSprkKpToBqBmX4nFZL9cW5jl6sWn+xpRJ7ypWh2yyqqr8UUCstSw==}
     dependencies:
-      '@types/node': 14.17.4
+      '@types/node': 14.17.5
       form-data: 3.0.0
     dev: true
 
