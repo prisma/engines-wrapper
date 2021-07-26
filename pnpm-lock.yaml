@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      '@sindresorhus/slugify': 2.1.0
+      '@sindresorhus/slugify': 1.1.2
       '@types/node': 14.17.6
       '@types/node-fetch': 2.5.12
       arg: 5.0.0
@@ -17,7 +17,7 @@ importers:
       ts-node: 10.1.0
       typescript: 4.3.5
     devDependencies:
-      '@sindresorhus/slugify': 2.1.0
+      '@sindresorhus/slugify': 1.1.2
       '@types/node': 14.17.6
       '@types/node-fetch': 2.5.12
       arg: 5.0.0
@@ -832,19 +832,19 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@sindresorhus/slugify/2.1.0:
-    resolution: {integrity: sha512-gU3Gdm/V167BmUwIn8APHZ3SeeRVRUSOdXxnt7Q/JkUHLXaaTA/prYmoRumwsSitJZWUDYMzDWdWgrOdvE8IRQ==}
-    engines: {node: '>=12'}
+  /@sindresorhus/slugify/1.1.2:
+    resolution: {integrity: sha512-V9nR/W0Xd9TSGXpZ4iFUcFGhuOJtZX82Fzxj1YISlbSgKvIiNa7eLEZrT0vAraPOt++KHauIVNYgGRgjc13dXA==}
+    engines: {node: '>=10'}
     dependencies:
-      '@sindresorhus/transliterate': 1.3.0
-      escape-string-regexp: 5.0.0
+      '@sindresorhus/transliterate': 0.1.1
+      escape-string-regexp: 4.0.0
     dev: true
 
-  /@sindresorhus/transliterate/1.3.0:
-    resolution: {integrity: sha512-/2t5zPKvJdBQUJ3xelUQcJo70ChMYngeGpaqApWHNR1bZGPgahgNx+mHJWIC7IP6F2ik1vkY2HVZqiNXxqPeBg==}
-    engines: {node: '>=12'}
+  /@sindresorhus/transliterate/0.1.1:
+    resolution: {integrity: sha512-QSdIQ5keUFAZ3KLbfbsntW39ox0Ym8183RqTwBq/ZEFoN3NQAtGV+qWaNdzKpIDHgj9J2CQ2iNDRVU11Zyr7MQ==}
+    engines: {node: '>=10'}
     dependencies:
-      escape-string-regexp: 5.0.0
+      escape-string-regexp: 2.0.0
       lodash.deburr: 4.1.0
     dev: true
 
@@ -1753,11 +1753,6 @@ packages:
   /escape-string-regexp/4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
-    dev: true
-
-  /escape-string-regexp/5.0.0:
-    resolution: {integrity: sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==}
-    engines: {node: '>=12'}
     dev: true
 
   /escodegen/2.0.0:
