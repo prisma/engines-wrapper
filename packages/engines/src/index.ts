@@ -6,18 +6,34 @@ const debug = Debug('prisma:engines')
 export function getEnginesPath() {
   return path.join(__dirname, '../')
 }
-
+const DEFAULT_CLI_QUERY_ENGINE_BINARY_TYPE = BinaryType.libqueryEngine
+/**
+ * Checks if the env override `PRISMA_CLI_QUERY_ENGINE_TYPE` is set to `node-api` or `binary`
+ * Otherwise returns the default
+ */
+export function getCliQueryEngineBinaryType(): BinaryType.libqueryEngine | BinaryType.queryEngine {
+  const envCliQueryEngineType = process.env.PRISMA_CLI_QUERY_ENGINE_TYPE
+  if (envCliQueryEngineType) {
+    if (envCliQueryEngineType === 'binary') {
+      return BinaryType.queryEngine
+    }
+    if (envCliQueryEngineType === 'node-api') {
+      return BinaryType.libqueryEngine
+    }
+  }
+  return DEFAULT_CLI_QUERY_ENGINE_BINARY_TYPE
+}
 export async function ensureBinariesExist() {
   const binaryDir = path.join(__dirname, '../')
   let binaryTargets = undefined
   if (process.env.PRISMA_CLI_BINARY_TARGETS) {
     binaryTargets = process.env.PRISMA_CLI_BINARY_TARGETS.split(',')
   }
-  debug(`using Node API: ${process.env.PRISMA_FORCE_NAPI === 'true'}`)
+
+  const cliQueryEngineBinaryType = getCliQueryEngineBinaryType()
+
   const binaries = {
-    [process.env.PRISMA_FORCE_NAPI === 'true'
-      ? BinaryType.libqueryEngine
-      : BinaryType.queryEngine]: binaryDir,
+    [cliQueryEngineBinaryType]: binaryDir,
     [BinaryType.migrationEngine]: binaryDir,
     [BinaryType.introspectionEngine]: binaryDir,
     [BinaryType.prismaFmt]: binaryDir,
