@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       '@sindresorhus/slugify': 1.1.2
-      '@types/node': 14.17.5
+      '@types/node': 14.17.6
       '@types/node-fetch': 2.5.12
       arg: 5.0.0
       chalk: 4.1.1
@@ -18,7 +18,7 @@ importers:
       typescript: 4.3.5
     devDependencies:
       '@sindresorhus/slugify': 1.1.2
-      '@types/node': 14.17.5
+      '@types/node': 14.17.6
       '@types/node-fetch': 2.5.12
       arg: 5.0.0
       chalk: 4.1.1
@@ -27,7 +27,7 @@ importers:
       is-ci: 3.0.0
       node-fetch: 2.6.1
       prettier: 2.3.2
-      ts-node: 10.1.0_400a4096d34ae850b4639c830a4747bf
+      ts-node: 10.1.0_13403c2f2d9ddab699dd2f492f123cbf
       typescript: 4.3.5
 
   packages/engines:
@@ -35,23 +35,23 @@ importers:
       '@prisma/debug': 2.27.0
       '@prisma/engines-version': workspace:2.28.0-15.d616ac2e761de0623c4f0494620b4199161d9019
       '@prisma/fetch-engine': workspace:2.28.0-15.d616ac2e761de0623c4f0494620b4199161d9019
-      '@types/node': 14.17.5
+      '@types/node': 14.17.6
       execa: 5.1.1
       typescript: 4.3.5
     devDependencies:
       '@prisma/debug': 2.27.0
       '@prisma/engines-version': link:../engines-version
       '@prisma/fetch-engine': link:../fetch-engine
-      '@types/node': 14.17.5
+      '@types/node': 14.17.6
       execa: 5.1.1
       typescript: 4.3.5
 
   packages/engines-version:
     specifiers:
-      '@types/node': 14.17.5
+      '@types/node': 14.17.6
       typescript: 4.3.5
     devDependencies:
-      '@types/node': 14.17.5
+      '@types/node': 14.17.6
       typescript: 4.3.5
 
   packages/fetch-engine:
@@ -61,7 +61,7 @@ importers:
       '@prisma/get-platform': workspace:2.28.0-15.d616ac2e761de0623c4f0494620b4199161d9019
       '@types/find-cache-dir': 3.2.1
       '@types/jest': 26.0.24
-      '@types/node': 14.17.5
+      '@types/node': 14.17.6
       '@types/node-fetch': 2.5.12
       '@types/progress': 2.0.4
       '@typescript-eslint/eslint-plugin': 4.28.4
@@ -115,7 +115,7 @@ importers:
       '@prisma/engines-version': link:../engines-version
       '@types/find-cache-dir': 3.2.1
       '@types/jest': 26.0.24
-      '@types/node': 14.17.5
+      '@types/node': 14.17.6
       '@types/node-fetch': 2.5.12
       '@types/progress': 2.0.4
       '@typescript-eslint/eslint-plugin': 4.28.4_b1648df9f9ba40bdeef3710a5a5af353
@@ -137,7 +137,7 @@ importers:
     specifiers:
       '@prisma/debug': 2.27.0
       '@types/jest': 26.0.24
-      '@types/node': 14.17.5
+      '@types/node': 14.17.6
       '@typescript-eslint/eslint-plugin': 4.28.4
       '@typescript-eslint/parser': 4.28.4
       eslint: 7.31.0
@@ -154,7 +154,7 @@ importers:
       '@prisma/debug': 2.27.0
     devDependencies:
       '@types/jest': 26.0.24
-      '@types/node': 14.17.5
+      '@types/node': 14.17.6
       '@typescript-eslint/eslint-plugin': 4.28.4_b1648df9f9ba40bdeef3710a5a5af353
       '@typescript-eslint/parser': 4.28.4_eslint@7.31.0+typescript@4.3.5
       eslint: 7.31.0
@@ -959,6 +959,10 @@ packages:
 
   /@types/node/14.17.5:
     resolution: {integrity: sha512-bjqH2cX/O33jXT/UmReo2pM7DIJREPMnarixbQ57DOOzzFaI6D2+IcwaJQaJpv0M1E9TIhPCYVxrkcityLjlqA==}
+    dev: true
+
+  /@types/node/14.17.6:
+    resolution: {integrity: sha512-iBxsxU7eswQDGhlr3AiamBxOssaYxbM+NKXVil8jg9yFXvrfEFbDumLD/2dMTB+zYyg7w+Xjt8yuxfdbUHAtcQ==}
     dev: true
 
   /@types/parse-json/4.0.0:
@@ -2507,7 +2511,7 @@ packages:
       jest-validate: 27.0.6
       micromatch: 4.0.4
       pretty-format: 27.0.6
-      ts-node: 10.1.0_400a4096d34ae850b4639c830a4747bf
+      ts-node: 10.1.0_13403c2f2d9ddab699dd2f492f123cbf
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -3803,7 +3807,7 @@ packages:
       yargs-parser: 20.2.9
     dev: true
 
-  /ts-node/10.1.0_400a4096d34ae850b4639c830a4747bf:
+  /ts-node/10.1.0_13403c2f2d9ddab699dd2f492f123cbf:
     resolution: {integrity: sha512-6szn3+J9WyG2hE+5W8e0ruZrzyk1uFLYye6IGMBadnOzDh8aP7t8CbFpsfCiEx2+wMixAhjFt7lOZC4+l+WbEA==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -3822,7 +3826,7 @@ packages:
       '@tsconfig/node12': 1.0.7
       '@tsconfig/node14': 1.0.0
       '@tsconfig/node16': 1.0.1
-      '@types/node': 14.17.5
+      '@types/node': 14.17.6
       arg: 4.1.3
       create-require: 1.1.1
       diff: 4.0.2
