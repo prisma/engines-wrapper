@@ -325,11 +325,8 @@ async function binaryNeedsToBeDownloaded(
   }
 
   // 3. If same platform, always check --version
-  if (
-    job.binaryTarget === nativePlatform &&
-    job.binaryName !== BinaryType.libqueryEngine
-  ) {
-    const works = await checkVersionCommand(binaryPath)
+  if (job.binaryTarget === nativePlatform) {
+    const works = await checkVersionCommand(job.binaryName, binaryPath)
     return !works
   }
 
@@ -343,8 +340,18 @@ export async function getVersion(enginePath: string): Promise<string> {
 }
 
 export async function checkVersionCommand(
+  binaryName: string,
   enginePath: string,
 ): Promise<boolean> {
+  if (binaryName === BinaryType.libqueryEngine) {
+    try {
+      const library = require(enginePath)
+      return true
+    } catch (e) {
+      return false
+    }
+  }
+
   try {
     const version = await getVersion(enginePath)
 
