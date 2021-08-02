@@ -116,11 +116,11 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
     Object.entries(opts.binaries),
     ([binaryName, targetFolder]: [string, string]) =>
       opts.binaryTargets.map((binaryTarget) => {
-        const fileName = getBinaryName(binaryName, binaryTarget)
-        const targetFilePath =
+        const fileName =
           binaryName === BinaryType.libqueryEngine
-            ? path.join(targetFolder, getNodeAPIName(binaryTarget, 'fs'))
-            : path.join(targetFolder, fileName)
+            ? getNodeAPIName(binaryTarget, 'fs')
+            : getBinaryName(binaryName, binaryTarget)
+        const targetFilePath = path.join(targetFolder, fileName)
         return {
           binaryName,
           targetFolder,
@@ -275,10 +275,12 @@ async function binaryNeedsToBeDownloaded(
   version: string,
   failSilent?: boolean,
 ): Promise<boolean> {
-  const binaryPath = job.envVarPath ?? job.targetFilePath
-
+  // If there is an ENV Override and the file exists then it does not need to be downloaded
+  if (job.envVarPath && fs.existsSync(job.envVarPath)) {
+    return false
+  }
   // 1. Check if file exists
-  const targetExists = await exists(binaryPath)
+  const targetExists = await exists(job.targetFilePath)
   // 2. If exists, check, if cached file exists and is up to date and has same hash as file.
   // If not, copy cached file over
   const cachedFile = await getCachedBinaryPath({
@@ -320,7 +322,7 @@ async function binaryNeedsToBeDownloaded(
 
   // If there is no cache and the file doesn't exist, we for sure need to download it
   if (!targetExists) {
-    debug(`file ${binaryPath} does not exist and must be downloaded`)
+    debug(`file ${job.targetFilePath} does not exist and must be downloaded`)
     return true
   }
 
@@ -329,7 +331,7 @@ async function binaryNeedsToBeDownloaded(
     job.binaryTarget === nativePlatform &&
     job.binaryName !== BinaryType.libqueryEngine
   ) {
-    const works = await checkVersionCommand(binaryPath)
+    const works = await checkVersionCommand(job.targetFilePath)
     return !works
   }
 

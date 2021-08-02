@@ -11,7 +11,9 @@ const DEFAULT_CLI_QUERY_ENGINE_BINARY_TYPE = BinaryType.libqueryEngine
  * Checks if the env override `PRISMA_CLI_QUERY_ENGINE_TYPE` is set to `node-api` or `binary`
  * Otherwise returns the default
  */
-export function getCliQueryEngineBinaryType(): BinaryType.libqueryEngine | BinaryType.queryEngine {
+export function getCliQueryEngineBinaryType():
+  | BinaryType.libqueryEngine
+  | BinaryType.queryEngine {
   const envCliQueryEngineType = process.env.PRISMA_CLI_QUERY_ENGINE_TYPE
   if (envCliQueryEngineType) {
     if (envCliQueryEngineType === 'binary') {
