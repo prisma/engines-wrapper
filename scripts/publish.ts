@@ -288,10 +288,10 @@ async function run(
 }
 
 // useful for debugging
-// process.env.GITHUB_EVENT_CLIENT_PAYLOAD = JSON.stringify({
-//   branch: 'enabling-node-api',
-//   commit: '8062e306decdf2fe2c2dcb8409c513a2023c8653',
-// })
+process.env.GITHUB_EVENT_CLIENT_PAYLOAD = JSON.stringify({
+  branch: 'enabling-node-api',
+  commit: '6287731616bd2e57d16f6b608f5bff40748ce13d',
+})
 
 const args = arg({
   '--dry': Boolean,
