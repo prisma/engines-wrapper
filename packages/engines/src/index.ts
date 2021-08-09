@@ -8,7 +8,7 @@ export function getEnginesPath() {
 }
 export const DEFAULT_CLI_QUERY_ENGINE_BINARY_TYPE = BinaryType.queryEngine
 /**
- * Checks if the env override `PRISMA_CLI_QUERY_ENGINE_TYPE` is set to `node-api` or `binary`
+ * Checks if the env override `PRISMA_CLI_QUERY_ENGINE_TYPE` is set to `library` or `binary`
  * Otherwise returns the default
  */
 export function getCliQueryEngineBinaryType():
@@ -19,7 +19,7 @@ export function getCliQueryEngineBinaryType():
     if (envCliQueryEngineType === 'binary') {
       return BinaryType.queryEngine
     }
-    if (envCliQueryEngineType === 'node-api') {
+    if (envCliQueryEngineType === 'library') {
       return BinaryType.libqueryEngine
     }
   }
