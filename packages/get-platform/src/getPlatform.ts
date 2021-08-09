@@ -202,6 +202,11 @@ export async function getPlatform(): Promise<Platform> {
     return `linux-arm-openssl-${libssl}` as Platform
   }
 
+  // 32 bit ARM(eg raspberry pi)
+  if (platform === 'linux' && arch === 'arm') {
+    return `linux-arm32-openssl-${libssl}` as Platform
+  }
+
   if (platform === 'linux' && distro === 'nixos') {
     return 'linux-nixos'
   }
