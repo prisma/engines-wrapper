@@ -7,6 +7,7 @@ import {
 } from '@prisma/fetch-engine'
 import fs from 'fs'
 import path from 'path'
+import { getCliQueryEngineBinaryType } from '.'
 const debug = Debug('prisma:download')
 
 const binaryDir = path.join(__dirname, '../')
@@ -28,11 +29,10 @@ async function main() {
     if (process.env.PRISMA_CLI_BINARY_TARGETS) {
       binaryTargets = process.env.PRISMA_CLI_BINARY_TARGETS.split(',')
     }
-    debug(`using Node API: ${process.env.PRISMA_FORCE_NAPI === 'true'}`)
+    const cliQueryEngineBinaryType = getCliQueryEngineBinaryType()
+
     const binaries: BinaryDownloadConfiguration = {
-      [process.env.PRISMA_FORCE_NAPI === 'true'
-        ? BinaryType.libqueryEngine
-        : BinaryType.queryEngine]: binaryDir,
+      [cliQueryEngineBinaryType]: binaryDir,
       [BinaryType.migrationEngine]: binaryDir,
       [BinaryType.introspectionEngine]: binaryDir,
       [BinaryType.prismaFmt]: binaryDir,
