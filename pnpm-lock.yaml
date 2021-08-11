@@ -33,16 +33,16 @@ importers:
   packages/engines:
     specifiers:
       '@prisma/debug': 2.28.0
-      '@prisma/engines-version': workspace:2.29.0-34.1be4cd60b89afa04b192acb1ef47758a39810f3a
-      '@prisma/fetch-engine': workspace:2.29.0-34.1be4cd60b89afa04b192acb1ef47758a39810f3a
+      '@prisma/engines-version': workspace:2.30.0-1.1be4cd60b89afa04b192acb1ef47758a39810f3a
+      '@prisma/fetch-engine': workspace:2.30.0-1.1be4cd60b89afa04b192acb1ef47758a39810f3a
       '@types/node': 14.17.9
       execa: 5.1.1
       typescript: 4.3.5
     devDependencies:
-      '@prisma/debug': 2.27.0
+      '@prisma/debug': 2.28.0
       '@prisma/engines-version': link:../engines-version
       '@prisma/fetch-engine': link:../fetch-engine
-      '@types/node': 14.17.6
+      '@types/node': 14.17.9
       execa: 5.1.1
       typescript: 4.3.5
 
@@ -57,8 +57,8 @@ importers:
   packages/fetch-engine:
     specifiers:
       '@prisma/debug': 2.28.0
-      '@prisma/engines-version': workspace:2.29.0-34.1be4cd60b89afa04b192acb1ef47758a39810f3a
-      '@prisma/get-platform': workspace:2.29.0-34.1be4cd60b89afa04b192acb1ef47758a39810f3a
+      '@prisma/engines-version': workspace:2.30.0-1.1be4cd60b89afa04b192acb1ef47758a39810f3a
+      '@prisma/get-platform': workspace:2.30.0-1.1be4cd60b89afa04b192acb1ef47758a39810f3a
       '@types/find-cache-dir': 3.2.1
       '@types/jest': 26.0.24
       '@types/node': 14.17.9
@@ -94,7 +94,7 @@ importers:
       ts-jest: 27.0.4
       typescript: 4.3.5
     dependencies:
-      '@prisma/debug': 2.27.0
+      '@prisma/debug': 2.28.0
       '@prisma/get-platform': link:../get-platform
       chalk: 4.1.1
       execa: 5.1.1
@@ -882,14 +882,6 @@ packages:
       fastq: 1.11.0
     dev: true
 
-  /@prisma/debug/2.27.0:
-    resolution: {integrity: sha512-Et01S4RoLnQP9u547dCp74aSnLWTu0akfBCzF4zQZsbEdw7wXLttrcvbcYKr+KhpfF5Xu291UP/Kaxg0aj8o4w==}
-    dependencies:
-      debug: 4.3.2
-      ms: 2.1.3
-    transitivePeerDependencies:
-      - supports-color
-
   /@prisma/debug/2.28.0:
     resolution: {integrity: sha512-SKihAtTPDqfm/iyLVs5xf1uLu4Ev+zcFLc8vdiGofpHTkeiu3qU1OSDPnrQ0nwn0IJsp3SeRbV0NRWTwL5Z71w==}
     dependencies:
@@ -897,7 +889,6 @@ packages:
       ms: 2.1.3
     transitivePeerDependencies:
       - supports-color
-    dev: false
 
   /@sindresorhus/slugify/1.1.2:
     resolution: {integrity: sha512-V9nR/W0Xd9TSGXpZ4iFUcFGhuOJtZX82Fzxj1YISlbSgKvIiNa7eLEZrT0vAraPOt++KHauIVNYgGRgjc13dXA==}
@@ -1028,10 +1019,6 @@ packages:
     resolution: {integrity: sha512-bjqH2cX/O33jXT/UmReo2pM7DIJREPMnarixbQ57DOOzzFaI6D2+IcwaJQaJpv0M1E9TIhPCYVxrkcityLjlqA==}
     dev: true
 
-  /@types/node/14.17.6:
-    resolution: {integrity: sha512-iBxsxU7eswQDGhlr3AiamBxOssaYxbM+NKXVil8jg9yFXvrfEFbDumLD/2dMTB+zYyg7w+Xjt8yuxfdbUHAtcQ==}
-    dev: true
-
   /@types/node/14.17.8:
     resolution: {integrity: sha512-0CHLt50GbUmH/6MrlBIKNdWCglvlyQKkorRf08/0DIi0ryuTPP+ijWLSI19SbDTHSKaagGDELiImY4BSikt61w==}
     dev: true
@@ -1109,7 +1096,7 @@ packages:
     peerDependencies:
       eslint: '*'
     dependencies:
-      '@types/json-schema': 7.0.7
+      '@types/json-schema': 7.0.9
       '@typescript-eslint/scope-manager': 4.28.3
       '@typescript-eslint/types': 4.28.3
       '@typescript-eslint/typescript-estree': 4.28.3_typescript@4.3.5
@@ -1127,7 +1114,7 @@ packages:
     peerDependencies:
       eslint: '*'
     dependencies:
-      '@types/json-schema': 7.0.7
+      '@types/json-schema': 7.0.9
       '@typescript-eslint/scope-manager': 4.29.1
       '@typescript-eslint/types': 4.29.1
       '@typescript-eslint/typescript-estree': 4.29.1_typescript@4.3.5
