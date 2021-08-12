@@ -1,6 +1,6 @@
 {
   "name": "@prisma/get-platform",
-  "version": "2.30.0-3.query-engine-skip-rollback-short-circuit-a5935b2a9381f41b773bfe6b4d7f3a9d441b0e77",
+  "version": "2.30.0-4.ec4e7aeaffc69fa817dbdd5d6e214a7b23598229",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
