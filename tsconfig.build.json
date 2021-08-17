@@ -14,5 +14,10 @@
     "noFallthroughCasesInSwitch": true,
     "skipDefaultLibCheck": true
   },
-  "exclude": ["**/build", "**/dist", "**/node_modules", "**/src/__tests__"]
+  "exclude": [
+    "**/dist",
+    "**/build",
+    "**/node_modules",
+    "**/src/__tests__"
+  ]
 }

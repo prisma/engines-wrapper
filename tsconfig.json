@@ -20,5 +20,10 @@
       "@prisma/engines-version": ["engines-version/src"]
     }
   },
-  "include": ["**/*"]
+  "include": ["**/*"],
+  "exclude": [
+    "**/dist",
+    "**/build",
+    "**/node_modules"
+  ]
 }
