@@ -1,6 +1,7 @@
 import Debug from '@prisma/debug'
 import { enginesVersion } from '@prisma/engines-version'
 import { BinaryType, download } from '@prisma/fetch-engine'
+import { Platform } from '@prisma/get-platform'
 import path from 'path'
 const debug = Debug('prisma:engines')
 export function getEnginesPath() {
@@ -27,7 +28,7 @@ export function getCliQueryEngineBinaryType():
 }
 export async function ensureBinariesExist() {
   const binaryDir = path.join(__dirname, '../')
-  let binaryTargets = undefined
+  let binaryTargets: string[] | undefined
   if (process.env.PRISMA_CLI_BINARY_TARGETS) {
     binaryTargets = process.env.PRISMA_CLI_BINARY_TARGETS.split(',')
   }
@@ -46,7 +47,7 @@ export async function ensureBinariesExist() {
     showProgress: true,
     version: enginesVersion,
     failSilent: false,
-    binaryTargets,
+    binaryTargets: binaryTargets as Platform[],
   })
 }
 

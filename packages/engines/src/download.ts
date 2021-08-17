@@ -5,6 +5,7 @@ import {
   BinaryType,
   download,
 } from '@prisma/fetch-engine'
+import { Platform } from '@prisma/get-platform'
 import fs from 'fs'
 import path from 'path'
 import { getCliQueryEngineBinaryType } from '.'
@@ -25,7 +26,7 @@ async function main() {
     )
   } else {
     createLockFile()
-    let binaryTargets = undefined
+    let binaryTargets: string[] | undefined
     if (process.env.PRISMA_CLI_BINARY_TARGETS) {
       binaryTargets = process.env.PRISMA_CLI_BINARY_TARGETS.split(',')
     }
@@ -43,7 +44,7 @@ async function main() {
       showProgress: true,
       version: enginesVersion,
       failSilent: true,
-      binaryTargets,
+      binaryTargets: binaryTargets as Platform[],
     }).catch((e) => debug(e))
 
     cleanupLockFile()
