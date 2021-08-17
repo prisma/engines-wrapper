@@ -33,7 +33,7 @@
     "@prisma/debug": "2.29.1"
   },
   "scripts": {
-    "build": "tsc -d",
+    "build": "tsc --build tsconfig.build.json",
     "prepublishOnly": "pnpm run build && npm run test",
     "format": "prettier --write .",
     "lint": "eslint --cache --fix --ext .ts .",

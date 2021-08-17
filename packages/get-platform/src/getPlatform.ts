@@ -166,8 +166,9 @@ async function gracefulExec(cmd: string): Promise<string | undefined> {
       })
     } catch (e) {
       resolve(undefined)
-      return undefined
     }
+
+    return undefined
   })
 }
 

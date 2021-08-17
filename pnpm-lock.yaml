@@ -36,6 +36,7 @@ importers:
       '@prisma/engines-version': workspace:2.30.0-9.a8608ff20d8774e88657834d2d58ad4c9134e5b7
       '@prisma/fetch-engine': workspace:2.30.0-9.a8608ff20d8774e88657834d2d58ad4c9134e5b7
       '@types/node': 14.17.9
+      esbuild: 0.12.20
       execa: 5.1.1
       typescript: 4.3.5
     devDependencies:
@@ -43,6 +44,7 @@ importers:
       '@prisma/engines-version': link:../engines-version
       '@prisma/fetch-engine': link:../fetch-engine
       '@types/node': 14.17.9
+      esbuild: 0.12.20
       execa: 5.1.1
       typescript: 4.3.5
 
@@ -1795,6 +1797,12 @@ packages:
     resolution: {integrity: sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==}
     dependencies:
       is-arrayish: 0.2.1
+    dev: true
+
+  /esbuild/0.12.20:
+    resolution: {integrity: sha512-u7+0qTo9Z64MD9PhooEngCmzyEYJ6ovFhPp8PLNh3UasR5Ihjv6HWVXqm8uHmasdQlpsAf0IsY4U0YVUfCpt4Q==}
+    hasBin: true
+    requiresBuild: true
     dev: true
 
   /escalade/3.1.1:

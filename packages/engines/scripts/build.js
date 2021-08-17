@@ -6,7 +6,7 @@ async function main() {
 
   // TODO: Combine download.ts and index.ts together to save space
   await Promise.all([
-    run('tsc -d', true),
+    run('tsc --build tsconfig.build.json', true),
     run(
       'esbuild src/download.ts --outfile=download/index.js --bundle --platform=node --target=node10 --minify --sourcemap',
       false,

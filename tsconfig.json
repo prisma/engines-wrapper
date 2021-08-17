@@ -1,14 +1,22 @@
 {
+  "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "lib": ["esnext"],
-    "module": "commonjs",
-    "target": "es2018",
-    "strict": false,
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "noImplicitAny": false,
-    "rootDir": "scripts",
-    "declaration": true
+    "baseUrl": "./packages/",
+    "paths": {
+      "@prisma/client/*": ["../../prisma/packages/client/src/runtime"],
+      "@prisma/sdk": ["../../prisma/packages/sdk/src"],
+      "@prisma/sdk/dist/*": ["../../prisma/packages/sdk/src/*"],
+      "@prisma/migrate": ["../../prisma/packages/migrate/src"],
+      "@prisma/generator-helper": ["../../prisma/packages/generator-helper/src"],
+      "@prisma/engine-core": ["../../prisma/packages/engine-core/src"],
+      "@prisma/engine-core/dist/*": ["../../prisma/packages/engine-core/src/*"],
+      "@prisma/debug": ["../../prisma/packages/debug/src"],
+      "@prisma/cli": ["../../prisma/packages/cli/src"],
+      "@prisma/get-platform": ["get-platform/src"],
+      "@prisma/fetch-engine": ["fetch-engine/src"],
+      "@prisma/engines": ["engines/src"],
+      "@prisma/engines-version": ["engines-version/src"]
+    }
   },
-  "include": ["scripts"]
+  "include": ["**/*"]
 }
