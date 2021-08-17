@@ -7,7 +7,9 @@
       "@prisma/sdk": ["../../prisma/packages/sdk/src"],
       "@prisma/sdk/dist/*": ["../../prisma/packages/sdk/src/*"],
       "@prisma/migrate": ["../../prisma/packages/migrate/src"],
-      "@prisma/generator-helper": ["../../prisma/packages/generator-helper/src"],
+      "@prisma/generator-helper": [
+        "../../prisma/packages/generator-helper/src"
+      ],
       "@prisma/engine-core": ["../../prisma/packages/engine-core/src"],
       "@prisma/engine-core/dist/*": ["../../prisma/packages/engine-core/src/*"],
       "@prisma/debug": ["../../prisma/packages/debug/src"],
