@@ -1,3 +1,3 @@
 import { getLatestTag } from '../src'
 
-getLatestTag().then((x) => console.log(x))
+void getLatestTag().then((x) => console.log(x))

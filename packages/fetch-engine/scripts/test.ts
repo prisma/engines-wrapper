@@ -1,7 +1,7 @@
 import { download } from '../src'
 import path from 'path'
 
-download({
+void download({
   binaries: {
     'query-engine': path.join(__dirname, '../test'),
     'migration-engine': path.join(__dirname, '../test'),
