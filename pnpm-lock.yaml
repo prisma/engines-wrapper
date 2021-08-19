@@ -33,8 +33,8 @@ importers:
   packages/engines:
     specifiers:
       '@prisma/debug': 2.29.1
-      '@prisma/engines-version': workspace:2.30.0-20.d7a8e3ff9a51eba24cbafcb8ce0c3d1daf7469df
-      '@prisma/fetch-engine': workspace:2.30.0-20.d7a8e3ff9a51eba24cbafcb8ce0c3d1daf7469df
+      '@prisma/engines-version': workspace:2.30.0-21.222465dda7cc7803b17526d3971e77de27fec0c2
+      '@prisma/fetch-engine': workspace:2.30.0-21.222465dda7cc7803b17526d3971e77de27fec0c2
       '@types/node': 14.17.10
       execa: 5.1.1
       typescript: 4.3.5
@@ -57,8 +57,8 @@ importers:
   packages/fetch-engine:
     specifiers:
       '@prisma/debug': 2.29.1
-      '@prisma/engines-version': workspace:2.30.0-20.d7a8e3ff9a51eba24cbafcb8ce0c3d1daf7469df
-      '@prisma/get-platform': workspace:2.30.0-20.d7a8e3ff9a51eba24cbafcb8ce0c3d1daf7469df
+      '@prisma/engines-version': workspace:2.30.0-21.222465dda7cc7803b17526d3971e77de27fec0c2
+      '@prisma/get-platform': workspace:2.30.0-21.222465dda7cc7803b17526d3971e77de27fec0c2
       '@types/find-cache-dir': 3.2.1
       '@types/jest': 27.0.1
       '@types/node': 14.17.10
