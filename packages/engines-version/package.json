@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "2.31.0-9.query-engine-rework-json-nullability-88f8b456a60674a3573d3ca4303f3b7e1bac4f70",
+  "version": "2.31.0-10.acbdf66015fec9f52252d305d99f972e32a20459",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "88f8b456a60674a3573d3ca4303f3b7e1bac4f70"
+    "enginesVersion": "acbdf66015fec9f52252d305d99f972e32a20459"
   },
   "devDependencies": {
     "@types/node": "14.17.12",
