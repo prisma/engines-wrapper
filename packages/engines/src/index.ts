@@ -6,7 +6,7 @@ const debug = Debug('prisma:engines')
 export function getEnginesPath() {
   return path.join(__dirname, '../')
 }
-export const DEFAULT_CLI_QUERY_ENGINE_BINARY_TYPE = BinaryType.queryEngine
+export const DEFAULT_CLI_QUERY_ENGINE_BINARY_TYPE = BinaryType.libqueryEngine
 /**
  * Checks if the env override `PRISMA_CLI_QUERY_ENGINE_TYPE` is set to `library` or `binary`
  * Otherwise returns the default
