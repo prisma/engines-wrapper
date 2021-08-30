@@ -1,14 +1,14 @@
 {
   "name": "@prisma/engines",
-  "version": "2.31.0-12.1f6a57b589346e24765493d208ef4a1b1a7bfa4d",
+  "version": "2.31.0-13.query-engine-rework-json-nullability-88641c1a232e4509c48131ad440ba85970b05ff1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "devDependencies": {
     "@prisma/debug": "2.30.0",
-    "@prisma/engines-version": "workspace:2.31.0-12.1f6a57b589346e24765493d208ef4a1b1a7bfa4d",
-    "@prisma/fetch-engine": "workspace:2.31.0-12.1f6a57b589346e24765493d208ef4a1b1a7bfa4d",
+    "@prisma/engines-version": "workspace:2.31.0-13.query-engine-rework-json-nullability-88641c1a232e4509c48131ad440ba85970b05ff1",
+    "@prisma/fetch-engine": "workspace:2.31.0-13.query-engine-rework-json-nullability-88641c1a232e4509c48131ad440ba85970b05ff1",
     "@types/node": "14.17.12",
     "execa": "5.1.1",
     "typescript": "4.3.5"
