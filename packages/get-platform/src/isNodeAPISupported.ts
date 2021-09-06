@@ -11,7 +11,7 @@ export async function isNodeAPISupported() {
   const os = await getos()
   if (!customLibraryExists && (os.arch === 'x32' || os.arch === 'ia32')) {
     throw new Error(
-      `Node-API is currently not supported for 32bit Node. Please remove \`nApi\` from the "previewFeatures" attribute in the "generator" block of the "schema.prisma", or remove the "PRISMA_FORCE_NAPI" environment variable.`,
+      `Node-API is currently not supported for 32bit Node. Please set \`engineType = "binary"\` in the "generator" block of your "schema.prisma" file (or use the environment variables "PRISMA_CLIENT_ENGINE_TYPE=binary" and/or "PRISMA_CLI_QUERY_ENGINE_TYPE=binary".)`,
     )
   }
 }
