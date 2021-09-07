@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       '@sindresorhus/slugify': 1.1.2
-      '@types/node': 14.17.14
+      '@types/node': 14.17.15
       '@types/node-fetch': 2.5.12
       arg: 5.0.1
       chalk: 4.1.2
@@ -18,7 +18,7 @@ importers:
       typescript: 4.3.5
     devDependencies:
       '@sindresorhus/slugify': 1.1.2
-      '@types/node': 14.17.14
+      '@types/node': 14.17.15
       '@types/node-fetch': 2.5.12
       arg: 5.0.1
       chalk: 4.1.2
@@ -27,7 +27,7 @@ importers:
       is-ci: 3.0.0
       node-fetch: 2.6.2
       prettier: 2.3.2
-      ts-node: 10.2.1_098ef90dbe4fbec5b372c34c43a42b72
+      ts-node: 10.2.1_b04324131e2fb5ba13b634647cdac0ef
       typescript: 4.3.5
 
   packages/engines:
@@ -35,23 +35,23 @@ importers:
       '@prisma/debug': 2.30.3
       '@prisma/engines-version': workspace:2.31.0-31.2452cc6313d52b8b9a96999ac0e974d0aedf88db
       '@prisma/fetch-engine': workspace:2.31.0-31.2452cc6313d52b8b9a96999ac0e974d0aedf88db
-      '@types/node': 14.17.14
+      '@types/node': 14.17.15
       execa: 5.1.1
       typescript: 4.3.5
     devDependencies:
       '@prisma/debug': 2.30.3
       '@prisma/engines-version': link:../engines-version
       '@prisma/fetch-engine': link:../fetch-engine
-      '@types/node': 14.17.14
+      '@types/node': 14.17.15
       execa: 5.1.1
       typescript: 4.3.5
 
   packages/engines-version:
     specifiers:
-      '@types/node': 14.17.14
+      '@types/node': 14.17.15
       typescript: 4.3.5
     devDependencies:
-      '@types/node': 14.17.14
+      '@types/node': 14.17.15
       typescript: 4.3.5
 
   packages/fetch-engine:
@@ -61,7 +61,7 @@ importers:
       '@prisma/get-platform': workspace:2.31.0-31.2452cc6313d52b8b9a96999ac0e974d0aedf88db
       '@types/find-cache-dir': 3.2.1
       '@types/jest': 27.0.1
-      '@types/node': 14.17.14
+      '@types/node': 14.17.15
       '@types/node-fetch': 2.5.12
       '@types/progress': 2.0.5
       '@typescript-eslint/eslint-plugin': 4.31.0
@@ -115,7 +115,7 @@ importers:
       '@prisma/engines-version': link:../engines-version
       '@types/find-cache-dir': 3.2.1
       '@types/jest': 27.0.1
-      '@types/node': 14.17.14
+      '@types/node': 14.17.15
       '@types/node-fetch': 2.5.12
       '@types/progress': 2.0.5
       '@typescript-eslint/eslint-plugin': 4.31.0_d1dd20e6bac64435251dbfdf7965a8a7
@@ -137,7 +137,7 @@ importers:
     specifiers:
       '@prisma/debug': 2.30.3
       '@types/jest': 27.0.1
-      '@types/node': 14.17.14
+      '@types/node': 14.17.15
       '@typescript-eslint/eslint-plugin': 4.31.0
       '@typescript-eslint/parser': 4.31.0
       eslint: 7.32.0
@@ -154,7 +154,7 @@ importers:
       '@prisma/debug': 2.30.3
     devDependencies:
       '@types/jest': 27.0.1
-      '@types/node': 14.17.14
+      '@types/node': 14.17.15
       '@typescript-eslint/eslint-plugin': 4.31.0_d1dd20e6bac64435251dbfdf7965a8a7
       '@typescript-eslint/parser': 4.31.0_eslint@7.32.0+typescript@4.3.5
       eslint: 7.32.0
@@ -960,8 +960,8 @@ packages:
     resolution: {integrity: sha512-vhUqgjJR1qxwTWV5Ps5txuy2XMdf7Fw+OrdChRboy8BmWUPkckOhphaohzFG6b8DW7CrxaBMdrdJ47SYFq1okw==}
     dev: true
 
-  /@types/node/14.17.14:
-    resolution: {integrity: sha512-rsAj2u8Xkqfc332iXV12SqIsjVi07H479bOP4q94NAcjzmAvapumEhuVIt53koEf7JFrpjgNKjBga5Pnn/GL8A==}
+  /@types/node/14.17.15:
+    resolution: {integrity: sha512-D1sdW0EcSCmNdLKBGMYb38YsHUS6JcM7yQ6sLQ9KuZ35ck7LYCKE7kYFHOO59ayFOY3zobWVZxf4KXhYHcHYFA==}
     dev: true
 
   /@types/node/14.17.5:
@@ -2524,7 +2524,7 @@ packages:
       jest-validate: 27.1.0
       micromatch: 4.0.4
       pretty-format: 27.1.0
-      ts-node: 10.2.1_098ef90dbe4fbec5b372c34c43a42b72
+      ts-node: 10.2.1_b04324131e2fb5ba13b634647cdac0ef
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -3826,7 +3826,7 @@ packages:
       yargs-parser: 20.2.9
     dev: true
 
-  /ts-node/10.2.1_098ef90dbe4fbec5b372c34c43a42b72:
+  /ts-node/10.2.1_b04324131e2fb5ba13b634647cdac0ef:
     resolution: {integrity: sha512-hCnyOyuGmD5wHleOQX6NIjJtYVIO8bPP8F2acWkB4W06wdlkgyvJtubO/I9NkI88hCFECbsEgoLc0VNkYmcSfw==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -3846,7 +3846,7 @@ packages:
       '@tsconfig/node12': 1.0.7
       '@tsconfig/node14': 1.0.0
       '@tsconfig/node16': 1.0.2
-      '@types/node': 14.17.14
+      '@types/node': 14.17.15
       acorn: 8.4.1
       acorn-walk: 8.1.1
       arg: 4.1.3
