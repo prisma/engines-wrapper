@@ -32,14 +32,14 @@ importers:
 
   packages/engines:
     specifiers:
-      '@prisma/debug': 3.0.1
+      '@prisma/debug': 3.0.2
       '@prisma/engines-version': workspace:3.1.0-2.eb8eb4c97238c32c9e71756e76d59ed5e502185a
       '@prisma/fetch-engine': workspace:3.1.0-2.eb8eb4c97238c32c9e71756e76d59ed5e502185a
       '@types/node': 14.17.15
       execa: 5.1.1
       typescript: 4.3.5
     devDependencies:
-      '@prisma/debug': 3.0.1
+      '@prisma/debug': 3.0.2
       '@prisma/engines-version': link:../engines-version
       '@prisma/fetch-engine': link:../fetch-engine
       '@types/node': 14.17.15
@@ -56,7 +56,7 @@ importers:
 
   packages/fetch-engine:
     specifiers:
-      '@prisma/debug': 3.0.1
+      '@prisma/debug': 3.0.2
       '@prisma/engines-version': workspace:3.1.0-2.eb8eb4c97238c32c9e71756e76d59ed5e502185a
       '@prisma/get-platform': workspace:3.1.0-2.eb8eb4c97238c32c9e71756e76d59ed5e502185a
       '@types/find-cache-dir': 3.2.1
@@ -94,7 +94,7 @@ importers:
       ts-jest: 27.0.5
       typescript: 4.3.5
     dependencies:
-      '@prisma/debug': 3.0.1
+      '@prisma/debug': 3.0.2
       '@prisma/get-platform': link:../get-platform
       chalk: 4.1.1
       execa: 5.1.1
@@ -135,7 +135,7 @@ importers:
 
   packages/get-platform:
     specifiers:
-      '@prisma/debug': 3.0.1
+      '@prisma/debug': 3.0.2
       '@types/jest': 27.0.1
       '@types/node': 14.17.15
       '@typescript-eslint/eslint-plugin': 4.31.0
@@ -151,7 +151,7 @@ importers:
       ts-jest: 27.0.5
       typescript: 4.3.5
     dependencies:
-      '@prisma/debug': 3.0.1
+      '@prisma/debug': 3.0.2
     devDependencies:
       '@types/jest': 27.0.1
       '@types/node': 14.17.15
@@ -818,8 +818,8 @@ packages:
       fastq: 1.11.0
     dev: true
 
-  /@prisma/debug/3.0.1:
-    resolution: {integrity: sha512-jygNyhua6weT/pMmoTBHIcSV/eC6WZpyHZwlGtRqP+PCcQgSUvfxY4b1Il7itsd8rCLI/D6JuvBm5UsNdo5dXw==}
+  /@prisma/debug/3.0.2:
+    resolution: {integrity: sha512-D2/LghEqphW6h9ycT8nfdEw2rzT0LXmikBy2101aYcY28vS01rHTVIUOiz/DDaltlqY1qBat3F5vgM+6GwIqbw==}
     dependencies:
       '@types/debug': 4.1.7
       debug: 4.3.2

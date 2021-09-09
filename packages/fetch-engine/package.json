@@ -36,7 +36,7 @@
     "typescript": "4.3.5"
   },
   "dependencies": {
-    "@prisma/debug": "3.0.1",
+    "@prisma/debug": "3.0.2",
     "@prisma/get-platform": "workspace:3.1.0-2.eb8eb4c97238c32c9e71756e76d59ed5e502185a",
     "chalk": "^4.0.0",
     "execa": "^5.0.0",
