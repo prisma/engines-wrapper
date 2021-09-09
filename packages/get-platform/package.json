@@ -30,7 +30,7 @@
     "typescript": "4.3.5"
   },
   "dependencies": {
-    "@prisma/debug": "3.0.1"
+    "@prisma/debug": "3.0.2"
   },
   "scripts": {
     "build": "tsc -d",
