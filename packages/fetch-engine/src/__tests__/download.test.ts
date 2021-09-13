@@ -15,7 +15,7 @@ import { getFiles } from './__utils__/getFiles'
 
 const CURRENT_BINARIES_HASH = enginesVersion
 
-const FIXED_BINARIES_HASH = '0cecbd5867319b25d3d5110c16c398af16082790 '
+const FIXED_BINARIES_HASH = '0cecbd5867319b25d3d5110c16c398af16082790'
 
 jest.setTimeout(100_000)
 
