@@ -56,6 +56,8 @@ export function getAllUrls(branch: string, commit: string): string[] {
     'freebsd',
     'arm',
     'linux-nixos',
+    'linux-arm-openssl-1.1.x',
+    'linux-arm-openssl-1.0.x',
     'openbsd',
     'netbsd',
     'freebsd11',
