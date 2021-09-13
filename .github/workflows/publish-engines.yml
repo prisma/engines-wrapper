@@ -10,7 +10,7 @@ concurrency: publish-engines
 jobs:
   publish-engines:
     # Do not change `name`, prisma-engines Buildkite build job depends on this name ending with the commit
-    name: "Publish engines-wrapper packages for prisma-engines branch ${{ github.event.ref }} and commit ${{ github.event.client_payload.commit }}"
+    name: 'Publish engines-wrapper packages for prisma-engines branch ${{ github.event.ref }} and commit ${{ github.event.client_payload.commit }}'
     timeout-minutes: 10
     runs-on: ubuntu-latest
 

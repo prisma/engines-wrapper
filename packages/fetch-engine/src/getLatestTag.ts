@@ -52,10 +52,16 @@ export async function getLatestTag(): Promise<any> {
 
 export function getAllUrls(branch: string, commit: string): string[] {
   const urls: string[] = []
+
+  // these are the platforms we know exists but we don't compile for.
+  // we need to exclude them here so that we don't try to download binaries for these.
+  // They are known because we don't want to block custom binary usage for them.
   const excludedPlatforms = [
     'freebsd',
     'arm',
     'linux-nixos',
+    'linux-arm-openssl-1.1.x',
+    'linux-arm-openssl-1.0.x',
     'openbsd',
     'netbsd',
     'freebsd11',
