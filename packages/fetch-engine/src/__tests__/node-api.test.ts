@@ -67,11 +67,11 @@ Array [
     "size": "X",
   },
   Object {
-    "name": "libquery_engine-linux-arm-openssl-1.0.x.so.node",
+    "name": "libquery_engine-linux-arm64-openssl-1.0.x.so.node",
     "size": "X",
   },
   Object {
-    "name": "libquery_engine-linux-arm-openssl-1.1.x.so.node",
+    "name": "libquery_engine-linux-arm64-openssl-1.1.x.so.node",
     "size": "X",
   },
   Object {
