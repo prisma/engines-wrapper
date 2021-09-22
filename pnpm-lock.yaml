@@ -12,7 +12,7 @@ importers:
       execa: 5.1.1
       husky: 7.0.2
       is-ci: 3.0.0
-      node-fetch: 2.6.3
+      node-fetch: 2.6.5
       prettier: 2.4.1
       ts-node: 10.2.1
       typescript: 4.4.3
@@ -25,7 +25,7 @@ importers:
       execa: 5.1.1
       husky: 7.0.2
       is-ci: 3.0.0
-      node-fetch: 2.6.3
+      node-fetch: 2.6.5
       prettier: 2.4.1
       ts-node: 10.2.1_1b2a76c7ee49ead6175810e099032438
       typescript: 4.4.3
@@ -3187,8 +3187,8 @@ packages:
     engines: {node: 4.x || >=6.0.0}
     dev: false
 
-  /node-fetch/2.6.3:
-    resolution: {integrity: sha512-BXSmNTLLDHT0UjQDg5E23x+0n/hPDjySqc0ELE4NpCa2wE5qmmaEWFRP/+v8pfuocchR9l5vFLbSB7CPE2ahvQ==}
+  /node-fetch/2.6.5:
+    resolution: {integrity: sha512-mmlIVHJEu5rnIxgEgez6b9GgWXbkZj5YZ7fx+2r94a2E+Uirsp6HsPTPlomfdHtpt/B0cdKviwkoaM6pyvUOpQ==}
     engines: {node: 4.x || >=6.0.0}
     dependencies:
       whatwg-url: 5.0.0
