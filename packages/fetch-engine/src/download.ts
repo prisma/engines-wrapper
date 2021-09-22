@@ -447,7 +447,7 @@ async function downloadBinary(options: DownloadBinaryOptions): Promise<void> {
     fs.accessSync(targetDir, fs.constants.W_OK)
     await makeDir(targetDir)
   } catch (e) {
-    if (options.failSilent || e.code !== 'EACCES') {
+    if (options.failSilent || (e as NodeJS.ErrnoException).code !== 'EACCES') {
       return
     } else {
       throw new Error(
