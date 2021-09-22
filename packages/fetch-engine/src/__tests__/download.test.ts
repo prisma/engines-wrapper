@@ -184,7 +184,7 @@ describe('download', () => {
         version: FIXED_BINARIES_HASH,
         binaryTargets: ['darwin', 'marvin'] as any, // eslint-disable-line @typescript-eslint/no-explicit-any
       })
-    } catch (err) {
+    } catch (err: any) {
       expect(stripAnsi(err.message)).toMatchInlineSnapshot(
         `"Env var PRISMA_QUERY_ENGINE_BINARY is provided but provided path ../query-engine can't be resolved."`,
       )
