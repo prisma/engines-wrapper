@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       '@sindresorhus/slugify': 1.1.2
-      '@types/node': 14.17.17
+      '@types/node': 14.17.18
       '@types/node-fetch': 2.5.12
       arg: 5.0.1
       chalk: 4.1.2
@@ -18,7 +18,7 @@ importers:
       typescript: 4.4.3
     devDependencies:
       '@sindresorhus/slugify': 1.1.2
-      '@types/node': 14.17.17
+      '@types/node': 14.17.18
       '@types/node-fetch': 2.5.12
       arg: 5.0.1
       chalk: 4.1.2
@@ -27,41 +27,41 @@ importers:
       is-ci: 3.0.0
       node-fetch: 2.6.3
       prettier: 2.4.1
-      ts-node: 10.2.1_3a3f5552efcda8537bf632ac6a685e01
+      ts-node: 10.2.1_1b2a76c7ee49ead6175810e099032438
       typescript: 4.4.3
 
   packages/engines:
     specifiers:
-      '@prisma/debug': 3.0.2
-      '@prisma/engines-version': workspace:3.1.0-24.c22652b7e418506fab23052d569b85d3aec4883f
-      '@prisma/fetch-engine': workspace:3.1.0-24.c22652b7e418506fab23052d569b85d3aec4883f
-      '@types/node': 14.17.17
+      '@prisma/debug': 3.1.1
+      '@prisma/engines-version': workspace:3.2.0-7.9062d80f548ec5d0e7ae453788615b2b560510a8
+      '@prisma/fetch-engine': workspace:3.2.0-7.9062d80f548ec5d0e7ae453788615b2b560510a8
+      '@types/node': 14.17.18
       execa: 5.1.1
       typescript: 4.4.3
     devDependencies:
-      '@prisma/debug': 3.0.2
+      '@prisma/debug': 3.1.1
       '@prisma/engines-version': link:../engines-version
       '@prisma/fetch-engine': link:../fetch-engine
-      '@types/node': 14.17.17
+      '@types/node': 14.17.18
       execa: 5.1.1
       typescript: 4.4.3
 
   packages/engines-version:
     specifiers:
-      '@types/node': 14.17.17
+      '@types/node': 14.17.18
       typescript: 4.4.3
     devDependencies:
-      '@types/node': 14.17.17
+      '@types/node': 14.17.18
       typescript: 4.4.3
 
   packages/fetch-engine:
     specifiers:
-      '@prisma/debug': 3.0.2
-      '@prisma/engines-version': workspace:3.1.0-24.c22652b7e418506fab23052d569b85d3aec4883f
-      '@prisma/get-platform': workspace:3.1.0-24.c22652b7e418506fab23052d569b85d3aec4883f
+      '@prisma/debug': 3.1.1
+      '@prisma/engines-version': workspace:3.2.0-7.9062d80f548ec5d0e7ae453788615b2b560510a8
+      '@prisma/get-platform': workspace:3.2.0-7.9062d80f548ec5d0e7ae453788615b2b560510a8
       '@types/find-cache-dir': 3.2.1
       '@types/jest': 27.0.2
-      '@types/node': 14.17.17
+      '@types/node': 14.17.18
       '@types/node-fetch': 2.5.12
       '@types/progress': 2.0.5
       '@typescript-eslint/eslint-plugin': 4.31.2
@@ -94,7 +94,7 @@ importers:
       ts-jest: 27.0.5
       typescript: 4.4.3
     dependencies:
-      '@prisma/debug': 3.0.2
+      '@prisma/debug': 3.1.1
       '@prisma/get-platform': link:../get-platform
       chalk: 4.1.1
       execa: 5.1.1
@@ -115,7 +115,7 @@ importers:
       '@prisma/engines-version': link:../engines-version
       '@types/find-cache-dir': 3.2.1
       '@types/jest': 27.0.2
-      '@types/node': 14.17.17
+      '@types/node': 14.17.18
       '@types/node-fetch': 2.5.12
       '@types/progress': 2.0.5
       '@typescript-eslint/eslint-plugin': 4.31.2_3815fab247b4312be6d1f55eb1f81298
@@ -135,9 +135,9 @@ importers:
 
   packages/get-platform:
     specifiers:
-      '@prisma/debug': 3.0.2
+      '@prisma/debug': 3.1.1
       '@types/jest': 27.0.2
-      '@types/node': 14.17.17
+      '@types/node': 14.17.18
       '@typescript-eslint/eslint-plugin': 4.31.2
       '@typescript-eslint/parser': 4.31.2
       eslint: 7.32.0
@@ -151,10 +151,10 @@ importers:
       ts-jest: 27.0.5
       typescript: 4.4.3
     dependencies:
-      '@prisma/debug': 3.0.2
+      '@prisma/debug': 3.1.1
     devDependencies:
       '@types/jest': 27.0.2
-      '@types/node': 14.17.17
+      '@types/node': 14.17.18
       '@typescript-eslint/eslint-plugin': 4.31.2_3815fab247b4312be6d1f55eb1f81298
       '@typescript-eslint/parser': 4.31.2_eslint@7.32.0+typescript@4.4.3
       eslint: 7.32.0
@@ -818,8 +818,8 @@ packages:
       fastq: 1.11.0
     dev: true
 
-  /@prisma/debug/3.0.2:
-    resolution: {integrity: sha512-D2/LghEqphW6h9ycT8nfdEw2rzT0LXmikBy2101aYcY28vS01rHTVIUOiz/DDaltlqY1qBat3F5vgM+6GwIqbw==}
+  /@prisma/debug/3.1.1:
+    resolution: {integrity: sha512-KCpckIAxYnf3wJ6wa2HkdwK7JZdgwr00T5QulC6dHbhn0a8QCSb/yTo74m2zuiyi/5NYo5LslZVPFeQJvKU7cQ==}
     dependencies:
       '@types/debug': 4.1.7
       debug: 4.3.2
@@ -958,6 +958,10 @@ packages:
 
   /@types/node/14.17.17:
     resolution: {integrity: sha512-niAjcewgEYvSPCZm3OaM9y6YQrL2SEPH9PymtE6fuZAvFiP6ereCcvApGl2jKTq7copTIguX3PBvfP08LN4LvQ==}
+    dev: true
+
+  /@types/node/14.17.18:
+    resolution: {integrity: sha512-haYyibw4pbteEhkSg0xdDLAI3679L75EJ799ymVrPxOA922bPx3ML59SoDsQ//rHlvqpu+e36kcbR3XRQtFblA==}
     dev: true
 
   /@types/node/14.17.5:
@@ -2521,7 +2525,7 @@ packages:
       jest-validate: 27.2.0
       micromatch: 4.0.4
       pretty-format: 27.2.0
-      ts-node: 10.2.1_3a3f5552efcda8537bf632ac6a685e01
+      ts-node: 10.2.1_1b2a76c7ee49ead6175810e099032438
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -3809,7 +3813,7 @@ packages:
       yargs-parser: 20.2.9
     dev: true
 
-  /ts-node/10.2.1_3a3f5552efcda8537bf632ac6a685e01:
+  /ts-node/10.2.1_1b2a76c7ee49ead6175810e099032438:
     resolution: {integrity: sha512-hCnyOyuGmD5wHleOQX6NIjJtYVIO8bPP8F2acWkB4W06wdlkgyvJtubO/I9NkI88hCFECbsEgoLc0VNkYmcSfw==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -3829,7 +3833,7 @@ packages:
       '@tsconfig/node12': 1.0.7
       '@tsconfig/node14': 1.0.0
       '@tsconfig/node16': 1.0.2
-      '@types/node': 14.17.17
+      '@types/node': 14.17.18
       acorn: 8.4.1
       acorn-walk: 8.1.1
       arg: 4.1.3
