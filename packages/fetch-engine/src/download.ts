@@ -81,8 +81,7 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
 
   if (os.distro && ['nixos'].includes(os.distro)) {
     console.error(
-      `${chalk.yellow('Warning')} Precompiled binaries are not available for ${
-        os.distro
+      `${chalk.yellow('Warning')} Precompiled binaries are not available for ${os.distro
       }.`,
     )
   } else if (
@@ -220,8 +219,7 @@ function getCollectiveBar(options: DownloadOptions): {
 } {
   const hasNodeAPI = 'libquery-engine' in options.binaries
   const bar = getBar(
-    `Downloading Prisma engines${
-      hasNodeAPI ? ' for Node-API' : ''
+    `Downloading Prisma engines${hasNodeAPI ? ' for Node-API' : ''
     } for ${options.binaryTargets?.map((p) => chalk.bold(p)).join(' and ')}`,
   )
 
@@ -232,20 +230,20 @@ function getCollectiveBar(options: DownloadOptions): {
     Object.values(options?.binaryTargets ?? []).length
   const setProgress =
     (sourcePath: string) =>
-    (progress): void => {
-      progressMap[sourcePath] = progress
-      const progressValues = Object.values(progressMap)
-      const totalProgress =
-        progressValues.reduce((acc, curr) => {
-          return acc + curr
-        }, 0) / numDownloads
-      if (options.progressCb) {
-        options.progressCb(totalProgress)
+      (progress): void => {
+        progressMap[sourcePath] = progress
+        const progressValues = Object.values(progressMap)
+        const totalProgress =
+          progressValues.reduce((acc, curr) => {
+            return acc + curr
+          }, 0) / numDownloads
+        if (options.progressCb) {
+          options.progressCb(totalProgress)
+        }
+        if (bar) {
+          bar.update(totalProgress)
+        }
       }
-      if (bar) {
-        bar.update(totalProgress)
-      }
-    }
 
   return {
     setProgress,
@@ -447,7 +445,7 @@ async function downloadBinary(options: DownloadBinaryOptions): Promise<void> {
     fs.accessSync(targetDir, fs.constants.W_OK)
     await makeDir(targetDir)
   } catch (e) {
-    if (options.failSilent || e.code !== 'EACCES') {
+    if (options.failSilent || (e as NodeJS.ErrnoException).code !== 'EACCES') {
       return
     } else {
       throw new Error(
