@@ -1,6 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base", ":disableRateLimiting"],
-  "masterIssue": true,
-  "reviewers": ["@jolg42", "@williamluke4"]
+  "dependencyDashboard": true,
+  "schedule": ["before 8am on Wednesday"],
+  "reviewers": ["@jolg42", "@millsp"]
 }
