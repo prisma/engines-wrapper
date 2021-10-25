@@ -8,6 +8,11 @@
   "prisma": {
     "enginesVersion": "6a51465e8857a85bad0a12d9261efbceaae55dfc"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prisma/engines-wrapper.git",
+    "directory": "packages/engines-version"
+  },
   "devDependencies": {
     "@types/node": "14.17.27",
     "typescript": "4.4.4"
