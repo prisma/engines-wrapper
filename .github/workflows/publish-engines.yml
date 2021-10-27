@@ -19,7 +19,7 @@ jobs:
 
       - name: Print input
         run: |
-          echo ${{github.event.client_payload}}
+          echo ${{  toJson(github.event.client_payload) }}
           
       - uses: actions/setup-node@v2
         with:
