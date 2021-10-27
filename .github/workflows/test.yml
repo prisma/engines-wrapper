@@ -25,7 +25,6 @@ jobs:
       - run: bash .github/workflows/setup.sh
         env:
           CI: true
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - run: pnpm run test
         name: 'fetch-engine'
@@ -48,7 +47,6 @@ jobs:
       - run: bash .github/workflows/setup.sh
         env:
           CI: true
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - run: pnpm run test
         name: 'get-platform'
