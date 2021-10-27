@@ -11,7 +11,7 @@ importers:
       chalk: 4.1.2
       execa: 5.1.1
       husky: 7.0.2
-      is-ci: 3.0.0
+      is-ci: 3.0.1
       node-fetch: 2.6.5
       prettier: 2.4.1
       ts-node: 10.3.0
@@ -24,7 +24,7 @@ importers:
       chalk: 4.1.2
       execa: 5.1.1
       husky: 7.0.2
-      is-ci: 3.0.0
+      is-ci: 3.0.1
       node-fetch: 2.6.5
       prettier: 2.4.1
       ts-node: 10.3.0_64c822b0f0ef3f125d8d3681dcee4e14
@@ -2337,6 +2337,13 @@ packages:
 
   /is-ci/3.0.0:
     resolution: {integrity: sha512-kDXyttuLeslKAHYL/K28F2YkM3x5jvFPEw3yXbRptXydjD9rpLEz+C5K5iutY9ZiUu6AP41JdvRQwF4Iqs4ZCQ==}
+    hasBin: true
+    dependencies:
+      ci-info: 3.2.0
+    dev: true
+
+  /is-ci/3.0.1:
+    resolution: {integrity: sha512-ZYvCgrefwqoQ6yTyYUbQu64HsITZ3NfKX1lzaEYdkTDcfKzzCI/wthRRYKkdjHKFVgNiXKAKm65Zo1pk2as/QQ==}
     hasBin: true
     dependencies:
       ci-info: 3.2.0
