@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo $NPM_TOKEN > ~/.npmrc
+echo "Adding token to ~/.npmrc"
+echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
 
 set -ex
 
