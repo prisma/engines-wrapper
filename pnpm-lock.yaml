@@ -79,7 +79,7 @@ importers:
       http-proxy-agent: ^5.0.0
       https-proxy-agent: ^5.0.0
       jest: 27.3.1
-      lint-staged: 11.2.3
+      lint-staged: 11.2.6
       make-dir: ^3.0.2
       node-fetch: ^2.6.0
       p-filter: ^2.1.0
@@ -127,7 +127,7 @@ importers:
       eslint-plugin-jest: 25.2.2_783ff3dc9c7b3e3d0f575817cc07bdc8
       eslint-plugin-prettier: 4.0.0_15313026b01cdd263118061498e273ac
       jest: 27.3.1_ts-node@10.3.0
-      lint-staged: 11.2.3
+      lint-staged: 11.2.6
       prettier: 2.4.1
       strip-ansi: 6.0.1
       ts-jest: 27.0.7_2c4ca6574207836d1023f54689cc81ac
@@ -146,7 +146,7 @@ importers:
       eslint-plugin-jest: 25.2.2
       eslint-plugin-prettier: 4.0.0
       jest: 27.3.1
-      lint-staged: 11.2.3
+      lint-staged: 11.2.6
       prettier: 2.4.1
       ts-jest: 27.0.7
       typescript: 4.4.4
@@ -163,7 +163,7 @@ importers:
       eslint-plugin-jest: 25.2.2_783ff3dc9c7b3e3d0f575817cc07bdc8
       eslint-plugin-prettier: 4.0.0_15313026b01cdd263118061498e273ac
       jest: 27.3.1_ts-node@10.3.0
-      lint-staged: 11.2.3
+      lint-staged: 11.2.6
       prettier: 2.4.1
       ts-jest: 27.0.7_2c4ca6574207836d1023f54689cc81ac
       typescript: 4.4.4
@@ -3079,8 +3079,8 @@ packages:
     resolution: {integrity: sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=}
     dev: true
 
-  /lint-staged/11.2.3:
-    resolution: {integrity: sha512-Tfmhk8O2XFMD25EswHPv+OYhUjsijy5D7liTdxeXvhG2rsadmOLFtyj8lmlfoFFXY8oXWAIOKpoI+lJe1DB1mw==}
+  /lint-staged/11.2.6:
+    resolution: {integrity: sha512-Vti55pUnpvPE0J9936lKl0ngVeTdSZpEdTNhASbkaWX7J5R9OEifo1INBGQuGW4zmy6OG+TcWPJ3m5yuy5Q8Tg==}
     hasBin: true
     dependencies:
       cli-truncate: 2.1.0
