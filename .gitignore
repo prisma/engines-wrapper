@@ -8,3 +8,5 @@ dist
 download
 *.tsbuildinfo
 .eslintcache
+/build-prisma-fmt/target
+/build-prisma-fmt/result

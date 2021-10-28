@@ -1,0 +1,19 @@
+{
+  "name": "@prisma/prisma-fmt-wasm",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomhoule/prisma-fmt-build.git"
+  },
+  "author": "Prisma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomhoule/prisma-fmt-build/issues"
+  },
+  "homepage": "https://github.com/tomhoule/prisma-fmt-build#readme"
+}
