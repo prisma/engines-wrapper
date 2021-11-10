@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "3.5.0-18.make-count-non-nullable-121a0358756cdcde47772ec7ef59be56a5786079",
+  "version": "3.5.0-19.135dbb29b11dabc18969e193fa9b93e60225c11e",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "121a0358756cdcde47772ec7ef59be56a5786079"
+    "enginesVersion": "135dbb29b11dabc18969e193fa9b93e60225c11e"
   },
   "repository": {
     "type": "git",

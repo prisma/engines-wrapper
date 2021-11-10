@@ -1,6 +1,6 @@
 {
   "name": "@prisma/get-platform",
-  "version": "3.5.0-18.make-count-non-nullable-121a0358756cdcde47772ec7ef59be56a5786079",
+  "version": "3.5.0-19.135dbb29b11dabc18969e193fa9b93e60225c11e",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
