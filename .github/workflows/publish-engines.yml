@@ -46,6 +46,15 @@ jobs:
           token: ${{ secrets.BOT_TOKEN }}
           inputs: '{ "version": "${{ steps.publish_script.outputs.new_prisma_version }}" }'
 
+      - name: Workflow dispatch to prisma/prisma-fmt-wasm for version update
+        if: ${{ steps.publish_script.outputs.new_prisma_version }}
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: new-engines-version
+          repo: prisma/prisma-fmt-wasm
+          token: ${{ secrets.BOT_TOKEN }}
+          inputs: '{ "enginesWrapperVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "engineHash": "${{ github.event.client_payload.commit }}" }'
+          
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           # Optional but recommended, defaults to "Apply automatic changes"
