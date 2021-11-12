@@ -59,7 +59,7 @@ async function main(dryRun = false) {
   // This special log makes values avaliable in Github Actions
   // Read: https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#using-workflow-commands-to-access-toolkit-functions
   console.log(`::set-output name=new_prisma_version::${newVersion}`)
-  console.log(`::set-output name=npm_dist_Tag::${npmDistTag}`)
+  console.log(`::set-output name=npm_dist_tag::${npmDistTag}`)
   
   // Publish Order
   // [engines-version, get-platform], fetch-engine, engines
