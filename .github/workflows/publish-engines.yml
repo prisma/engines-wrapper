@@ -38,7 +38,8 @@ jobs:
           GITHUB_EVENT_CLIENT_PAYLOAD: ${{ toJson(github.event.client_payload) }}
 
       - name: Workflow dispatch to prisma/prisma for version update
-        if: ${{ steps.publish_script.outputs.new_prisma_version }}
+        # Only automatically trigger update for `latest`!
+        if: steps.publish_script.outputs.npm_dist_tag == 'latest' 
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: Update Engines Version
@@ -47,13 +48,12 @@ jobs:
           inputs: '{ "version": "${{ steps.publish_script.outputs.new_prisma_version }}" }'
 
       - name: Workflow dispatch to prisma/prisma-fmt-wasm for version update
-        if: ${{ steps.publish_script.outputs.new_prisma_version }}
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: new-engines-version
           repo: prisma/prisma-fmt-wasm
           token: ${{ secrets.BOT_TOKEN }}
-          inputs: '{ "enginesWrapperVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "engineHash": "${{ github.event.client_payload.commit }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
+          inputs: '{ "engineHash": "${{ github.event.client_payload.commit }}", "enginesWrapperVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
           
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
