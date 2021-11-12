@@ -53,7 +53,7 @@ jobs:
           workflow: new-engines-version
           repo: prisma/prisma-fmt-wasm
           token: ${{ secrets.BOT_TOKEN }}
-          inputs: '{ "enginesWrapperVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "engineHash": "${{ github.event.client_payload.commit }}" }'
+          inputs: '{ "enginesWrapperVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "engineHash": "${{ github.event.client_payload.commit }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
           
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
