@@ -23,5 +23,6 @@
   </h2>
 </div>
   
-This repository contains the packages `@prisma/engines`, `@prisma/engines-version`, `@prisma/fetch-engine` and `@prisma/get-platform`.  
-They are wrapping the [Prisma Rust Engines](https://github.com/prisma/prisma-engines) in npm packages to use by the [Prisma CLI, Client](https://github.com/prisma/prisma) and other tooling.
+This repository contains the code for packages `@prisma/engines`, `@prisma/engines-version`, `@prisma/fetch-engine` and `@prisma/get-platform`. They are wrapping the [Prisma Rust Engines](https://github.com/prisma/prisma-engines) in npm packages to use by the [Prisma CLI and Client](https://github.com/prisma/prisma) and other tooling. 
+
+[The automated publish pipeline](https://github.com/prisma/engines-wrapper/actions/workflows/publish-engines.yml), triggered itself during the publish process of [`prisma-engines`](https://github.com/prisma/prisma-engines), also triggers use of these packages via GitHub Actions workflows in other repositories (e.g. [`prisma/prisma`](https://github.com/prisma/prisma) and [`prisma/prisma-fmt-wasm`](https://github.com/prisma/prisma-fmt-wasm)).
