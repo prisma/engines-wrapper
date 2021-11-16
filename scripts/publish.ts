@@ -55,6 +55,12 @@ async function main(dryRun = false) {
   console.log(`${chalk.bold('New version')}   ${newVersion}`)
   console.log(`${chalk.bold('Npm Dist Tag')}  ${npmDistTag}\n`)
 
+  console.log(`Printing values for workflow dispatch: ${newVersion}, ${npmDistTag}`)
+  // This special log makes values avaliable in Github Actions
+  // Read: https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#using-workflow-commands-to-access-toolkit-functions
+  console.log(`::set-output name=new_prisma_version::${newVersion}`)
+  console.log(`::set-output name=npm_dist_tag::${npmDistTag}`)
+  
   // Publish Order
   // [engines-version, get-platform], fetch-engine, engines
 
@@ -119,14 +125,6 @@ async function main(dryRun = false) {
     `pnpm publish --no-git-checks --tag ${npmDistTag}`,
     dryRun,
   )
-
-  // Print out version for workflow dispatch if npmTag is latest
-  if (npmDistTag === 'latest') {
-    console.log(`Printing version for workflow dispatch: ${newVersion}`)
-    // This special log makes new_prisma_version avaliable in github actions
-    // Read: https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#using-workflow-commands-to-access-toolkit-functions
-    console.log(`::set-output name=new_prisma_version::${newVersion}`)
-  }
 }
 
 /** Apply call back function to content of file and write it back */
