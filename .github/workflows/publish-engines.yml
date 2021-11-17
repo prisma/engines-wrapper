@@ -53,7 +53,7 @@ jobs:
           workflow: Build and publish @prisma/prisma-fmt-wasm
           repo: prisma/prisma-fmt-wasm
           token: ${{ secrets.BOT_TOKEN }}
-          inputs: '{ "engineHash": "${{ github.event.client_payload.commit }}", "enginesWrapperVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
+          inputs: '{ "enginesHash": "${{ github.event.client_payload.commit }}", "enginesWrapperVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
           
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
