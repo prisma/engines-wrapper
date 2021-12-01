@@ -14,7 +14,7 @@
     "directory": "packages/engines-version"
   },
   "devDependencies": {
-    "@types/node": "16.11.10",
+    "@types/node": "16.11.11",
     "typescript": "4.5.2"
   },
   "scripts": {
