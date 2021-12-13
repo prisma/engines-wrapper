@@ -1,6 +1,6 @@
 {
   "name": "@prisma/get-platform",
-  "version": "3.7.0-17.58ee91f116bd76aff76f39a522e4c2d57a83b7c6",
+  "version": "3.7.0-18.97db7f24c947f417d83b66b90061976c4ca33002",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
