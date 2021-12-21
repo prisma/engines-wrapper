@@ -66,47 +66,47 @@ importers:
       '@types/progress': 2.0.5
       '@typescript-eslint/eslint-plugin': 5.7.0
       '@typescript-eslint/parser': 5.7.0
-      chalk: ^4.0.0
+      chalk: 4.0.0
       del: 6.0.0
       eslint: 8.4.1
       eslint-config-prettier: 8.3.0
       eslint-plugin-eslint-comments: 3.2.0
       eslint-plugin-jest: 25.3.0
       eslint-plugin-prettier: 4.0.0
-      execa: ^5.0.0
-      find-cache-dir: ^3.3.1
-      hasha: ^5.2.0
-      http-proxy-agent: ^5.0.0
-      https-proxy-agent: ^5.0.0
+      execa: 5.0.0
+      find-cache-dir: 3.3.1
+      hasha: 5.2.0
+      http-proxy-agent: 5.0.0
+      https-proxy-agent: 5.0.0
       jest: 27.4.5
       lint-staged: 11.2.6
-      make-dir: ^3.0.2
-      node-fetch: ^2.6.0
-      p-filter: ^2.1.0
-      p-map: ^4.0.0
-      p-retry: ^4.2.0
+      make-dir: 3.0.2
+      node-fetch: 2.6.1
+      p-filter: 2.1.0
+      p-map: 4.0.0
+      p-retry: 4.2.0
       prettier: 2.5.1
-      progress: ^2.0.3
-      rimraf: ^3.0.2
+      progress: 2.0.3
+      rimraf: 3.0.2
       strip-ansi: 6.0.1
-      temp-dir: ^2.0.0
-      tempy: ^1.0.0
+      temp-dir: 2.0.0
+      tempy: 1.0.0
       ts-jest: 27.1.1
       typescript: 4.5.4
     dependencies:
       '@prisma/debug': 3.6.0
       '@prisma/get-platform': link:../get-platform
-      chalk: 4.1.1
-      execa: 5.1.1
+      chalk: 4.0.0
+      execa: 5.0.0
       find-cache-dir: 3.3.1
-      hasha: 5.2.2
+      hasha: 5.2.0
       http-proxy-agent: 5.0.0
       https-proxy-agent: 5.0.0
-      make-dir: 3.1.0
+      make-dir: 3.0.2
       node-fetch: 2.6.1
       p-filter: 2.1.0
       p-map: 4.0.0
-      p-retry: 4.4.0
+      p-retry: 4.2.0
       progress: 2.0.3
       rimraf: 3.0.2
       temp-dir: 2.0.0
@@ -1449,8 +1449,8 @@ packages:
       supports-color: 5.5.0
     dev: true
 
-  /chalk/4.1.1:
-    resolution: {integrity: sha512-diHzdDKxcU+bAsUboHLPEDQiw0qEe0qd7SYUn3HgcFlWgbDcfLGswOHYeGrHKzG9z6UYf01d9VFMfZxPM1xZSg==}
+  /chalk/4.0.0:
+    resolution: {integrity: sha512-N9oWFcegS0sFr9oh1oz2d7Npos6vNoWW9HvtCg5N1KRFpUhaAhvTv5Y58g880fZaEYSNm3qDz8SU1UrGvp+n7A==}
     engines: {node: '>=10'}
     dependencies:
       ansi-styles: 4.3.0
@@ -1613,17 +1613,6 @@ packages:
       whatwg-mimetype: 2.3.0
       whatwg-url: 8.7.0
     dev: true
-
-  /debug/4.3.1:
-    resolution: {integrity: sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==}
-    engines: {node: '>=6.0'}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-    dependencies:
-      ms: 2.1.2
 
   /debug/4.3.2:
     resolution: {integrity: sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==}
@@ -1969,6 +1958,21 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /execa/5.0.0:
+    resolution: {integrity: sha512-ov6w/2LCiuyO4RLYGdpFGjkcs0wMTgGE8PrkTHikeUy5iJekXyPIKUjifk5CsE0pt7sMCrMZ3YNqoCj6idQOnQ==}
+    engines: {node: '>=10'}
+    dependencies:
+      cross-spawn: 7.0.3
+      get-stream: 6.0.0
+      human-signals: 2.1.0
+      is-stream: 2.0.0
+      merge-stream: 2.0.0
+      npm-run-path: 4.0.1
+      onetime: 5.1.2
+      signal-exit: 3.0.3
+      strip-final-newline: 2.0.0
+    dev: false
+
   /execa/5.1.1:
     resolution: {integrity: sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==}
     engines: {node: '>=10'}
@@ -1982,6 +1986,7 @@ packages:
       onetime: 5.1.2
       signal-exit: 3.0.3
       strip-final-newline: 2.0.0
+    dev: true
 
   /exit/0.1.2:
     resolution: {integrity: sha1-BjJjj42HfMghB9MKD/8aF8uhzQw=}
@@ -2218,8 +2223,8 @@ packages:
       function-bind: 1.1.1
     dev: true
 
-  /hasha/5.2.2:
-    resolution: {integrity: sha512-Hrp5vIK/xr5SkeN2onO32H0MgNZ0f17HRNH39WfL0SYUNOTZ5Lz1TJ8Pajo/87dYGEFlLMm7mIc/k/s6Bvz9HQ==}
+  /hasha/5.2.0:
+    resolution: {integrity: sha512-2W+jKdQbAdSIrggA8Q35Br8qKadTrqCTC8+XZvBWepKDK6m9XkX6Iz1a2yh2KP01kzAR/dpuMeUnocoLYDcskw==}
     engines: {node: '>=8'}
     dependencies:
       is-stream: 2.0.0
@@ -2264,7 +2269,7 @@ packages:
     engines: {node: '>= 6'}
     dependencies:
       agent-base: 6.0.2
-      debug: 4.3.1
+      debug: 4.3.2
     transitivePeerDependencies:
       - supports-color
 
@@ -3134,6 +3139,13 @@ packages:
       yallist: 4.0.0
     dev: true
 
+  /make-dir/3.0.2:
+    resolution: {integrity: sha512-rYKABKutXa6vXTXhoV18cBE7PaewPXHe/Bdq4v+ZLMhxbWApkFFplT0LcbMW+6BbjnQXzZ/sAvSE/JdguApG5w==}
+    engines: {node: '>=8'}
+    dependencies:
+      semver: 6.3.0
+    dev: false
+
   /make-dir/3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
     engines: {node: '>=8'}
@@ -3304,8 +3316,8 @@ packages:
     dependencies:
       aggregate-error: 3.1.0
 
-  /p-retry/4.4.0:
-    resolution: {integrity: sha512-gVB/tBsG+3AHI1SyDHRrX6n9ZL0Bcbifps9W9/Bgu3Oyu4/OrAh8SvDzDsvpP0oxfCt3oWNT+0fQ9LyUGwBTLg==}
+  /p-retry/4.2.0:
+    resolution: {integrity: sha512-jPH38/MRh263KKcq0wBNOGFJbm+U6784RilTmHjB/HM9kH9V8WlCpVUcdOmip9cjXOh6MxZ5yk1z2SjDUJfWmA==}
     engines: {node: '>=8'}
     dependencies:
       '@types/retry': 0.12.0
