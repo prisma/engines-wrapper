@@ -75,7 +75,7 @@ importers:
       eslint-plugin-prettier: 4.0.0
       execa: 5.1.1
       find-cache-dir: 3.3.1
-      hasha: 5.2.0
+      hasha: 5.2.2
       http-proxy-agent: 5.0.0
       https-proxy-agent: 5.0.0
       jest: 27.4.5
@@ -99,7 +99,7 @@ importers:
       chalk: 4.0.0
       execa: 5.1.1
       find-cache-dir: 3.3.1
-      hasha: 5.2.0
+      hasha: 5.2.2
       http-proxy-agent: 5.0.0
       https-proxy-agent: 5.0.0
       make-dir: 3.1.0
@@ -2207,8 +2207,8 @@ packages:
       function-bind: 1.1.1
     dev: true
 
-  /hasha/5.2.0:
-    resolution: {integrity: sha512-2W+jKdQbAdSIrggA8Q35Br8qKadTrqCTC8+XZvBWepKDK6m9XkX6Iz1a2yh2KP01kzAR/dpuMeUnocoLYDcskw==}
+  /hasha/5.2.2:
+    resolution: {integrity: sha512-Hrp5vIK/xr5SkeN2onO32H0MgNZ0f17HRNH39WfL0SYUNOTZ5Lz1TJ8Pajo/87dYGEFlLMm7mIc/k/s6Bvz9HQ==}
     engines: {node: '>=8'}
     dependencies:
       is-stream: 2.0.0
