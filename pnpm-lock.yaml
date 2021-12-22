@@ -80,7 +80,7 @@ importers:
       https-proxy-agent: 5.0.0
       jest: 27.4.5
       lint-staged: 11.2.6
-      make-dir: 3.0.2
+      make-dir: 3.1.0
       node-fetch: 2.6.1
       p-filter: 2.1.0
       p-map: 4.0.0
@@ -102,7 +102,7 @@ importers:
       hasha: 5.2.0
       http-proxy-agent: 5.0.0
       https-proxy-agent: 5.0.0
-      make-dir: 3.0.2
+      make-dir: 3.1.0
       node-fetch: 2.6.1
       p-filter: 2.1.0
       p-map: 4.0.0
@@ -3138,13 +3138,6 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
-
-  /make-dir/3.0.2:
-    resolution: {integrity: sha512-rYKABKutXa6vXTXhoV18cBE7PaewPXHe/Bdq4v+ZLMhxbWApkFFplT0LcbMW+6BbjnQXzZ/sAvSE/JdguApG5w==}
-    engines: {node: '>=8'}
-    dependencies:
-      semver: 6.3.0
-    dev: false
 
   /make-dir/3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
