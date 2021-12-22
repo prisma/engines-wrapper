@@ -73,7 +73,7 @@ importers:
       eslint-plugin-eslint-comments: 3.2.0
       eslint-plugin-jest: 25.3.0
       eslint-plugin-prettier: 4.0.0
-      execa: 5.0.0
+      execa: 5.1.1
       find-cache-dir: 3.3.1
       hasha: 5.2.0
       http-proxy-agent: 5.0.0
@@ -97,7 +97,7 @@ importers:
       '@prisma/debug': 3.6.0
       '@prisma/get-platform': link:../get-platform
       chalk: 4.0.0
-      execa: 5.0.0
+      execa: 5.1.1
       find-cache-dir: 3.3.1
       hasha: 5.2.0
       http-proxy-agent: 5.0.0
@@ -1958,21 +1958,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /execa/5.0.0:
-    resolution: {integrity: sha512-ov6w/2LCiuyO4RLYGdpFGjkcs0wMTgGE8PrkTHikeUy5iJekXyPIKUjifk5CsE0pt7sMCrMZ3YNqoCj6idQOnQ==}
-    engines: {node: '>=10'}
-    dependencies:
-      cross-spawn: 7.0.3
-      get-stream: 6.0.0
-      human-signals: 2.1.0
-      is-stream: 2.0.0
-      merge-stream: 2.0.0
-      npm-run-path: 4.0.1
-      onetime: 5.1.2
-      signal-exit: 3.0.3
-      strip-final-newline: 2.0.0
-    dev: false
-
   /execa/5.1.1:
     resolution: {integrity: sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==}
     engines: {node: '>=10'}
@@ -1986,7 +1971,6 @@ packages:
       onetime: 5.1.2
       signal-exit: 3.0.3
       strip-final-newline: 2.0.0
-    dev: true
 
   /exit/0.1.2:
     resolution: {integrity: sha1-BjJjj42HfMghB9MKD/8aF8uhzQw=}
