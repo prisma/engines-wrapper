@@ -90,7 +90,7 @@ importers:
       rimraf: 3.0.2
       strip-ansi: 6.0.1
       temp-dir: 2.0.0
-      tempy: 1.0.0
+      tempy: 1.0.1
       ts-jest: 27.1.1
       typescript: 4.5.4
     dependencies:
@@ -110,7 +110,7 @@ importers:
       progress: 2.0.3
       rimraf: 3.0.2
       temp-dir: 2.0.0
-      tempy: 1.0.0
+      tempy: 1.0.1
     devDependencies:
       '@prisma/engines-version': link:../engines-version
       '@types/find-cache-dir': 3.2.1
@@ -3729,8 +3729,8 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /tempy/1.0.0:
-    resolution: {integrity: sha512-eLXG5B1G0mRPHmgH2WydPl5v4jH35qEn3y/rA/aahKhIa91Pn119SsU7n7v/433gtT9ONzC8ISvNHIh2JSTm0w==}
+  /tempy/1.0.1:
+    resolution: {integrity: sha512-biM9brNqxSc04Ee71hzFbryD11nX7VPhQQY32AdDmjFvodsRFz/3ufeoTZ6uYkRFfGo188tENcASNs3vTdsM0w==}
     engines: {node: '>=10'}
     dependencies:
       del: 6.0.0
