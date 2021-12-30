@@ -1,14 +1,14 @@
 {
   "name": "@prisma/engines",
-  "version": "3.8.0-15.qe-napi-2-aea7eb19eba5e9530c6fd43008d5c41c310383ba",
+  "version": "3.8.0-16.14408a4b729c0ff1eb9fccc259016218217ecfc8",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "devDependencies": {
     "@prisma/debug": "3.7.0",
-    "@prisma/engines-version": "workspace:3.8.0-15.qe-napi-2-aea7eb19eba5e9530c6fd43008d5c41c310383ba",
-    "@prisma/fetch-engine": "workspace:3.8.0-15.qe-napi-2-aea7eb19eba5e9530c6fd43008d5c41c310383ba",
+    "@prisma/engines-version": "workspace:3.8.0-16.14408a4b729c0ff1eb9fccc259016218217ecfc8",
+    "@prisma/fetch-engine": "workspace:3.8.0-16.14408a4b729c0ff1eb9fccc259016218217ecfc8",
     "@types/node": "16.11.17",
     "execa": "5.1.1",
     "typescript": "4.5.4"
