@@ -9,11 +9,11 @@ import { getDownloadUrl } from './util'
 export async function getLatestTag(): Promise<any> {
   let branch = await getBranch()
   if (
-    branch !== 'master' &&
+    branch !== 'main' &&
     !isPatchBranch(branch) &&
     !branch.startsWith('integration/')
   ) {
-    branch = 'master'
+    branch = 'main'
   }
 
   // remove the "integration/" part
@@ -22,17 +22,17 @@ export async function getLatestTag(): Promise<any> {
 
   // first try to get the branch as it is
   // if it doesn't have an equivalent in the engines repo
-  // default back to master
+  // default back to main
   let commits = await getCommits(branch)
   if (
     (!commits || !Array.isArray(commits)) &&
-    branch !== 'master' &&
+    branch !== 'main' &&
     !isPatchBranch(branch)
   ) {
     console.log(
-      `Overwriting branch "${branch}" with "master" as it's not a branch we have binaries for`,
+      `Overwriting branch "${branch}" with "main" as it's not a branch we have binaries for`,
     )
-    branch = 'master'
+    branch = 'main'
     commits = await getCommits(branch)
   }
 
