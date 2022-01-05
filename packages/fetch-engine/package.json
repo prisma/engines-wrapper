@@ -16,7 +16,7 @@
   "devDependencies": {
     "@prisma/engines-version": "workspace:3.8.0-26.367f1321e79a7ba33fcac73ed17111312b87e526",
     "@types/find-cache-dir": "3.2.1",
-    "@types/jest": "27.0.3",
+    "@types/jest": "27.4.0",
     "@types/node": "16.11.17",
     "@types/node-fetch": "2.5.12",
     "@types/progress": "2.0.5",
@@ -28,7 +28,7 @@
     "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-jest": "25.3.4",
     "eslint-plugin-prettier": "4.0.0",
-    "jest": "27.4.5",
+    "jest": "27.4.6",
     "lint-staged": "11.2.6",
     "prettier": "2.5.1",
     "strip-ansi": "6.0.1",
