@@ -32,14 +32,14 @@ importers:
 
   packages/engines:
     specifiers:
-      '@prisma/debug': 3.7.0
+      '@prisma/debug': 3.8.0
       '@prisma/engines-version': workspace:3.9.0-2.migration-engine-json-rpc-print-2766bc3dd93a669c6a56b25f71d31f309d28644d
       '@prisma/fetch-engine': workspace:3.9.0-2.migration-engine-json-rpc-print-2766bc3dd93a669c6a56b25f71d31f309d28644d
       '@types/node': 16.11.19
       execa: 5.1.1
       typescript: 4.5.4
     devDependencies:
-      '@prisma/debug': 3.7.0
+      '@prisma/debug': 3.8.0
       '@prisma/engines-version': link:../engines-version
       '@prisma/fetch-engine': link:../fetch-engine
       '@types/node': 16.11.19
@@ -56,7 +56,7 @@ importers:
 
   packages/fetch-engine:
     specifiers:
-      '@prisma/debug': 3.7.0
+      '@prisma/debug': 3.8.0
       '@prisma/engines-version': workspace:3.9.0-2.migration-engine-json-rpc-print-2766bc3dd93a669c6a56b25f71d31f309d28644d
       '@prisma/get-platform': workspace:3.9.0-2.migration-engine-json-rpc-print-2766bc3dd93a669c6a56b25f71d31f309d28644d
       '@types/find-cache-dir': 3.2.1
@@ -94,7 +94,7 @@ importers:
       ts-jest: 27.1.2
       typescript: 4.5.4
     dependencies:
-      '@prisma/debug': 3.7.0
+      '@prisma/debug': 3.8.0
       '@prisma/get-platform': link:../get-platform
       chalk: 4.1.2
       execa: 5.1.1
@@ -135,7 +135,7 @@ importers:
 
   packages/get-platform:
     specifiers:
-      '@prisma/debug': 3.7.0
+      '@prisma/debug': 3.8.0
       '@types/jest': 27.4.0
       '@types/node': 16.11.19
       '@typescript-eslint/eslint-plugin': 5.9.0
@@ -151,7 +151,7 @@ importers:
       ts-jest: 27.1.2
       typescript: 4.5.4
     dependencies:
-      '@prisma/debug': 3.7.0
+      '@prisma/debug': 3.8.0
     devDependencies:
       '@types/jest': 27.4.0
       '@types/node': 16.11.19
@@ -899,8 +899,8 @@ packages:
       fastq: 1.11.0
     dev: true
 
-  /@prisma/debug/3.7.0:
-    resolution: {integrity: sha512-3FdQRGUt2zSe1D+RnCh2wmbCiMmhX+BKNRnC6Ic8KHayXMbEuRR4Ofgt0AZHRCdEQBwVFvM2Yep9zN3hNnWssw==}
+  /@prisma/debug/3.8.0:
+    resolution: {integrity: sha512-dSOnKP3hhn8lBK2RRCHl2pnoJeOfyJZQ+G+/4cuUk03ZCccTw28Uz9XjwXjY7FnLKuxaiAeVtYhahXsMEqocKQ==}
     dependencies:
       '@types/debug': 4.1.7
       ms: 2.1.3
