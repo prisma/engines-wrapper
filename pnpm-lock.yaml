@@ -71,7 +71,7 @@ importers:
       eslint: 8.6.0
       eslint-config-prettier: 8.3.0
       eslint-plugin-eslint-comments: 3.2.0
-      eslint-plugin-jest: 25.3.4
+      eslint-plugin-jest: 25.7.0
       eslint-plugin-prettier: 4.0.0
       execa: 5.1.1
       find-cache-dir: 3.3.2
@@ -124,7 +124,7 @@ importers:
       eslint: 8.6.0
       eslint-config-prettier: 8.3.0_eslint@8.6.0
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.6.0
-      eslint-plugin-jest: 25.3.4_f28fd0913e6523d2c1d3b30fe9c2214f
+      eslint-plugin-jest: 25.7.0_f28fd0913e6523d2c1d3b30fe9c2214f
       eslint-plugin-prettier: 4.0.0_1c588f61426b1faf18812943f1678311
       jest: 27.4.7_ts-node@10.4.0
       lint-staged: 11.2.6
@@ -143,7 +143,7 @@ importers:
       eslint: 8.6.0
       eslint-config-prettier: 8.3.0
       eslint-plugin-eslint-comments: 3.2.0
-      eslint-plugin-jest: 25.3.4
+      eslint-plugin-jest: 25.7.0
       eslint-plugin-prettier: 4.0.0
       jest: 27.4.7
       lint-staged: 11.2.6
@@ -160,7 +160,7 @@ importers:
       eslint: 8.6.0
       eslint-config-prettier: 8.3.0_eslint@8.6.0
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.6.0
-      eslint-plugin-jest: 25.3.4_f28fd0913e6523d2c1d3b30fe9c2214f
+      eslint-plugin-jest: 25.7.0_f28fd0913e6523d2c1d3b30fe9c2214f
       eslint-plugin-prettier: 4.0.0_1c588f61426b1faf18812943f1678311
       jest: 27.4.7_ts-node@10.4.0
       lint-staged: 11.2.6
@@ -1787,8 +1787,8 @@ packages:
       ignore: 5.1.8
     dev: true
 
-  /eslint-plugin-jest/25.3.4_f28fd0913e6523d2c1d3b30fe9c2214f:
-    resolution: {integrity: sha512-CCnwG71wvabmwq/qkz0HWIqBHQxw6pXB1uqt24dxqJ9WB34pVg49bL1sjXphlJHgTMWGhBjN1PicdyxDxrfP5A==}
+  /eslint-plugin-jest/25.7.0_f28fd0913e6523d2c1d3b30fe9c2214f:
+    resolution: {integrity: sha512-PWLUEXeeF7C9QGKqvdSbzLOiLTx+bno7/HC9eefePfEb257QFHg7ye3dh80AZVkaa/RQsBB1Q/ORQvg2X7F0NQ==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': ^4.0.0 || ^5.0.0
