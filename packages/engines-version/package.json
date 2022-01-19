@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "3.9.0-20.4af4e703e6c7e418781fface6855e55b3cfa5cb8",
+  "version": "3.9.0-21.revert-node-api-v2-8b00e2de5fb74a24fc7ec6050cdf9928124a637a",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "4af4e703e6c7e418781fface6855e55b3cfa5cb8"
+    "enginesVersion": "8b00e2de5fb74a24fc7ec6050cdf9928124a637a"
   },
   "repository": {
     "type": "git",
