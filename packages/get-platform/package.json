@@ -1,6 +1,6 @@
 {
   "name": "@prisma/get-platform",
-  "version": "3.9.0-24.migration-engine-json-rpc-print-e9be07143f76d39fbec47ce013872002a78b12dc",
+  "version": "3.9.0-25.4372724afb100a433b2446a986bde4e940096d29",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
