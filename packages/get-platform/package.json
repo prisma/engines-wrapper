@@ -1,6 +1,6 @@
 {
   "name": "@prisma/get-platform",
-  "version": "3.9.0-21.revert-node-api-v2-8b00e2de5fb74a24fc7ec6050cdf9928124a637a",
+  "version": "3.9.0-22.bdaab3cd8d7127813ec3c7a12a0b5cc0f53cc81d",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
