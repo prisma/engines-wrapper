@@ -33,8 +33,8 @@ importers:
   packages/engines:
     specifiers:
       '@prisma/debug': 3.8.1
-      '@prisma/engines-version': workspace:3.9.0-41.itx-work-three-tmp-fda027046c23cf637dd241777891d060c1f7c01e
-      '@prisma/fetch-engine': workspace:3.9.0-41.itx-work-three-tmp-fda027046c23cf637dd241777891d060c1f7c01e
+      '@prisma/engines-version': workspace:3.9.0-42.itx-work-three-tmp-ae25622fe134d9f53e35ab883ed1d74f994ed2bb
+      '@prisma/fetch-engine': workspace:3.9.0-42.itx-work-three-tmp-ae25622fe134d9f53e35ab883ed1d74f994ed2bb
       '@types/node': 16.11.21
       execa: 5.1.1
       typescript: 4.5.5
@@ -57,8 +57,8 @@ importers:
   packages/fetch-engine:
     specifiers:
       '@prisma/debug': 3.8.1
-      '@prisma/engines-version': workspace:3.9.0-41.itx-work-three-tmp-fda027046c23cf637dd241777891d060c1f7c01e
-      '@prisma/get-platform': workspace:3.9.0-41.itx-work-three-tmp-fda027046c23cf637dd241777891d060c1f7c01e
+      '@prisma/engines-version': workspace:3.9.0-42.itx-work-three-tmp-ae25622fe134d9f53e35ab883ed1d74f994ed2bb
+      '@prisma/get-platform': workspace:3.9.0-42.itx-work-three-tmp-ae25622fe134d9f53e35ab883ed1d74f994ed2bb
       '@types/find-cache-dir': 3.2.1
       '@types/jest': 27.4.0
       '@types/node': 16.11.21
