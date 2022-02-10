@@ -1,6 +1,6 @@
 {
   "name": "@prisma/get-platform",
-  "version": "3.10.0-18.node-logging-layer-69048c1df2f5405ff200f4d26cc2aa508bbb5769",
+  "version": "3.10.0-19.3d4dfce7f1b7ed853b3396cce18a6647ef345997",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
