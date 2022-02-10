@@ -40,7 +40,7 @@ export enum BinaryType {
   prismaFmt = 'prisma-fmt',
 }
 export type BinaryDownloadConfiguration = {
-  [binary in BinaryType]?: string
+  [binary in BinaryType]?: string // that is a path to the binary download location
 }
 export type BinaryPaths = {
   [binary in BinaryType]?: { [binaryTarget in Platform]: string } // key: target, value: path
@@ -99,7 +99,7 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
 
   // no need to do anything, if there are no binaries
   if (!options.binaries || Object.values(options.binaries).length === 0) {
-    return {}
+    return {} // we don't download anything if nothing is provided
   }
 
   // merge options
@@ -112,6 +112,7 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
     ), // just necessary to support both camelCase and hyphen-case
   }
 
+  // creates a matrix of binaries x binary targets
   const binaryJobs = flatMap(
     Object.entries(opts.binaries),
     ([binaryName, targetFolder]: [string, string]) =>
@@ -136,6 +137,7 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
     opts.version = process.env.BINARY_DOWNLOAD_VERSION
   }
 
+  // TODO: look to remove latest, because we always pass a version
   if (opts.version === 'latest') {
     opts.version = await getLatestTag()
   }
@@ -155,8 +157,8 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
     const isSupported = platforms.includes(job.binaryTarget as Platform)
     const shouldDownload =
       isSupported &&
-      !job.envVarPath &&
-      (opts.ignoreCache || needsToBeDownloaded)
+      !job.envVarPath && // this is for custom binaries
+      (opts.ignoreCache || needsToBeDownloaded) // TODO: do we need ignoreCache?
     if (needsToBeDownloaded && !isSupported) {
       throw new Error(
         `Unknown binaryTarget ${job.binaryTarget} and no custom binaries were provided`,
@@ -179,7 +181,6 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
       setProgress = collectiveBar.setProgress
     }
 
-    // Node 14 for whatever reason can't handle concurrent writes
     await Promise.all(
       binariesToDownload.map((job) =>
         downloadBinary({
@@ -333,7 +334,7 @@ async function binaryNeedsToBeDownloaded(
   ) {
     const works = await checkVersionCommand(job.targetFilePath)
     return !works
-  }
+  } // TODO: this is probably not useful anymore
 
   return false
 }
