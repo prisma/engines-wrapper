@@ -1,6 +1,6 @@
 {
   "name": "@prisma/fetch-engine",
-  "version": "3.10.0-27.migration-engine-print-notifications-to-print-requests-090c931acf957a2e1939bb200850d62aab3d1607",
+  "version": "3.10.0-28.39d709ea3ba1b9e60f6b10ac781f26aaaf01c9f6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
@@ -14,7 +14,7 @@
   ],
   "bugs": "https://github.com/prisma/prisma/issues",
   "devDependencies": {
-    "@prisma/engines-version": "workspace:3.10.0-27.migration-engine-print-notifications-to-print-requests-090c931acf957a2e1939bb200850d62aab3d1607",
+    "@prisma/engines-version": "workspace:3.10.0-28.39d709ea3ba1b9e60f6b10ac781f26aaaf01c9f6",
     "@types/find-cache-dir": "3.2.1",
     "@types/jest": "27.4.0",
     "@types/node": "16.11.22",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@prisma/debug": "3.9.1",
-    "@prisma/get-platform": "workspace:3.10.0-27.migration-engine-print-notifications-to-print-requests-090c931acf957a2e1939bb200850d62aab3d1607",
+    "@prisma/get-platform": "workspace:3.10.0-28.39d709ea3ba1b9e60f6b10ac781f26aaaf01c9f6",
     "chalk": "4.1.2",
     "execa": "5.1.1",
     "find-cache-dir": "3.3.2",
