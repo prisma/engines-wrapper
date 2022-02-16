@@ -1,6 +1,6 @@
 {
   "name": "@prisma/get-platform",
-  "version": "3.10.0-32.ea65ba769db3e492acb0e303e90161087dcbf427",
+  "version": "3.10.0-33.migration-engine-print-notifications-to-print-requests-9cd8337d54330aa77f7773ef654f35583c822806",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
