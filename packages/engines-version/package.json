@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "3.10.0-33.migration-engine-print-notifications-to-print-requests-9cd8337d54330aa77f7773ef654f35583c822806",
+  "version": "3.10.0-34.1e2a986858a8bc0ad185ac8baf19fb72b382b7ec",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "9cd8337d54330aa77f7773ef654f35583c822806"
+    "enginesVersion": "1e2a986858a8bc0ad185ac8baf19fb72b382b7ec"
   },
   "repository": {
     "type": "git",

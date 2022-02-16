@@ -33,8 +33,8 @@ importers:
   packages/engines:
     specifiers:
       '@prisma/debug': 3.9.2
-      '@prisma/engines-version': workspace:3.10.0-33.migration-engine-print-notifications-to-print-requests-9cd8337d54330aa77f7773ef654f35583c822806
-      '@prisma/fetch-engine': workspace:3.10.0-33.migration-engine-print-notifications-to-print-requests-9cd8337d54330aa77f7773ef654f35583c822806
+      '@prisma/engines-version': workspace:3.10.0-34.1e2a986858a8bc0ad185ac8baf19fb72b382b7ec
+      '@prisma/fetch-engine': workspace:3.10.0-34.1e2a986858a8bc0ad185ac8baf19fb72b382b7ec
       '@types/node': 16.11.25
       execa: 5.1.1
       typescript: 4.5.5
@@ -57,8 +57,8 @@ importers:
   packages/fetch-engine:
     specifiers:
       '@prisma/debug': 3.9.2
-      '@prisma/engines-version': workspace:3.10.0-33.migration-engine-print-notifications-to-print-requests-9cd8337d54330aa77f7773ef654f35583c822806
-      '@prisma/get-platform': workspace:3.10.0-33.migration-engine-print-notifications-to-print-requests-9cd8337d54330aa77f7773ef654f35583c822806
+      '@prisma/engines-version': workspace:3.10.0-34.1e2a986858a8bc0ad185ac8baf19fb72b382b7ec
+      '@prisma/get-platform': workspace:3.10.0-34.1e2a986858a8bc0ad185ac8baf19fb72b382b7ec
       '@types/find-cache-dir': 3.2.1
       '@types/jest': 27.4.0
       '@types/node': 16.11.25
