@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "3.10.0-37.composite-dmmf-fixes-579f952e86c0907d71347dfab3228570783c5fdd",
+  "version": "3.10.0-38.2152ca32a51c274e568364108d713778c3f53969",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "579f952e86c0907d71347dfab3228570783c5fdd"
+    "enginesVersion": "2152ca32a51c274e568364108d713778c3f53969"
   },
   "repository": {
     "type": "git",
