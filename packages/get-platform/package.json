@@ -1,6 +1,6 @@
 {
   "name": "@prisma/get-platform",
-  "version": "3.10.0-42.050ba2cf976b451529a8fd53c55b44798a94bc5a",
+  "version": "3.10.0-43.query-engine-composite-basic-api-75065d645357b98fe726b330e70235349f9f23f7",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
