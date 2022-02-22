@@ -1,6 +1,6 @@
 {
   "name": "@prisma/get-platform",
-  "version": "3.11.0-2.c549d63a33078062a5e6bc2336f000946f8de389",
+  "version": "3.11.0-3.query-engine-mongodb-rebased-order-by-52f8e2270614cce6dd03680a6baa8a6139bc04e0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
