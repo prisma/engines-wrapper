@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "devDependencies": {
-    "@prisma/debug": "3.9.2",
+    "@prisma/debug": "3.10.0",
     "@prisma/engines-version": "workspace:3.11.0-3.query-engine-mongodb-rebased-order-by-52f8e2270614cce6dd03680a6baa8a6139bc04e0",
     "@prisma/fetch-engine": "workspace:3.11.0-3.query-engine-mongodb-rebased-order-by-52f8e2270614cce6dd03680a6baa8a6139bc04e0",
     "@types/node": "16.11.25",
