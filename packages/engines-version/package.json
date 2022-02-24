@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "3.11.0-8.23eea17bd761acf388c556be3e94fe9070797c12",
+  "version": "3.11.0-9.query-engine-mongodb-rebased-order-by-413a32347111270e44297fc019582dc43ac06b65",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "23eea17bd761acf388c556be3e94fe9070797c12"
+    "enginesVersion": "413a32347111270e44297fc019582dc43ac06b65"
   },
   "repository": {
     "type": "git",

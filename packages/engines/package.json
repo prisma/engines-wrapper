@@ -1,14 +1,14 @@
 {
   "name": "@prisma/engines",
-  "version": "3.11.0-8.23eea17bd761acf388c556be3e94fe9070797c12",
+  "version": "3.11.0-9.query-engine-mongodb-rebased-order-by-413a32347111270e44297fc019582dc43ac06b65",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "devDependencies": {
     "@prisma/debug": "3.10.0",
-    "@prisma/engines-version": "workspace:3.11.0-8.23eea17bd761acf388c556be3e94fe9070797c12",
-    "@prisma/fetch-engine": "workspace:3.11.0-8.23eea17bd761acf388c556be3e94fe9070797c12",
+    "@prisma/engines-version": "workspace:3.11.0-9.query-engine-mongodb-rebased-order-by-413a32347111270e44297fc019582dc43ac06b65",
+    "@prisma/fetch-engine": "workspace:3.11.0-9.query-engine-mongodb-rebased-order-by-413a32347111270e44297fc019582dc43ac06b65",
     "@types/node": "16.11.25",
     "execa": "5.1.1",
     "typescript": "4.5.5"
