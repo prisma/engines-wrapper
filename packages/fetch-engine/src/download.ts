@@ -103,10 +103,12 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
     return {} // we don't download anything if nothing is requested
   }
 
-  // merge options 
+  // merge options
   const binaryTargets = options.binaryTargets ?? [platform]
   const version = options.version ?? 'latest'
-  const binaries = mapKeys(options.binaries, (key) => engineTypeToBinaryType(key, platform)) // just necessary to support both camelCase and hyphen-case
+  const binaries = mapKeys(options.binaries, (key) =>
+    engineTypeToBinaryType(key, platform),
+  ) // just necessary to support both camelCase and hyphen-case
   const opts = {
     ...options,
     binaryTargets: binaryTargets,
@@ -171,7 +173,11 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
   })
 
   // TODO Find out how to access name of binary here - Object.keys is not it (possibly binaryName though)
-  debug(`(download) binaries that need to be downloaded: ${Object.keys(binariesToDownload).join(', ')}`)
+  debug(
+    `(download) binaries that need to be downloaded: ${Object.keys(
+      binariesToDownload,
+    ).join(', ')}`,
+  )
 
   if (binariesToDownload.length > 0) {
     const cleanupPromise = cleanupCache() // already start cleaning up while we download

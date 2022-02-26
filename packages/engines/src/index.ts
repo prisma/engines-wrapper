@@ -30,7 +30,7 @@ export function getCliQueryEngineBinaryType():
  */
 export async function ensureBinariesExist() {
   const binaryDir = path.join(__dirname, '../')
-  
+
   let binaryTargets = undefined
   if (process.env.PRISMA_CLI_BINARY_TARGETS) {
     binaryTargets = process.env.PRISMA_CLI_BINARY_TARGETS.split(',')
@@ -44,7 +44,11 @@ export async function ensureBinariesExist() {
     [BinaryType.introspectionEngine]: binaryDir,
     [BinaryType.prismaFmt]: binaryDir,
   }
-  debug(`(ensureBinariesExist) binaries that need to exist: ${Object.keys(binaries).join(', ')}`)
+  debug(
+    `(ensureBinariesExist) binaries that need to exist: ${Object.keys(
+      binaries,
+    ).join(', ')}`,
+  )
 
   await download({
     binaries: binaries,
