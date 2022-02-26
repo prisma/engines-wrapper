@@ -75,10 +75,11 @@ type BinaryDownloadJob = {
 }
 
 export async function download(options: DownloadOptions): Promise<BinaryPaths> {
-  // get platform
+  // get platform and os
   const platform = await getPlatform()
   const os = await getos()
 
+  // Warning and error message for unsupported os/platform/engine
   if (os.distro && ['nixos'].includes(os.distro)) {
     console.error(
       `${chalk.yellow('Warning')} Precompiled binaries are not available for ${
@@ -97,19 +98,20 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
     await isNodeAPISupported()
   }
 
-  // no need to do anything, if there are no binaries
+  // no need to do anything, if there are no required binaries
   if (!options.binaries || Object.values(options.binaries).length === 0) {
-    return {} // we don't download anything if nothing is provided
+    return {} // we don't download anything if nothing is requested
   }
 
-  // merge options
+  // merge options 
+  const binaryTargets = options.binaryTargets ?? [platform]
+  const version = options.version ?? 'latest'
+  const binaries = mapKeys(options.binaries, (key) => engineTypeToBinaryType(key, platform)) // just necessary to support both camelCase and hyphen-case
   const opts = {
     ...options,
-    binaryTargets: options.binaryTargets ?? [platform],
-    version: options.version ?? 'latest',
-    binaries: mapKeys(options.binaries, (key) =>
-      engineTypeToBinaryType(key, platform),
-    ), // just necessary to support both camelCase and hyphen-case
+    binaryTargets: binaryTargets,
+    version: version,
+    binaries: binaries,
   }
 
   // creates a matrix of binaries x binary targets
@@ -133,6 +135,7 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
       }),
   )
 
+  // Overwrite version with explicitly supplied one
   if (process.env.BINARY_DOWNLOAD_VERSION) {
     opts.version = process.env.BINARY_DOWNLOAD_VERSION
   }
@@ -166,6 +169,9 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
     }
     return shouldDownload
   })
+
+  // TODO Find out how to access name of binary here - Object.keys is not it (possibly binaryName though)
+  debug(`(download) binaries that need to be downloaded: ${Object.keys(binariesToDownload).join(', ')}`)
 
   if (binariesToDownload.length > 0) {
     const cleanupPromise = cleanupCache() // already start cleaning up while we download
@@ -282,20 +288,20 @@ async function binaryNeedsToBeDownloaded(
   }
   // 1. Check if file exists
   const targetExists = await exists(job.targetFilePath)
+
   // 2. If exists, check, if cached file exists and is up to date and has same hash as file.
-  // If not, copy cached file over
+  //    If not, copy cached file over
   const cachedFile = await getCachedBinaryPath({
     ...job,
     version,
     failSilent,
   })
-
   if (cachedFile) {
     const sha256FilePath = cachedFile + '.sha256'
     if (await exists(sha256FilePath)) {
-      const sha256File = await readFile(sha256FilePath, 'utf-8')
+      const sha256FileContent = await readFile(sha256FilePath, 'utf-8')
       const sha256Cache = await getHash(cachedFile)
-      if (sha256File === sha256Cache) {
+      if (sha256FileContent === sha256Cache) {
         if (!targetExists) {
           debug(`copying ${cachedFile} to ${job.targetFilePath}`)
 
@@ -306,7 +312,7 @@ async function binaryNeedsToBeDownloaded(
           await copyFile(cachedFile, job.targetFilePath)
         }
         const targetSha256 = await getHash(job.targetFilePath)
-        if (sha256File !== targetSha256) {
+        if (sha256FileContent !== targetSha256) {
           debug(
             `overwriting ${job.targetFilePath} with ${cachedFile} as hashes do not match`,
           )
