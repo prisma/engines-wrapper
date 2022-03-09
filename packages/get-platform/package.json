@@ -1,6 +1,6 @@
 {
   "name": "@prisma/get-platform",
-  "version": "3.11.0-30.test-mobc-fix-ca9fb922c8fd66aa105fe549629891efc4219ca3",
+  "version": "3.11.0-31.67dfdef5d58530a74f1fa09630fc4ba026b581d0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
