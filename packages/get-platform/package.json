@@ -1,6 +1,6 @@
 {
   "name": "@prisma/get-platform",
-  "version": "3.11.0-35.logging-dispatch-20f8df70f3d1de12fb51d0d2dcb22cb1d0cc33a1",
+  "version": "3.11.0-36.db97651ed34c2e77678c266ab6a465e6b2e6c9dd",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
