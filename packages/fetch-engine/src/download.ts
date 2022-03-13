@@ -32,21 +32,21 @@ const copyFile = promisify(fs.copyFile)
 const utimes = promisify(fs.utimes)
 
 const channel = 'master'
-export enum BinaryType {
+export enum EngineType {
   queryEngine = 'query-engine',
   libqueryEngine = 'libquery-engine',
   migrationEngine = 'migration-engine',
   introspectionEngine = 'introspection-engine',
   prismaFmt = 'prisma-fmt',
 }
-export type BinaryDownloadConfiguration = {
-  [binary in BinaryType]?: string // that is a path to the binary download location
+export type EngineDownloadConfiguration = {
+  [engine in EngineType]?: string // that is a path to the engine download location
 }
-export type BinaryPaths = {
-  [binary in BinaryType]?: { [binaryTarget in Platform]: string } // key: target, value: path
+export type EnginePaths = {
+  [engine in EngineType]?: { [binaryTarget in Platform]: string } // key: target, value: path
 }
 export interface DownloadOptions {
-  binaries: BinaryDownloadConfiguration
+  engines: EngineDownloadConfiguration
   binaryTargets?: Platform[]
   showProgress?: boolean
   progressCb?: (progress: number) => void
@@ -57,16 +57,16 @@ export interface DownloadOptions {
   printVersion?: boolean
 }
 
-const BINARY_TO_ENV_VAR = {
-  [BinaryType.migrationEngine]: 'PRISMA_MIGRATION_ENGINE_BINARY',
-  [BinaryType.queryEngine]: 'PRISMA_QUERY_ENGINE_BINARY',
-  [BinaryType.libqueryEngine]: 'PRISMA_QUERY_ENGINE_LIBRARY',
-  [BinaryType.introspectionEngine]: 'PRISMA_INTROSPECTION_ENGINE_BINARY',
-  [BinaryType.prismaFmt]: 'PRISMA_FMT_BINARY',
+const ENGINETYPE_TO_ENV_VAR = {
+  [EngineType.migrationEngine]: 'PRISMA_MIGRATION_ENGINE_BINARY',
+  [EngineType.queryEngine]: 'PRISMA_QUERY_ENGINE_BINARY',
+  [EngineType.libqueryEngine]: 'PRISMA_QUERY_ENGINE_LIBRARY',
+  [EngineType.introspectionEngine]: 'PRISMA_INTROSPECTION_ENGINE_BINARY',
+  [EngineType.prismaFmt]: 'PRISMA_FMT_BINARY',
 }
 
-type BinaryDownloadJob = {
-  binaryName: string
+type EngineDownloadJob = {
+  engineName: string
   targetFolder: string
   binaryTarget: Platform
   fileName: string
@@ -74,14 +74,14 @@ type BinaryDownloadJob = {
   envVarPath: string | null
 }
 
-export async function download(options: DownloadOptions): Promise<BinaryPaths> {
+export async function download(options: DownloadOptions): Promise<EnginePaths> {
   // get platform
   const platform = await getPlatform()
   const os = await getos()
 
   if (os.distro && ['nixos'].includes(os.distro)) {
     console.error(
-      `${chalk.yellow('Warning')} Precompiled binaries are not available for ${
+      `${chalk.yellow('Warning')} Precompiled engines are not available for ${
         os.distro
       }.`,
     )
@@ -91,14 +91,14 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
     console.error(
       `${chalk.yellow(
         'Warning',
-      )} Precompiled binaries are not available for ${platform}. Read more about building your own binaries at https://pris.ly/d/build-binaries`,
+      )} Precompiled engines are not available for ${platform}. Read more about building your own engines at https://pris.ly/d/build-engines`,
     )
-  } else if (BinaryType.libqueryEngine in options.binaries) {
+  } else if (EngineType.libqueryEngine in options.engines) {
     await isNodeAPISupported()
   }
 
-  // no need to do anything, if there are no binaries
-  if (!options.binaries || Object.values(options.binaries).length === 0) {
+  // no need to do anything, if there are no engines
+  if (!options.engines || Object.values(options.engines).length === 0) {
     return {} // we don't download anything if nothing is provided
   }
 
@@ -107,28 +107,28 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
     ...options,
     binaryTargets: options.binaryTargets ?? [platform],
     version: options.version ?? 'latest',
-    binaries: mapKeys(options.binaries, (key) =>
-      engineTypeToBinaryType(key, platform),
+    engines: mapKeys(options.engines, (key) =>
+      binaryTargetToEngineType(key, platform),
     ), // just necessary to support both camelCase and hyphen-case
   }
 
-  // creates a matrix of binaries x binary targets
-  const binaryJobs = flatMap(
-    Object.entries(opts.binaries),
-    ([binaryName, targetFolder]: [string, string]) =>
+  // creates a matrix of engines x binary targets
+  const engineMatrix = flatMap(
+    Object.entries(opts.engines),
+    ([engineName, targetFolder]: [string, string]) =>
       opts.binaryTargets.map((binaryTarget) => {
         const fileName =
-          binaryName === BinaryType.libqueryEngine
+          engineName === EngineType.libqueryEngine
             ? getNodeAPIName(binaryTarget, 'fs')
-            : getBinaryName(binaryName, binaryTarget)
+            : getEngineName(engineName, binaryTarget)
         const targetFilePath = path.join(targetFolder, fileName)
         return {
-          binaryName,
+          engineName,
           targetFolder,
           binaryTarget,
           fileName,
           targetFilePath,
-          envVarPath: getBinaryEnvVarPath(binaryName),
+          envVarPath: getEngineEnvVarPath(engineName),
         }
       }),
   )
@@ -147,8 +147,8 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
   }
 
   // filter out files, which don't yet exist or have to be created
-  const binariesToDownload = await pFilter(binaryJobs, async (job) => {
-    const needsToBeDownloaded = await binaryNeedsToBeDownloaded(
+  const enginesToDownload = await pFilter(engineMatrix, async (job) => {
+    const needsToBeDownloaded = await engineNeedsToBeDownloaded(
       job,
       platform,
       opts.version,
@@ -157,17 +157,17 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
     const isSupported = platforms.includes(job.binaryTarget as Platform)
     const shouldDownload =
       isSupported &&
-      !job.envVarPath && // this is for custom binaries
+      !job.envVarPath && // this is for custom engines
       (opts.ignoreCache || needsToBeDownloaded) // TODO: do we need ignoreCache?
     if (needsToBeDownloaded && !isSupported) {
       throw new Error(
-        `Unknown binaryTarget ${job.binaryTarget} and no custom binaries were provided`,
+        `Unknown binaryTarget ${job.binaryTarget} and no custom engines were provided`,
       )
     }
     return shouldDownload
   })
 
-  if (binariesToDownload.length > 0) {
+  if (enginesToDownload.length > 0) {
     const cleanupPromise = cleanupCache() // already start cleaning up while we download
 
     let finishBar: undefined | (() => void)
@@ -182,8 +182,8 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
     }
 
     await Promise.all(
-      binariesToDownload.map((job) =>
-        downloadBinary({
+      enginesToDownload.map((job) =>
+        downloadEngine({
           ...job,
           version: opts.version,
           failSilent: opts.failSilent,
@@ -198,28 +198,28 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
     }
   }
 
-  const binaryPaths = binaryJobsToBinaryPaths(binaryJobs)
+  const enginePaths = engineMatrixToEnginePaths(engineMatrix)
   const dir = eval('__dirname')
 
   // this is necessary for pkg
   if (dir.startsWith('/snapshot/')) {
-    for (const engineType in binaryPaths) {
-      const binaryTargets = binaryPaths[engineType]
+    for (const engineType in enginePaths) {
+      const binaryTargets = enginePaths[engineType]
       for (const binaryTarget in binaryTargets) {
-        const binaryPath = binaryTargets[binaryTarget]
-        binaryTargets[binaryTarget] = await maybeCopyToTmp(binaryPath)
+        const enginePath = binaryTargets[binaryTarget]
+        binaryTargets[binaryTarget] = await maybeCopyToTmp(enginePath)
       }
     }
   }
 
-  return binaryPaths
+  return enginePaths
 }
 
 function getCollectiveBar(options: DownloadOptions): {
   finishBar: () => void
   setProgress: (sourcePath: string) => (progress: number) => void
 } {
-  const hasNodeAPI = 'libquery-engine' in options.binaries
+  const hasNodeAPI = 'libquery-engine' in options.engines
   const bar = getBar(
     `Downloading Prisma engines${
       hasNodeAPI ? ' for Node-API' : ''
@@ -229,7 +229,7 @@ function getCollectiveBar(options: DownloadOptions): {
   const progressMap: { [key: string]: number } = {}
   // Object.values is faster than Object.keys
   const numDownloads =
-    Object.values(options.binaries).length *
+    Object.values(options.engines).length *
     Object.values(options?.binaryTargets ?? []).length
   const setProgress =
     (sourcePath: string) =>
@@ -257,21 +257,21 @@ function getCollectiveBar(options: DownloadOptions): {
   }
 }
 
-function binaryJobsToBinaryPaths(jobs: BinaryDownloadJob[]): BinaryPaths {
-  return jobs.reduce<BinaryPaths>((acc, job) => {
-    if (!acc[job.binaryName]) {
-      acc[job.binaryName] = {}
+function engineMatrixToEnginePaths(jobs: EngineDownloadJob[]): EnginePaths {
+  return jobs.reduce<EnginePaths>((acc, job) => {
+    if (!acc[job.engineName]) {
+      acc[job.engineName] = {}
     }
 
     // if an env var path has been provided, prefer that one
-    acc[job.binaryName][job.binaryTarget] = job.envVarPath || job.targetFilePath
+    acc[job.engineName][job.binaryTarget] = job.envVarPath || job.targetFilePath
 
     return acc
-  }, {} as BinaryPaths)
+  }, {} as EnginePaths)
 }
 
-async function binaryNeedsToBeDownloaded(
-  job: BinaryDownloadJob,
+async function engineNeedsToBeDownloaded(
+  job: EngineDownloadJob,
   nativePlatform: string,
   version: string,
   failSilent?: boolean,
@@ -284,7 +284,7 @@ async function binaryNeedsToBeDownloaded(
   const targetExists = await exists(job.targetFilePath)
   // 2. If exists, check, if cached file exists and is up to date and has same hash as file.
   // If not, copy cached file over
-  const cachedFile = await getCachedBinaryPath({
+  const cachedFile = await getCachedEnginePath({
     ...job,
     version,
     failSilent,
@@ -330,7 +330,7 @@ async function binaryNeedsToBeDownloaded(
   // 3. If same platform, always check --version
   if (
     job.binaryTarget === nativePlatform &&
-    job.binaryName !== BinaryType.libqueryEngine
+    job.engineName !== EngineType.libqueryEngine
   ) {
     const works = await checkVersionCommand(job.targetFilePath)
     return !works
@@ -357,30 +357,30 @@ export async function checkVersionCommand(
   }
 }
 
-export function getBinaryName(binaryName: string, platform: Platform): string {
-  if (binaryName === BinaryType.libqueryEngine) {
+export function getEngineName(engineType: string, platform: Platform): string {
+  if (engineType === EngineType.libqueryEngine) {
     return `${getNodeAPIName(platform, 'url')}`
   }
   const extension = platform === 'windows' ? '.exe' : ''
-  return `${binaryName}-${platform}${extension}`
+  return `${engineType}-${platform}${extension}`
 }
 
-type GetCachedBinaryOptions = BinaryDownloadJob & {
+type GetCachedEngineOptions = EngineDownloadJob & {
   version: string
   failSilent?: boolean
 }
 
-async function getCachedBinaryPath({
+async function getCachedEnginePath({
   version,
   binaryTarget,
-  binaryName,
-}: GetCachedBinaryOptions): Promise<string | null> {
+  engineName,
+}: GetCachedEngineOptions): Promise<string | null> {
   const cacheDir = await getCacheDir(channel, version, binaryTarget)
   if (!cacheDir) {
     return null
   }
 
-  const cachedTargetPath = path.join(cacheDir, binaryName)
+  const cachedTargetPath = path.join(cacheDir, engineName)
 
   if (!fs.existsSync(cachedTargetPath)) {
     return null
@@ -399,8 +399,8 @@ async function getCachedBinaryPath({
   return null
 }
 
-export function getBinaryEnvVarPath(binaryName: string): string | null {
-  const envVar = BINARY_TO_ENV_VAR[binaryName]
+export function getEngineEnvVarPath(engineType: string): string | null {
+  const envVar = ENGINETYPE_TO_ENV_VAR[engineType]
   if (envVar && process.env[envVar]) {
     const envVarPath = path.resolve(
       process.cwd(),
@@ -416,8 +416,8 @@ export function getBinaryEnvVarPath(binaryName: string): string | null {
       )
     }
     debug(
-      `Using env var ${chalk.bold(envVar)} for binary ${chalk.bold(
-        binaryName,
+      `Using env var ${chalk.bold(envVar)} for engine ${chalk.bold(
+        engineType,
       )}, which points to ${chalk.underline(process.env[envVar])}`,
     )
     return envVarPath
@@ -426,20 +426,20 @@ export function getBinaryEnvVarPath(binaryName: string): string | null {
   return null
 }
 
-type DownloadBinaryOptions = BinaryDownloadJob & {
+type DownloadEngineOptions = EngineDownloadJob & {
   version: string
   progressCb?: (progress: number) => void
   failSilent?: boolean
 }
 
-async function downloadBinary(options: DownloadBinaryOptions): Promise<void> {
-  const { version, progressCb, targetFilePath, binaryTarget, binaryName } =
+async function downloadEngine(options: DownloadEngineOptions): Promise<void> {
+  const { version, progressCb, targetFilePath, binaryTarget, engineName } =
     options
   const downloadUrl = getDownloadUrl(
     'all_commits',
     version,
     binaryTarget,
-    binaryName,
+    engineName,
   )
 
   const targetDir = path.dirname(targetFilePath)
@@ -481,7 +481,7 @@ async function downloadBinary(options: DownloadBinaryOptions): Promise<void> {
 }
 
 async function saveFileToCache(
-  job: BinaryDownloadJob,
+  job: EngineDownloadJob,
   version: string,
   sha256: string,
   zippedSha256: string,
@@ -492,11 +492,11 @@ async function saveFileToCache(
     return
   }
 
-  const cachedTargetPath = path.join(cacheDir, job.binaryName)
-  const cachedSha256Path = path.join(cacheDir, job.binaryName + '.sha256')
+  const cachedTargetPath = path.join(cacheDir, job.engineName)
+  const cachedSha256Path = path.join(cacheDir, job.engineName + '.sha256')
   const cachedSha256ZippedPath = path.join(
     cacheDir,
-    job.binaryName + '.gz.sha256',
+    job.engineName + '.gz.sha256',
   )
 
   try {
@@ -509,12 +509,13 @@ async function saveFileToCache(
   }
 }
 
-function engineTypeToBinaryType(
+// TODO Wth does this _really_ do? Opposite how currently named?
+function binaryTargetToEngineType(
   engineType: string,
   binaryTarget: string,
 ): string {
-  if (BinaryType[engineType]) {
-    return BinaryType[engineType]
+  if (EngineType[engineType]) {
+    return EngineType[engineType]
   }
   if (engineType === 'native') {
     return binaryTarget
@@ -536,11 +537,11 @@ function mapKeys<T extends object, K extends keyof T>(
 
 export async function maybeCopyToTmp(file: string): Promise<string> {
   // in this case, we are in a "pkg" context with a virtual fs
-  // to make this work, we need to copy the binary to /tmp and execute it from there
+  // to make this work, we need to copy the engine to /tmp and execute it from there
 
   const dir = eval('__dirname')
   if (dir.startsWith('/snapshot/')) {
-    const targetDir = path.join(tempDir, 'prisma-binaries')
+    const targetDir = path.join(tempDir, 'prisma-engines')
     await makeDir(targetDir)
     const target = path.join(targetDir, path.basename(file))
     const data = await readFile(file)
