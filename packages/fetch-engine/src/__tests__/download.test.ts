@@ -8,14 +8,14 @@ import { cleanupCache } from '../cleanupCache'
 import {
   checkVersionCommand,
   download,
-  getEngineName,
+  getBinaryName,
   getVersion,
 } from '../download'
 import { getFiles } from './__utils__/getFiles'
 
-const CURRENT_ENGINES_VERSION_HASH = enginesVersion
+const CURRENT_BINARIES_HASH = enginesVersion
 
-const FIXED_ENGINES_VERSION_HASH = '0cecbd5867319b25d3d5110c16c398af16082790'
+const FIXED_BINARIES_HASH = '0cecbd5867319b25d3d5110c16c398af16082790'
 
 jest.setTimeout(100_000)
 
@@ -31,29 +31,29 @@ describe('download', () => {
     const platform = await getPlatform()
     const queryEnginePath = path.join(
       __dirname,
-      getEngineName('query-engine', platform),
+      getBinaryName('query-engine', platform),
     )
     const introspectionEnginePath = path.join(
       __dirname,
-      getEngineName('introspection-engine', platform),
+      getBinaryName('introspection-engine', platform),
     )
     const migrationEnginePath = path.join(
       __dirname,
-      getEngineName('migration-engine', platform),
+      getBinaryName('migration-engine', platform),
     )
     const prismafmtPath = path.join(
       __dirname,
-      getEngineName('prisma-fmt', platform),
+      getBinaryName('prisma-fmt', platform),
     )
 
     await download({
-      engines: {
+      binaries: {
         'query-engine': __dirname,
         'introspection-engine': __dirname,
         'migration-engine': __dirname,
         'prisma-fmt': __dirname,
       },
-      version: FIXED_ENGINES_VERSION_HASH,
+      version: FIXED_BINARIES_HASH,
     })
 
     expect(await getVersion(queryEnginePath)).toMatchInlineSnapshot(
@@ -70,27 +70,27 @@ describe('download', () => {
     )
   })
 
-  test('basic download all current engines', async () => {
+  test('basic download all current binaries', async () => {
     const platform = await getPlatform()
     const queryEnginePath = path.join(
       __dirname,
-      getEngineName('query-engine', platform),
+      getBinaryName('query-engine', platform),
     )
     const introspectionEnginePath = path.join(
       __dirname,
-      getEngineName('introspection-engine', platform),
+      getBinaryName('introspection-engine', platform),
     )
     const migrationEnginePath = path.join(
       __dirname,
-      getEngineName('migration-engine', platform),
+      getBinaryName('migration-engine', platform),
     )
     const prismafmtPath = path.join(
       __dirname,
-      getEngineName('prisma-fmt', platform),
+      getBinaryName('prisma-fmt', platform),
     )
 
     await download({
-      engines: {
+      binaries: {
         'query-engine': __dirname,
         'introspection-engine': __dirname,
         'migration-engine': __dirname,
@@ -108,26 +108,26 @@ describe('download', () => {
         'windows',
         'linux-musl',
       ],
-      version: CURRENT_ENGINES_VERSION_HASH,
+      version: CURRENT_BINARIES_HASH,
     })
 
-    // Check that all engines git hash are the same
-    expect(await getVersion(queryEnginePath)).toContain(CURRENT_ENGINES_VERSION_HASH)
+    // Check that all binaries git hash are the same
+    expect(await getVersion(queryEnginePath)).toContain(CURRENT_BINARIES_HASH)
     expect(await getVersion(introspectionEnginePath)).toContain(
-      CURRENT_ENGINES_VERSION_HASH,
+      CURRENT_BINARIES_HASH,
     )
     expect(await getVersion(migrationEnginePath)).toContain(
-      CURRENT_ENGINES_VERSION_HASH,
+      CURRENT_BINARIES_HASH,
     )
-    expect(await getVersion(prismafmtPath)).toContain(CURRENT_ENGINES_VERSION_HASH)
+    expect(await getVersion(prismafmtPath)).toContain(CURRENT_BINARIES_HASH)
   })
 
-  test('auto heal corrupt engine file', async () => {
+  test('auto heal corrupt binary', async () => {
     const platform = await getPlatform()
     const baseDir = path.join(__dirname, 'corruption')
     const targetPath = path.join(
       baseDir,
-      getEngineName('query-engine', platform),
+      getBinaryName('query-engine', platform),
     )
     if (fs.existsSync(targetPath)) {
       try {
@@ -138,20 +138,20 @@ describe('download', () => {
     }
 
     await download({
-      engines: {
+      binaries: {
         'query-engine': baseDir,
       },
-      version: FIXED_ENGINES_VERSION_HASH,
+      version: FIXED_BINARIES_HASH,
     })
 
-    fs.writeFileSync(targetPath, 'incorrect-engine-file')
+    fs.writeFileSync(targetPath, 'incorrect-binary')
 
     // please heal it
     await download({
-      engines: {
+      binaries: {
         'query-engine': baseDir,
       },
-      version: FIXED_ENGINES_VERSION_HASH,
+      version: FIXED_BINARIES_HASH,
     })
 
     expect(fs.existsSync(targetPath)).toBe(true)
@@ -162,26 +162,26 @@ describe('download', () => {
   test('handle non-existent binary target', async () => {
     await expect(
       download({
-        engines: {
+        binaries: {
           'query-engine': __dirname,
         },
-        version: FIXED_ENGINES_VERSION_HASH,
+        version: FIXED_BINARIES_HASH,
         binaryTargets: ['darwin', 'marvin'] as any, // eslint-disable-line @typescript-eslint/no-explicit-any
       }),
     ).rejects.toThrowErrorMatchingInlineSnapshot(
-      `"Unknown binaryTarget marvin and no custom engines were provided"`,
+      `"Unknown binaryTarget marvin and no custom binaries were provided"`,
     )
   })
 
-  test('handle non-existent binary target with missing custom engines', async () => {
+  test('handle non-existent binary target with missing custom binaries', async () => {
     expect.assertions(1)
     process.env.PRISMA_QUERY_ENGINE_BINARY = '../query-engine'
     try {
       await download({
-        engines: {
+        binaries: {
           'query-engine': __dirname,
         },
-        version: FIXED_ENGINES_VERSION_HASH,
+        version: FIXED_BINARIES_HASH,
         binaryTargets: ['darwin', 'marvin'] as any, // eslint-disable-line @typescript-eslint/no-explicit-any
       })
     } catch (err: any) {
@@ -191,9 +191,9 @@ describe('download', () => {
     }
   })
 
-  test('handle non-existent binary target with custom engines', async () => {
+  test('handle non-existent binary target with custom binaries', async () => {
     const e = await download({
-      engines: {
+      binaries: {
         'query-engine': __dirname,
       },
     })
@@ -201,13 +201,13 @@ describe('download', () => {
     const targetPath = path.join(
       __dirname,
       // @ts-ignore
-      getEngineName('query-engine', 'marvin'),
+      getBinaryName('query-engine', 'marvin'),
     )
     fs.copyFileSync(dummyPath, targetPath)
     process.env.PRISMA_QUERY_ENGINE_BINARY = targetPath
 
     const testResult = await download({
-      engines: {
+      binaries: {
         'query-engine': path.join(__dirname, 'all'),
       },
       binaryTargets: ['marvin'] as any, // eslint-disable-line @typescript-eslint/no-explicit-any
@@ -215,10 +215,10 @@ describe('download', () => {
     expect(testResult['query-engine']!['marvin']).toEqual(targetPath)
   })
 
-  test('download all engines & cache them', async () => {
+  test('download all binaries & cache them', async () => {
     const baseDir = path.join(__dirname, 'all')
     await download({
-      engines: {
+      binaries: {
         'query-engine': baseDir,
         'introspection-engine': baseDir,
         'migration-engine': baseDir,
@@ -236,7 +236,7 @@ describe('download', () => {
         'windows',
         'linux-musl',
       ],
-      version: FIXED_ENGINES_VERSION_HASH,
+      version: FIXED_BINARIES_HASH,
     })
     const files = getFiles(baseDir)
     expect(files).toMatchInlineSnapshot(`
@@ -411,7 +411,7 @@ Array [
     await del(baseDir + '/prisma-fmt*')
     const before = Date.now()
     await download({
-      engines: {
+      binaries: {
         'query-engine': baseDir,
         'introspection-engine': baseDir,
         'migration-engine': baseDir,
@@ -429,7 +429,7 @@ Array [
         'windows',
         'linux-musl',
       ],
-      version: FIXED_ENGINES_VERSION_HASH,
+      version: FIXED_BINARIES_HASH,
     })
     const after = Date.now()
     // cache should take less than 2s
@@ -439,7 +439,7 @@ Array [
     expect(took).toBeLessThan(20000)
     const before2 = Date.now()
     await download({
-      engines: {
+      binaries: {
         'query-engine': baseDir,
         'introspection-engine': baseDir,
         'migration-engine': baseDir,
@@ -457,7 +457,7 @@ Array [
         'windows',
         'linux-musl',
       ],
-      version: FIXED_ENGINES_VERSION_HASH,
+      version: FIXED_BINARIES_HASH,
     })
     const after2 = Date.now()
     // value on Mac: 33ms
