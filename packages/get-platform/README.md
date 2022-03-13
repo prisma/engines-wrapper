@@ -1,6 +1,6 @@
 # @prisma/get-platform
 
-Platform detection used for Prisma 2+ engines.
+Platform detection used for Prisma 2 binaries.
 
 ## Usage
 
