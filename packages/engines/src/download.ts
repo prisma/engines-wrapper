@@ -1,18 +1,18 @@
 import Debug from '@prisma/debug'
 import { enginesVersion } from '@prisma/engines-version'
 import {
-  BinaryDownloadConfiguration,
-  BinaryType,
+  EngineDownloadConfiguration,
+  EngineType,
   download,
 } from '@prisma/fetch-engine'
 import fs from 'fs'
 import path from 'path'
-import { getCliQueryEngineBinaryType } from '.'
+import { getCliQueryEngineType } from '.'
 const debug = Debug('prisma:download')
 
-const binaryDir = path.join(__dirname, '../')
+const engineDir = path.join(__dirname, '../')
 
-const lockFile = path.join(binaryDir, 'download-lock')
+const lockFile = path.join(engineDir, 'download-lock')
 
 let createdLockFile = false
 async function main() {
@@ -21,7 +21,7 @@ async function main() {
     parseInt(fs.readFileSync(lockFile, 'utf-8'), 10) > Date.now() - 20000
   ) {
     debug(
-      `Lock file already exists, so we're skipping the download of the prisma binaries`,
+      `Lock file already exists, so we're skipping the download of the Prisma engines`,
     )
   } else {
     createLockFile()
@@ -29,17 +29,17 @@ async function main() {
     if (process.env.PRISMA_CLI_BINARY_TARGETS) {
       binaryTargets = process.env.PRISMA_CLI_BINARY_TARGETS.split(',')
     }
-    const cliQueryEngineBinaryType = getCliQueryEngineBinaryType()
+    const cliQueryEngineBinaryType = getCliQueryEngineType()
 
-    const binaries: BinaryDownloadConfiguration = {
-      [cliQueryEngineBinaryType]: binaryDir,
-      [BinaryType.migrationEngine]: binaryDir,
-      [BinaryType.introspectionEngine]: binaryDir,
-      [BinaryType.prismaFmt]: binaryDir,
+    const engines: EngineDownloadConfiguration = {
+      [cliQueryEngineBinaryType]: engineDir,
+      [EngineType.migrationEngine]: engineDir,
+      [EngineType.introspectionEngine]: engineDir,
+      [EngineType.prismaFmt]: engineDir,
     }
 
     await download({
-      binaries,
+      engines,
       showProgress: true,
       version: enginesVersion,
       failSilent: true,

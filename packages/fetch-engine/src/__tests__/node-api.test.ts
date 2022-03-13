@@ -5,7 +5,7 @@ import { cleanupCache } from '../cleanupCache'
 import { download } from '../download'
 import { getFiles } from './__utils__/getFiles'
 
-const CURRENT_BINARIES_HASH = enginesVersion
+const CURRENT_ENGINES_VERSION_HASH = enginesVersion
 
 jest.setTimeout(80_000)
 
@@ -24,7 +24,7 @@ describe('download', () => {
     const baseDir = path.join(__dirname, 'node-api')
 
     await download({
-      binaries: {
+      engines: {
         'libquery-engine': baseDir,
       },
       binaryTargets: [
@@ -39,7 +39,7 @@ describe('download', () => {
         'windows',
         'linux-musl',
       ],
-      version: CURRENT_BINARIES_HASH,
+      version: CURRENT_ENGINES_VERSION_HASH,
     })
 
     const files = getFiles(baseDir).map((f) => ({ ...f, size: 'X' }))
