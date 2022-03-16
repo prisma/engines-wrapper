@@ -13,7 +13,7 @@ importers:
       husky: 7.0.4
       is-ci: 3.0.1
       node-fetch: 2.6.7
-      prettier: 2.5.1
+      prettier: 2.6.0
       ts-node: 10.7.0
       typescript: 4.6.2
     devDependencies:
@@ -26,7 +26,7 @@ importers:
       husky: 7.0.4
       is-ci: 3.0.1
       node-fetch: 2.6.7
-      prettier: 2.5.1
+      prettier: 2.6.0
       ts-node: 10.7.0_045cabcbf8818eda83522fe731c87088
       typescript: 4.6.2
 
@@ -85,7 +85,7 @@ importers:
       p-filter: 2.1.0
       p-map: 4.0.0
       p-retry: 4.6.1
-      prettier: 2.5.1
+      prettier: 2.6.0
       progress: 2.0.3
       rimraf: 3.0.2
       strip-ansi: 6.0.1
@@ -125,10 +125,10 @@ importers:
       eslint-config-prettier: 8.5.0_eslint@8.10.0
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.10.0
       eslint-plugin-jest: 25.7.0_83b965a57a5e946ff723ffe717bf82fb
-      eslint-plugin-prettier: 4.0.0_f3d13a703a9c1079e3d1af6044603beb
+      eslint-plugin-prettier: 4.0.0_eff241c09b04add26f793c28a293b227
       jest: 27.5.1_ts-node@10.7.0
       lint-staged: 11.2.6
-      prettier: 2.5.1
+      prettier: 2.6.0
       strip-ansi: 6.0.1
       ts-jest: 27.1.3_60149d457e34ffba7d4e845dde6a1263
       typescript: 4.6.2
@@ -147,7 +147,7 @@ importers:
       eslint-plugin-prettier: 4.0.0
       jest: 27.5.1
       lint-staged: 11.2.6
-      prettier: 2.5.1
+      prettier: 2.6.0
       ts-jest: 27.1.3
       typescript: 4.6.2
     dependencies:
@@ -161,10 +161,10 @@ importers:
       eslint-config-prettier: 8.5.0_eslint@8.10.0
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.10.0
       eslint-plugin-jest: 25.7.0_83b965a57a5e946ff723ffe717bf82fb
-      eslint-plugin-prettier: 4.0.0_f3d13a703a9c1079e3d1af6044603beb
+      eslint-plugin-prettier: 4.0.0_eff241c09b04add26f793c28a293b227
       jest: 27.5.1_ts-node@10.7.0
       lint-staged: 11.2.6
-      prettier: 2.5.1
+      prettier: 2.6.0
       ts-jest: 27.1.3_60149d457e34ffba7d4e845dde6a1263
       typescript: 4.6.2
 
@@ -1803,7 +1803,7 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-prettier/4.0.0_f3d13a703a9c1079e3d1af6044603beb:
+  /eslint-plugin-prettier/4.0.0_eff241c09b04add26f793c28a293b227:
     resolution: {integrity: sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
@@ -1816,7 +1816,7 @@ packages:
     dependencies:
       eslint: 8.10.0
       eslint-config-prettier: 8.5.0_eslint@8.10.0
-      prettier: 2.5.1
+      prettier: 2.6.0
       prettier-linter-helpers: 1.0.0
     dev: true
 
@@ -3363,8 +3363,8 @@ packages:
       fast-diff: 1.2.0
     dev: true
 
-  /prettier/2.5.1:
-    resolution: {integrity: sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==}
+  /prettier/2.6.0:
+    resolution: {integrity: sha512-m2FgJibYrBGGgQXNzfd0PuDGShJgRavjUoRCw1mZERIWVSXF0iLzLm+aOqTAbLnC3n6JzUhAA8uZnFVghHJ86A==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
