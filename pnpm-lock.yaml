@@ -33,8 +33,8 @@ importers:
   packages/engines:
     specifiers:
       '@prisma/debug': 3.11.0
-      '@prisma/engines-version': workspace:3.12.0-11.query-engine-mongodb-filter-rewrite-8ba438db2b04e6c6e7d6ea77f1e52c0776168ece
-      '@prisma/fetch-engine': workspace:3.12.0-11.query-engine-mongodb-filter-rewrite-8ba438db2b04e6c6e7d6ea77f1e52c0776168ece
+      '@prisma/engines-version': workspace:3.12.0-12.2ab307d2b73aa7052990e03a8efc915b4396c46b
+      '@prisma/fetch-engine': workspace:3.12.0-12.2ab307d2b73aa7052990e03a8efc915b4396c46b
       '@types/node': 16.11.26
       execa: 5.1.1
       typescript: 4.6.2
@@ -57,8 +57,8 @@ importers:
   packages/fetch-engine:
     specifiers:
       '@prisma/debug': 3.11.0
-      '@prisma/engines-version': workspace:3.12.0-11.query-engine-mongodb-filter-rewrite-8ba438db2b04e6c6e7d6ea77f1e52c0776168ece
-      '@prisma/get-platform': workspace:3.12.0-11.query-engine-mongodb-filter-rewrite-8ba438db2b04e6c6e7d6ea77f1e52c0776168ece
+      '@prisma/engines-version': workspace:3.12.0-12.2ab307d2b73aa7052990e03a8efc915b4396c46b
+      '@prisma/get-platform': workspace:3.12.0-12.2ab307d2b73aa7052990e03a8efc915b4396c46b
       '@types/find-cache-dir': 3.2.1
       '@types/jest': 27.4.1
       '@types/node': 16.11.26
