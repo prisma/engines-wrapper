@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "3.12.0-10.4a39a13bcdacf02f5ddee7ed0d472ad175116821",
+  "version": "3.12.0-11.query-engine-mongodb-filter-rewrite-8ba438db2b04e6c6e7d6ea77f1e52c0776168ece",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "4a39a13bcdacf02f5ddee7ed0d472ad175116821"
+    "enginesVersion": "8ba438db2b04e6c6e7d6ea77f1e52c0776168ece"
   },
   "repository": {
     "type": "git",
