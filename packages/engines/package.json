@@ -11,7 +11,7 @@
     "@prisma/fetch-engine": "workspace:3.12.0-25.0f6048e7cce89b63420fdf68cfa225185fea1fcb",
     "@types/node": "16.11.26",
     "execa": "5.1.1",
-    "typescript": "4.6.2"
+    "typescript": "4.6.3"
   },
   "repository": {
     "type": "git",
