@@ -1,6 +1,6 @@
 {
   "name": "@prisma/get-platform",
-  "version": "3.13.0-4.a2a89a7dfb88dbe9b1a27e8d1a6325b35e1ca41f",
+  "version": "3.13.0-5.chore-napi-rs-v2-e87225b9b65cc841802b704ff5bda125ddd7e6e3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
