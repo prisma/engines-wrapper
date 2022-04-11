@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "3.13.0-5.chore-napi-rs-v2-e87225b9b65cc841802b704ff5bda125ddd7e6e3",
+  "version": "3.13.0-6.0317ad013e33dcab239f637ba0bf0e00fda77c1d",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "e87225b9b65cc841802b704ff5bda125ddd7e6e3"
+    "enginesVersion": "0317ad013e33dcab239f637ba0bf0e00fda77c1d"
   },
   "repository": {
     "type": "git",
