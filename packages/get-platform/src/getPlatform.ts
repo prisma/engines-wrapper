@@ -172,6 +172,9 @@ async function gracefulExec(cmd: string): Promise<string | undefined> {
 }
 
 export async function getPlatform(): Promise<Platform> {
+  if (process.env.PRISMA_PLATFORM)
+    return process.env.PRISMA_PLATFORM as Platform;
+
   const { platform, libssl, distro, arch } = await getos()
 
   // Apple Silicon (M1)
