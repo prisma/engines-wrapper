@@ -62,6 +62,7 @@ export function getAllUrls(branch: string, commit: string): string[] {
     'linux-nixos',
     'linux-arm-openssl-1.1.x',
     'linux-arm-openssl-1.0.x',
+    'linux-arm-openssl-3.0.x',
     'openbsd',
     'netbsd',
     'freebsd11',
@@ -201,12 +202,12 @@ async function getCommits(branch: string): Promise<string[] | object> {
   const url = `https://github-cache.prisma.workers.dev/repos/prisma/prisma-engines/commits?sha=${branch}`
   const result = await fetch(url, {
     agent: getProxyAgent(url) as any,
-// Headers are not used by the worker
-//     headers: {
-//       Authorization: process.env.GITHUB_TOKEN
-//         ? `token ${process.env.GITHUB_TOKEN}`
-//         : undefined,
-//     },
+    // Headers are not used by the worker
+    //     headers: {
+    //       Authorization: process.env.GITHUB_TOKEN
+    //         ? `token ${process.env.GITHUB_TOKEN}`
+    //         : undefined,
+    //     },
   } as any).then((res) => res.json())
 
   if (!Array.isArray(result)) {

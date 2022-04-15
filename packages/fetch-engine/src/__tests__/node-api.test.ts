@@ -7,7 +7,7 @@ import { getFiles } from './__utils__/getFiles'
 
 const CURRENT_BINARIES_HASH = enginesVersion
 
-jest.setTimeout(80_000)
+jest.setTimeout(120_000)
 
 describe('download', () => {
   beforeEach(async () => {
@@ -32,10 +32,13 @@ describe('download', () => {
         'darwin-arm64',
         'debian-openssl-1.0.x',
         'debian-openssl-1.1.x',
+        'debian-openssl-3.0.x',
         'linux-arm64-openssl-1.0.x',
         'linux-arm64-openssl-1.1.x',
+        'linux-arm64-openssl-3.0.x',
         'rhel-openssl-1.0.x',
         'rhel-openssl-1.1.x',
+        'rhel-openssl-3.0.x',
         'windows',
         'linux-musl',
       ],
@@ -67,11 +70,19 @@ Array [
     "size": "X",
   },
   Object {
+    "name": "libquery_engine-debian-openssl-3.0.x.so.node",
+    "size": "X",
+  },
+  Object {
     "name": "libquery_engine-linux-arm64-openssl-1.0.x.so.node",
     "size": "X",
   },
   Object {
     "name": "libquery_engine-linux-arm64-openssl-1.1.x.so.node",
+    "size": "X",
+  },
+  Object {
+    "name": "libquery_engine-linux-arm64-openssl-3.0.x.so.node",
     "size": "X",
   },
   Object {
@@ -84,6 +95,10 @@ Array [
   },
   Object {
     "name": "libquery_engine-rhel-openssl-1.1.x.so.node",
+    "size": "X",
+  },
+  Object {
+    "name": "libquery_engine-rhel-openssl-3.0.x.so.node",
     "size": "X",
   },
   Object {

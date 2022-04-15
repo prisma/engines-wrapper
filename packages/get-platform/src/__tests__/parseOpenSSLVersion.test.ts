@@ -11,6 +11,11 @@ const tests = [
     content: `OpenSSL 1.0.2g  1 Mar 2016`,
     expect: '1.0.x',
   },
+  {
+    name: '3.0',
+    content: `OpenSSL 3.0.2 15 Mar 2022 (Library: OpenSSL 3.0.2 15 Mar 2022)`,
+    expect: '3.0.x',
+  },
 ]
 
 describe('parseOpenSSLVersion', () => {
