@@ -62,7 +62,7 @@ export async function getos(): Promise<GetOSResult> {
 
   return {
     platform: 'linux',
-    libssl: await getOpenSSLVersion(),
+    libssl: await getOpenSSLVersion(platform, arch),
     distro: await resolveDistro(),
     arch,
   }
@@ -133,18 +133,19 @@ export function parseOpenSSLVersion(input: string): string | undefined {
 }
 
 // getOpenSSLVersion returns the OpenSSL version excluding the patch version, e.g. "1.1.x"
-export async function getOpenSSLVersion(): Promise<string | undefined> {
+export async function getOpenSSLVersion(platform: NodeJS.Platform, arch: Arch): Promise<string | undefined> {
   let prefix = ''
 
-  if (os.platform() == 'android') {
+  if (platform == 'android') {
     prefix = '/data/data/com.termux/files/usr'
   }
 
+  const isArm = arch === 'arm' || arch === 'arm64'
   const [version, ls] = await Promise.all([
     gracefulExec(`openssl version -v`),
     gracefulExec(`
-      ls -l ${prefix}/lib64 | grep ssl;
-      ls -l ${prefix}/usr/lib64 | grep ssl;
+      ls -l ${prefix}/lib${isArm ? '' : '64'} | grep ssl;
+      ls -l ${prefix != '' ? prefix.replace('/usr', '') : ''}/usr/lib${isArm ? '' : '64'} | grep ssl;
     `),
   ])
 
