@@ -15,7 +15,15 @@ import { getFiles } from './__utils__/getFiles'
 
 const CURRENT_BINARIES_HASH = enginesVersion
 
-const FIXED_BINARIES_HASH = '0cecbd5867319b25d3d5110c16c398af16082790'
+// Commit after OpenSSL 3
+// https://github.com/prisma/prisma-engines/commit/0cecbd5867319b25d3d5110c16c398af16082790
+// const FIXED_BINARIES_HASH = '0cecbd5867319b25d3d5110c16c398af16082790'
+// Commit just before OpenSSL 3
+// https://github.com/prisma/prisma-engines/commit/0317ad013e33dcab239f637ba0bf0e00fda77c1d
+// const FIXED_BINARIES_HASH = '0317ad013e33dcab239f637ba0bf0e00fda77c1d'
+// Commit for 3.12.0
+// https://github.com/prisma/prisma-engines/commit/22b822189f46ef0dc5c5b503368d1bee01213980
+const FIXED_BINARIES_HASH = '22b822189f46ef0dc5c5b503368d1bee01213980'
 
 jest.setTimeout(100_000)
 
@@ -57,16 +65,16 @@ describe('download', () => {
     })
 
     expect(await getVersion(queryEnginePath)).toMatchInlineSnapshot(
-      `"query-engine 0cecbd5867319b25d3d5110c16c398af16082790"`,
+      `"query-engine 22b822189f46ef0dc5c5b503368d1bee01213980"`,
     )
     expect(await getVersion(introspectionEnginePath)).toMatchInlineSnapshot(
-      `"introspection-core 0cecbd5867319b25d3d5110c16c398af16082790"`,
+      `"introspection-core 22b822189f46ef0dc5c5b503368d1bee01213980"`,
     )
     expect(await getVersion(migrationEnginePath)).toMatchInlineSnapshot(
-      `"migration-engine-cli 0cecbd5867319b25d3d5110c16c398af16082790"`,
+      `"migration-engine-cli 22b822189f46ef0dc5c5b503368d1bee01213980"`,
     )
     expect(await getVersion(prismafmtPath)).toMatchInlineSnapshot(
-      `"prisma-fmt 0cecbd5867319b25d3d5110c16c398af16082790"`,
+      `"prisma-fmt 22b822189f46ef0dc5c5b503368d1bee01213980"`,
     )
   })
 
@@ -240,173 +248,173 @@ describe('download', () => {
     })
     const files = getFiles(baseDir)
     expect(files).toMatchInlineSnapshot(`
-Array [
-  Object {
-    "name": ".gitkeep",
-    "size": 0,
-  },
-  Object {
-    "name": "introspection-engine-darwin",
-    "size": 17617016,
-  },
-  Object {
-    "name": "introspection-engine-darwin-arm64",
-    "size": 15160465,
-  },
-  Object {
-    "name": "introspection-engine-debian-openssl-1.0.x",
-    "size": 22115480,
-  },
-  Object {
-    "name": "introspection-engine-debian-openssl-1.1.x",
-    "size": 19384392,
-  },
-  Object {
-    "name": "introspection-engine-linux-arm64-openssl-1.0.x",
-    "size": 20821472,
-  },
-  Object {
-    "name": "introspection-engine-linux-arm64-openssl-1.1.x",
-    "size": 21367104,
-  },
-  Object {
-    "name": "introspection-engine-linux-musl",
-    "size": 22339792,
-  },
-  Object {
-    "name": "introspection-engine-rhel-openssl-1.0.x",
-    "size": 22085320,
-  },
-  Object {
-    "name": "introspection-engine-rhel-openssl-1.1.x",
-    "size": 19378520,
-  },
-  Object {
-    "name": "introspection-engine-windows.exe",
-    "size": 12523008,
-  },
-  Object {
-    "name": "migration-engine-darwin",
-    "size": 21094696,
-  },
-  Object {
-    "name": "migration-engine-darwin-arm64",
-    "size": 25607309,
-  },
-  Object {
-    "name": "migration-engine-debian-openssl-1.0.x",
-    "size": 25912224,
-  },
-  Object {
-    "name": "migration-engine-debian-openssl-1.1.x",
-    "size": 23183128,
-  },
-  Object {
-    "name": "migration-engine-linux-arm64-openssl-1.0.x",
-    "size": 24282808,
-  },
-  Object {
-    "name": "migration-engine-linux-arm64-openssl-1.1.x",
-    "size": 24851968,
-  },
-  Object {
-    "name": "migration-engine-linux-musl",
-    "size": 25983216,
-  },
-  Object {
-    "name": "migration-engine-rhel-openssl-1.0.x",
-    "size": 25882064,
-  },
-  Object {
-    "name": "migration-engine-rhel-openssl-1.1.x",
-    "size": 23173568,
-  },
-  Object {
-    "name": "migration-engine-windows.exe",
-    "size": 23372288,
-  },
-  Object {
-    "name": "prisma-fmt-darwin",
-    "size": 4955008,
-  },
-  Object {
-    "name": "prisma-fmt-darwin-arm64",
-    "size": 4324199,
-  },
-  Object {
-    "name": "prisma-fmt-debian-openssl-1.0.x",
-    "size": 8654416,
-  },
-  Object {
-    "name": "prisma-fmt-debian-openssl-1.1.x",
-    "size": 8654520,
-  },
-  Object {
-    "name": "prisma-fmt-linux-arm64-openssl-1.0.x",
-    "size": 8411512,
-  },
-  Object {
-    "name": "prisma-fmt-linux-arm64-openssl-1.1.x",
-    "size": 8411448,
-  },
-  Object {
-    "name": "prisma-fmt-linux-musl",
-    "size": 8635408,
-  },
-  Object {
-    "name": "prisma-fmt-rhel-openssl-1.0.x",
-    "size": 8654344,
-  },
-  Object {
-    "name": "prisma-fmt-rhel-openssl-1.1.x",
-    "size": 8654448,
-  },
-  Object {
-    "name": "prisma-fmt-windows.exe",
-    "size": 3799552,
-  },
-  Object {
-    "name": "query-engine-darwin",
-    "size": 38297216,
-  },
-  Object {
-    "name": "query-engine-darwin-arm64",
-    "size": 32890761,
-  },
-  Object {
-    "name": "query-engine-debian-openssl-1.0.x",
-    "size": 46199640,
-  },
-  Object {
-    "name": "query-engine-debian-openssl-1.1.x",
-    "size": 43489912,
-  },
-  Object {
-    "name": "query-engine-linux-arm64-openssl-1.0.x",
-    "size": 43248576,
-  },
-  Object {
-    "name": "query-engine-linux-arm64-openssl-1.1.x",
-    "size": 43808608,
-  },
-  Object {
-    "name": "query-engine-linux-musl",
-    "size": 45035448,
-  },
-  Object {
-    "name": "query-engine-rhel-openssl-1.0.x",
-    "size": 46166096,
-  },
-  Object {
-    "name": "query-engine-rhel-openssl-1.1.x",
-    "size": 43485976,
-  },
-  Object {
-    "name": "query-engine-windows.exe",
-    "size": 31400448,
-  },
-]
-`)
+      Array [
+        Object {
+          "name": ".gitkeep",
+          "size": 0,
+        },
+        Object {
+          "name": "introspection-engine-darwin",
+          "size": 24437544,
+        },
+        Object {
+          "name": "introspection-engine-darwin-arm64",
+          "size": 22381650,
+        },
+        Object {
+          "name": "introspection-engine-debian-openssl-1.0.x",
+          "size": 32321584,
+        },
+        Object {
+          "name": "introspection-engine-debian-openssl-1.1.x",
+          "size": 29587928,
+        },
+        Object {
+          "name": "introspection-engine-linux-arm64-openssl-1.0.x",
+          "size": 30197856,
+        },
+        Object {
+          "name": "introspection-engine-linux-arm64-openssl-1.1.x",
+          "size": 30748648,
+        },
+        Object {
+          "name": "introspection-engine-linux-musl",
+          "size": 31558736,
+        },
+        Object {
+          "name": "introspection-engine-rhel-openssl-1.0.x",
+          "size": 32296232,
+        },
+        Object {
+          "name": "introspection-engine-rhel-openssl-1.1.x",
+          "size": 29582576,
+        },
+        Object {
+          "name": "introspection-engine-windows.exe",
+          "size": 20715008,
+        },
+        Object {
+          "name": "migration-engine-darwin",
+          "size": 26951208,
+        },
+        Object {
+          "name": "migration-engine-darwin-arm64",
+          "size": 24579438,
+        },
+        Object {
+          "name": "migration-engine-debian-openssl-1.0.x",
+          "size": 32456568,
+        },
+        Object {
+          "name": "migration-engine-debian-openssl-1.1.x",
+          "size": 32444904,
+        },
+        Object {
+          "name": "migration-engine-linux-arm64-openssl-1.0.x",
+          "size": 32349352,
+        },
+        Object {
+          "name": "migration-engine-linux-arm64-openssl-1.1.x",
+          "size": 33082016,
+        },
+        Object {
+          "name": "migration-engine-linux-musl",
+          "size": 34240288,
+        },
+        Object {
+          "name": "migration-engine-rhel-openssl-1.0.x",
+          "size": 32437464,
+        },
+        Object {
+          "name": "migration-engine-rhel-openssl-1.1.x",
+          "size": 32439552,
+        },
+        Object {
+          "name": "migration-engine-windows.exe",
+          "size": 23255040,
+        },
+        Object {
+          "name": "prisma-fmt-darwin",
+          "size": 4836936,
+        },
+        Object {
+          "name": "prisma-fmt-darwin-arm64",
+          "size": 4476824,
+        },
+        Object {
+          "name": "prisma-fmt-debian-openssl-1.0.x",
+          "size": 9142544,
+        },
+        Object {
+          "name": "prisma-fmt-debian-openssl-1.1.x",
+          "size": 9142632,
+        },
+        Object {
+          "name": "prisma-fmt-linux-arm64-openssl-1.0.x",
+          "size": 8965000,
+        },
+        Object {
+          "name": "prisma-fmt-linux-arm64-openssl-1.1.x",
+          "size": 8965200,
+        },
+        Object {
+          "name": "prisma-fmt-linux-musl",
+          "size": 8749768,
+        },
+        Object {
+          "name": "prisma-fmt-rhel-openssl-1.0.x",
+          "size": 9142360,
+        },
+        Object {
+          "name": "prisma-fmt-rhel-openssl-1.1.x",
+          "size": 9142440,
+        },
+        Object {
+          "name": "prisma-fmt-windows.exe",
+          "size": 3850752,
+        },
+        Object {
+          "name": "query-engine-darwin",
+          "size": 36031616,
+        },
+        Object {
+          "name": "query-engine-darwin-arm64",
+          "size": 33042266,
+        },
+        Object {
+          "name": "query-engine-debian-openssl-1.0.x",
+          "size": 43404616,
+        },
+        Object {
+          "name": "query-engine-debian-openssl-1.1.x",
+          "size": 43380008,
+        },
+        Object {
+          "name": "query-engine-linux-arm64-openssl-1.0.x",
+          "size": 42594448,
+        },
+        Object {
+          "name": "query-engine-linux-arm64-openssl-1.1.x",
+          "size": 43321736,
+        },
+        Object {
+          "name": "query-engine-linux-musl",
+          "size": 44670744,
+        },
+        Object {
+          "name": "query-engine-rhel-openssl-1.0.x",
+          "size": 43377232,
+        },
+        Object {
+          "name": "query-engine-rhel-openssl-1.1.x",
+          "size": 43375048,
+        },
+        Object {
+          "name": "query-engine-windows.exe",
+          "size": 32592896,
+        },
+      ]
+    `)
     await del(baseDir + '/*engine*')
     await del(baseDir + '/prisma-fmt*')
     const before = Date.now()
