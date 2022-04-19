@@ -220,6 +220,8 @@ describe('download', () => {
 
   test('download all binaries & cache them', async () => {
     const baseDir = path.join(__dirname, 'all')
+
+    const before0 = Date.now()
     await download({
       binaries: {
         'query-engine': baseDir,
@@ -244,6 +246,13 @@ describe('download', () => {
       ],
       version: FIXED_BINARIES_HASH,
     })
+    const after0 = Date.now()
+    const timeInMsToDownloadAll = after0 - before0
+    console.debug(
+      `1 - No Cache: first time, download everything.
+It took ${timeInMsToDownloadAll}ms to execute download() for all binaryTargets.`,
+    )
+
     const files = getFiles(baseDir)
     expect(files).toMatchInlineSnapshot(`
       Array [
@@ -461,8 +470,17 @@ describe('download', () => {
         },
       ]
     `)
+
+    //
+    // Cache test 1
+    // 1- We delete the artifacts locally but not from the cache folder
+    // 2- We measure how much time it takes to call download
+    //
+
+    // Delete all artifacts
     await del(baseDir + '/*engine*')
     await del(baseDir + '/prisma-fmt*')
+
     const before = Date.now()
     await download({
       binaries: {
@@ -489,18 +507,17 @@ describe('download', () => {
       version: FIXED_BINARIES_HASH,
     })
     const after = Date.now()
-    // TODO: the comment below says 2s, but the test checks for 20s.
-    // The numbers in the comments are also way below the actual time.
-    //
-    // cache should take less than 2s
-    // value on Mac: 1440
-    // value on GH Actions: ~5812
-    const took = after - before
-    expect(took).toBeLessThan(20000)
+    const timeInMsToDownloadAllFromCache1 = after - before
+    console.debug(
+      `2 - With cache1: We deleted the engines locally but not from the cache folder.
+It took ${timeInMsToDownloadAllFromCache1}ms to execute download() for all binaryTargets.`,
+    )
 
-    // TODO: why is this repeated again, can this just be removed, or is it
-    // expected that the time should be smaller when downloading the third time
-    // than the second time?
+    //
+    // Cache test 1
+    // 1- We keep all artifacts from previous download
+    // 2- We measure how much time it takes to call download
+    //
     const before2 = Date.now()
     await download({
       binaries: {
@@ -527,9 +544,21 @@ describe('download', () => {
       version: FIXED_BINARIES_HASH,
     })
     const after2 = Date.now()
-    // value on Mac: 15466
-    // value on GH Actions: 13065
-    const took2 = after2 - before2
-    expect(took2).toBeLessThan(20000)
+    const timeInMsToDownloadAllFromCache2 = after2 - before2
+    console.debug(
+      `3 - With cache2: Engines were already present
+It took ${timeInMsToDownloadAllFromCache2}ms to execute download() for all binaryTargets.`,
+    )
+
+    // This is a rather high number to avoid flakiness in CI
+    expect(timeInMsToDownloadAll).toBeLessThan(20_000)
+    expect(timeInMsToDownloadAllFromCache1).toBeLessThan(20_000)
+    expect(timeInMsToDownloadAllFromCache2).toBeLessThan(20_000)
+
+    // Using cache should be faster
+    expect(timeInMsToDownloadAllFromCache1).toBeLessThan(timeInMsToDownloadAll)
+    expect(timeInMsToDownloadAllFromCache2).toBeLessThan(
+      timeInMsToDownloadAllFromCache1,
+    )
   })
 })
