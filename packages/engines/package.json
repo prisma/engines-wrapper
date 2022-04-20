@@ -9,7 +9,7 @@
     "@prisma/debug": "3.12.0",
     "@prisma/engines-version": "workspace:3.13.0-10.f738c2de40b0514b47c5cdbf75f8bb06929df254",
     "@prisma/fetch-engine": "workspace:3.13.0-10.f738c2de40b0514b47c5cdbf75f8bb06929df254",
-    "@types/node": "16.11.26",
+    "@types/node": "16.11.27",
     "execa": "5.1.1",
     "typescript": "4.6.3"
   },
