@@ -551,9 +551,8 @@ It took ${timeInMsToDownloadAllFromCache2}ms to execute download() for all binar
     )
 
     // This is a rather high number to avoid flakiness in CI
-    expect(timeInMsToDownloadAll).toBeLessThan(20_000)
-    expect(timeInMsToDownloadAllFromCache1).toBeLessThan(20_000)
-    expect(timeInMsToDownloadAllFromCache2).toBeLessThan(20_000)
+    expect(timeInMsToDownloadAllFromCache1).toBeLessThan(40_000)
+    expect(timeInMsToDownloadAllFromCache2).toBeLessThan(40_000)
 
     // Using cache should be faster
     expect(timeInMsToDownloadAllFromCache1).toBeLessThan(timeInMsToDownloadAll)
