@@ -14,21 +14,13 @@ export function getNodeAPIName(platform: Platform, type: 'url' | 'fs') {
   const isUrl = type === 'url'
   if (platform.includes('windows')) {
     return isUrl ? `query_engine.dll.node` : `query_engine-${platform}.dll.node`
-  } else if (
-    platform.includes('linux') ||
-    platform.includes('debian') ||
-    platform.includes('rhel')
-  ) {
-    return isUrl
-      ? `${NODE_API_QUERY_ENGINE_URL_BASE}.so.node`
-      : `${NODE_API_QUERY_ENGINE_URL_BASE}-${platform}.so.node`
   } else if (platform.includes('darwin')) {
     return isUrl
       ? `${NODE_API_QUERY_ENGINE_URL_BASE}.dylib.node`
       : `${NODE_API_QUERY_ENGINE_URL_BASE}-${platform}.dylib.node`
   } else {
-    throw new Error(
-      `Node API is currently not supported on your platform: ${platform}`,
-    )
+    return isUrl
+      ? `${NODE_API_QUERY_ENGINE_URL_BASE}.so.node`
+      : `${NODE_API_QUERY_ENGINE_URL_BASE}-${platform}.so.node`
   }
 }
