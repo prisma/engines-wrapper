@@ -148,7 +148,7 @@ export async function getOpenSSLVersion(
       ls -l ${prefix ? prefix : ''}/lib${
       platform == 'android' ? '' : '64'
     } | grep ssl;
-      ${platform != 'android' && `ls -l /usr/lib | grep ssl;`}
+      ${platform != 'android' && `ls -l /usr/lib64 | grep ssl;`}
     `),
   ])
 
