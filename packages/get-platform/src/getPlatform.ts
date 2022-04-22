@@ -140,7 +140,7 @@ export async function getOpenSSLVersion(platform: NodeJS.Platform, arch: Arch): 
     prefix = '/data/data/com.termux/files/usr'
   }
 
-  const isArmAndAndroid = arch === 'arm' || arch === 'arm64' && platform == 'android'
+  const isArmAndAndroid = (arch === 'arm' || arch === 'arm64') && platform == 'android'
   const [version, ls] = await Promise.all([
     gracefulExec(`openssl version -v`),
     gracefulExec(`
