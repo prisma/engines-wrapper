@@ -133,19 +133,25 @@ export function parseOpenSSLVersion(input: string): string | undefined {
 }
 
 // getOpenSSLVersion returns the OpenSSL version excluding the patch version, e.g. "1.1.x"
-export async function getOpenSSLVersion(platform: NodeJS.Platform, arch: Arch): Promise<string | undefined> {
+export async function getOpenSSLVersion(
+  platform: NodeJS.Platform,
+  arch: Arch,
+): Promise<string | undefined> {
   let prefix: string | undefined = undefined
 
   if (platform == 'android') {
     prefix = '/data/data/com.termux/files/usr'
   }
 
-  const isArmAndAndroid = (arch === 'arm' || arch === 'arm64') && platform == 'android'
+  const isArmAndAndroid =
+    (arch === 'arm' || arch === 'arm64') && platform == 'android'
   const [version, ls] = await Promise.all([
     gracefulExec(`openssl version -v`),
     gracefulExec(`
-      ls -l ${prefix ? prefix : ''}/lib${isArmAndAndroid ? '' : '64'} | grep ssl;
-      ls -l ${prefix ? prefix : '/usr'}/lib${isArmAndAndroid ? '' : '64'} | grep ssl;
+      ls -l ${prefix ? prefix : ''}/lib${
+      isArmAndAndroid ? '' : '64'
+    } | grep ssl;
+      ${platform != 'android' && `ls -l /usr/lib | grep ssl;`}
     `),
   ])
 
