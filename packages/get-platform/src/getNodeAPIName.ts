@@ -15,9 +15,8 @@ export function getNodeAPIName(platform: Platform, type: 'url' | 'fs') {
   if (platform.includes('windows')) {
     return isUrl ? `query_engine.dll.node` : `query_engine-${platform}.dll.node`
   } else if (
-    platform.includes('android') ||
-    platform.includes('debian') ||
     platform.includes('linux') ||
+    platform.includes('debian') ||
     platform.includes('rhel')
   ) {
     return isUrl
