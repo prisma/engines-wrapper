@@ -17,7 +17,7 @@
     "@prisma/engines-version": "workspace:3.14.0-2.cfc4d6eac26c4229aad752aa92eee7df06be3a2d",
     "@types/find-cache-dir": "3.2.1",
     "@types/jest": "27.4.1",
-    "@types/node": "16.11.27",
+    "@types/node": "16.11.31",
     "@types/node-fetch": "2.6.1",
     "@types/progress": "2.0.5",
     "@typescript-eslint/eslint-plugin": "5.21.0",
