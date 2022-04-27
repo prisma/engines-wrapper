@@ -67,6 +67,7 @@ export function getAllUrls(branch: string, commit: string): string[] {
     'netbsd',
     'freebsd11',
     'freebsd12',
+    'freebsd13',
   ]
   const relevantPlatforms = platforms.filter(
     (p) => !excludedPlatforms.includes(p),

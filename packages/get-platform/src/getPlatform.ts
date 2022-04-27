@@ -32,6 +32,7 @@ export type GetOSResult = {
     | 'nixos'
     | 'freebsd11'
     | 'freebsd12'
+    | 'freebsd13'
 }
 
 export async function getos(): Promise<GetOSResult> {
