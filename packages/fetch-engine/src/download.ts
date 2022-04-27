@@ -86,7 +86,9 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
       }.`,
     )
   } else if (
-    ['freebsd11', 'freebsd12', 'openbsd', 'netbsd'].includes(platform)
+    ['freebsd11', 'freebsd12', 'freebsd13', 'openbsd', 'netbsd'].includes(
+      platform,
+    )
   ) {
     console.error(
       `${chalk.yellow(
