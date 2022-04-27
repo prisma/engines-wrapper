@@ -84,7 +84,7 @@ importers:
       node-fetch: 2.6.7
       p-filter: 2.1.0
       p-map: 4.0.0
-      p-retry: 4.6.1
+      p-retry: 4.6.2
       prettier: 2.6.2
       progress: 2.0.3
       rimraf: 3.0.2
@@ -106,7 +106,7 @@ importers:
       node-fetch: 2.6.7
       p-filter: 2.1.0
       p-map: 4.0.0
-      p-retry: 4.6.1
+      p-retry: 4.6.2
       progress: 2.0.3
       rimraf: 3.0.2
       temp-dir: 2.0.0
@@ -3266,8 +3266,8 @@ packages:
     dependencies:
       aggregate-error: 3.1.0
 
-  /p-retry/4.6.1:
-    resolution: {integrity: sha512-e2xXGNhZOZ0lfgR9kL34iGlU8N/KO0xZnQxVEwdeOvpqNDQfdnxIYizvWtK8RglUa3bGqI8g0R/BdfzLMxRkiA==}
+  /p-retry/4.6.2:
+    resolution: {integrity: sha512-312Id396EbJdvRONlngUx0NydfrIQ5lsYu0znKVUzVvArzEIt08V1qhtyESbGVd1FGX7UKtiFp5uwKZdM8wIuQ==}
     engines: {node: '>=8'}
     dependencies:
       '@types/retry': 0.12.0
