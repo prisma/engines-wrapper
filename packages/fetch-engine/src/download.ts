@@ -81,7 +81,7 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
 
   if (os.distro && ['nixos'].includes(os.distro)) {
     console.error(
-      `${chalk.yellow('Warning')} Precompiled binaries are not available for ${
+      `${chalk.yellow('Warning')} Precompiled engine files are not available for ${
         os.distro
       }.`,
     )
@@ -91,7 +91,7 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
     console.error(
       `${chalk.yellow(
         'Warning',
-      )} Precompiled binaries are not available for ${platform}. Read more about building your own binaries at https://pris.ly/d/build-binaries`,
+      )} Precompiled engine files are not available for ${platform}. Read more about building your own engines at https://pris.ly/d/build-engines`,
     )
   } else if (BinaryType.libqueryEngine in options.binaries) {
     await isNodeAPISupported()
@@ -161,7 +161,7 @@ export async function download(options: DownloadOptions): Promise<BinaryPaths> {
       (opts.ignoreCache || needsToBeDownloaded) // TODO: do we need ignoreCache?
     if (needsToBeDownloaded && !isSupported) {
       throw new Error(
-        `Unknown binaryTarget ${job.binaryTarget} and no custom binaries were provided`,
+        `Unknown binaryTarget ${job.binaryTarget} and no custom engine files were provided`,
       )
     }
     return shouldDownload
