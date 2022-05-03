@@ -1,6 +1,6 @@
 {
   "name": "@prisma/get-platform",
-  "version": "3.14.0-13.fix-query-raw-input-coercion-9afed36f8d42aed8d522e90bb2089b02a52c1b3d",
+  "version": "3.14.0-14.da841b9ec405a4ec574162f142175f0d9bc041b3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",

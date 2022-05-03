@@ -1,6 +1,6 @@
 {
   "name": "@prisma/fetch-engine",
-  "version": "3.14.0-13.fix-query-raw-input-coercion-9afed36f8d42aed8d522e90bb2089b02a52c1b3d",
+  "version": "3.14.0-14.da841b9ec405a4ec574162f142175f0d9bc041b3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
@@ -14,7 +14,7 @@
   ],
   "bugs": "https://github.com/prisma/prisma/issues",
   "devDependencies": {
-    "@prisma/engines-version": "workspace:3.14.0-13.fix-query-raw-input-coercion-9afed36f8d42aed8d522e90bb2089b02a52c1b3d",
+    "@prisma/engines-version": "workspace:3.14.0-14.da841b9ec405a4ec574162f142175f0d9bc041b3",
     "@types/find-cache-dir": "3.2.1",
     "@types/jest": "27.4.1",
     "@types/node": "16.11.31",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@prisma/debug": "3.13.0",
-    "@prisma/get-platform": "workspace:3.14.0-13.fix-query-raw-input-coercion-9afed36f8d42aed8d522e90bb2089b02a52c1b3d",
+    "@prisma/get-platform": "workspace:3.14.0-14.da841b9ec405a4ec574162f142175f0d9bc041b3",
     "chalk": "4.1.2",
     "execa": "5.1.1",
     "find-cache-dir": "3.3.2",
