@@ -53,7 +53,15 @@ export async function getos(): Promise<GetOSResult> {
     }
   }
 
-  if (platform !== 'linux' && platform !== 'android') {
+  if (platform === 'android') {
+    return {
+      platform: 'linux',
+      libssl: await getOpenSSLVersion(platform),
+      arch,
+    }
+  }
+
+  if (platform !== 'linux') {
     return {
       platform,
       arch,
@@ -136,21 +144,23 @@ export function parseOpenSSLVersion(input: string): string | undefined {
 export async function getOpenSSLVersion(
   platform: NodeJS.Platform,
 ): Promise<string | undefined> {
-  let prefix: string | undefined = undefined
-
+  let version: any, ls: any
   if (platform == 'android') {
-    prefix = '/data/data/com.termux/files/usr'
-  }
-
-  const [version, ls] = await Promise.all([
-    gracefulExec(`openssl version -v`),
-    gracefulExec(`
-      ls -l ${prefix ? prefix : ''}/lib${
-      platform == 'android' ? '' : '64'
-    } | grep ssl;
-      ${platform != 'android' && `ls -l /usr/lib64 | grep ssl;`}
+    ;[version, ls] = await Promise.all([
+      gracefulExec(`openssl version -v`),
+      gracefulExec(`
+      ls -l /data/data/com.termux/files/usr/lib | grep ssl;
     `),
-  ])
+    ])
+  } else {
+    ;[version, ls] = await Promise.all([
+      gracefulExec(`openssl version -v`),
+      gracefulExec(`
+      ls -l /lib64 | grep ssl;
+      ls -l /usr/lib64 | grep ssl;
+    `),
+    ])
+  }
 
   if (version) {
     const v = parseOpenSSLVersion(version)
