@@ -16,7 +16,7 @@
   "devDependencies": {
     "@prisma/engines-version": "workspace:3.14.0-16.51eedf92d49b198f6699eacd692c99a77a3ca86a",
     "@types/find-cache-dir": "3.2.1",
-    "@types/jest": "27.4.1",
+    "@types/jest": "27.5.0",
     "@types/node": "16.11.33",
     "@types/node-fetch": "2.6.1",
     "@types/progress": "2.0.5",

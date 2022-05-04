@@ -60,7 +60,7 @@ importers:
       '@prisma/engines-version': workspace:3.14.0-16.51eedf92d49b198f6699eacd692c99a77a3ca86a
       '@prisma/get-platform': workspace:3.14.0-16.51eedf92d49b198f6699eacd692c99a77a3ca86a
       '@types/find-cache-dir': 3.2.1
-      '@types/jest': 27.4.1
+      '@types/jest': 27.5.0
       '@types/node': 16.11.33
       '@types/node-fetch': 2.6.1
       '@types/progress': 2.0.5
@@ -114,7 +114,7 @@ importers:
     devDependencies:
       '@prisma/engines-version': link:../engines-version
       '@types/find-cache-dir': 3.2.1
-      '@types/jest': 27.4.1
+      '@types/jest': 27.5.0
       '@types/node': 16.11.33
       '@types/node-fetch': 2.6.1
       '@types/progress': 2.0.5
@@ -130,13 +130,13 @@ importers:
       lint-staged: 11.2.6
       prettier: 2.6.2
       strip-ansi: 6.0.1
-      ts-jest: 27.1.4_53ggqi2i4rbcfjtktmjua6zili
+      ts-jest: 27.1.4_3y7pzupgu3ueocdatbfldfrs3i
       typescript: 4.6.4
 
   packages/get-platform:
     specifiers:
       '@prisma/debug': 3.13.0
-      '@types/jest': 27.4.1
+      '@types/jest': 27.5.0
       '@types/node': 16.11.33
       '@typescript-eslint/eslint-plugin': 5.21.0
       '@typescript-eslint/parser': 5.21.0
@@ -153,7 +153,7 @@ importers:
     dependencies:
       '@prisma/debug': 3.13.0
     devDependencies:
-      '@types/jest': 27.4.1
+      '@types/jest': 27.5.0
       '@types/node': 16.11.33
       '@typescript-eslint/eslint-plugin': 5.21.0_vxtfsxfxxyksjzzdyas4bgfolu
       '@typescript-eslint/parser': 5.21.0_t725usgvqspm5woeqpaxbfp2qu
@@ -165,7 +165,7 @@ importers:
       jest: 27.5.1
       lint-staged: 11.2.6
       prettier: 2.6.2
-      ts-jest: 27.1.4_53ggqi2i4rbcfjtktmjua6zili
+      ts-jest: 27.1.4_3y7pzupgu3ueocdatbfldfrs3i
       typescript: 4.6.4
 
 packages:
@@ -922,8 +922,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/27.4.1:
-    resolution: {integrity: sha512-23iPJADSmicDVrWk+HT58LMJtzLAnB2AgIzplQuq/bSrGaxCrlvRFjGbXmamnnk/mAmCdLStiGqggu28ocUyiw==}
+  /@types/jest/27.5.0:
+    resolution: {integrity: sha512-9RBFx7r4k+msyj/arpfaa0WOOEcaAZNmN+j80KFbFCoSqCJGHTz7YMAMGQW9Xmqm5w6l5c25vbSjMwlikJi5+g==}
     dependencies:
       jest-matcher-utils: 27.5.1
       pretty-format: 27.5.1
@@ -3739,7 +3739,7 @@ packages:
       punycode: 2.1.1
     dev: true
 
-  /ts-jest/27.1.4_53ggqi2i4rbcfjtktmjua6zili:
+  /ts-jest/27.1.4_3y7pzupgu3ueocdatbfldfrs3i:
     resolution: {integrity: sha512-qjkZlVPWVctAezwsOD1OPzbZ+k7zA5z3oxII4dGdZo5ggX/PL7kvwTM0pXTr10fAtbiVpJaL3bWd502zAhpgSQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     hasBin: true
@@ -3760,7 +3760,7 @@ packages:
       esbuild:
         optional: true
     dependencies:
-      '@types/jest': 27.4.1
+      '@types/jest': 27.5.0
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
       jest: 27.5.1
