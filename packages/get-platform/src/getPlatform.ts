@@ -149,15 +149,15 @@ export async function getOpenSSLVersion(
     ;[version, ls] = await Promise.all([
       gracefulExec(`openssl version -v`),
       gracefulExec(`
-      ls -l /data/data/com.termux/files/usr/lib | grep ssl;
+        ls -l /data/data/com.termux/files/usr/lib | grep ssl;
     `),
     ])
   } else {
     ;[version, ls] = await Promise.all([
       gracefulExec(`openssl version -v`),
       gracefulExec(`
-      ls -l /lib64 | grep ssl;
-      ls -l /usr/lib64 | grep ssl;
+        ls -l /lib64 | grep ssl;
+        ls -l /usr/lib64 | grep ssl;
     `),
     ])
   }
