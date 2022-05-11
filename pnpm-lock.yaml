@@ -32,14 +32,14 @@ importers:
 
   packages/engines:
     specifiers:
-      '@prisma/debug': 3.13.0
+      '@prisma/debug': 3.14.0
       '@prisma/engines-version': workspace:3.15.0-1.40300bb9a78949ed2d23316cd82e0bc719cdc167
       '@prisma/fetch-engine': workspace:3.15.0-1.40300bb9a78949ed2d23316cd82e0bc719cdc167
       '@types/node': 16.11.33
       execa: 5.1.1
       typescript: 4.6.4
     devDependencies:
-      '@prisma/debug': 3.13.0
+      '@prisma/debug': 3.14.0
       '@prisma/engines-version': link:../engines-version
       '@prisma/fetch-engine': link:../fetch-engine
       '@types/node': 16.11.33
@@ -56,7 +56,7 @@ importers:
 
   packages/fetch-engine:
     specifiers:
-      '@prisma/debug': 3.13.0
+      '@prisma/debug': 3.14.0
       '@prisma/engines-version': workspace:3.15.0-1.40300bb9a78949ed2d23316cd82e0bc719cdc167
       '@prisma/get-platform': workspace:3.15.0-1.40300bb9a78949ed2d23316cd82e0bc719cdc167
       '@types/find-cache-dir': 3.2.1
@@ -94,7 +94,7 @@ importers:
       ts-jest: 27.1.4
       typescript: 4.6.4
     dependencies:
-      '@prisma/debug': 3.13.0
+      '@prisma/debug': 3.14.0
       '@prisma/get-platform': link:../get-platform
       chalk: 4.1.2
       execa: 5.1.1
@@ -135,7 +135,7 @@ importers:
 
   packages/get-platform:
     specifiers:
-      '@prisma/debug': 3.13.0
+      '@prisma/debug': 3.14.0
       '@types/jest': 27.5.0
       '@types/node': 16.11.33
       '@typescript-eslint/eslint-plugin': 5.22.0
@@ -151,7 +151,7 @@ importers:
       ts-jest: 27.1.4
       typescript: 4.6.4
     dependencies:
-      '@prisma/debug': 3.13.0
+      '@prisma/debug': 3.14.0
     devDependencies:
       '@types/jest': 27.5.0
       '@types/node': 16.11.33
@@ -803,8 +803,8 @@ packages:
       fastq: 1.11.0
     dev: true
 
-  /@prisma/debug/3.13.0:
-    resolution: {integrity: sha512-uzL4ug7pWbiodTSW/WMAJ9SOP/ulxn6EVlV4YTpKaidgPMOLPqSV7iLZP7P4w7q3HGSpWZp+kr2a4nq7+ANEfg==}
+  /@prisma/debug/3.14.0:
+    resolution: {integrity: sha512-cvA2NRJU6oLCFpYcOJO6jjUZZcPwQqdKYVpa6OY+jFrSwLdYLgSPjrfbnBPOD2z1gzODdnrWYfpz3wPKVhZ0IQ==}
     dependencies:
       '@types/debug': 4.1.7
       ms: 2.1.3
