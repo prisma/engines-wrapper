@@ -1,6 +1,6 @@
 {
   "name": "@prisma/get-platform",
-  "version": "3.15.0-16.query-engine-number-input-650fc529dd407d6935b8aa35464d626db896d233",
+  "version": "3.15.0-17.add-global-labels-binary-e53513b8485896e7665baa1269ddc29cc928ab5d",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",

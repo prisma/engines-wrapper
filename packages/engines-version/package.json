@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "3.15.0-16.query-engine-number-input-650fc529dd407d6935b8aa35464d626db896d233",
+  "version": "3.15.0-17.add-global-labels-binary-e53513b8485896e7665baa1269ddc29cc928ab5d",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "650fc529dd407d6935b8aa35464d626db896d233"
+    "enginesVersion": "e53513b8485896e7665baa1269ddc29cc928ab5d"
   },
   "repository": {
     "type": "git",
