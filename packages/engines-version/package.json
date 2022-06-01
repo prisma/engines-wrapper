@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "3.15.0-17.add-global-labels-binary-e53513b8485896e7665baa1269ddc29cc928ab5d",
+  "version": "3.15.0-18.6f44ae80b9ca16e79bd04160da837f3880738e64",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "e53513b8485896e7665baa1269ddc29cc928ab5d"
+    "enginesVersion": "6f44ae80b9ca16e79bd04160da837f3880738e64"
   },
   "repository": {
     "type": "git",
