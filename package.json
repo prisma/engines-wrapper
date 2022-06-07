@@ -5,7 +5,7 @@
   "private": true,
   "devDependencies": {
     "@sindresorhus/slugify": "1.1.2",
-    "@types/node": "16.11.34",
+    "@types/node": "16.11.39",
     "@types/node-fetch": "2.6.1",
     "arg": "5.0.1",
     "chalk": "4.1.2",
