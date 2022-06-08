@@ -91,7 +91,7 @@ importers:
       strip-ansi: 6.0.1
       temp-dir: 2.0.0
       tempy: 1.0.1
-      ts-jest: 27.1.4
+      ts-jest: 27.1.5
       typescript: 4.6.4
     dependencies:
       '@prisma/debug': 3.15.0
@@ -130,7 +130,7 @@ importers:
       lint-staged: 11.2.6
       prettier: 2.6.2
       strip-ansi: 6.0.1
-      ts-jest: 27.1.4_0588c40ff47025e294a4a1ca57d5eeab
+      ts-jest: 27.1.5_0588c40ff47025e294a4a1ca57d5eeab
       typescript: 4.6.4
 
   packages/get-platform:
@@ -148,7 +148,7 @@ importers:
       jest: 27.5.1
       lint-staged: 11.2.6
       prettier: 2.6.2
-      ts-jest: 27.1.4
+      ts-jest: 27.1.5
       typescript: 4.6.4
     dependencies:
       '@prisma/debug': 3.15.0
@@ -165,7 +165,7 @@ importers:
       jest: 27.5.1_ts-node@10.7.0
       lint-staged: 11.2.6
       prettier: 2.6.2
-      ts-jest: 27.1.4_0588c40ff47025e294a4a1ca57d5eeab
+      ts-jest: 27.1.5_0588c40ff47025e294a4a1ca57d5eeab
       typescript: 4.6.4
 
 packages:
@@ -3095,7 +3095,7 @@ packages:
     dev: true
 
   /lodash.memoize/4.1.2:
-    resolution: {integrity: sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=}
+    resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
     dev: true
 
   /lodash.merge/4.6.2:
@@ -3764,8 +3764,8 @@ packages:
       punycode: 2.1.1
     dev: true
 
-  /ts-jest/27.1.4_0588c40ff47025e294a4a1ca57d5eeab:
-    resolution: {integrity: sha512-qjkZlVPWVctAezwsOD1OPzbZ+k7zA5z3oxII4dGdZo5ggX/PL7kvwTM0pXTr10fAtbiVpJaL3bWd502zAhpgSQ==}
+  /ts-jest/27.1.5_0588c40ff47025e294a4a1ca57d5eeab:
+    resolution: {integrity: sha512-Xv6jBQPoBEvBq/5i2TeSG9tt/nqkbpcurrEG1b+2yfBrcJelOZF9Ml6dmyMh7bcW9JyFbRYpR5rxROSlBLTZHA==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     hasBin: true
     peerDependencies:
