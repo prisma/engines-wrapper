@@ -20,7 +20,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: '12'
+          node-version: '14'
 
       - run: bash .github/workflows/setup.sh
         env:
@@ -42,7 +42,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: '12'
+          node-version: '14'
 
       - run: bash .github/workflows/setup.sh
         env:

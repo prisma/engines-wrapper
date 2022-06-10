@@ -8,11 +8,11 @@ async function main() {
   await Promise.all([
     run('tsc -d', true),
     run(
-      'esbuild src/download.ts --outfile=download/index.js --bundle --platform=node --target=node12 --minify --sourcemap',
+      'esbuild src/download.ts --outfile=download/index.js --bundle --platform=node --target=node14 --minify --sourcemap',
       false,
     ),
     run(
-      'esbuild src/index.ts --outfile=dist/index.js --bundle --platform=node --target=node12',
+      'esbuild src/index.ts --outfile=dist/index.js --bundle --platform=node --target=node14',
       false,
     ),
   ])
