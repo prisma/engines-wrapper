@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "3.16.0-11.99ac5a5c95ba2f5308d84fc30a7110f606182d92",
+  "version": "3.16.0-12.query-engine-nodeapi-experimental-destroy-5bb82a5c77516589eed1505eba4c8194568ed046",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "99ac5a5c95ba2f5308d84fc30a7110f606182d92"
+    "enginesVersion": "5bb82a5c77516589eed1505eba4c8194568ed046"
   },
   "repository": {
     "type": "git",
