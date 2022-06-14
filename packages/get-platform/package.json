@@ -1,6 +1,6 @@
 {
   "name": "@prisma/get-platform",
-  "version": "3.16.0-12.query-engine-nodeapi-experimental-destroy-5bb82a5c77516589eed1505eba4c8194568ed046",
+  "version": "3.16.0-13.ae457f56b17f2236dc8df669588ab36427f1f2f8",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
