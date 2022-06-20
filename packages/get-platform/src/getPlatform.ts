@@ -38,6 +38,7 @@ export type GetOSResult = {
 export async function getos(): Promise<GetOSResult> {
   const platform = os.platform()
   const arch = process.arch as Arch
+
   if (platform === 'freebsd') {
     const version = await gracefulExec(`freebsd-version`)
     if (version && version.trim().length > 0) {
@@ -53,6 +54,14 @@ export async function getos(): Promise<GetOSResult> {
     }
   }
 
+  if (platform === 'android') {
+    return {
+      platform: 'linux',
+      libssl: await getOpenSSLVersion(platform),
+      arch,
+    }
+  }
+
   if (platform !== 'linux') {
     return {
       platform,
@@ -62,7 +71,7 @@ export async function getos(): Promise<GetOSResult> {
 
   return {
     platform: 'linux',
-    libssl: await getOpenSSLVersion(),
+    libssl: await getOpenSSLVersion(platform),
     distro: await resolveDistro(),
     arch,
   }
@@ -133,20 +142,31 @@ export function parseOpenSSLVersion(input: string): string | undefined {
 }
 
 // getOpenSSLVersion returns the OpenSSL version excluding the patch version, e.g. "1.1.x"
-export async function getOpenSSLVersion(): Promise<string | undefined> {
-  const [version, ls] = await Promise.all([
-    gracefulExec(`openssl version -v`),
-    gracefulExec(`
-      ls -l /lib64 | grep ssl;
-      ls -l /usr/lib64 | grep ssl;
+export async function getOpenSSLVersion(
+  platform: NodeJS.Platform,
+): Promise<string | undefined> {
+  let version: any, ls: any
+  if (platform == 'android') {
+    ;[version, ls] = await Promise.all([
+      gracefulExec(`openssl version -v`),
+      gracefulExec(`
+        ls -l /data/data/com.termux/files/usr/lib | grep ssl;
     `),
-  ])
+    ])
+  } else {
+    ;[version, ls] = await Promise.all([
+      gracefulExec(`openssl version -v`),
+      gracefulExec(`
+        ls -l /lib64 | grep ssl;
+        ls -l /usr/lib64 | grep ssl;
+    `),
+    ])
+  }
 
   if (version) {
     const v = parseOpenSSLVersion(version)
-    if (v) {
-      return v
-    }
+
+    if (v) return v
   }
 
   if (ls) {
