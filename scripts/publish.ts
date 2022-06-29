@@ -74,57 +74,6 @@ async function main(dryRun = false) {
     `pnpm publish --no-git-checks --tag ${npmDistTag}`,
     dryRun,
   )
-
-  // @prisma/get-platform
-  adjustPkgJson('packages/get-platform/package.json', (pkg) => {
-    pkg.version = newVersion
-  })
-
-  await run('packages/get-platform', `pnpm run build`, dryRun)
-
-  await run(
-    'packages/get-platform',
-    `pnpm publish --no-git-checks --tag ${npmDistTag}`,
-    dryRun,
-  )
-
-  // @prisma/fetch-engine
-  adjustPkgJson('packages/fetch-engine/package.json', (pkg) => {
-    pkg.version = newVersion
-  })
-
-  await run(
-    'packages/fetch-engine',
-    `pnpm i @prisma/engines-version@${newVersion} @prisma/get-platform@${newVersion}`,
-    dryRun,
-  )
-
-  await run('packages/fetch-engine', `pnpm run build`, dryRun)
-
-  await run(
-    'packages/fetch-engine',
-    `pnpm publish --no-git-checks --tag ${npmDistTag}`,
-    dryRun,
-  )
-
-  // @prisma/engines
-  adjustPkgJson('packages/engines/package.json', (pkg) => {
-    pkg.version = newVersion
-  })
-
-  await run(
-    'packages/engines',
-    `pnpm i @prisma/fetch-engine@${newVersion} @prisma/engines-version@${newVersion}`,
-    dryRun,
-  )
-
-  await run('packages/engines', `pnpm run build`, dryRun)
-
-  await run(
-    'packages/engines',
-    `pnpm publish --no-git-checks --tag ${npmDistTag}`,
-    dryRun,
-  )
 }
 
 /** Apply call back function to content of file and write it back */
