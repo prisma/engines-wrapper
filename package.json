@@ -1,7 +1,7 @@
 {
   "name": "engines-wrapper",
   "version": "1.0.0",
-  "description": "This repository contains the packages `@prisma/engines` and `@prisma/engines-version`. They are wrapping our [Rust Engines](https://github.com/prisma/prisma-engines) in npm packages.",
+  "description": "It is used to get the hash of the [Prisma Rust Engines](https://github.com/prisma/prisma-engines) for downloading via the [Prisma CLI, the Client](https://github.com/prisma/prisma), and other tooling.",
   "private": true,
   "devDependencies": {
     "@sindresorhus/slugify": "1.1.2",
