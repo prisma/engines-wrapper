@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 importers:
 
@@ -27,7 +27,7 @@ importers:
       is-ci: 3.0.1
       node-fetch: 2.6.7
       prettier: 2.7.1
-      ts-node: 10.8.1_841f2a74d64cdda652a10d589e346265
+      ts-node: 10.8.1_qqpsu5gwjto2muvbbvmj4ndcmu
       typescript: 4.7.4
 
   packages/engines-version:
@@ -358,7 +358,7 @@ packages:
     resolution: {integrity: sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=}
     dev: true
 
-  /ts-node/10.8.1_841f2a74d64cdda652a10d589e346265:
+  /ts-node/10.8.1_qqpsu5gwjto2muvbbvmj4ndcmu:
     resolution: {integrity: sha512-Wwsnao4DQoJsN034wePSg5nZiw4YKXf56mPIAeD6wVmiv+RytNSWqc2f3fKvcUoV+Yn2+yocD71VOfQHbmVX4g==}
     hasBin: true
     peerDependencies:
