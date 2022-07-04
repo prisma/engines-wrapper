@@ -55,12 +55,14 @@ async function main(dryRun = false) {
   console.log(`${chalk.bold('New version')}   ${newVersion}`)
   console.log(`${chalk.bold('Npm Dist Tag')}  ${npmDistTag}\n`)
 
-  console.log(`Printing values for workflow dispatch: ${newVersion}, ${npmDistTag}`)
+  console.log(
+    `Printing values for workflow dispatch: ${newVersion}, ${npmDistTag}`,
+  )
   // This special log makes values avaliable in Github Actions
   // Read: https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#using-workflow-commands-to-access-toolkit-functions
   console.log(`::set-output name=new_prisma_version::${newVersion}`)
   console.log(`::set-output name=npm_dist_tag::${npmDistTag}`)
-  
+
   // Publish Order
   // [engines-version, get-platform], fetch-engine, engines
 
