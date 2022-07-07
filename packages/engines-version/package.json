@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.1.0-20.query-engine-nodeapi-memory-leak-no-destroy-9e513c70f3a00c2f3ebf3115f2545ff2de8bce20",
+  "version": "4.1.0-21.55dd27075df408898bae0ebc466163b0ae96752c",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "9e513c70f3a00c2f3ebf3115f2545ff2de8bce20"
+    "enginesVersion": "55dd27075df408898bae0ebc466163b0ae96752c"
   },
   "repository": {
     "type": "git",
