@@ -14,7 +14,7 @@ importers:
       is-ci: 3.0.1
       node-fetch: 2.6.7
       prettier: 2.7.1
-      ts-node: 10.8.2
+      ts-node: 10.9.1
       typescript: 4.7.4
     devDependencies:
       '@sindresorhus/slugify': 1.1.2
@@ -27,7 +27,7 @@ importers:
       is-ci: 3.0.1
       node-fetch: 2.6.7
       prettier: 2.7.1
-      ts-node: 10.8.2_kmhzd2ra25a2aeanupbqenugla
+      ts-node: 10.9.1_kmhzd2ra25a2aeanupbqenugla
       typescript: 4.7.4
 
   packages/engines-version:
@@ -358,8 +358,8 @@ packages:
     resolution: {integrity: sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=}
     dev: true
 
-  /ts-node/10.8.2_kmhzd2ra25a2aeanupbqenugla:
-    resolution: {integrity: sha512-LYdGnoGddf1D6v8REPtIH+5iq/gTDuZqv2/UJUU7tKjuEU8xVZorBM+buCGNjj+pGEud+sOoM4CX3/YzINpENA==}
+  /ts-node/10.9.1_kmhzd2ra25a2aeanupbqenugla:
+    resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
       '@swc/core': '>=1.2.50'
