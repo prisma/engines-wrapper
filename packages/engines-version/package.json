@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.2.0-15.integration-metric-renaming-1f993ff682f550307ef63b792a1c5f678f6963a8",
+  "version": "4.2.0-16.integration-tracing-more-fixes-ae7c377d84048fc7fc2e1a1f97780b1f2f3c41dd",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "1f993ff682f550307ef63b792a1c5f678f6963a8"
+    "enginesVersion": "ae7c377d84048fc7fc2e1a1f97780b1f2f3c41dd"
   },
   "repository": {
     "type": "git",
