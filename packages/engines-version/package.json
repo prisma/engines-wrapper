@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.3.0-6.6f1f2c376c72682befd6650a1bf61390c7d2944d",
+  "version": "4.3.0-7.feat-many-composite-unique-compound-f1fc590206e998566528f8b603475ea1f0a73270",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "6f1f2c376c72682befd6650a1bf61390c7d2944d"
+    "enginesVersion": "f1fc590206e998566528f8b603475ea1f0a73270"
   },
   "repository": {
     "type": "git",
