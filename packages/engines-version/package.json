@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.3.0-23.integration-tracing-high-res-time-727d86ca4ace27b862718bf9064f1f82269912c1",
+  "version": "4.3.0-24.21c220b93399bce937b9bf368c7700083eed217a",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "727d86ca4ace27b862718bf9064f1f82269912c1"
+    "enginesVersion": "21c220b93399bce937b9bf368c7700083eed217a"
   },
   "repository": {
     "type": "git",
