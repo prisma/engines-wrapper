@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.4.0-3.88f6ab88e559ef52ab26bc98f1da15200e0c25b4",
+  "version": "4.4.0-4.integration-deno-preview-flag-3c1168fbf77b17ded4f89a480e467eddb5302d77",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "88f6ab88e559ef52ab26bc98f1da15200e0c25b4"
+    "enginesVersion": "3c1168fbf77b17ded4f89a480e467eddb5302d77"
   },
   "repository": {
     "type": "git",
