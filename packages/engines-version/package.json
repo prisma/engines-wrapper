@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.4.0-20.integration-occ-fixes-8612-2365bc6ad57e0fe0dbf43726ce468b02b63020d4",
+  "version": "4.4.0-21.integration-occ-fixes-8612-f32f7e902ecde7ea02d5ab7f802a1d7f0f2f0925",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "2365bc6ad57e0fe0dbf43726ce468b02b63020d4"
+    "enginesVersion": "f32f7e902ecde7ea02d5ab7f802a1d7f0f2f0925"
   },
   "repository": {
     "type": "git",
