@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.4.0-29.fb56bfedb3a66723ec5d908bc5cb4a411ec97c47",
+  "version": "4.4.0-30.feat-batch-isolation-level-3eb13fb258f5cb0005d56e8a5324222a2306445d",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "fb56bfedb3a66723ec5d908bc5cb4a411ec97c47"
+    "enginesVersion": "3eb13fb258f5cb0005d56e8a5324222a2306445d"
   },
   "repository": {
     "type": "git",
