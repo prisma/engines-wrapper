@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.4.0-30.feat-batch-isolation-level-3eb13fb258f5cb0005d56e8a5324222a2306445d",
+  "version": "4.4.0-31.integration-qe-repair-overwrite-datasource-8ac7ec83eaf4ee83ca9d24b1fc2c9a46367d4287",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "3eb13fb258f5cb0005d56e8a5324222a2306445d"
+    "enginesVersion": "8ac7ec83eaf4ee83ca9d24b1fc2c9a46367d4287"
   },
   "repository": {
     "type": "git",
