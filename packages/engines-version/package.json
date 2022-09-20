@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.4.0-34.integration-query-raw-itx-mongo-a1599749701c523cc33d37c2ed9dd1871d67ad48",
+  "version": "4.4.0-35.integration-database-assertion-violation-error-853cbb4e7b6a0b5b344eda1d15f9419bc3f7b526",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "a1599749701c523cc33d37c2ed9dd1871d67ad48"
+    "enginesVersion": "853cbb4e7b6a0b5b344eda1d15f9419bc3f7b526"
   },
   "repository": {
     "type": "git",
