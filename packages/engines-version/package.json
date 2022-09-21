@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.4.0-37.integration-query-raw-itx-mongo-fa5baf707cf4ac80743c8651921d7291280034b7",
+  "version": "4.4.0-38.integration-query-raw-itx-mongo-e14b0c20440e93dc29d2b2ebb2edb7d3baa3ff14",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "fa5baf707cf4ac80743c8651921d7291280034b7"
+    "enginesVersion": "e14b0c20440e93dc29d2b2ebb2edb7d3baa3ff14"
   },
   "repository": {
     "type": "git",
