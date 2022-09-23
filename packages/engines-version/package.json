@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.4.0-49.382d2d28770009a18c917d614db20090d0caf4ca",
+  "version": "4.4.0-50.integration-database-assertion-violation-error-2-ed23821e01366277c5fbc9b7b44e6b66f3a18fd0",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "382d2d28770009a18c917d614db20090d0caf4ca"
+    "enginesVersion": "ed23821e01366277c5fbc9b7b44e6b66f3a18fd0"
   },
   "repository": {
     "type": "git",
