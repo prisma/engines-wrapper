@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.4.0-58.integration-sqlite-conversion-panic-27ab384f9b6367b324482ba93a5accaac01231ec",
+  "version": "4.4.0-59.46fdd5d57f6803fac12266db34f9dca13d83f9c0",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "27ab384f9b6367b324482ba93a5accaac01231ec"
+    "enginesVersion": "46fdd5d57f6803fac12266db34f9dca13d83f9c0"
   },
   "repository": {
     "type": "git",
