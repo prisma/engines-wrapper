@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.4.0-61.integration-smaller-pg-batch-size-d648eeea3754295b57706d66257a7fe7be19c7c9",
+  "version": "4.4.0-62.fd66403800591e7da0f4b941056ef3fb926fffea",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "d648eeea3754295b57706d66257a7fe7be19c7c9"
+    "enginesVersion": "fd66403800591e7da0f4b941056ef3fb926fffea"
   },
   "repository": {
     "type": "git",
