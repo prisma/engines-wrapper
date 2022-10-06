@@ -45,11 +45,11 @@ jobs:
           token: ${{ secrets.BOT_TOKEN }}
           inputs: '{ "version": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
 
-      - name: Workflow dispatch to prisma/prisma-fmt-wasm for version update
+      - name: Workflow dispatch to prisma/prisma-engines for prisma-fmt-wasm publication
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: Build and publish @prisma/prisma-fmt-wasm
-          repo: prisma/prisma-fmt-wasm
+          repo: prisma/prisma-engines
           token: ${{ secrets.BOT_TOKEN }}
           inputs: '{ "enginesHash": "${{ github.event.client_payload.commit }}", "enginesWrapperVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
 
