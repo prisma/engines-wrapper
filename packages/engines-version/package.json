@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.5.0-21.integration-remove-simulated-noaction-for-postgres-and-sqlite-2e08a7244ca876351adc7689a8c3551c315eac5c",
+  "version": "4.5.0-22.8f03a76408054acf5dc26ede4035e32e847db977",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "2e08a7244ca876351adc7689a8c3551c315eac5c"
+    "enginesVersion": "8f03a76408054acf5dc26ede4035e32e847db977"
   },
   "repository": {
     "type": "git",
