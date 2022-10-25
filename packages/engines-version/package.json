@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.6.0-10.query-engine-mongo-logging-fix-12d17f6198de6f592ce3ff9b8e25669dae0bd284",
+  "version": "4.6.0-11.637b9a48dbf8706f6278426d0fd02c59affa4d42",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "12d17f6198de6f592ce3ff9b8e25669dae0bd284"
+    "enginesVersion": "637b9a48dbf8706f6278426d0fd02c59affa4d42"
   },
   "repository": {
     "type": "git",
