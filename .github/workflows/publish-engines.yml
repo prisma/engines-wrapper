@@ -37,6 +37,14 @@ jobs:
           CI: true
           GITHUB_EVENT_CLIENT_PAYLOAD: ${{ toJson(github.event.client_payload) }}
 
+      - name: Workflow dispatch to prisma/prisma-engines for @prisma/prisma-fmt-wasm publish to npm
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: Build and publish @prisma/prisma-fmt-wasm
+          repo: prisma/prisma-engines
+          token: ${{ secrets.BOT_TOKEN }}
+          inputs: '{ "enginesHash": "${{ github.event.client_payload.commit }}", "enginesWrapperVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
+
       - name: Workflow dispatch to prisma/prisma for version update
         uses: benc-uk/workflow-dispatch@v1
         with:
@@ -44,14 +52,6 @@ jobs:
           repo: prisma/prisma
           token: ${{ secrets.BOT_TOKEN }}
           inputs: '{ "version": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
-
-      - name: Workflow dispatch to prisma/prisma-engines for prisma-fmt-wasm publication
-        uses: benc-uk/workflow-dispatch@v1
-        with:
-          workflow: Build and publish @prisma/prisma-fmt-wasm
-          repo: prisma/prisma-engines
-          token: ${{ secrets.BOT_TOKEN }}
-          inputs: '{ "enginesHash": "${{ github.event.client_payload.commit }}", "enginesWrapperVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
