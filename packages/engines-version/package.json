@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.7.0-25.integration-update-napi-dep-3e5fff398fc149c544a2095ab46326314054a1d0",
+  "version": "4.7.0-26.84b91f3952980fc557d1f9122dca4ab1f07f1efc",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "3e5fff398fc149c544a2095ab46326314054a1d0"
+    "enginesVersion": "84b91f3952980fc557d1f9122dca4ab1f07f1efc"
   },
   "repository": {
     "type": "git",
