@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.7.0-37.integration-itx-remove-preview-feature-d49c60b9b24079055b2e8e17c3a449d4424c42f0",
+  "version": "4.7.0-38.integration-closed-itx-error-message-16d77def54dd384776bd2d2287028eb81303d234",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "d49c60b9b24079055b2e8e17c3a449d4424c42f0"
+    "enginesVersion": "16d77def54dd384776bd2d2287028eb81303d234"
   },
   "repository": {
     "type": "git",
