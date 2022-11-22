@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.7.0-48.integration-closed-itx-error-message-2687e7ffbef0eff16081f50686187a4c326f090b",
+  "version": "4.7.0-49.7586f197a86dc755ba5c020f17bd98194efb912f",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "2687e7ffbef0eff16081f50686187a4c326f090b"
+    "enginesVersion": "7586f197a86dc755ba5c020f17bd98194efb912f"
   },
   "repository": {
     "type": "git",
