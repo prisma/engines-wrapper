@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.8.0-28.ddfde0aabd6544e4740cc1b4ef9a682c02b813d2",
+  "version": "4.8.0-29.integration-debian-is-now-rhel-171d29628e84ffa45793f80672686f4f6dd38e2d",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "ddfde0aabd6544e4740cc1b4ef9a682c02b813d2"
+    "enginesVersion": "171d29628e84ffa45793f80672686f4f6dd38e2d"
   },
   "repository": {
     "type": "git",
