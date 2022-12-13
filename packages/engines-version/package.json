@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.8.0-31.integration-add-affected-prop-to-introspection-warnings-97cf49ec832e3ddc64c432185cd264c4faf6a9cb",
+  "version": "4.8.0-32.78131205d71f48532f7a58a91144967f9e90e9b6",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "97cf49ec832e3ddc64c432185cd264c4faf6a9cb"
+    "enginesVersion": "78131205d71f48532f7a58a91144967f9e90e9b6"
   },
   "repository": {
     "type": "git",
