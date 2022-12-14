@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.8.0-34.feat-dmmf-connected-engine-ee487e70470b452b3350f1e15ce530ac3361cab9",
+  "version": "4.8.0-35.90d9ed826961c8b5c30420e5478dbdf0c1d23cbf",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "ee487e70470b452b3350f1e15ce530ac3361cab9"
+    "enginesVersion": "90d9ed826961c8b5c30420e5478dbdf0c1d23cbf"
   },
   "repository": {
     "type": "git",
