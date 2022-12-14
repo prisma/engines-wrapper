@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.8.0-33.integration-pass-namespaces-to-introspect-430becaf603dddebc58173a4fba16d5a1a92abe8",
+  "version": "4.8.0-34.feat-dmmf-connected-engine-ee487e70470b452b3350f1e15ce530ac3361cab9",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "430becaf603dddebc58173a4fba16d5a1a92abe8"
+    "enginesVersion": "ee487e70470b452b3350f1e15ce530ac3361cab9"
   },
   "repository": {
     "type": "git",
