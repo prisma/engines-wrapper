@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.8.0-46.integration-alpine-builds-50f740ec721d2f08956550f9b3e648e4203fbbd2",
+  "version": "4.8.0-47.d4c8ebe0fd42c074998dd02e77a704adf88de2fa",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "50f740ec721d2f08956550f9b3e648e4203fbbd2"
+    "enginesVersion": "d4c8ebe0fd42c074998dd02e77a704adf88de2fa"
   },
   "repository": {
     "type": "git",
