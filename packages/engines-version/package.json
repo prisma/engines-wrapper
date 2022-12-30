@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.9.0-7.74b351fff2ea60bc4c3f37b35e9f1b7acf3db8b7",
+  "version": "4.9.0-8.log-capture-improvements-c2d0876355bc9103b77721edc74c886b51446aab",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "74b351fff2ea60bc4c3f37b35e9f1b7acf3db8b7"
+    "enginesVersion": "c2d0876355bc9103b77721edc74c886b51446aab"
   },
   "repository": {
     "type": "git",
