@@ -1,5 +1,5 @@
 name: publish-engines
-run-name: Publish engines-wrapper packages for prisma-engines branch ${{ github.event.client_payload.branch }} and commit ${{ github.event.client_payload.commit }}
+run-name: Publish ${{ github.event.client_payload.branch }}/${{ github.event.client_payload.commit }} commit from prisma-engines to npm package @prisma/engines-version
 
 on:
   repository_dispatch:
