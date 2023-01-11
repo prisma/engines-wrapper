@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.9.0-31.integration-me-allow-invalid-datamodel-when-introspecting-with-force-input-param-752a02ea1d26033afa9097d502345b32bd304948",
+  "version": "4.9.0-32.f307669e852dde0c751a36420b11f932fc3cf268",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "752a02ea1d26033afa9097d502345b32bd304948"
+    "enginesVersion": "f307669e852dde0c751a36420b11f932fc3cf268"
   },
   "repository": {
     "type": "git",
