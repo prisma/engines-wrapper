@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.10.0-60.integration-musl-arm-bbb684e8f722179952f61f00103009d8815cdb1f",
+  "version": "4.10.0-61.5cb8c36d6b81f775275971664983f06409ed8c6d",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "bbb684e8f722179952f61f00103009d8815cdb1f"
+    "enginesVersion": "5cb8c36d6b81f775275971664983f06409ed8c6d"
   },
   "repository": {
     "type": "git",
