@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.10.0-78.integration-evie-direct-url-fix-6ae8d35f7be300e6622461bd3a74c7fc06132321",
+  "version": "4.10.0-79.integration-evie-direct-url-fix-1df394d740069ed92a9c7ee705e09b3c44289b5a",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "6ae8d35f7be300e6622461bd3a74c7fc06132321"
+    "enginesVersion": "1df394d740069ed92a9c7ee705e09b3c44289b5a"
   },
   "repository": {
     "type": "git",
