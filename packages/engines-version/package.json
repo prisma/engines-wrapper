@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.10.0-83.integration-evie-partition-tables-fix-0c08c4bf9d6ec24df1142c87016ffac6ca85b118",
+  "version": "4.10.0-84.ca7fcef713137fa11029d519a9780db130cca91d",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "0c08c4bf9d6ec24df1142c87016ffac6ca85b118"
+    "enginesVersion": "ca7fcef713137fa11029d519a9780db130cca91d"
   },
   "repository": {
     "type": "git",
