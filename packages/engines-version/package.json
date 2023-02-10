@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.11.0-17.72a5d0e5c0fb251c9ad8f37d6b682372bb5f2463",
+  "version": "4.11.0-18.integration-ignore-env-var-errors-673c8e6d2e5b2190aaab95e9da7e030a3e60cdd4",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "72a5d0e5c0fb251c9ad8f37d6b682372bb5f2463"
+    "enginesVersion": "673c8e6d2e5b2190aaab95e9da7e030a3e60cdd4"
   },
   "repository": {
     "type": "git",
