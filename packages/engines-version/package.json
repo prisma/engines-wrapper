@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.11.0-24.integration-capture-wasm-panics-543bfdafb66aa4ce6a35f6056bb4f7588c921df2",
+  "version": "4.11.0-25.53b8d8c8cd78506c019b1757c6e10f3e6498b8fb",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "543bfdafb66aa4ce6a35f6056bb4f7588c921df2"
+    "enginesVersion": "53b8d8c8cd78506c019b1757c6e10f3e6498b8fb"
   },
   "repository": {
     "type": "git",
