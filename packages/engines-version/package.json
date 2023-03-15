@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.12.0-19.8ad602854ef9c73cef8af5987ec6aa30ffbcdd6b",
+  "version": "4.12.0-20.integration-dmmf-relation-field-ordering-b48e25dea85b3d99a521f4619eda7982ec3aaf0a",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "8ad602854ef9c73cef8af5987ec6aa30ffbcdd6b"
+    "enginesVersion": "b48e25dea85b3d99a521f4619eda7982ec3aaf0a"
   },
   "repository": {
     "type": "git",
