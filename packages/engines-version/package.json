@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.12.0-59.perf-defer-ident-allocs-c0a78a5572c3238e0dd3b5f29af71be1a5173d3d",
+  "version": "4.12.0-60.393ad1f4e45b1728c101c20ef9cd5047cee73efb",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "c0a78a5572c3238e0dd3b5f29af71be1a5173d3d"
+    "enginesVersion": "393ad1f4e45b1728c101c20ef9cd5047cee73efb"
   },
   "repository": {
     "type": "git",
