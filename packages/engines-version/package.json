@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.13.0-7.integration-ts-from-rust-98b154d4c362032eb316c4fdfa332c8aa8c6e53b",
+  "version": "4.13.0-8.integration-ts-from-rust-5e7b482fefb87ffbffb91462c8eaad70d634f418",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "98b154d4c362032eb316c4fdfa332c8aa8c6e53b"
+    "enginesVersion": "5e7b482fefb87ffbffb91462c8eaad70d634f418"
   },
   "repository": {
     "type": "git",
