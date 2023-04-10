@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.13.0-21.integration-no-nulls-first-last-on-cockroachdb-35d3bdbcf25894e7057d808c948ce5536f97fe63",
+  "version": "4.13.0-22.eba14a9e33f738d77299437c72f1ea019f906468",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "35d3bdbcf25894e7057d808c948ce5536f97fe63"
+    "enginesVersion": "eba14a9e33f738d77299437c72f1ea019f906468"
   },
   "repository": {
     "type": "git",
