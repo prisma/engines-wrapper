@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.13.0-23.ae5c6a96d0927f0adb3d79b63bf442227605a41b",
+  "version": "4.13.0-24.integration-extra-spans-c9e390292dc279ab5cd428dcc8bb9ab613d8d2cd",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "ae5c6a96d0927f0adb3d79b63bf442227605a41b"
+    "enginesVersion": "c9e390292dc279ab5cd428dcc8bb9ab613d8d2cd"
   },
   "repository": {
     "type": "git",
