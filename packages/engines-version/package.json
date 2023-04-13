@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.13.0-27.integration-napi-windows-2c71da02fa2a92c615e57699778cc1cb445a7b82",
+  "version": "4.13.0-28.385aba2a0b3fba347266d9e0dda6761bfcfecb89",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "2c71da02fa2a92c615e57699778cc1cb445a7b82"
+    "enginesVersion": "385aba2a0b3fba347266d9e0dda6761bfcfecb89"
   },
   "repository": {
     "type": "git",
