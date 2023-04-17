@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.13.0-43.integration-mobc-upstream-30325ab26fa7d5669eb4b5c447f52a3918a4d9d7",
+  "version": "4.13.0-44.integration-header-protocol-override-745dcc4b3aa8b8a153cf4fa46478871befdfd9bd",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "30325ab26fa7d5669eb4b5c447f52a3918a4d9d7"
+    "enginesVersion": "745dcc4b3aa8b8a153cf4fa46478871befdfd9bd"
   },
   "repository": {
     "type": "git",
