@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.13.0-46.integration-mobc-upstream-30325ab26fa7d5669eb4b5c447f52a3918a4d9d7",
+  "version": "4.13.0-47.integration-postgres-check-constraints-stopgap-3c74298ef577a2349312adb52fd642f1fa1cba16",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "30325ab26fa7d5669eb4b5c447f52a3918a4d9d7"
+    "enginesVersion": "3c74298ef577a2349312adb52fd642f1fa1cba16"
   },
   "repository": {
     "type": "git",
