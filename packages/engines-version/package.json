@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.14.0-6.a780c539644473631966b7fa269ab89dd89915d4",
+  "version": "4.14.0-7.integration-metrics-node-api-fix-b09822e9801affee2f99309ae64229fc8326494c",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "a780c539644473631966b7fa269ab89dd89915d4"
+    "enginesVersion": "b09822e9801affee2f99309ae64229fc8326494c"
   },
   "repository": {
     "type": "git",
