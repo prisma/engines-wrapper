@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.14.0-9.integration-mysql-connection-improvements-5a90cf27f3424ef1b09ac6d45b0bb1e7c35f8d7d",
+  "version": "4.14.0-10.integration-mysql-connection-improvements-05821f5b0d5f7715ed21bb7e7bfa3d417dfbe85d",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "5a90cf27f3424ef1b09ac6d45b0bb1e7c35f8d7d"
+    "enginesVersion": "05821f5b0d5f7715ed21bb7e7bfa3d417dfbe85d"
   },
   "repository": {
     "type": "git",
