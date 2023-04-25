@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.14.0-33.integration-remove-napi-get-config-41ed105ba4faff6ac50dd73c3485b1b1989f7624",
+  "version": "4.14.0-34.integration-remove-napi-get-config-ae7940e2bf5037451dc2670b32c1e125fe0cd1bf",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "41ed105ba4faff6ac50dd73c3485b1b1989f7624"
+    "enginesVersion": "ae7940e2bf5037451dc2670b32c1e125fe0cd1bf"
   },
   "repository": {
     "type": "git",
