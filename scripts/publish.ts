@@ -34,9 +34,11 @@ async function main(dryRun = false) {
   }
 
   // Client Payload via GitHub Event (branch + commit)
+  console.debug('Payload: ', process.env.GITHUB_EVENT_CLIENT_PAYLOAD)
   const githubEventClientPayload = JSON.parse(
     process.env.GITHUB_EVENT_CLIENT_PAYLOAD,
   )
+  console.debug('Payload parsed: ', githubEventClientPayload)
   assertIsClientPayload(githubEventClientPayload)
 
   // Gather information for version string
