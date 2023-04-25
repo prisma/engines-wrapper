@@ -1,0 +1,33 @@
+name: build
+
+# Run on push only for main, if not it will trigger push & pull_request on PRs at the same time
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '*.md'
+      - 'LICENSE'
+      - 'renovate.json'
+  pull_request:
+    paths-ignore:
+      - '*.md'
+      - 'LICENSE'
+      - 'renovate.json'
+  workflow_dispatch:
+
+jobs:
+  build:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - run: bash .github/workflows/setup.sh
+        env:
+          CI: true

@@ -5,6 +5,7 @@ import chalk from 'chalk'
 import execa from 'execa'
 import fs from 'fs'
 import fetch from 'node-fetch'
+import core from '@actions/core'
 
 /**
  * Turns a prisma-engines Git branch name (that got new engines published) into a
@@ -50,21 +51,13 @@ async function main(dryRun = false) {
   const versionIncrement = await getNextVersionIncrement(nextStable)
   const newVersion = `${nextStable}-${versionIncrement}.${optionalNamePart}${githubEventClientPayload.commit}`
 
-  // Output
   console.log(chalk.bold.greenBright('Going to publish:\n'))
   console.log(`${chalk.bold('New version')}   ${newVersion}`)
   console.log(`${chalk.bold('Npm Dist Tag')}  ${npmDistTag}\n`)
-
-  console.log(
-    `Printing values for workflow dispatch: ${newVersion}, ${npmDistTag}`,
-  )
-  // This special log makes values avaliable in Github Actions
-  // Read: https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#using-workflow-commands-to-access-toolkit-functions
-  console.log(`::set-output name=new_prisma_version::${newVersion}`)
-  console.log(`::set-output name=npm_dist_tag::${npmDistTag}`)
-
-  // Publish Order
-  // [engines-version, get-platform], fetch-engine, engines
+  // Set outputs / GITHUB_OUTPUT
+  // See: https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#using-workflow-commands-to-access-toolkit-functions
+  core.setOutput('new_prisma_version', newVersion)
+  core.setOutput('npm_dist_tag', npmDistTag)
 
   // @prisma/engines-version
   adjustPkgJson('packages/engines-version/package.json', (pkg) => {
@@ -139,7 +132,7 @@ type ClientInput = {
   commit: string
 }
 
-/** Assert receivec payload is valid */
+/** Assert received payload is valid */
 function assertIsClientPayload(val: any): asserts val is ClientInput {
   if (!val || typeof val !== 'object') {
     throw new AssertionError({
