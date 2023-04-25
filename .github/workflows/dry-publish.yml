@@ -1,4 +1,4 @@
-name: build
+name: dry-publish
 
 # Run on push only for main, if not it will trigger push & pull_request on PRs at the same time
 on:
@@ -16,6 +16,9 @@ on:
       - 'renovate.json'
   workflow_dispatch:
 
+env:
+  CI: true
+
 jobs:
   build:
     timeout-minutes: 5
@@ -29,5 +32,8 @@ jobs:
           node-version: '16'
 
       - run: bash .github/workflows/setup.sh
+
+      - run: pnpm run publish-all --dry
+        id: publish_script
         env:
-          CI: true
+          GITHUB_EVENT_CLIENT_PAYLOAD: '{"branch": "main", "commit": "e2942655e5370b20e0b3942f4717c2a302b0b620"}'

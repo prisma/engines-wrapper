@@ -4,8 +4,8 @@ import { AssertionError } from 'assert'
 import chalk from 'chalk'
 import execa from 'execa'
 import fs from 'fs'
+import os from 'os'
 import fetch from 'node-fetch'
-import core from '@actions/core'
 
 /**
  * Turns a prisma-engines Git branch name (that got new engines published) into a
@@ -34,9 +34,11 @@ async function main(dryRun = false) {
   }
 
   // Client Payload via GitHub Event (branch + commit)
+  console.debug('Payload: ', process.env.GITHUB_EVENT_CLIENT_PAYLOAD)
   const githubEventClientPayload = JSON.parse(
     process.env.GITHUB_EVENT_CLIENT_PAYLOAD,
   )
+  console.debug('Payload parsed: ', githubEventClientPayload)
   assertIsClientPayload(githubEventClientPayload)
 
   // Gather information for version string
@@ -54,10 +56,9 @@ async function main(dryRun = false) {
   console.log(chalk.bold.greenBright('Going to publish:\n'))
   console.log(`${chalk.bold('New version')}   ${newVersion}`)
   console.log(`${chalk.bold('Npm Dist Tag')}  ${npmDistTag}\n`)
-  // Set outputs / GITHUB_OUTPUT
-  // See: https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#using-workflow-commands-to-access-toolkit-functions
-  core.setOutput('new_prisma_version', newVersion)
-  core.setOutput('npm_dist_tag', npmDistTag)
+  // Set GITHUB_OUTPUT
+  setOutput('new_prisma_version', newVersion)
+  setOutput('npm_dist_tag', npmDistTag)
 
   // @prisma/engines-version
   adjustPkgJson('packages/engines-version/package.json', (pkg) => {
@@ -227,6 +228,13 @@ async function run(
       ) + (e.stderr || e.stack || e.message),
     )
   }
+}
+
+// From https://github.com/actions/toolkit/issues/1218#issuecomment-1288890856
+function setOutput(key, value) {
+  // Temporary hack until core actions library catches up with github new recommendations
+  const output = process.env['GITHUB_OUTPUT']
+  fs.appendFileSync(output, `${key}=${value}${os.EOL}`)
 }
 
 // useful for debugging
