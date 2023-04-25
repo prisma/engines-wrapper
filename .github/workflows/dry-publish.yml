@@ -19,7 +19,7 @@ on:
 env:
   CI: true
   # See dispatch.sh
-  GITHUB_EVENT_CLIENT_PAYLOAD: '{"event_type": "publish-engines", "client_payload": {"branch": "main", "commit": "e2942655e5370b20e0b3942f4717c2a302b0b620"}}'
+  GITHUB_EVENT_CLIENT_PAYLOAD_STRING: '{"event_type": "publish-engines", "client_payload": {"branch": "main", "commit": "e2942655e5370b20e0b3942f4717c2a302b0b620"}}'
 
 jobs:
   build:
@@ -38,4 +38,4 @@ jobs:
       - run: pnpm run publish-all --dry
         id: publish_script
         env:
-          GITHUB_EVENT_CLIENT_PAYLOAD: ${{ toJson(env.GITHUB_EVENT_CLIENT_PAYLOAD) }}
+          GITHUB_EVENT_CLIENT_PAYLOAD: ${{ toJson(env.GITHUB_EVENT_CLIENT_PAYLOAD_STRING) }}
