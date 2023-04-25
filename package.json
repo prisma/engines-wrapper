@@ -4,6 +4,7 @@
   "description": "It is used to get the hash of the [Prisma Rust Engines](https://github.com/prisma/prisma-engines) for downloading via the [Prisma CLI, the Client](https://github.com/prisma/prisma), and other tooling.",
   "private": true,
   "devDependencies": {
+    "@actions/core": "1.10.0",
     "@sindresorhus/slugify": "1.1.2",
     "@types/node": "18.16.0",
     "@types/node-fetch": "2.6.3",

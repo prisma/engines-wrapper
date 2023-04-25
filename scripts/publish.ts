@@ -4,8 +4,8 @@ import { AssertionError } from 'assert'
 import chalk from 'chalk'
 import execa from 'execa'
 import fs from 'fs'
-import os from 'os'
 import fetch from 'node-fetch'
+import * as core from '@actions/core'
 
 /**
  * Turns a prisma-engines Git branch name (that got new engines published) into a
@@ -49,16 +49,20 @@ async function main(dryRun = false) {
     npmDistTag === 'integration'
       ? `${slugify(githubEventClientPayload.branch)}-`
       : ''
-  const nextStable = await getNextPrismaStableVersion(npmDistTag === 'patch')
-  const versionIncrement = await getNextVersionIncrement(nextStable)
+  const nextStable = await getNextPrismaStableVersion({
+    isPatch: npmDistTag === 'patch',
+  })
+  const versionIncrement = await getNextVersionIncrement({
+    versionPrefix: nextStable,
+  })
   const newVersion = `${nextStable}-${versionIncrement}.${optionalNamePart}${githubEventClientPayload.commit}`
 
   console.log(chalk.bold.greenBright('Going to publish:\n'))
   console.log(`${chalk.bold('New version')}   ${newVersion}`)
   console.log(`${chalk.bold('Npm Dist Tag')}  ${npmDistTag}\n`)
   // Set GITHUB_OUTPUT
-  setOutput('new_prisma_version', newVersion)
-  setOutput('npm_dist_tag', npmDistTag)
+  core.setOutput('new_prisma_version', newVersion)
+  core.setOutput('npm_dist_tag', npmDistTag)
 
   // @prisma/engines-version
   adjustPkgJson('packages/engines-version/package.json', (pkg) => {
@@ -86,9 +90,11 @@ function setPatchZero(version: string): string {
 }
 
 /** Get next stable version of prisma CLI (using Npm) */
-async function getNextPrismaStableVersion(
-  isPatch: boolean,
-): Promise<string | null> {
+async function getNextPrismaStableVersion({
+  isPatch,
+}: {
+  isPatch: boolean
+}): Promise<string | null> {
   const data = await fetch('https://registry.npmjs.org/prisma').then((res) =>
     res.json(),
   )
@@ -102,7 +108,11 @@ async function getNextPrismaStableVersion(
 }
 
 /** Get next version increment of engines version (using Npm) */
-async function getNextVersionIncrement(versionPrefix: string): Promise<number> {
+async function getNextVersionIncrement({
+  versionPrefix,
+}: {
+  versionPrefix: string
+}): Promise<number> {
   console.log('getting increment for prefix', versionPrefix)
   const data = await fetch(
     'https://registry.npmjs.org/@prisma/engines-version',
@@ -228,13 +238,6 @@ async function run(
       ) + (e.stderr || e.stack || e.message),
     )
   }
-}
-
-// From https://github.com/actions/toolkit/issues/1218#issuecomment-1288890856
-function setOutput(key, value) {
-  // Temporary hack until core actions library catches up with github new recommendations
-  const output = process.env['GITHUB_OUTPUT']
-  fs.appendFileSync(output, `${key}=${value}${os.EOL}`)
 }
 
 // useful for debugging
