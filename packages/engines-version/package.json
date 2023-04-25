@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.14.0-26.integration-warning-rendering-in-rust-2-1cf4f0a23c0f00aa9a916cce0695c6f4606ffefb",
+  "version": "4.14.0-27.integration-extra-spans-9c111e18cc52a9df1c69b65ba54defbe353d202c",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "1cf4f0a23c0f00aa9a916cce0695c6f4606ffefb"
+    "enginesVersion": "9c111e18cc52a9df1c69b65ba54defbe353d202c"
   },
   "repository": {
     "type": "git",
