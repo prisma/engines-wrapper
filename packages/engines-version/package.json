@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.14.0-44.integration-qe-auto-port-265b1336fb62bf97365b9609ffa079a4dc489b26",
+  "version": "4.14.0-45.8a19c38770eeb2b3dbc148889c218fd0df6159a7",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "265b1336fb62bf97365b9609ffa079a4dc489b26"
+    "enginesVersion": "8a19c38770eeb2b3dbc148889c218fd0df6159a7"
   },
   "repository": {
     "type": "git",
