@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.14.0-60.integration-glibc-unification-eaeb8a3c8de25067d936a20c2658a445f4a17824",
+  "version": "4.14.0-61.5b7524fca1ee153056d401438214a7428cc0480b",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "eaeb8a3c8de25067d936a20c2658a445f4a17824"
+    "enginesVersion": "5b7524fca1ee153056d401438214a7428cc0480b"
   },
   "repository": {
     "type": "git",
