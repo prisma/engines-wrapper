@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.15.0-21.integration-support-arrays-generator-config-9a275bd4cc6cf045d5f0f9dcd8420b79fc380a35",
+  "version": "4.15.0-22.a43d6561ea10788c11577290459c671a4fe66a00",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "9a275bd4cc6cf045d5f0f9dcd8420b79fc380a35"
+    "enginesVersion": "a43d6561ea10788c11577290459c671a4fe66a00"
   },
   "repository": {
     "type": "git",
