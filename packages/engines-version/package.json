@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.16.0-16.integration-rename-migration-engine-to-schema-engine-72a818438fbeb692961516daebf61ab86af03011",
+  "version": "4.16.0-17.da382fed977574758dd73a3dab768f4e57ae621f",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "72a818438fbeb692961516daebf61ab86af03011"
+    "enginesVersion": "da382fed977574758dd73a3dab768f4e57ae621f"
   },
   "repository": {
     "type": "git",
