@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.16.0-34.integration-node-drivers-typed-a47f6564408b5ed5dc3fe47a1e62b31ea5e7cfb7",
+  "version": "4.16.0-35.19e843b566004b575cf2166785c0250bbef55606",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "a47f6564408b5ed5dc3fe47a1e62b31ea5e7cfb7"
+    "enginesVersion": "19e843b566004b575cf2166785c0250bbef55606"
   },
   "repository": {
     "type": "git",
