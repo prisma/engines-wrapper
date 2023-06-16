@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.16.0-61.integration-default-protocol-05dbc451f077f23c3a09370aeb37d65841e18c45",
+  "version": "4.16.0-62.integration-tracing-runtime-js-dd2821c098a7360794afae9efa80a43abfbd4b73",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "05dbc451f077f23c3a09370aeb37d65841e18c45"
+    "enginesVersion": "dd2821c098a7360794afae9efa80a43abfbd4b73"
   },
   "repository": {
     "type": "git",
