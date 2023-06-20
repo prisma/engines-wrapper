@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.16.0-70.integration-tracing-runtime-js-b967cfe0b3471cb83685e28c9bbccd0a25180ce6",
+  "version": "4.16.0-71.cockroachdb-with-postgres-provider-5dbcd575dfeb408cbd8d423edb813cf42606c8bb",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "b967cfe0b3471cb83685e28c9bbccd0a25180ce6"
+    "enginesVersion": "5dbcd575dfeb408cbd8d423edb813cf42606c8bb"
   },
   "repository": {
     "type": "git",
