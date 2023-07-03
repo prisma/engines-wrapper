@@ -38,10 +38,10 @@ jobs:
           CI: true
           GITHUB_EVENT_CLIENT_PAYLOAD: ${{ toJson(github.event.client_payload) }}
 
-      - name: Workflow dispatch to prisma/prisma-engines for @prisma/prisma-fmt-wasm publish to npm
+      - name: Workflow dispatch to prisma/prisma-engines for @prisma/prisma-schema-wasm publish to npm
         uses: benc-uk/workflow-dispatch@v1
         with:
-          workflow: Build and publish @prisma/prisma-fmt-wasm
+          workflow: Build and publish @prisma/prisma-schema-wasm
           repo: prisma/prisma-engines
           token: ${{ secrets.BOT_TOKEN }}
           inputs: '{ "enginesHash": "${{ github.event.client_payload.commit }}", "enginesWrapperVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
