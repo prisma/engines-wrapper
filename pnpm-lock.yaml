@@ -15,8 +15,8 @@ importers:
         specifier: 1.1.2
         version: 1.1.2
       '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
+        specifier: 18.16.19
+        version: 18.16.19
       '@types/node-fetch':
         specifier: 2.6.4
         version: 2.6.4
@@ -43,7 +43,7 @@ importers:
         version: 2.8.8
       ts-node:
         specifier: 10.9.1
-        version: 10.9.1(@types/node@18.16.18)(typescript@4.9.5)
+        version: 10.9.1(@types/node@18.16.19)(typescript@4.9.5)
       typescript:
         specifier: 4.9.5
         version: 4.9.5
@@ -51,8 +51,8 @@ importers:
   packages/engines-version:
     devDependencies:
       '@types/node':
-        specifier: 18.16.18
-        version: 18.16.18
+        specifier: 18.16.19
+        version: 18.16.19
       typescript:
         specifier: 4.9.5
         version: 4.9.5
@@ -130,12 +130,12 @@ packages:
   /@types/node-fetch@2.6.4:
     resolution: {integrity: sha512-1ZX9fcN4Rvkvgv4E6PAY5WXUFWFcRWxZa3EW83UjycOB9ljJCedb2CupIP4RZMEwF/M3eTcCihbBRgwtGbg5Rg==}
     dependencies:
-      '@types/node': 18.16.18
+      '@types/node': 18.16.19
       form-data: 3.0.0
     dev: true
 
-  /@types/node@18.16.18:
-    resolution: {integrity: sha512-/aNaQZD0+iSBAGnvvN2Cx92HqE5sZCPZtx2TsK+4nvV23fFe09jVDvpArXr2j9DnYlzuU9WuoykDDc6wqvpNcw==}
+  /@types/node@18.16.19:
+    resolution: {integrity: sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==}
     dev: true
 
   /acorn-walk@8.1.1:
@@ -390,7 +390,7 @@ packages:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
     dev: true
 
-  /ts-node@10.9.1(@types/node@18.16.18)(typescript@4.9.5):
+  /ts-node@10.9.1(@types/node@18.16.19)(typescript@4.9.5):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -409,7 +409,7 @@ packages:
       '@tsconfig/node12': 1.0.7
       '@tsconfig/node14': 1.0.0
       '@tsconfig/node16': 1.0.2
-      '@types/node': 18.16.18
+      '@types/node': 18.16.19
       acorn: 8.7.1
       acorn-walk: 8.1.1
       arg: 4.1.3
