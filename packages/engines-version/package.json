@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.17.0-20.cockroachdb-with-postgres-provider-5a3e8f5928a8bade7ddb9c9b73edcd011fc4bc4c",
+  "version": "4.17.0-21.a6324410622b51700b1f574eeca057c71b1a3c5a",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "5a3e8f5928a8bade7ddb9c9b73edcd011fc4bc4c"
+    "enginesVersion": "a6324410622b51700b1f574eeca057c71b1a3c5a"
   },
   "repository": {
     "type": "git",
