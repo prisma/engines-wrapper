@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "4.17.0-22.eac90b24528fc540a7549eac798e4fde23cb7472",
+  "version": "4.17.0-23.integration-chore-update-data-proxy-error-d1fa3aa450aadb75d08e0c6ba88eb79b5ebaa449",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "eac90b24528fc540a7549eac798e4fde23cb7472"
+    "enginesVersion": "d1fa3aa450aadb75d08e0c6ba88eb79b5ebaa449"
   },
   "repository": {
     "type": "git",
