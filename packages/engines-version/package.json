@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.1.0-6.integration-alula-ipv6-9943d4e306ad96d7806ab1274c18621f6e5ace2e",
+  "version": "5.1.0-7.6bdd55c4e16f8250d90a95040a04253d43f7abcd",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "9943d4e306ad96d7806ab1274c18621f6e5ace2e"
+    "enginesVersion": "6bdd55c4e16f8250d90a95040a04253d43f7abcd"
   },
   "repository": {
     "type": "git",
