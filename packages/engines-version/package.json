@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.1.0-12.integration-ipv6-with-tests-62ef4e5560580828e96e1cfe9557c4a0c4a33484",
+  "version": "5.1.0-13.6a4762d4d94d9c5aa24faf7803734c9af7fa014f",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "62ef4e5560580828e96e1cfe9557c4a0c4a33484"
+    "enginesVersion": "6a4762d4d94d9c5aa24faf7803734c9af7fa014f"
   },
   "repository": {
     "type": "git",
