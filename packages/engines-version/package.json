@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.1.0-25.2650ebde0c9e24678112900883012807b7d4dfc8",
+  "version": "5.1.0-26.integration-fix-1-1-update-relation-mode-prisma-faab4b8d871ca3dba4f060557253dc586fc4e8d0",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "2650ebde0c9e24678112900883012807b7d4dfc8"
+    "enginesVersion": "faab4b8d871ca3dba4f060557253dc586fc4e8d0"
   },
   "repository": {
     "type": "git",
