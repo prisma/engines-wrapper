@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.2.0-10.integration-mongo-relation-mode-prisma-skip-integrity-ed91a7b2497b937965f670a81b14ad3b5b2318cc",
+  "version": "5.2.0-11.5dfedd162db49b874318a377708f206bf3bdb3ca",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "ed91a7b2497b937965f670a81b14ad3b5b2318cc"
+    "enginesVersion": "5dfedd162db49b874318a377708f206bf3bdb3ca"
   },
   "repository": {
     "type": "git",
