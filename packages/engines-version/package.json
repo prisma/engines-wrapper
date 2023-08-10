@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.2.0-13.9fe3fe474102fcbb680f0079a028fe304b7bf3f0",
+  "version": "5.2.0-14.joel-basedon-vitess-docker-image-version-update-5a2d26a26c5f7f7ca0deb9908246abfafd259a65",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "9fe3fe474102fcbb680f0079a028fe304b7bf3f0"
+    "enginesVersion": "5a2d26a26c5f7f7ca0deb9908246abfafd259a65"
   },
   "repository": {
     "type": "git",
