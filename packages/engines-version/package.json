@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.3.0-6.8b73f5ad1caae1046f7e302046fad8205afcca64",
+  "version": "5.3.0-7.qe-remove-unsafe-log-callback-1eb2a814ca332858858b479ede3d45f80c68d293",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "8b73f5ad1caae1046f7e302046fad8205afcca64"
+    "enginesVersion": "1eb2a814ca332858858b479ede3d45f80c68d293"
   },
   "repository": {
     "type": "git",
