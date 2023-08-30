@@ -70,7 +70,7 @@ jobs:
 
       - name: Slack Notification on Failure
         if: ${{ failure() }}
-        uses: rtCamp/action-slack-notify@v2.2.0
+        uses: rtCamp/action-slack-notify@v2.2.1
         env:
           SLACK_TITLE: 'Publishing failed :x:'
           SLACK_COLOR: '#FF0000'
