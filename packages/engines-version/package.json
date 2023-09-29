@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.4.0-40.janpio-shadow-drop-with-force-134b510303ababf88da061a7d13b598a4b8f9c95",
+  "version": "5.4.0-41.18f3e4017174e7e4731539d4d97cadb72b10ae73",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "134b510303ababf88da061a7d13b598a4b8f9c95"
+    "enginesVersion": "18f3e4017174e7e4731539d4d97cadb72b10ae73"
   },
   "repository": {
     "type": "git",
