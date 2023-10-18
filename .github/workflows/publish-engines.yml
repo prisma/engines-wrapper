@@ -54,7 +54,7 @@ jobs:
           token: ${{ secrets.BOT_TOKEN }}
           inputs: '{ "version": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           # Optional but recommended, defaults to "Apply automatic changes"
           commit_message: engines commit ${{ github.event.client_payload.commit }}
