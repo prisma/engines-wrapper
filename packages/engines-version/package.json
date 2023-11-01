@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.6.0-13.janpio-sql-nested-transactions-07d231288d1a9b62fb7af3764745b75447d5d2b7",
+  "version": "5.6.0-14.integration-sql-nested-transactions-5a0f60fe78f2029f692e21ce8732a978466b9baf",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "07d231288d1a9b62fb7af3764745b75447d5d2b7"
+    "enginesVersion": "5a0f60fe78f2029f692e21ce8732a978466b9baf"
   },
   "repository": {
     "type": "git",
