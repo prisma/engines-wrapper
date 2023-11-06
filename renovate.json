@@ -12,5 +12,6 @@
     }
   ],
   "schedule": ["before 8am on Wednesday"],
-  "reviewers": ["@jolg42", "@millsp", "@aqrln"]
+  "reviewers": ["@jolg42", "@millsp", "@aqrln"],
+  "configMigration": true
 }
