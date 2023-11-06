@@ -1,12 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", ":disableRateLimiting"],
+  "extends": ["config:recommended", ":disableRateLimiting"],
   "dependencyDashboard": true,
   "packageRules": [
     {
       "groupName": "dependencies (major)",
-      "depTypeList": ["devDependencies", "dependencies"],
-      "updateTypes": ["major"],
+      "matchDepTypes": ["devDependencies", "dependencies"],
+      "matchUpdateTypes": ["major"],
       "excludePackageNames": ["@types/node"],
       "schedule": ["before 8am on Wednesday"]
     }
