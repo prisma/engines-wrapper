@@ -18,8 +18,8 @@ importers:
         specifier: 18.18.6
         version: 18.18.6
       '@types/node-fetch':
-        specifier: 2.6.7
-        version: 2.6.7
+        specifier: 2.6.9
+        version: 2.6.9
       arg:
         specifier: 5.0.2
         version: 5.0.2
@@ -127,8 +127,8 @@ packages:
     resolution: {integrity: sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==}
     dev: true
 
-  /@types/node-fetch@2.6.7:
-    resolution: {integrity: sha512-lX17GZVpJ/fuCjguZ5b3TjEbSENxmEk1B2z02yoXSK9WMEWRivhdSY73wWMn6bpcCDAOh6qAdktpKHIlkDk2lg==}
+  /@types/node-fetch@2.6.9:
+    resolution: {integrity: sha512-bQVlnMLFJ2d35DkPNjEPmd9ueO/rh5EiaZt2bhqiSarPjZIuIV6bPQVqcrEyvNo+AfTrRGVazle1tl597w3gfA==}
     dependencies:
       '@types/node': 18.18.6
       form-data: 4.0.0
