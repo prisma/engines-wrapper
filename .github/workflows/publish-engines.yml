@@ -14,6 +14,10 @@ jobs:
     name: 'Publish engines-wrapper packages for prisma-engines branch ${{ github.event.client_payload.branch }} and commit ${{ github.event.client_payload.commit }}'
     timeout-minutes: 10
     runs-on: ubuntu-latest
+    permissions:
+      # required for publishing to npm with --provenance
+      # see https://docs.npmjs.com/generating-provenance-statements
+      id-token: write
 
     steps:
       - uses: actions/checkout@v4
@@ -25,7 +29,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '20'
 
       - run: bash .github/workflows/setup.sh
         env:
@@ -37,6 +41,8 @@ jobs:
         env:
           CI: true
           GITHUB_EVENT_CLIENT_PAYLOAD: ${{ toJson(github.event.client_payload) }}
+          # https://docs.npmjs.com/generating-provenance-statements
+          NPM_CONFIG_PROVENANCE: true
 
       - name: Workflow dispatch to prisma/prisma-engines for @prisma/prisma-schema-wasm publish to npm
         uses: benc-uk/workflow-dispatch@v1
