@@ -29,7 +29,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '20'
 
       - run: bash .github/workflows/setup.sh
 
@@ -37,3 +37,5 @@ jobs:
         id: publish_script
         env:
           GITHUB_EVENT_CLIENT_PAYLOAD: '{"branch": "main", "commit": "e2942655e5370b20e0b3942f4717c2a302b0b620"}'
+          # https://docs.npmjs.com/generating-provenance-statements
+          NPM_CONFIG_PROVENANCE: true
