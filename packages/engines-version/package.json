@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.7.0-13.driver-adapters-remove-dispose-method-for-js-transaction-interface-fc5d9935df947f2d7440701bc3eb8a5e93b039e5",
+  "version": "5.7.0-14.2c867f452d73681500eb8426a83b37ad1bc1eda7",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "fc5d9935df947f2d7440701bc3eb8a5e93b039e5"
+    "enginesVersion": "2c867f452d73681500eb8426a83b37ad1bc1eda7"
   },
   "repository": {
     "type": "git",
