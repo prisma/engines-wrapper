@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.7.0-28.integration-join-support-a84fe4386fdf0f05bd737b62e5d112ab079c7098",
+  "version": "5.7.0-29.integration-sql-nested-transactions2-e943433a36b16524e1d88f0f0b93c3d8d4ddd4c8",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "a84fe4386fdf0f05bd737b62e5d112ab079c7098"
+    "enginesVersion": "e943433a36b16524e1d88f0f0b93c3d8d4ddd4c8"
   },
   "repository": {
     "type": "git",
