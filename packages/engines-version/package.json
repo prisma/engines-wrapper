@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.7.0-29.integration-sql-nested-transactions2-e943433a36b16524e1d88f0f0b93c3d8d4ddd4c8",
+  "version": "5.7.0-30.janpio-foreign-key-check-0-on-soft-reset-660136bed9126a34fe4173cded12598138a91107",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "e943433a36b16524e1d88f0f0b93c3d8d4ddd4c8"
+    "enginesVersion": "660136bed9126a34fe4173cded12598138a91107"
   },
   "repository": {
     "type": "git",
