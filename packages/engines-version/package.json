@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.7.0-30.janpio-foreign-key-check-0-on-soft-reset-660136bed9126a34fe4173cded12598138a91107",
+  "version": "5.7.0-31.integration-vitess-constraint-fix-b59e2443af85d17d95da072b996be11f60481986",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "660136bed9126a34fe4173cded12598138a91107"
+    "enginesVersion": "b59e2443af85d17d95da072b996be11f60481986"
   },
   "repository": {
     "type": "git",
