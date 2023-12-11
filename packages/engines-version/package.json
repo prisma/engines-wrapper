@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.8.0-4.47a3fbd1f3c4111123f5198040dc7dac49644d09",
+  "version": "5.8.0-5.integration-wasm-decrease-size-1-3mb-939e3788636bc4a04bb8b74ac6e605825d6836b7",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "47a3fbd1f3c4111123f5198040dc7dac49644d09"
+    "enginesVersion": "939e3788636bc4a04bb8b74ac6e605825d6836b7"
   },
   "repository": {
     "type": "git",
