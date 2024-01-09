@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.8.0-36.feat-qe-implement-relationloadstrategy-api-d2f09986b7514e6bda7b9fa6b000aec0c4cd8180",
+  "version": "5.8.0-37.0a83d8541752d7582de2ebc1ece46519ce72a848",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "d2f09986b7514e6bda7b9fa6b000aec0c4cd8180"
+    "enginesVersion": "0a83d8541752d7582de2ebc1ece46519ce72a848"
   },
   "repository": {
     "type": "git",
