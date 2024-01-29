@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.9.0-30.fix-nested-json-dollar-type-2-384423d3343745433a53da003b53596d916e52f6",
+  "version": "5.9.0-31.dbcc905f0ab8f338d47bd9fe6323baffd45ed506",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "384423d3343745433a53da003b53596d916e52f6"
+    "enginesVersion": "dbcc905f0ab8f338d47bd9fe6323baffd45ed506"
   },
   "repository": {
     "type": "git",
