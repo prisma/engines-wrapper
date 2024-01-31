@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.10.0-1.integration-minimal-qe-wasm-no-schema-df8fed62839069ce077de68f26b347159d4bb4ad",
+  "version": "5.10.0-2.integration-minimal-qe-wasm-1b4ed50da42d97c4ac234536343ff31faa0b6b70",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "df8fed62839069ce077de68f26b347159d4bb4ad"
+    "enginesVersion": "1b4ed50da42d97c4ac234536343ff31faa0b6b70"
   },
   "repository": {
     "type": "git",
