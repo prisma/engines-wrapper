@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.12.0-10.integration-jkomyno-d1-boolean-904260f081dd153649eb6e22e36baeb9cb0a0da1",
+  "version": "5.12.0-11.e53b11a2ca09d01b9f1b5079a82ec3a388226fed",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "904260f081dd153649eb6e22e36baeb9cb0a0da1"
+    "enginesVersion": "e53b11a2ca09d01b9f1b5079a82ec3a388226fed"
   },
   "repository": {
     "type": "git",
