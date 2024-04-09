@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.13.0-9.integration-multi-prisma-fmt-bfd6805a8c6880cd0161f6e57189b9fb8c6bcc7f",
+  "version": "5.13.0-10.feat-exclude-selection-0e36efc9f3b5aa64f9d3911568b7280ae9c4505d",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "bfd6805a8c6880cd0161f6e57189b9fb8c6bcc7f"
+    "enginesVersion": "0e36efc9f3b5aa64f9d3911568b7280ae9c4505d"
   },
   "repository": {
     "type": "git",
