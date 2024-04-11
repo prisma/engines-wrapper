@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.13.0-16.6d35870e9578a3e7406168f61f89f84e78c1b38d",
+  "version": "5.13.0-17.feat-get-config-multi-file-be6e6284945aad03ebe0292e0e1aa8174e499d0b",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "6d35870e9578a3e7406168f61f89f84e78c1b38d"
+    "enginesVersion": "be6e6284945aad03ebe0292e0e1aa8174e499d0b"
   },
   "repository": {
     "type": "git",
