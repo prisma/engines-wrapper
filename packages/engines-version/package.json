@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.13.0-18.feat-exclude-selection-567a3e894bb45c200d072d568ea64adc3d8afb94",
+  "version": "5.13.0-19.feat-d1-compatible-sqlite-migration-61ede41e91f79e295f2ed2d4734286808784eb2e",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "567a3e894bb45c200d072d568ea64adc3d8afb94"
+    "enginesVersion": "61ede41e91f79e295f2ed2d4734286808784eb2e"
   },
   "repository": {
     "type": "git",
