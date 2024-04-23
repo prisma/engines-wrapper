@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.14.0-1.integration-vitess-constraint-fix-ca251465b6b966a5b9f61c3a8077ef99275ca330",
+  "version": "5.14.0-2.0c8d1f594df33ae0e5280c46a59c153f02807210",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "ca251465b6b966a5b9f61c3a8077ef99275ca330"
+    "enginesVersion": "0c8d1f594df33ae0e5280c46a59c153f02807210"
   },
   "repository": {
     "type": "git",
