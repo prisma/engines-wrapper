@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.14.0-10.feat-create-many-and-return-31c187d29db487fb54d6bb593a851d2f9e5687a6",
+  "version": "5.14.0-11.0ec3a6f887f51c3c1e876d3ccf0b9cf9088cc3ed",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "31c187d29db487fb54d6bb593a851d2f9e5687a6"
+    "enginesVersion": "0ec3a6f887f51c3c1e876d3ccf0b9cf9088cc3ed"
   },
   "repository": {
     "type": "git",
