@@ -15,8 +15,8 @@ importers:
         specifier: 1.1.2
         version: 1.1.2
       '@types/node':
-        specifier: 18.19.29
-        version: 18.19.29
+        specifier: 18.19.32
+        version: 18.19.32
       '@types/node-fetch':
         specifier: 2.6.11
         version: 2.6.11
@@ -43,7 +43,7 @@ importers:
         version: 2.8.8
       ts-node:
         specifier: 10.9.2
-        version: 10.9.2(@types/node@18.19.29)(typescript@4.9.5)
+        version: 10.9.2(@types/node@18.19.32)(typescript@4.9.5)
       typescript:
         specifier: 4.9.5
         version: 4.9.5
@@ -51,8 +51,8 @@ importers:
   packages/engines-version:
     devDependencies:
       '@types/node':
-        specifier: 18.19.29
-        version: 18.19.29
+        specifier: 18.19.32
+        version: 18.19.32
       typescript:
         specifier: 4.9.5
         version: 4.9.5
@@ -130,12 +130,12 @@ packages:
   /@types/node-fetch@2.6.11:
     resolution: {integrity: sha512-24xFj9R5+rfQJLRyM56qh+wnVSYhyXC2tkoBndtY0U+vubqNsYXGjufB2nn8Q6gt0LrARwL6UBtMCSVCwl4B1g==}
     dependencies:
-      '@types/node': 18.19.29
+      '@types/node': 18.19.32
       form-data: 4.0.0
     dev: true
 
-  /@types/node@18.19.29:
-    resolution: {integrity: sha512-5pAX7ggTmWZdhUrhRWLPf+5oM7F80bcKVCBbr0zwEkTNzTJL2CWQjznpFgHYy6GrzkYi2Yjy7DHKoynFxqPV8g==}
+  /@types/node@18.19.32:
+    resolution: {integrity: sha512-2bkg93YBSDKk8DLmmHnmj/Rwr18TLx7/n+I23BigFwgexUJoMHZOd8X1OFxuF/W3NN0S2W2E5sVabI5CPinNvA==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -392,7 +392,7 @@ packages:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
     dev: true
 
-  /ts-node@10.9.2(@types/node@18.19.29)(typescript@4.9.5):
+  /ts-node@10.9.2(@types/node@18.19.32)(typescript@4.9.5):
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -411,7 +411,7 @@ packages:
       '@tsconfig/node12': 1.0.7
       '@tsconfig/node14': 1.0.0
       '@tsconfig/node16': 1.0.2
-      '@types/node': 18.19.29
+      '@types/node': 18.19.32
       acorn: 8.7.1
       acorn-walk: 8.1.1
       arg: 4.1.3
