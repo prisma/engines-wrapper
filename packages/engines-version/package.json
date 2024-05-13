@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.14.0-22.integration-rust-1-78-wasm-fc926224322c04c61c76032c9985a1d4fdfee13f",
+  "version": "5.14.0-23.079da82321947525558fa7146f7737149538f523",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "fc926224322c04c61c76032c9985a1d4fdfee13f"
+    "enginesVersion": "079da82321947525558fa7146f7737149538f523"
   },
   "repository": {
     "type": "git",
