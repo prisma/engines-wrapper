@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.15.0-15.get-config-fault-tolerant-49eaa97e1de2cace3bd0d8016b165ad0012b7f1a",
+  "version": "5.15.0-16.64bb6b95cbf89b742d0a4cbcbebffc973942e7ad",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "49eaa97e1de2cace3bd0d8016b165ad0012b7f1a"
+    "enginesVersion": "64bb6b95cbf89b742d0a4cbcbebffc973942e7ad"
   },
   "repository": {
     "type": "git",
