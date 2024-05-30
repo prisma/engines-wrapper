@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.15.0-17.feat-multi-file-introspection-cli-1-27cfda7ab7d009c56e2bfb58badc16a348cbeefa",
+  "version": "5.15.0-18.feat-multi-file-introspection-cli-2-2161c3dd5f60d5d52f89724118f4b1328f7d161d",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "27cfda7ab7d009c56e2bfb58badc16a348cbeefa"
+    "enginesVersion": "2161c3dd5f60d5d52f89724118f4b1328f7d161d"
   },
   "repository": {
     "type": "git",
