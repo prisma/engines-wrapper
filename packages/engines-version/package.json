@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.15.0-29.12e25d8d06f6ea5a0252864dd9a03b1bb51f3022",
+  "version": "5.16.0-1.fix-sqlite-concurrent-writes-74a48e9f33b0a8b403045af35430ce444541be88",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "12e25d8d06f6ea5a0252864dd9a03b1bb51f3022"
+    "enginesVersion": "74a48e9f33b0a8b403045af35430ce444541be88"
   },
   "repository": {
     "type": "git",
