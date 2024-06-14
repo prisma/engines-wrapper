@@ -18,12 +18,11 @@ jobs:
       # required for publishing to npm with --provenance
       # see https://docs.npmjs.com/generating-provenance-statements
       id-token: write
-      # Give the default GITHUB_TOKEN write permission to commit and push 
-      # For stefanzweifel/git-auto-commit-action below
-      contents: write
 
     steps:
       - uses: actions/checkout@v4
+        with: 
+          token: ${{ secrets.PRISMA_BOT_TOKEN }}
 
       - name: Print input
         env: { THE_INPUT: '${{ toJson(github.event.client_payload) }}' }
