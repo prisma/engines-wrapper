@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.16.0-15.fix-fts-relation-input-name-9388ddb70ab6bc6cba66ec9b351906f857af5d3f",
+  "version": "5.16.0-16.4c3db41c3ad6086fa0f844bafe039fc221e9de94",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "9388ddb70ab6bc6cba66ec9b351906f857af5d3f"
+    "enginesVersion": "4c3db41c3ad6086fa0f844bafe039fc221e9de94"
   },
   "repository": {
     "type": "git",
