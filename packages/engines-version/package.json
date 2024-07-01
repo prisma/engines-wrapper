@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.16.0-24.34ace0eb2704183d2c05b60b52fba5c43c13f303",
+  "version": "5.17.0-1.perf-query-raw-serialization-e47383c417b1d157566b509938893a9b8ada2aad",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "34ace0eb2704183d2c05b60b52fba5c43c13f303"
+    "enginesVersion": "e47383c417b1d157566b509938893a9b8ada2aad"
   },
   "repository": {
     "type": "git",
