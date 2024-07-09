@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.17.0-4.feat-remove-actors-attempt-2-e7f608ab076eda9e1264e600ce3a140f0bc06bbe",
+  "version": "5.17.0-5.c41dd5bcfeef5b6c035aaa4c241397cb6f009168",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "e7f608ab076eda9e1264e600ce3a140f0bc06bbe"
+    "enginesVersion": "c41dd5bcfeef5b6c035aaa4c241397cb6f009168"
   },
   "repository": {
     "type": "git",
