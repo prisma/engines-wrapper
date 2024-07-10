@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.17.0-8.5954db1fa6f2b12aeb1d5cf503b870c3bb6f8387",
+  "version": "5.17.0-9.integration-dmmf-indexes-d1e2e9a2a0de2bfcf127b78ffed1231707668674",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "5954db1fa6f2b12aeb1d5cf503b870c3bb6f8387"
+    "enginesVersion": "d1e2e9a2a0de2bfcf127b78ffed1231707668674"
   },
   "repository": {
     "type": "git",
