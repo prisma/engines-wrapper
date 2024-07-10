@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.17.0-6.integration-schema-wasm-datamodel-e7f10528e9f51ad6040a30bd82ee9d220aa4ee93",
+  "version": "5.17.0-7.4b84e51743fad4e1b5bcbf8779aa03568f7551f2",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "e7f10528e9f51ad6040a30bd82ee9d220aa4ee93"
+    "enginesVersion": "4b84e51743fad4e1b5bcbf8779aa03568f7551f2"
   },
   "repository": {
     "type": "git",
