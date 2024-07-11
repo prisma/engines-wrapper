@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.17.0-15.integration-schema-wasm-bundler-816ba4de3ca14f6ebd05641d19f9741620a1c874",
+  "version": "5.17.0-16.integration-dmmf-indexes-d964e5cfdd8811d32218d9bfa6c83522e0a1ddde",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "816ba4de3ca14f6ebd05641d19f9741620a1c874"
+    "enginesVersion": "d964e5cfdd8811d32218d9bfa6c83522e0a1ddde"
   },
   "repository": {
     "type": "git",
