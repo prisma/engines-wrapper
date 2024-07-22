@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.18.0-11.f66d88804a33cdad6758bc004b993bccf02c43e0",
+  "version": "5.18.0-12.improve-quaint-column-type-331a7dd91f2553e6a77b58649b55472bca4fa225",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "f66d88804a33cdad6758bc004b993bccf02c43e0"
+    "enginesVersion": "331a7dd91f2553e6a77b58649b55472bca4fa225"
   },
   "repository": {
     "type": "git",
