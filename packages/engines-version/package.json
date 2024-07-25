@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.18.0-18.integration-fix-planetscale-transactions-7d29edf49b381a3b8a98443a959cdc71a2c7a2c1",
+  "version": "5.18.0-19.integration-fix-planetscale-transactions-5e7db172bbc270d357c26b29a6feb2eb0e791f6a",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "7d29edf49b381a3b8a98443a959cdc71a2c7a2c1"
+    "enginesVersion": "5e7db172bbc270d357c26b29a6feb2eb0e791f6a"
   },
   "repository": {
     "type": "git",
