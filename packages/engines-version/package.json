@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.18.0-26.feat-introspect-sql-4dcdf8b8304815e12f4af0e41837efb42c98e9b7",
+  "version": "5.18.0-27.662419b1930e8e32dfb6d624702366aead9c7f84",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "4dcdf8b8304815e12f4af0e41837efb42c98e9b7"
+    "enginesVersion": "662419b1930e8e32dfb6d624702366aead9c7f84"
   },
   "repository": {
     "type": "git",
