@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.19.0-18.feat-typed-sql-nullability-c4dc3c5083115b65abe4436e4ec6e1c8c2afbecd",
+  "version": "5.19.0-19.cb8fbf23062d1b8788a70d0d0cd3d2e0bd6eea08",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "c4dc3c5083115b65abe4436e4ec6e1c8c2afbecd"
+    "enginesVersion": "cb8fbf23062d1b8788a70d0d0cd3d2e0bd6eea08"
   },
   "repository": {
     "type": "git",
