@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.19.0-20.integration-mongodb-ipv6-fix-52a7684de6884ddf5b7e91ac5f37254a02a69774",
+  "version": "5.19.0-21.feat-typed-sql-nullability-e696c9149500a73fbefedf5b0edb3f085ff90515",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "52a7684de6884ddf5b7e91ac5f37254a02a69774"
+    "enginesVersion": "e696c9149500a73fbefedf5b0edb3f085ff90515"
   },
   "repository": {
     "type": "git",
