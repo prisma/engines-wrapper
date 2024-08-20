@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.19.0-22.integration-mongodb-ipv6-fix-a6fed372778795b60d9899578c11319bc19597ac",
+  "version": "5.19.0-23.c356d1b4064663e128504e183e2b0cbe5fcdb063",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "a6fed372778795b60d9899578c11319bc19597ac"
+    "enginesVersion": "c356d1b4064663e128504e183e2b0cbe5fcdb063"
   },
   "repository": {
     "type": "git",
