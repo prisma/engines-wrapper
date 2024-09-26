@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.21.0-7.integration-mimalloc-e348b85a811cbce6dcf6f7fee495333f099b529a",
+  "version": "5.21.0-8.031f4d3fc290d071071bf02083dc6e7b783469e2",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "e348b85a811cbce6dcf6f7fee495333f099b529a"
+    "enginesVersion": "031f4d3fc290d071071bf02083dc6e7b783469e2"
   },
   "repository": {
     "type": "git",
