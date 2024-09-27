@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.21.0-19.integration-itx-refactor-104354e8a9def55d4f413f31d16799330e3ef7d3",
+  "version": "5.21.0-20.integration-itx-refactor-4c3d81888c1061f682f4be20a2dafa2126e6af1f",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "104354e8a9def55d4f413f31d16799330e3ef7d3"
+    "enginesVersion": "4c3d81888c1061f682f4be20a2dafa2126e6af1f"
   },
   "repository": {
     "type": "git",
