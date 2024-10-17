@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.22.0-1.fix-shadow-db-ws-a57fc564c92d0e3eac830e38694dd44c464c82aa",
+  "version": "5.22.0-2.integration-itx-refactor-10561ae38bf0882d58859b272629052f23bd8263",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "a57fc564c92d0e3eac830e38694dd44c464c82aa"
+    "enginesVersion": "10561ae38bf0882d58859b272629052f23bd8263"
   },
   "repository": {
     "type": "git",
