@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.22.0-13.refactor-metrics-177edc4c001abd8ae80c6e1e2c418283761a1483",
+  "version": "5.22.0-14.refactor-metrics-4a27b2e54894ed710cde5df92d4b41d1f2709e5a",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "177edc4c001abd8ae80c6e1e2c418283761a1483"
+    "enginesVersion": "4a27b2e54894ed710cde5df92d4b41d1f2709e5a"
   },
   "repository": {
     "type": "git",
