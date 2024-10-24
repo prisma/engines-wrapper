@@ -7,8 +7,8 @@
       "groupName": "dependencies (major)",
       "matchDepTypes": ["devDependencies", "dependencies"],
       "matchUpdateTypes": ["major"],
-      "excludePackageNames": ["@types/node"],
-      "schedule": ["before 8am on Wednesday"]
+      "schedule": ["before 8am on Wednesday"],
+      "matchPackageNames": ["!@types/node"]
     }
   ],
   "schedule": ["before 8am on Wednesday"],
