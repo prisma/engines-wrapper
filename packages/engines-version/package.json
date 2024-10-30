@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.22.0-24.00b1df92924781469b7072a86b918bb90b5f6a5a",
+  "version": "5.22.0-25.bump-rust-postgres-integration-9fa55196fd05878be9db69ba3b4e6c08f9dc0591",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "00b1df92924781469b7072a86b918bb90b5f6a5a"
+    "enginesVersion": "9fa55196fd05878be9db69ba3b4e6c08f9dc0591"
   },
   "repository": {
     "type": "git",
