@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.22.0-26.integration-next-bbe742e5df39dfd9012055dba6026ae1f90d2d13",
+  "version": "5.22.0-27.metrics3-phantasmagoria-of-the-lost-recorder-47785ced2c48f59d114bb0f15b5495cf6c0a7b8e",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "bbe742e5df39dfd9012055dba6026ae1f90d2d13"
+    "enginesVersion": "47785ced2c48f59d114bb0f15b5495cf6c0a7b8e"
   },
   "repository": {
     "type": "git",
