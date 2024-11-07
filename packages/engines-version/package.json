@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.23.0-2.add-schema-to-dmmf-6b2b29378ec9ecb0902a9ae4fa6302e9b16baf18",
+  "version": "5.23.0-3.2c64fd33d2f53472b190a59807765246f1816a58",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "6b2b29378ec9ecb0902a9ae4fa6302e9b16baf18"
+    "enginesVersion": "2c64fd33d2f53472b190a59807765246f1816a58"
   },
   "repository": {
     "type": "git",
