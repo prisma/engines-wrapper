@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.23.0-8.integration-include-field-native-type-data-to-dmmf-f616ccc38c3d791e452ebd52f830a7fad0161650",
+  "version": "5.23.0-9.378004bf583e0d2e7846a4fe191c0f97c2303ab3",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "f616ccc38c3d791e452ebd52f830a7fad0161650"
+    "enginesVersion": "378004bf583e0d2e7846a4fe191c0f97c2303ab3"
   },
   "repository": {
     "type": "git",
