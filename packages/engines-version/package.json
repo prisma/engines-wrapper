@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "5.23.0-20.integration-enum-mapped-values-5951ba0974e3e23a86bf5e9ff7eb9c5dd7519e23",
+  "version": "5.23.0-21.0160cc2f56997459423712af8dfa8cf1ad97704b",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "5951ba0974e3e23a86bf5e9ff7eb9c5dd7519e23"
+    "enginesVersion": "0160cc2f56997459423712af8dfa8cf1ad97704b"
   },
   "repository": {
     "type": "git",
