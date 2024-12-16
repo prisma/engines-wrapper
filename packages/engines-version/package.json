@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "6.1.0-17.fixup-wasm-response-json-serialization-span-18513eab509bdb5aef5cdd9c553594c3924d18cb",
+  "version": "6.1.0-18.fixup-wasm-response-json-serialization-span-8988abfac9afb8e5e01a2f1862852f4e8ce393e0",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "18513eab509bdb5aef5cdd9c553594c3924d18cb"
+    "enginesVersion": "8988abfac9afb8e5e01a2f1862852f4e8ce393e0"
   },
   "repository": {
     "type": "git",
