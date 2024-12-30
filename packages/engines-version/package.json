@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "6.2.0-7.feat-update-many-and-return-f165828e67aa4eee12e3988ecaef03a622c2c96c",
+  "version": "6.2.0-8.aef02d5e376f57f540a4d5998c0fa73361a9c900",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "f165828e67aa4eee12e3988ecaef03a622c2c96c"
+    "enginesVersion": "aef02d5e376f57f540a4d5998c0fa73361a9c900"
   },
   "repository": {
     "type": "git",
