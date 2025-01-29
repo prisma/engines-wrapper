@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "6.4.0-1.fix-cockroachdb-slow-migrations-workaround-7f2ebe4987f4376912fd7d7e638148a3943dbc78",
+  "version": "6.4.0-2.4767cae5af70f60ad05e14222e663255fc63a65e",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "7f2ebe4987f4376912fd7d7e638148a3943dbc78"
+    "enginesVersion": "4767cae5af70f60ad05e14222e663255fc63a65e"
   },
   "repository": {
     "type": "git",
