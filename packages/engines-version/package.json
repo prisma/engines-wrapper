@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "6.4.0-6.ea0929672a4a933a7dbc5b2f9031bb90560f894e",
+  "version": "6.4.0-7.chore-rename-error-kinds-6ade8eb07ce6ee78cd81baad86b254c457300340",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "ea0929672a4a933a7dbc5b2f9031bb90560f894e"
+    "enginesVersion": "6ade8eb07ce6ee78cd81baad86b254c457300340"
   },
   "repository": {
     "type": "git",
