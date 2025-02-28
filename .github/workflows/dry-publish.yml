@@ -25,6 +25,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Debounce so we won't run competing jobs if we merge multiple PRs in prisma-engines in quick succesion
+      - name: Debounce 1 minute
+        uses: zachary95/github-actions-debounce
+        with:
+          wait: 60
+
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
