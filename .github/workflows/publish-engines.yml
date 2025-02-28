@@ -20,6 +20,12 @@ jobs:
       id-token: write
 
     steps:
+      # Debounce so we won't run competing jobs if we merge multiple PRs in prisma-engines in quick succesion
+      - name: Debounce 1 minute
+        uses: zachary95/github-actions-debounce
+        with:
+          wait: 60
+
       - uses: actions/checkout@v4
         with: 
           token: ${{ secrets.PRISMA_BOT_TOKEN }}
