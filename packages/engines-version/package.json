@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "6.6.0-16.refactor-migrate-to-new-interface-5ecebf55a47f4f963b194be9367d8b89c730f672",
+  "version": "6.6.0-17.refactor-migrate-to-new-interface-a65ab979bf81a122861f2a68231321419d7fb303",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "5ecebf55a47f4f963b194be9367d8b89c730f672"
+    "enginesVersion": "a65ab979bf81a122861f2a68231321419d7fb303"
   },
   "repository": {
     "type": "git",
