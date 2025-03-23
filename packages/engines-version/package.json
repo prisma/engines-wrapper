@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "6.6.0-27.ff4e67a11a395e489261256f882adb6d6a7eea11",
+  "version": "6.6.0-28.feat-orm-596-expose-model-grouping-on-dmmf-600968a1f46d3d8626cdd2c933cf04e50eb5219b",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "ff4e67a11a395e489261256f882adb6d6a7eea11"
+    "enginesVersion": "600968a1f46d3d8626cdd2c933cf04e50eb5219b"
   },
   "repository": {
     "type": "git",
