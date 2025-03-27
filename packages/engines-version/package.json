@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "6.6.0-40.integration-compiler-batching-cc7b9e04d5ea938b67379c9f05e7d4d56e4943b3",
+  "version": "6.6.0-41.9061db3b0058e3d3731c6fe68a1b77061bed4861",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "cc7b9e04d5ea938b67379c9f05e7d4d56e4943b3"
+    "enginesVersion": "9061db3b0058e3d3731c6fe68a1b77061bed4861"
   },
   "repository": {
     "type": "git",
