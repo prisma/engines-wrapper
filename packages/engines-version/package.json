@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "6.8.0-38.integration-pglite-compat-c424c85ee697d2d2ad1beff6959dfcc3206cb8f1",
+  "version": "6.8.0-39.2594251642324e4aa16b918f0d41ca043b15f195",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "c424c85ee697d2d2ad1beff6959dfcc3206cb8f1"
+    "enginesVersion": "2594251642324e4aa16b918f0d41ca043b15f195"
   },
   "repository": {
     "type": "git",
