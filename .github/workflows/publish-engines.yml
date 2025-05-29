@@ -27,8 +27,8 @@ jobs:
           wait: 60
 
       - uses: actions/checkout@v4
-        with: 
-          token: ${{ secrets.PRISMA_BOT_TOKEN }}
+        with:
+          token: ${{ secrets.BOT_TOKEN_ENGINES_WRAPPER_CI }}
 
       - name: Print input
         env: { THE_INPUT: '${{ toJson(github.event.client_payload) }}' }
