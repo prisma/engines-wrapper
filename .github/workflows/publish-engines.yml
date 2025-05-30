@@ -57,7 +57,7 @@ jobs:
         with:
           workflow: Build and publish @prisma/prisma-schema-wasm
           repo: prisma/prisma-engines
-          token: ${{ secrets.BOT_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN_ENGINES_WRAPPER_DISPATCH_CI }}
           inputs: '{ "enginesHash": "${{ github.event.client_payload.commit }}", "enginesWrapperVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
 
       - name: Workflow dispatch to prisma/prisma-engines for @prisma/query-engine-wasm publish to npm
@@ -65,7 +65,7 @@ jobs:
         with:
           workflow: Build and publish @prisma/query-engine-wasm
           repo: prisma/prisma-engines
-          token: ${{ secrets.BOT_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN_ENGINES_WRAPPER_DISPATCH_CI }}
           inputs: '{ "enginesHash": "${{ github.event.client_payload.commit }}", "packageVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
 
       - name: Workflow dispatch to prisma/prisma-engines for @prisma/query-compiler-wasm publish to npm
@@ -73,7 +73,7 @@ jobs:
         with:
           workflow: Build and publish @prisma/query-compiler-wasm
           repo: prisma/prisma-engines
-          token: ${{ secrets.BOT_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN_ENGINES_WRAPPER_DISPATCH_CI }}
           inputs: '{ "enginesHash": "${{ github.event.client_payload.commit }}", "packageVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
 
       - name: Workflow dispatch to prisma/prisma-engines for @prisma/schema-engine-wasm publish to npm
@@ -81,7 +81,7 @@ jobs:
         with:
           workflow: Build and publish @prisma/schema-engine-wasm
           repo: prisma/prisma-engines
-          token: ${{ secrets.BOT_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN_ENGINES_WRAPPER_DISPATCH_CI }}
           inputs: '{ "enginesHash": "${{ github.event.client_payload.commit }}", "packageVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
 
       - name: Workflow dispatch to prisma/prisma for version update
@@ -89,7 +89,7 @@ jobs:
         with:
           workflow: Update Engines Version
           repo: prisma/prisma
-          token: ${{ secrets.BOT_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN_ENGINES_WRAPPER_DISPATCH_CI }}
           inputs: '{ "version": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
 
       - uses: stefanzweifel/git-auto-commit-action@v5
