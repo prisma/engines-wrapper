@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "6.10.0-36.feat-adapter-mysql2-726a4f1d29fc74561d7c8dd7545727e2f8bc26e0",
+  "version": "6.10.0-37.feat-adapter-mysql2-f08a5631f21ef1d59190236288d46f16dcb851b6",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "726a4f1d29fc74561d7c8dd7545727e2f8bc26e0"
+    "enginesVersion": "f08a5631f21ef1d59190236288d46f16dcb851b6"
   },
   "repository": {
     "type": "git",
