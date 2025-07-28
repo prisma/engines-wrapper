@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "6.13.0-33.4c9c25c84cf1a4c0744a0b15acab20e1c91ccf47",
+  "version": "6.13.0-34.integration-sqlite-enum-introspection-0efb3ce704063569f9db137dad77b5c0b95c6d66",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "4c9c25c84cf1a4c0744a0b15acab20e1c91ccf47"
+    "enginesVersion": "0efb3ce704063569f9db137dad77b5c0b95c6d66"
   },
   "repository": {
     "type": "git",
