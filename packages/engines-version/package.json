@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "6.18.0-5.feat-add-support-for-engine-classic-in-prisma-config-c9fef7a6275e0af7d397fe6e65a84e15906646fd",
+  "version": "6.18.0-6.9bf76dbea6c9e34d59a3577015bd1e94bfda7624",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "c9fef7a6275e0af7d397fe6e65a84e15906646fd"
+    "enginesVersion": "9bf76dbea6c9e34d59a3577015bd1e94bfda7624"
   },
   "repository": {
     "type": "git",
