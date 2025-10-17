@@ -16,6 +16,10 @@ function prismaEnginesBranchToNpmDistTag(branch: string): string {
     return 'latest'
   }
 
+  if (branch === 'next') {
+    return 'next'
+  }
+
   if (isPatchBranch(branch)) {
     return 'patch'
   }
@@ -46,7 +50,7 @@ async function main(dryRun = false) {
     githubEventClientPayload.branch,
   )
   const optionalNamePart =
-    npmDistTag === 'integration'
+    npmDistTag === 'integration' || npmDistTag === 'next'
       ? `${slugify(githubEventClientPayload.branch)}-`
       : ''
   const nextStable = await getNextPrismaStableVersion({
