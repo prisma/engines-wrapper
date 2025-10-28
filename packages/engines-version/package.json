@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "6.19.0-15.08761ddce3e1b2107c76ee662fbd0520fc1110dc",
+  "version": "6.19.0-17.integration-aijeyomah-feature-support-enum-ignore-directive-faee99d5aebc84212fa2814294689bded167b500",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "08761ddce3e1b2107c76ee662fbd0520fc1110dc"
+    "enginesVersion": "faee99d5aebc84212fa2814294689bded167b500"
   },
   "repository": {
     "type": "git",
