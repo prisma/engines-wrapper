@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "6.19.0-26.2ba551f319ab1df4bc874a89965d8b3641056773",
+  "version": "6.19.0-27.feat-bump-database-versions-2-4b6e368f6da3d45f65f44068ed2758da3adcf9e2",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "2ba551f319ab1df4bc874a89965d8b3641056773"
+    "enginesVersion": "4b6e368f6da3d45f65f44068ed2758da3adcf9e2"
   },
   "repository": {
     "type": "git",
