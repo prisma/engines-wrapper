@@ -63,6 +63,7 @@ jobs:
 
       - name: Workflow dispatch to prisma/prisma-engines for @prisma/query-engine-wasm publish to npm
         uses: benc-uk/workflow-dispatch@v1
+        if: github.event.client_payload.branch == 'main' # TODO: remove this when Prisma 7 is merged to main
         with:
           workflow: Build and publish @prisma/query-engine-wasm
           repo: prisma/prisma-engines
