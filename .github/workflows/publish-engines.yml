@@ -61,15 +61,6 @@ jobs:
           token: ${{ secrets.BOT_TOKEN_ENGINES_WRAPPER_DISPATCH_CI }}
           inputs: '{ "enginesHash": "${{ github.event.client_payload.commit }}", "enginesWrapperVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
 
-      - name: Workflow dispatch to prisma/prisma-engines for @prisma/query-engine-wasm publish to npm
-        uses: benc-uk/workflow-dispatch@v1
-        if: github.event.client_payload.branch == 'main' # TODO: remove this when Prisma 7 is merged to main
-        with:
-          workflow: Build and publish @prisma/query-engine-wasm
-          repo: prisma/prisma-engines
-          token: ${{ secrets.BOT_TOKEN_ENGINES_WRAPPER_DISPATCH_CI }}
-          inputs: '{ "enginesHash": "${{ github.event.client_payload.commit }}", "packageVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
-
       - name: Workflow dispatch to prisma/prisma-engines for @prisma/query-compiler-wasm publish to npm
         uses: benc-uk/workflow-dispatch@v1
         with:
