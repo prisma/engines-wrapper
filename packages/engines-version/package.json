@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "7.3.0-8.aee8f579c2872ad0cedd6fd7e9070704fdb3610e",
+  "version": "7.3.0-10.fix-fix-mapped-enum-issue-0b7e6564db7dc3dac7f9312aa84e9ed81d805521",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "aee8f579c2872ad0cedd6fd7e9070704fdb3610e"
+    "enginesVersion": "0b7e6564db7dc3dac7f9312aa84e9ed81d805521"
   },
   "repository": {
     "type": "git",
