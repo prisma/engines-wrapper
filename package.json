@@ -4,19 +4,19 @@
   "description": "It is used to get the hash of the [Prisma Rust Engines](https://github.com/prisma/prisma-engines) for downloading via the [Prisma CLI, the Client](https://github.com/prisma/prisma), and other tooling.",
   "private": true,
   "devDependencies": {
-    "@actions/core": "1.11.1",
-    "@sindresorhus/slugify": "1.1.2",
+    "@actions/core": "3.0.0",
+    "@sindresorhus/slugify": "3.0.0",
     "@types/node": "18.19.76",
     "@types/node-fetch": "2.6.12",
     "arg": "5.0.2",
-    "chalk": "4.1.2",
-    "execa": "5.1.1",
-    "husky": "7.0.4",
-    "is-ci": "3.0.1",
-    "node-fetch": "2.7.0",
-    "prettier": "2.8.8",
+    "chalk": "5.6.2",
+    "execa": "9.6.1",
+    "husky": "9.1.7",
+    "is-ci": "4.1.0",
+    "node-fetch": "3.3.2",
+    "prettier": "3.8.1",
     "ts-node": "10.9.2",
-    "typescript": "4.9.5"
+    "typescript": "5.9.3"
   },
   "scripts": {
     "format": "prettier --write .",
