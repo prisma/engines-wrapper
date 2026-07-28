@@ -82,6 +82,10 @@ jobs:
         with:
           workflow: Update Engines Version
           repo: prisma/prisma
+          # Prisma 7 lives on the `v7` branch of prisma/prisma, while its `main` branch hosts a
+          # different codebase. Without an explicit ref the dispatch resolves against the default
+          # branch, which does not have this workflow, and the bump would silently stop happening.
+          ref: v7
           token: ${{ secrets.BOT_TOKEN_ENGINES_WRAPPER_DISPATCH_CI }}
           inputs: '{ "version": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
 
