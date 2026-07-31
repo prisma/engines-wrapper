@@ -1,12 +1,12 @@
 {
   "name": "@prisma/engines-version",
-  "version": "7.10.0-4.0edf323efd1d98336f3f0a68684b56f689b900d3",
+  "version": "7.10.0-6.shadow-db-safety-s4-655dd77dae3f13790e219ef4b2d7650f3e9d8b01",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "Apache-2.0",
   "author": "Tim Suchanek <suchanek@prisma.io>",
   "prisma": {
-    "enginesVersion": "0edf323efd1d98336f3f0a68684b56f689b900d3"
+    "enginesVersion": "655dd77dae3f13790e219ef4b2d7650f3e9d8b01"
   },
   "repository": {
     "type": "git",
