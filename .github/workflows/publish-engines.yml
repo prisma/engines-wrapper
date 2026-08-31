@@ -77,15 +77,15 @@ jobs:
           token: ${{ secrets.BOT_TOKEN_ENGINES_WRAPPER_DISPATCH_CI }}
           inputs: '{ "enginesHash": "${{ github.event.client_payload.commit }}", "packageVersion": "${{ steps.publish_script.outputs.new_prisma_version }}", "npmDistTag": "${{ steps.publish_script.outputs.npm_dist_tag }}" }'
 
-      - name: Workflow dispatch to prisma/prisma for version update
+      - name: Workflow dispatch to prisma/orm for version update
         uses: benc-uk/workflow-dispatch@v1
         with:
           # Addressed by filename rather than display name: the filename is what
           # GitHub keys a workflow's registry entry on, so it survives edits to
           # the `name:` field.
           workflow: v7-update-engines-version.yml
-          repo: prisma/prisma
-          # Prisma 7 lives on the `v7` branch of prisma/prisma, while its `main` branch hosts a
+          repo: prisma/orm
+          # Prisma 7 lives on the `v7` branch of prisma/orm, while its `main` branch hosts a
           # different codebase. `main` carries only a registration stub at this path, which fails
           # with an explanatory message; `ref` is what selects the workflow that does the work.
           ref: v7
